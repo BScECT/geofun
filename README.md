@@ -1,6 +1,6 @@
 # Geodata Fundamentals' Textbook
 
-This repository contains the source code for the interactive textbook of Geodata Fundamentals. Geodata Fundamentals is a course taken by the first year students of the bachelor's degree program *Earth, Climate and Technology* (EC&T) at the Civil Engineering and Geosciences faculty of Delft University of Technology.
+This repository contains the source code for the [interactive textbook of Geodata Fundamentals](https://bscect.github.io/geofun). Geodata Fundamentals is a course taken by the first year students of the bachelor's degree program *Earth, Climate and Technology* (EC&T) at the Civil Engineering and Geosciences faculty of Delft University of Technology.
 
 ## Contributors
 - Guillaume Rongier

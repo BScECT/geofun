@@ -2,8 +2,9 @@
 
 ## Programming
 
-Struggling to remember how to use Python? It is always good to go back to the material of *Exploring the Grand Challenges* to refresh your memory. In addition, you can check those resources:
+Struggling to remember how to use Python? You can check those resources:
 
+  * [Introduction to Python](https://teachbooks.io/introduction_to_python/main/intro.html) from *Exploring the Grand Challenges* to refresh your memory.
   * [Python Cheatsheet](https://labex.io/pythoncheatsheet/) for quick overviews starting from the very basics.
   * [Think Python](https://allendowney.github.io/ThinkPython/index.html), an entire book for more in-depth explanations.
 

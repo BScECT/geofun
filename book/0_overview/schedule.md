@@ -15,8 +15,8 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 **Content**
 
 * Lecture 1: From data to insights [[slides](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4674230/View)]
-* Lecture 2: Variable and data types
-* Practical: Manipulating geodata in Python
+* Lecture 2: Variable and data types [[slides](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4679778/View)]
+* Practical: Manipulating geodata in Python [[slides](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4679791/View), [first](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4679819/View) and [second](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4679821/View) notebooks]
 
 ```
 

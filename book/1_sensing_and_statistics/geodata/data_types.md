@@ -30,7 +30,7 @@ Those criteria lead to four main types of variables, divided into two main class
 
 ### Other options
 
-In statistics, another criterion is sometimes considered: whether variables have an absolute zero point, i.e., they have a true zero implying that there none of the variable. Based on that, categorical variables remain the same as before, but numerical variables become:
+In statistics, another criterion is sometimes considered: whether variables have an absolute zero point, i.e., they have a true zero implying that there is none of the variable. Based on that, categorical variables remain the same as before, but numerical variables become:
 
   * *Interval variables* are ordered and metric, but do not have an absolute zero, e.g., the elevation relative to sea level and the temperature in °C.
   * *Ratio variables* are ordered, metric, and have an absolute zero, e.g., the elevation relative to the center of the Earth temperature in °K.

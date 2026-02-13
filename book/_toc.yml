@@ -14,7 +14,9 @@ parts:
       sections:
       - file: 1_sensing_and_statistics/geodata/data_to_insight.md
       - file: 1_sensing_and_statistics/geodata/data_types.md
-    # - file: 1_sensing_and_statistics/probability_theory/overview.md
+    - file: 1_sensing_and_statistics/probability_theory/overview.md
+      sections:
+      - file: 1_sensing_and_statistics/probability_theory/IntroProbability.md
     # - file: 1_sensing_and_statistics/statistical_inference/overview.md
     # - file: 1_sensing_and_statistics/data_analysis/overview.md
     #   sections:

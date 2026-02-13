@@ -30,8 +30,8 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: 
-* Lecture 2: 
+* Lecture 1: Introduction to probability
+* Lecture 2: Conditional probability and independence
 * Practical: Thinking in probabilities
 
 ```

@@ -4,7 +4,7 @@ In this chapter you will learn about the fundamental concepts of probability. We
 
 Topics per section:
 
-* [IntroP](Introduction to probability): uncertainty, definition of probability, set theory
+* [Introduction to probability](IntroP): uncertainty, definition of probability, set theory
 * Conditional probability and independency: conditional probability, total probability rule, Bayes' rule, independence
 * Discrete probability distributions
 * Continuous probability distributions

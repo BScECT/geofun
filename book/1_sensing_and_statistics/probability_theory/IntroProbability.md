@@ -29,7 +29,7 @@ After studying the Introduction probability theory you will be able to...
 Uncertainty is part of every day life, but here we will focus on uncertainty that we have to deal with in science and engineering, with a focus on the field of Earth, Climate & Technology. Dealing with uncertainty is a necessity, since:
 
 * We are observing phenomena with uncertainty - exact measurements do not exist! Hence we need to be able to separate the *signal of interest* we are trying to measure from the *noise* or *disturbances* that affect our observations. 
-* We are building complex systems from components with uncertain lifetimes and in environments with uncertain condition and hence need to design the system taking into account reliability versus costs.
+* We are building complex systems from components with uncertain lifetimes and in environments with uncertain conditions. Hence, we need to design systems taking into account reliability versus costs.
 * We need to make decision in uncertain situations and hence need to minimize the risk of a wrong decision.
 
 More specific examples from our field:
@@ -40,10 +40,10 @@ More specific examples from our field:
 
 It is common to distinguish two types of uncertainty:
 
-#### Aleatoric uncertainty [in Latin *alea* is *rolling of dice]
+### Aleatoric uncertainty [in Latin *alea* is *rolling of dice*]
 This is uncertainty due to natural variations, which are impossible to predict. A good example are certain weather phenomena, or variations in river flow. This type of uncertainty is irreducible.
 
-#### Epistemic uncertainty [in Greek *episteme* is *knowledge*]
+### Epistemic uncertainty [in Greek *episteme* is *knowledge*]
 This is uncertainty due to a lack of knowledge. This can be due to measurement errors, or due to limitations of the mathematical equations that are used to model a physical phenomenon. This type of uncertainty is reducible by taking more measurements or improving the models (for which generally also more data is needed).
 
 In this course we will learn how probability distributions can be used to model both types of uncertainty.
@@ -71,9 +71,16 @@ Probability that we throw
 * an even number, i.e., event $A=\{2,4,6\}$: $\mathsf{P}(A)=\frac{3}{6}=\frac{1}{2}$
 * smaller than 7, i.e., event $A=\{1,2,3,4,5,6\}$: $\mathsf{P}(A)=\frac{6}{6}=1$ (this is an example of a *sure event*)
 
-Unfortunately, in many of our science and engineering problems it is not as simple as that. For instance wind speed is a *noncountable* parameter, and depending on location and time certain wind speeds will occur more frequently than others. One option then would be to collect wind speed measurements over a long time and create a histogram, which shows the *relative frequencies*.
+Unfortunately, in many of our science and engineering problems it is not as simple as that. For instance wind speed is a *noncountable* parameter, and depending on location and time certain wind speeds will occur more frequently than others. One option then would be to collect wind speed measurements over a long time and create a histogram as shown in ({numref}`figure {number} <wind_histogram>`) , which shows the *relative frequencies* that the wind speed is in a certain interval.
 
-EXAMPLE
+````{figure} ../../figures/part-a_wind_histogram.png
+---
+name: wind_histogram
+width: 95%
+align: center
+---
+Histogram showing the relative frequency that wind speed in Delft is in a certain interval (based on data of one year).
+````
 
 Relative frequency in fact is only an estimate of the actual probability based on observed data and there is a dependency on the number of trials. A small number of trials will give a poor estimate. Gathering a large amount of data over a long timespan is not always possible, and sometimes those past data records simply do not exist. 
 
@@ -107,14 +114,22 @@ $
 $
 </div>
 
+since $A^c \cup A = \Omega $ and hence $\mathsf{P}(A^c \cup A)=\mathsf{P}(A^c)+\mathsf{P}(A) = \mathsf{P}(\Omega)=1$. The second panel in ({numref}`figure {number} <venn_diagrams>`) illustrates the events in sample space $\Omega$.
 
-since $A^c \cup A = \Omega $ and hence $\mathsf{P}(A^c \cup A)=\mathsf{P}(A^c)+\mathsf{P}(A) = \mathsf{P}(\Omega)=1$. The figure below illustrates the events in sample space $\Omega$.
+````{figure} ../../figures/part-a_VennDiagrams.png
+---
+name: venn_diagrams
+width: 95%
+align: center
+---
+Venn diagrams illustrating set operations.
+````
 
 ## Set theory
 
 Set theory can used to derive more probability rules and relations. Sets are collections of elements, in our case outcomes. Hence, the sample space $\Omega$ is the set with all possible outcomes, and we can define events $A,B, \ldots$ as subsets of $\Omega$. Moreover, we can use operations like the union ($\cup$), intersection ($\cap$), complement $A^c$, and difference $A\setminus B$. If $A$ is a subset of $B$, this is denoted as $A\subset B$. Finally, the empty set is $\emptyset$.
 
-The following set properties can be derived, where it can be useful to use Venn diagrams to visualize the set operations and relations, see figure for some examples or try yourself.
+The following set properties can be derived, where it can be useful to use Venn diagrams to visualize the set operations and relations.
 
 * $A\cup \Omega = \Omega$ and  $A\cap \Omega = A$
 * $A\cup \emptyset =A $ and  $A\cap \emptyset  = \emptyset $ 
@@ -125,7 +140,7 @@ The following set properties can be derived, where it can be useful to use Venn 
 * $(A\cup B)\cap C = (A\cap B) \cup (B \cap C)$ (distributive property)
 *  $(A\cup B)^c=(A^c \cap B^c)$ and $(A\cap B)^c=(A^c \cup B^c)$ (DeMorgan's Laws)
 
-<div style="background-color:#AABAB2; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<div style="background-color:#CAE7D3; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
 
 $\textbf{Rock example}$
@@ -149,7 +164,14 @@ For instance we can look at the events:
 * $A\cap B =  \{os\}$, which means $\mathsf{P}(A\cap B)=\frac{1}{4}$
 * $A\cup B =  \{so,os,ss\}$, which means $\mathsf{P}(A\cap B)=\frac{3}{4}$
 
-We can observe thatin this case $\mathsf{P}(A\cap B) \neq \mathsf{P}(A) + \mathsf{P}(B)$. The reason is that $A$ and $B$ are not mutually exclusive: outcome $os$ is an element of both events, and if we would add up the probabilities of both events, this outcome would be counted twice. The common outcome is the same as the intersection  $A\cap B=\{os\}$. From this follows that $\mathsf{P}(A\cup B) = \mathsf{P}(A) + \mathsf{P}(B)- \mathsf{P}(A\cap B)= \mathsf{P}(\{so,os\}) + \mathsf{P}(\{os,ss\})- \mathsf{P}(\{os\})=\frac{2}{4}+\frac{2}{4}-\frac{1}{4}=\frac{3}{4}$.
+We can observe thatin this case $\mathsf{P}(A\cap B) \neq \mathsf{P}(A) + \mathsf{P}(B)$. The reason is that $A$ and $B$ are not mutually exclusive: outcome $os$ is an element of both events, and if we would add up the probabilities of both events, this outcome would be counted twice. The common outcome is the same as the intersection  $A\cap B=\{os\}$. From this follows that 
+
+$$
+\begin{align*}
+\mathsf{P}(A\cup B) &= \mathsf{P}(A) + \mathsf{P}(B)- \mathsf{P}(A\cap B)\\ &= \mathsf{P}(\{so,os\}) + \mathsf{P}(\{os,ss\})- \mathsf{P}(\{os\})=\frac{2}{4}+\frac{2}{4}-\frac{1}{4}=\frac{3}{4}
+\end{align*}
+$$
+
 </div>
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
@@ -160,11 +182,11 @@ $\textbf{Addition rule}:$
 $\mathsf{P}(A\cup B) = \mathsf{P}(A) + \mathsf{P}(B)- \mathsf{P}(A\cap B)$
 </div>
 
-Note that this does not conflict with the third axiom we defined before, since if the events $A$ and $B$ are mutually exclusive, we have that $\mathsf{P}(A\cup B)=0$.
+Note that this does not conflict with the third axiom we defined before, since if the events $A$ and $B$ are *disjoint* (i.e., have no outcomes in common), we have that $\mathsf{P}(A\cup B)=0$.
 
 ## What's next
 
-In the following section we will look at conditional probabilities and independence, after which we will move on to the concept of *random variables* and probability distributions, which allow us to evaluate probabilities of events, both in case of countable and noncountable outcomes.
+In the following section we will look at conditional probabilities and independence, after which we will move on to the concept of *random variables* and probability distributions, which allows us to evaluate probabilities of events, both in case of countable and noncountable outcomes.
 
 ## Exercises
 

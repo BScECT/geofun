@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .game-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #2196f3;
+            color: #1565c0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .concessions-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .concession-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .concession {
+            aspect-ratio: 4 / 3;
+            border: 3px solid #ccc;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .concession::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9px;
+            z-index: 1;
+        }
+        
+        .concession > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .concession:hover:not(.revealed):not(.disabled) {
+            transform: translateY(-5px);
+            border-color: #2196f3;
+            box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+        }
+        
+        .concession.selected {
+            border-color: #2196f3;
+            border-width: 5px;
+        }
+        
+        .concession.revealed {
+            cursor: default;
+        }
+        
+        .concession.disabled {
+            cursor: not-allowed;
+        }
+        
+        .concession-number {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+        
+        .concession-label {
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        
+        .viable {
+            border-color: #4caf50 !important;
+        }
+        
+        .viable::before {
+            background: transparent;
+        }
+        
+        .viable-text {
+            color: #4caf50 !important;
+        }
+        
+        .non-viable {
+            border-color: #f44336 !important;
+        }
+        
+        .non-viable::before {
+            background: transparent;
+        }
+        
+        .non-viable-text {
+            color: #f44336 !important;
+        }
+        
+        .selected-text {
+            color: #2196f3 !important;
+        }
+        
+        .gray-text {
+            color: #999 !important;
+        }
+        
+        .button-container {
+            text-align: center;
+        }
+        
+        button {
+            padding: 12px 35px;
+            font-size: 1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #2196f3;
+            color: white;
+            transition: all 0.2s ease;
+        }
+        
+        button:hover {
+            background: #1976d2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .concessions-container {
+                gap: 15px;
+            }
+            
+            .concession-icon {
+                font-size: 2.5em;
+            }
+            
+            .concession-number {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div id="instructions" class="instructions">
+            Select one of the three mining concessions below.
+        </div>
+        
+        <div class="concessions-container">
+            <div class="concession-wrapper">
+                <div class="concession-number" data-index="0">Concession 1</div>
+                <div class="concession" data-index="0" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Fusselman_Formation_Quartzite_Ridge.jpg/960px-Fusselman_Formation_Quartzite_Ridge.jpg');"></div>
+                <div class="concession-label" data-index="0">Unknown viability</div>
+            </div>
+            <div class="concession-wrapper">
+                <div class="concession-number" data-index="1">Concession 2</div>
+                <div class="concession" data-index="1" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Quartzite_Ridge_-_Flickr_-_aspidoscelis.jpg/960px-Quartzite_Ridge_-_Flickr_-_aspidoscelis.jpg');"></div>
+                <div class="concession-label" data-index="1">Unknown viability</div>
+            </div>
+            <div class="concession-wrapper">
+                <div class="concession-number" data-index="2">Concession 3</div>
+                <div class="concession" data-index="2" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Marqenas_Formation_middle.jpg/960px-Marqenas_Formation_middle.jpg');"></div>
+                <div class="concession-label" data-index="2">Unknown viability</div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button onclick="resetGame()">Reset</button>
+        </div>
+    </div>
+    
+    <script>
+        let gameState = {
+            phase: 'initial',
+            viableIndex: null,
+            selectedIndex: null,
+            revealedIndex: null,
+            firstNonViableImageIndex: null
+        };
+        
+        const initialImages = [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Fusselman_Formation_Quartzite_Ridge.jpg/960px-Fusselman_Formation_Quartzite_Ridge.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Quartzite_Ridge_-_Flickr_-_aspidoscelis.jpg/960px-Quartzite_Ridge_-_Flickr_-_aspidoscelis.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Marqenas_Formation_middle.jpg/960px-Marqenas_Formation_middle.jpg'
+        ];
+        
+        const nonViableImages = [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Kyanite_quartzite_%28GeoDIL_number_-_369%29.jpg/960px-Kyanite_quartzite_%28GeoDIL_number_-_369%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Quartzite_with_jasper_pebbles_%28GeoDIL_number_-_420%29.jpg/960px-Quartzite_with_jasper_pebbles_%28GeoDIL_number_-_420%29.jpg'
+        ];
+        
+        const viableImage = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Pepita_de_oro_y_cuarzo._Navelgas%2C_Asturias%2C_Espa%C3%B1a.jpg/960px-Pepita_de_oro_y_cuarzo._Navelgas%2C_Asturias%2C_Espa%C3%B1a.jpg';
+        
+        function initGame() {
+            gameState.phase = 'initial';
+            gameState.viableIndex = Math.floor(Math.random() * 3);
+            gameState.selectedIndex = null;
+            gameState.revealedIndex = null;
+            gameState.firstNonViableImageIndex = null;
+            
+            const concessions = document.querySelectorAll('.concession');
+            concessions.forEach((concession, index) => {
+                concession.className = 'concession';
+                concession.onclick = () => selectConcession(index);
+                concession.style.backgroundImage = `url('${initialImages[index]}')`;
+                
+                const label = document.querySelector(`.concession-label[data-index="${index}"]`);
+                const number = document.querySelector(`.concession-number[data-index="${index}"]`);
+                
+                label.textContent = 'Unknown viability';
+                label.className = 'concession-label';
+                number.textContent = `Concession ${index + 1}`;
+                number.className = 'concession-number';
+            });
+            
+            document.getElementById('instructions').textContent = 
+                'Select one of the three mining concessions below.';
+        }
+        
+        function selectConcession(index) {
+            if (gameState.phase === 'initial') {
+                gameState.selectedIndex = index;
+                
+                const concessions = document.querySelectorAll('.concession');
+                concessions[index].classList.add('selected');
+                
+                // Mark the selected title as blue
+                const selectedNumber = document.querySelector(`.concession-number[data-index="${index}"]`);
+                selectedNumber.classList.add('selected-text');
+                
+                // Reveal one non-viable concession
+                let revealOptions = [];
+                for (let i = 0; i < 3; i++) {
+                    if (i !== index && i !== gameState.viableIndex) {
+                        revealOptions.push(i);
+                    }
+                }
+                gameState.revealedIndex = revealOptions[Math.floor(Math.random() * revealOptions.length)];
+                
+                const revealedConcession = concessions[gameState.revealedIndex];
+                revealedConcession.classList.add('revealed', 'non-viable', 'disabled');
+                
+                // Randomly pick one of the non-viable images for the first reveal
+                const firstNonViableImgIndex = Math.floor(Math.random() * nonViableImages.length);
+                const nonViableImg = nonViableImages[firstNonViableImgIndex];
+                revealedConcession.style.backgroundImage = `url('${nonViableImg}')`;
+                
+                // Store which image we used for later
+                gameState.firstNonViableImageIndex = firstNonViableImgIndex;
+                
+                const revealedLabel = document.querySelector(`.concession-label[data-index="${gameState.revealedIndex}"]`);
+                const revealedNumber = document.querySelector(`.concession-number[data-index="${gameState.revealedIndex}"]`);
+                revealedLabel.textContent = 'Non-Viable';
+                revealedLabel.classList.add('non-viable-text');
+                revealedNumber.classList.add('gray-text');
+                
+                revealedConcession.onclick = null;
+                
+                // Find the other available concession (not revealed, not selected)
+                let otherConcession = null;
+                for (let i = 0; i < 3; i++) {
+                    if (i !== gameState.revealedIndex && i !== gameState.selectedIndex) {
+                        otherConcession = i + 1;
+                        break;
+                    }
+                }
+                
+                document.getElementById('instructions').innerHTML = 
+                    `Concession ${gameState.revealedIndex + 1} is revealed to be economically non-viable. Confirm your initial choice or switch to Concession ${otherConcession}.`;
+                
+                gameState.phase = 'revealed';
+                
+            } else if (gameState.phase === 'revealed' && index !== gameState.revealedIndex) {
+                // If switching, remove blue from original selection
+                if (index !== gameState.selectedIndex) {
+                    const originalNumber = document.querySelector(`.concession-number[data-index="${gameState.selectedIndex}"]`);
+                    originalNumber.classList.remove('selected-text');
+                    // Remove thick border from original selection
+                    const concessions = document.querySelectorAll('.concession');
+                    concessions[gameState.selectedIndex].classList.remove('selected');
+                }
+                
+                const concessions = document.querySelectorAll('.concession');
+                
+                // Add selected class to new choice
+                concessions[index].classList.add('selected');
+                
+                // Get the OTHER non-viable image (the one we didn't use in the first reveal)
+                const secondNonViableImageIndex = gameState.firstNonViableImageIndex === 0 ? 1 : 0;
+                
+                concessions.forEach((concession, i) => {
+                    concession.classList.add('revealed', 'disabled');
+                    concession.onclick = null;
+                    
+                    const label = document.querySelector(`.concession-label[data-index="${i}"]`);
+                    const number = document.querySelector(`.concession-number[data-index="${i}"]`);
+                    
+                    if (i === gameState.viableIndex) {
+                        concession.classList.add('viable');
+                        concession.style.backgroundImage = `url('${viableImage}')`;
+                        label.textContent = 'Viable';
+                        label.classList.add('viable-text');
+                    } else if (i !== gameState.revealedIndex) {
+                        // This is the second non-viable - use the OTHER image
+                        concession.classList.add('non-viable');
+                        concession.style.backgroundImage = `url('${nonViableImages[secondNonViableImageIndex]}')`;
+                        label.textContent = 'Non-Viable';
+                        label.classList.add('non-viable-text');
+                        // Only make it gray if it's NOT the final choice
+                        if (i !== index) {
+                            number.classList.add('gray-text');
+                        }
+                    }
+                    
+                    // Keep the final choice title blue
+                    if (i === index) {
+                        number.classList.add('selected-text');
+                    }
+                });
+                
+                // Check if the player won
+                const won = (index === gameState.viableIndex);
+                const resultMessage = won 
+                    ? 'Congratulations, you got the economically viable concession. ' 
+                    : 'Unfortunately, you did not get the economically viable concession. ';
+                
+                document.getElementById('instructions').innerHTML = 
+                    resultMessage + 'Click <i>Reset</i> to try again.';
+                
+                gameState.phase = 'final';
+            }
+        }
+        
+        function resetGame() {
+            initGame();
+        }
+        
+        initGame();
+    </script>
+</body>
+</html>

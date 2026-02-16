@@ -1,4 +1,4 @@
-(CondP) =
+(CondP)=
 # Conditional probability and independence
 
 ## Learning objectives
@@ -72,6 +72,30 @@ $$
 \end{align*}
 $$
 
+<div style="background-color:#CAE7D3; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+
+$\textbf{Example testing rocks}$
+
+Two rocks are tested on the presence of neodymium. Result of a test is either 'detection', denoted as outcome $s$, or 'not detected', denoted as outcome $o$. The sample space is thus $\Omega = \{ss,so,os,oo\}$, and the following probabilities are given:
+
+$\mathsf{P}(\{ss\})=0.5,\; \mathsf{P}(\{so\})=\mathsf{P}(\{os\})=0.2,\;\mathsf{P}(\{oo\})=0.1$.
+
+What is the probability that testing the second rock results in 'not detected' given that for the first rock the outcome was 'not detected'.
+
+We then have
+
+$\mathsf{P}(A)=\mathsf{P}(\text{'not detected' for first rock}\})=\mathsf{P}(\{os\})+\mathsf{P}(\{oo\})=0.3$
+
+$\mathsf{P}(A\cap B)=\mathsf{P}(\text{'not detected' for first and second rock}\})=\mathsf{P}(\{oo\})=0.1$
+
+The asked for conditional probability is then:
+
+$\mathsf{P}(B|A)=\frac{\mathsf{P}(A\cap B)}{\mathsf{P}(A)}= \frac{0.1}{0.3} = \frac{1}{3} $
+
+</div>
+
+
 ## Total probability and Bayes' rule
 
 Earlier we have seen that for disjoint sets $A$ and $B$ we have that $\mathsf{P}(A\cup B) = \mathsf{P}(A) + \mathsf{P}(B)$. Obviously, $A$ and $A^c$ are disjoint sets, and their union is equal to the sample space: $A\cup A^c = \Omega$. We can also look at a *partition* of the sample space comprising more than two sets.
@@ -81,7 +105,7 @@ Earlier we have seen that for disjoint sets $A$ and $B$ we have that $\mathsf{P}
 
 $\textbf{Partition of sample space } \Omega:$
 
-a collections of $n$ subsets $B_i$ that are disjoint subsets and with their union equal to the sample space
+a collection of $n$ disjoint subsets $B_i$ with their union equal to the sample space
 
 $\bigcup_{i=1}^n B_i = B_1 \cup B_2 \cup B_3 \ldots = \Omega$
 
@@ -99,7 +123,7 @@ name: venn_part
 width: 40%
 align: center
 ---
-Venn diagram with partition of three disjoint sets $B_i$, and intersecctions with set $A$.
+Venn diagram with partition of three disjoint sets $B_i$, and intersections with set $A$.
 ````
 
 Since the $B_i$ are disjoint, also the subsets $(A\cap B_i)$ are disjoint, and hence
@@ -185,7 +209,7 @@ $$
 
 </div>
 
-(Indep =)
+(Indep)=
 ## Independence
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">

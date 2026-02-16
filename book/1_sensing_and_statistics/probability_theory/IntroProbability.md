@@ -1,4 +1,4 @@
-(IntroP) =
+(IntroP)=
 # Introduction to probability
 
 ## Notation

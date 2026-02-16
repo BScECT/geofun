@@ -17,7 +17,7 @@
 
 ## Learning objectives
 
-After studying the Introduction probability theory you will be able to...
+After studying the Introduction to probability you will be able to...
 * explain why uncertainty needs to be accounted for in science and engineering
 * define sample spaces and events
 * execute set operations: perform and visualize (with Venn diagrams) unions ($A \cup B$), intersections ($A \cap B$), complements ($A^c$), and set differences 
@@ -76,7 +76,7 @@ Unfortunately, in many of our science and engineering problems it is not as simp
 ````{figure} ../../figures/part-a_wind_histogram.png
 ---
 name: wind_histogram
-width: 95%
+width: 50%
 align: center
 ---
 Histogram showing the relative frequency that wind speed in Delft is in a certain interval (based on data of one year).
@@ -164,7 +164,7 @@ For instance we can look at the events:
 * $A\cap B =  \{os\}$, which means $\mathsf{P}(A\cap B)=\frac{1}{4}$
 * $A\cup B =  \{so,os,ss\}$, which means $\mathsf{P}(A\cap B)=\frac{3}{4}$
 
-We can observe thatin this case $\mathsf{P}(A\cap B) \neq \mathsf{P}(A) + \mathsf{P}(B)$. The reason is that $A$ and $B$ are not mutually exclusive: outcome $os$ is an element of both events, and if we would add up the probabilities of both events, this outcome would be counted twice. The common outcome is the same as the intersection  $A\cap B=\{os\}$. From this follows that 
+We can observe that in this case $\mathsf{P}(A\cap B) \neq \mathsf{P}(A) + \mathsf{P}(B)$. The reason is that $A$ and $B$ are not mutually exclusive: outcome $os$ is an element of both events, and if we would add up the probabilities of both events, this outcome would be counted twice. The common outcome is the same as the intersection  $A\cap B=\{os\}$. From this follows that 
 
 $$
 \begin{align*}

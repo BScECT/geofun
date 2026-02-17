@@ -162,9 +162,9 @@ For instance we can look at the events:
 * $A=$  {one rock with neodymium and one without} $= \{so,os\}$, which means $\mathsf{P}(A)=\frac{2}{4}$
 * $B=$ {second rock with neodymium} $= \{os,ss\}$, which means $\mathsf{P}(B)=\frac{2}{4}$
 * $A\cap B =  \{os\}$, which means $\mathsf{P}(A\cap B)=\frac{1}{4}$
-* $A\cup B =  \{so,os,ss\}$, which means $\mathsf{P}(A\cap B)=\frac{3}{4}$
+* $A\cup B =  \{so,os,ss\}$, which means $\mathsf{P}(A\cup B)=\frac{3}{4}$
 
-We can observe that in this case $\mathsf{P}(A\cap B) \neq \mathsf{P}(A) + \mathsf{P}(B)$. The reason is that $A$ and $B$ are not mutually exclusive: outcome $os$ is an element of both events, and if we would add up the probabilities of both events, this outcome would be counted twice. The common outcome is the same as the intersection  $A\cap B=\{os\}$. From this follows that 
+We can observe that in this case $\mathsf{P}(A\cup B) \neq \mathsf{P}(A) + \mathsf{P}(B)$. The reason is that $A$ and $B$ are not mutually exclusive: outcome $os$ is an element of both events, and if we would add up the probabilities of both events, this outcome would be counted twice. The common outcome is the same as the intersection  $A\cap B=\{os\}$. From this follows that 
 
 $$
 \begin{align*}

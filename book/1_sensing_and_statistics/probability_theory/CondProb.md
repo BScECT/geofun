@@ -85,9 +85,9 @@ What is the probability that testing the second rock results in 'not detected' g
 
 We then have
 
-$\mathsf{P}(A)=\mathsf{P}(\text{'not detected' for first rock}\})=\mathsf{P}(\{os\})+\mathsf{P}(\{oo\})=0.3$
+$\mathsf{P}(A)=\mathsf{P}(\{\text{'not detected' for first rock}\})=\mathsf{P}(\{os\})+\mathsf{P}(\{oo\})=0.3$
 
-$\mathsf{P}(A\cap B)=\mathsf{P}(\text{'not detected' for first and second rock}\})=\mathsf{P}(\{oo\})=0.1$
+$\mathsf{P}(A\cap B)=\mathsf{P}(\{\text{'not detected' for first and second rock}\})=\mathsf{P}(\{oo\})=0.1$
 
 The asked for conditional probability is then:
 
@@ -270,27 +270,11 @@ Hence, the failure probability increases by adding more components in a series, 
 
 <iframe src="https://tudelft.h5p.com/content/1292827810544191377/embed" aria-label="Q05_Bayes" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
 
-:::
-
-:::{card} Exercises
-
 <iframe src="https://tudelft.h5p.com/content/1292827823249190307/embed" aria-label="Q06_totalP" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
-
-:::
-
-:::{card} Exercises
 
 <iframe src="https://tudelft.h5p.com/content/1292827827161330647/embed" aria-label="Q07" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
 
-:::
-
-:::{card} Exercises
-
 <iframe src="https://tudelft.h5p.com/content/1292827839811357777/embed" aria-label="Q08_system" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
-
-:::
-
-:::{card} Exercises
 
 <iframe src="https://tudelft.h5p.com/content/1292827853278700257/embed" aria-label="Q09_condprob" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
 

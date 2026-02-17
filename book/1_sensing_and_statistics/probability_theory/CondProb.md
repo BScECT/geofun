@@ -111,7 +111,7 @@ $\bigcup_{i=1}^n B_i = B_1 \cup B_2 \cup B_3 \ldots = \Omega$
 
 </div>
 
-This also implies that the third axiom of probability can be extended to $\mathsf{P}(\bigcup_{i=1}^n B_i) = \mathsf{P}(B_1) + \mathsf{P}(B_2) +\ldots + \mathsf{P}(B_n)$ for $n$ disjoint subsets $B_i$. 
+Note that for $n$ disjoint subsets, the third axiom of probability can be extended to $\mathsf{P}(\bigcup_{i=1}^n A_i) = \mathsf{P}(A_1) + \mathsf{P}(A_2) +\ldots + \mathsf{P}(A_n)$. In case the $n$ subsets form a partition, the sum will be equal to 1.
 
 An example with three disjoint subsets is shown in ({numref}`figure {number} <venn_part>`). In that figure, also a set $A$ is shown, for which we can see that:
 
@@ -221,6 +221,12 @@ Two events $A$ and $B$ are mutually independent if $\mathsf{P}(B|A) = \mathsf{P}
 
 </div>
 
+This implies that for independent $A$ and $B$:
+
+$$
+\mathsf{P}(A| B)= \frac{\mathsf{P}(A\cap B)}{\mathsf{P}(B)}= \mathsf{P}(B) \Leftrightarrow \mathsf{P}(A\cap B)=\mathsf{P}(A)\mathsf{P}(B)
+$$
+
 This can be generalized to $n$ independent events: the intersection of any number of subset of these events is equal to the product of the individual events in the subset. For instance with three independent events we have:
 
 $$
@@ -241,14 +247,23 @@ $\textbf{Example system reliability}$
 
 System reliability depends on the reliability of each of its components. Hence, in order to determine the system reliability, or conversely the failure probability of the system, one needs to determine the failure probability of all components. Once all failure probabilities are known, it is possible to calculate the system reliability or failure probability of the complete system. For that purpose diagrams are used that show the relations and dependences of all components. 
 
-Two basic relations are shown in FIGURE. On the left two parallel components are shown, which means that the system can operate as long as one of the components works properly. For instance, a satellite will have redundant power components to ensure it can still operate if one fails. The system will fail if \textbf{both} $A$ \textbf{and} $B$ occur. If failure of each of the components is independent, the failure probability $\mathsf{P}_F$ is equal to:
+````{figure} ../../figures/part-a_systemrel.png
+---
+name: system_rel
+width: 70%
+align: center
+---
+System with two parallel components (left) or two components in series (right.)
+````
+
+Two basic relations are shown in ({numref}`figure {number} <system_rel>`). On the left two parallel components are shown, which means that the system can operate as long as one of the components works properly. For instance, a satellite will have redundant power components to ensure it can still operate if one fails. The system will fail if **both** $A$ **and** $B$ occur. If failure of each of the components is independent, the failure probability $\mathsf{P}_F$ is equal to:
 
 $$\mathsf{P}_F = P(A\cap B) = P(A)P(B)$$
 
 If a third component would be added parellel to $A$ and $B$, with $C$ the event that it fails independent from the other components, the failure probability would becomes $\mathsf{P}_F = \mathsf{P}(A\cap B\cap C) = \mathsf{P}(A)\mathsf{P}(B)\mathsf{P}(C)$.
 Since $P(C)$ will be smaller than 1, this shows that the failure probability decreases by adding more components in parallel. Alternatively, one can also say that the reliability $\mathsf{R} = 1-\mathsf{P}_F$ increases. 
 
-FIGURE also shows two components in a series. For instance, the power system of a satellite only works if solar arrays and battery operate properly (and many more components). Hence, the system will fail if $A$ **or** $B$ occurs (or both). If $A$ and $B$ are again independent, the failure probability $\mathsf{P}_F$ is now equal to:
+({numref}`Figure {number} <system_rel>`) also shows two components in a series. For instance, the power system of a satellite only works if solar arrays and battery operate properly (and many more components). Hence, the system will fail if $A$ **or** $B$ occurs (or both). If $A$ and $B$ are again independent, the failure probability $\mathsf{P}_F$ is now equal to:
 
 $$
 \begin{align*} 

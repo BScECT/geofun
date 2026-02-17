@@ -232,7 +232,7 @@ $$
 \end{align*}
 $$
 
-The concept of independence is very important, for instance in the context of repeated trials in an experiment for assessing system reliability.
+The concept of independence is very important, for instance in the context of repeated trials in an experiment, or for assessing system reliability.
 
 <div style="background-color:#CAE7D3; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
@@ -265,3 +265,33 @@ Adding a third component in a series, with $C$ the event that it fails independe
 Hence, the failure probability increases by adding more components in a series, which is as expected since each component makes the system more susceptible to failure.
 
 </div>
+
+:::{card} Exercises
+
+<iframe src="https://tudelft.h5p.com/content/1292827810544191377/embed" aria-label="Q05_Bayes" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+:::
+
+:::{card} Exercises
+
+<iframe src="https://tudelft.h5p.com/content/1292827823249190307/embed" aria-label="Q06_totalP" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+:::
+
+:::{card} Exercises
+
+<iframe src="https://tudelft.h5p.com/content/1292827827161330647/embed" aria-label="Q07" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+:::
+
+:::{card} Exercises
+
+<iframe src="https://tudelft.h5p.com/content/1292827839811357777/embed" aria-label="Q08_system" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+:::
+
+:::{card} Exercises
+
+<iframe src="https://tudelft.h5p.com/content/1292827853278700257/embed" aria-label="Q09_condprob" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+:::

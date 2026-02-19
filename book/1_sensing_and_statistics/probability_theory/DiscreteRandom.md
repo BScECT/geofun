@@ -176,6 +176,8 @@ $P(X=2) = \mathsf{P}(\{sso\})+\mathsf{P}(\{sos\})+\mathsf{P}(\{oss\}) = 3\cdot p
 
 and this is indeed equal to what you get using the expression for the probability mass function as defined above.
 
+
+
 </div>
 
 :::{card} Exercises

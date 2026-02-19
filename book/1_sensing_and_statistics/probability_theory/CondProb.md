@@ -113,7 +113,7 @@ $\bigcup_{i=1}^n B_i = B_1 \cup B_2 \cup B_3 \ldots = \Omega$
 
 Note that for $n$ disjoint subsets, the third axiom of probability can be extended to $\mathsf{P}(\bigcup_{i=1}^n A_i) = \mathsf{P}(A_1) + \mathsf{P}(A_2) +\ldots + \mathsf{P}(A_n)$. In case the $n$ subsets form a partition, the sum will be equal to 1.
 
-An example with three disjoint subsets is shown in ({numref}`figure {number} <venn_part>`). In that figure, also a set $A$ is shown, for which we can see that:
+An example with three disjoint subsets is shown in {numref}`figure {number} <venn_part>`. In that figure, also a set $A$ is shown, for which we can see that:
 
 $$A = (A\cap B_1)\cup(A\cap B_2)\cup(A\cap B_3)$$
 
@@ -256,14 +256,14 @@ align: center
 System with two parallel components (left) or two components in series (right.)
 ````
 
-Two basic relations are shown in ({numref}`figure {number} <system_rel>`). On the left two parallel components are shown, which means that the system can operate as long as one of the components works properly. For instance, a satellite will have redundant power components to ensure it can still operate if one fails. The system will fail if **both** $A$ **and** $B$ occur. If failure of each of the components is independent, the failure probability $\mathsf{P}_F$ is equal to:
+Two basic relations are shown in {numref}`figure {number} <system_rel>`. On the left two parallel components are shown, which means that the system can operate as long as one of the components works properly. For instance, a satellite will have redundant power components to ensure it can still operate if one fails. The system will fail if **both** $A$ **and** $B$ occur. If failure of each of the components is independent, the failure probability $\mathsf{P}_F$ is equal to:
 
 $$\mathsf{P}_F = P(A\cap B) = P(A)P(B)$$
 
 If a third component would be added parellel to $A$ and $B$, with $C$ the event that it fails independent from the other components, the failure probability would becomes $\mathsf{P}_F = \mathsf{P}(A\cap B\cap C) = \mathsf{P}(A)\mathsf{P}(B)\mathsf{P}(C)$.
 Since $P(C)$ will be smaller than 1, this shows that the failure probability decreases by adding more components in parallel. Alternatively, one can also say that the reliability $\mathsf{R} = 1-\mathsf{P}_F$ increases. 
 
-({numref}`Figure {number} <system_rel>`) also shows two components in a series. For instance, the power system of a satellite only works if solar arrays and battery operate properly (and many more components). Hence, the system will fail if $A$ **or** $B$ occurs (or both). If $A$ and $B$ are again independent, the failure probability $\mathsf{P}_F$ is now equal to:
+{numref}`Figure {number} <system_rel>` also shows two components in a series. For instance, the power system of a satellite only works if solar arrays and battery operate properly (and many more components). Hence, the system will fail if $A$ **or** $B$ occurs (or both). If $A$ and $B$ are again independent, the failure probability $\mathsf{P}_F$ is now equal to:
 
 $$
 \begin{align*} 

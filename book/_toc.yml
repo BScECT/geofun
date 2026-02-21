@@ -20,9 +20,9 @@ parts:
       - file: 1_sensing_and_statistics/probability_theory/CondProb.md
       - file: 1_sensing_and_statistics/probability_theory/DiscreteRandom.md
     # - file: 1_sensing_and_statistics/statistical_inference/overview.md
-    - file: 1_sensing_and_statistics/data_analysis/overview.md
-      sections:
-      - file: 1_sensing_and_statistics/data_analysis/descriptive_statistics.ipynb
+    # - file: 1_sensing_and_statistics/data_analysis/overview.md
+    #   sections:
+    #   - file: 1_sensing_and_statistics/data_analysis/descriptive_statistics.ipynb
     #   - file: 1_sensing_and_statistics/data_analysis/data_visualization.ipynb
   # - caption: Part B - Applied Statistics with Python
   #   chapters:

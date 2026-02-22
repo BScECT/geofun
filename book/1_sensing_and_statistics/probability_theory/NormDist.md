@@ -40,7 +40,7 @@ Interactively change the mean and standard deviation of the normal distribution 
 If the mean $\mu=0$ and variance $\sigma^2=1$ we obtain the so-called *standard* normal distribution with pdf:
 
 $$
-f(Z)(z)=\frac{1}{\sqrt{2 \pi}} \exp( -\frac{1}{2} z^{2} ),~-\infty < x < \infty 
+f_Z(z)=\frac{1}{\sqrt{2 \pi}} \exp( -\frac{1}{2} z^{2} ),~-\infty < x < \infty 
 $$
 
 Hence, $Z\sim N(0,1)$. Note that $Z$ is specifically used for random variables with a standard normal distribution.
@@ -111,20 +111,9 @@ $$
 \end{align*}
 $$
 
-which shows that we can expect 95.44\% of the ball bearingst to be accepted.
+which shows that we can expect 95.44\% of the ball bearings to be accepted.
 
 </div>
-
-```{admonition} Solutions to exercises
-:class: tip, dropdown
-
-$\mathsf{P}(Z\leq 2)= 1- \mathsf{P}(Z\geq 2) = 1-0.0228$
-
-$\mathsf{P}(-2.35 \leq Z\leq 3)= \mathsf{P}(Z\leq 3) - \mathsf{P}(Z\geq 2.35) = 1- \mathsf{P}(Z\geq 3) - \mathsf{P}(Z\geq 2.35)=1-0.0013-0.0094$
-
-$\mathsf{P}(-2.35 \leq Z\leq -1.96)= \mathsf{P}(Z\geq 1.96) - \mathsf{P}(Z\geq 2.35) =0.0250-0.0094$
-
-```
 
 ## Sum of independent normally distributed random variables
 
@@ -170,4 +159,4 @@ $\mathsf{P}(-2.35 \leq Z\leq -1.96)= \mathsf{P}(Z\geq 1.96) - \mathsf{P}(Z\geq 2
 :::
 
 
- [^ref3]: The interactive figure in this pages is created by Max Ramgraber ([maxramgraber.com/interactive](https://www.maxramgraber.com/interactive)), which are published with a CC BY license and included in this book without modification.
+ [^ref3]: The interactive figure in this pages is created by Max Ramgraber ([maxramgraber.com/interactive](https://www.maxramgraber.com/interactive)), which is published with a CC BY license and included in this book without modification.

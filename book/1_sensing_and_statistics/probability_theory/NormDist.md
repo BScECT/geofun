@@ -28,6 +28,13 @@ align: center
 Probability density function of $X\sim N(\mu,\sigma^2)$.
 ````
 
+````{iframe-figure} ../../_static/elements/element_Gaussian_pdf.html
+:name: Gaussian_pdf_intro
+:aspectratio: 1.5 / 1
+
+Interactively change the mean and standard deviation of the normal distribution to visualize the effect on the pdf and distribution function.[^ref3]
+````
+
 ## Standard normal distribution
 
 If the mean $\mu=0$ and variance $\sigma^2=1$ we obtain the so-called *standard* normal distribution with pdf:
@@ -43,7 +50,7 @@ For $Z\sim N(0,1)$ we can use a tabulation to find the probabilities $\mathsf{P}
 ````{figure} ../../figures/part-a_standardnormal.png
 ---
 name: normal_standard
-width: 40%
+width: 50%
 align: center
 ---
 Probability density function of $Z\sim N(0,1)$ with $\mathsf{P}(Z\geq k)=\alpha$.
@@ -144,7 +151,6 @@ $
 
 Note that in case the mean and variance of all $X_i$ are identical, we get $Y\sim N(n\mu,n\sigma^2)$.
 
-</div>
 
 ```{admonition} Solutions to exercises
 :class: tip, dropdown
@@ -162,3 +168,6 @@ $\mathsf{P}(-2.35 \leq Z\leq -1.96)= \mathsf{P}(Z\geq 1.96) - \mathsf{P}(Z\geq 2
 <iframe src="https://tudelft.h5p.com/content/1292831267040301097/embed" aria-label="Norm_solar" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
 
 :::
+
+
+ [^ref3]: The interactive figure in this pages is created by Max Ramgraber ([maxramgraber.com/interactive](https://www.maxramgraber.com/interactive)), which are published with a CC BY license and included in this book without modification.

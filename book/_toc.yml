@@ -21,6 +21,7 @@ parts:
       - file: 1_sensing_and_statistics/probability_theory/DiscreteRandom.md
       - file: 1_sensing_and_statistics/probability_theory/ContinRandom.md
       - file: 1_sensing_and_statistics/probability_theory/MeanVar.md
+      - file: 1_sensing_and_statistics/probability_theory/ContinDistributions.md
     # - file: 1_sensing_and_statistics/statistical_inference/overview.md
     # - file: 1_sensing_and_statistics/data_analysis/overview.md
     #   sections:

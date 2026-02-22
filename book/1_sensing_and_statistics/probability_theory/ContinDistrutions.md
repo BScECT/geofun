@@ -60,6 +60,8 @@ with amplitude $a$ and angular frequency $\omega$, and a random phase shift $X$.
 
 Derive the distribution function $F_X(x)$ of $X\sim U(a,b)$.
 
+*Solution at end of this page.*
+
 :::
 
 ## Normal distribution
@@ -133,6 +135,8 @@ Probability density function and distribution function of $X\sim Exp(\lambda)$ f
 
 Derive the distribution function $F_X(x)$ of $X\sim Exp(\lambda)$.
 
+*Solution at end of this page.*
+
 :::
 
 
@@ -169,6 +173,30 @@ align: center
 ---
 Probability density function and distribution function of $X\sim Lognormal(0,\sigma^2)$ for three values of $\sigma$.
 ````
+
+```{admonition} Solutions of exercises
+:class: tip, dropdown
+
+For the distribution function of $X\sim U(a,b)$ we have:
+
+$
+F_X(x)=\mathsf{P}(X\leq x) \begin{cases}
+0 &\text{for } x<a\\
+\frac{x-a}{b-a} & \text{for } a\leq x\leq b\\
+1 & \text{for } x>b
+\end{cases}
+$
+
+since if $a\leq x\leq b$ the probability $\mathsf{P}(X\leq x)$ is equal to the area below the pdf, which is $(x-a)\cdot f_X(x)= \frac{x-a}{b-a}$.
+
+For the distribution function of $X\sim Exp(\lambda)$ we have:
+
+$
+F_X(x)=\int_{-\infty}^x \lambda \exp(-\lambda t)dt = 1-\exp(-\lambda x)
+$
+
+```
+
 :::{card} Exercise
 
 <iframe src="https://tudelft.h5p.com/content/1292831239836069137/embed" aria-label="U_quiz" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
@@ -181,3 +209,8 @@ Probability density function and distribution function of $X\sim Lognormal(0,\si
 <iframe src="https://tudelft.h5p.com/content/1292831211736706777/embed" aria-label="Exp_Wind" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
 
 :::
+
+
+
+
+

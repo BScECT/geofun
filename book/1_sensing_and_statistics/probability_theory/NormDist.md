@@ -144,6 +144,18 @@ $
 
 Note that in case the mean and variance of all $X_i$ are identical, we get $Y\sim N(n\mu,n\sigma^2)$.
 
+</div>
+
+```{admonition} Solutions to exercises
+:class: tip, dropdown
+
+$\mathsf{P}(Z\leq 2)= 1- \mathsf{P}(Z\geq 2) = 1-0.0228$
+
+$\mathsf{P}(-2.35 \leq Z\leq 3)= \mathsf{P}(Z\leq 3) - \mathsf{P}(Z\geq 2.35) =1-0.0013-0.0094$
+
+$\mathsf{P}(-2.35 \leq Z\leq -1.96)= \mathsf{P}(Z\geq 1.96) - \mathsf{P}(Z\geq 2.35) =0.0250-0.0094$
+
+```
 
 :::{card} Exercise
 

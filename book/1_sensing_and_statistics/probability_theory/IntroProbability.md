@@ -17,7 +17,7 @@
 
 ## Learning objectives
 
-After studying the Introduction to probability you will be able to...
+After studying the *Introduction to probability* you will be able to...
 * explain why uncertainty needs to be accounted for in science and engineering
 * define sample spaces and events
 * execute set operations: perform and visualize (with Venn diagrams) unions ($A \cup B$), intersections ($A \cap B$), complements ($A^c$), and set differences 

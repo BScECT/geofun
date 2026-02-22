@@ -5,7 +5,7 @@ Experiments often have a noncountable infinite number of outcomes. How then to d
 
 ## Learning objectives
 
-After studying Discrete random variables you will be able to ...
+After studying *Continuous random variables* you will be able to ...
 * define continuous random variables
 * evaluate probability density functions and distribution functions of continuous random variables
 * define and interpret the expectation and variance of random variables
@@ -58,7 +58,7 @@ Ultimately, if we would have infinitesimally small bin widths, the histogram wit
 ````{figure} ../../figures/part-a_pdf.png
 ---
 name: hist_pdf
-width: 35%
+width: 40%
 align: center
 ---
 Probability density function with corresponding histogram in background.
@@ -87,7 +87,7 @@ The probability is thus the area below the pdf as shown in the right panel of {n
 ````{figure} ../../figures/part-a_probcalc.png
 ---
 name: prob_calc
-width: 40%
+width: 80%
 align: center
 ---
 Probability $\mathsf{P}(a\leq X\leq b)$ equal to sum of relative frequencies (left) or area of bars (middle) or area below probability density function (right).

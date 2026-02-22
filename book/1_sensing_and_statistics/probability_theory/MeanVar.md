@@ -3,6 +3,12 @@
 
 Moments of a distribution are quantitative measures that describe the location and shape of a distribution. Here, we will only focus on the first two moments: *expectation* (location) and *variance* (spread).
 
+## Learning objectives
+
+After studying *Expectation (mean) and variance* you will be able to ...
+* define and interpret the expectation and variance of random variables
+* explain and apply the linear transformation rules of expectation and variance
+
 ## Expectation = mean
 The expectation, also referred to as mean, is the first moment of a probability distribution and is defined as:
 

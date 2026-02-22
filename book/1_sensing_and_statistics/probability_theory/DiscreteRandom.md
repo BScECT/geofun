@@ -4,7 +4,7 @@ In science and engineering we are often dealing with events, processes or variab
 
 ## Learning objectives
 
-After studying Discrete random variables you will be able to ...
+After studying *Discrete random variables* you will be able to ...
 * define discrete random variables
 * construct, visualize and interpret probability mass functions and distribution functions of discrete random variables
 * identify when uniform, Bernouilli and binomial distributions apply in real-world contexts

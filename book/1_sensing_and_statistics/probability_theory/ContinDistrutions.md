@@ -76,7 +76,7 @@ $\textbf{Normal distribution:}$
 Random variable $X$ is normally distributed if its probability density function is given as:
 
 $f_X(x)=
-\frac{1}{\sigma\sqrt{2 \pi}} \exp \{ -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^{2} \},~-\infty < x < \infty 
+\frac{1}{\sigma\sqrt{2 \pi}} \exp ( -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^{2} ),~-\infty < x < \infty 
 $
 
 with $\mathbb{E}(X)=\mu$ and $Var(X)=\sigma^2$.
@@ -174,7 +174,7 @@ align: center
 Probability density function and distribution function of $X\sim Lognormal(0,\sigma^2)$ for three values of $\sigma$.
 ````
 
-```{admonition} Solutions of exercises
+```{admonition} Solutions to exercises
 :class: tip, dropdown
 
 For the distribution function of $X\sim U(a,b)$ we have:
@@ -196,6 +196,8 @@ F_X(x)=\int_{-\infty}^x \lambda \exp(-\lambda t)dt = 1-\exp(-\lambda x)
 $
 
 ```
+
+
 
 :::{card} Exercise
 

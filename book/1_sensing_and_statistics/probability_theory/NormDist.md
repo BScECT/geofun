@@ -78,14 +78,14 @@ $$
 \begin{align*}
 \mathsf{P}(a\leq X \leq b)&= \int_a^b f_X(x)dx \\
 &= \frac{1}{\sigma\sqrt{2 \pi}}\int_a^b\exp( -\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^{2} )dx\\
-& = \frac{1}{\sqrt{2 \pi}}\int_{\frac{a-\mu}{\sigma}}^{\frac{b-\mu}{\sigma}}\exp( -\frac{1}{2} z^{2} )dzd\\
+& = \frac{1}{\sqrt{2 \pi}}\int_{\frac{a-\mu}{\sigma}}^{\frac{b-\mu}{\sigma}}\exp( -\frac{1}{2} z^{2} )dz\\
 &= \mathsf{P}(\frac{a-\mu}{\sigma} \leq Z \leq \frac{b-\mu}{\sigma})
 \end{align*}
 $$
 
 where we applied the substitution $z=\frac{x-\mu}{\sigma}$, implying that $dx=\frac{1}{\sigma}dz$.
 
-Since we can use [Table Standard Normal distribution](table_standardnormal) to calculate the probability $\mathsf{P}(\frac{a-\mu}{\sigma} \leq Z \leq \frac{b-\mu}{\sigma})$ this shows how we can use the transformation $Z=\frac{X-\mu}{\sigma}$ to calculate probabilities $\mathsf{P}(a\leq X \leq b)$ for any $X\sim N(\mu,\sigma^2)$.
+Since we can use [Table Standard Normal distribution](table_standardnormal) to calculate the probability $\mathsf{P}(\frac{a-\mu}{\sigma} \leq Z \leq \frac{b-\mu}{\sigma})$ this shows how we can use the transformation $Z=\frac{X-\mu}{\sigma}\sim N(0,1)$ to calculate probabilities $\mathsf{P}(a\leq X \leq b)$ for any $X\sim N(\mu,\sigma^2)$.
 
 <div style="background-color:#CAE7D3; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>

@@ -5,7 +5,7 @@ Probability distributions of natural phenomena and experimental outcomes with a 
 ## Learning objectives
 
 After studying *Continuous probability distributions* you will be able to ...
-* identify and apply the uniform, normal, exponential and lognormal distributions apply in real-world contexts
+* identify and apply the uniform, normal, exponential and lognormal distributions in real-world contexts
 * be able to explain dependence on parameters of these distributions
 
 

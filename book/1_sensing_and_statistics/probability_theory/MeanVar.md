@@ -126,3 +126,9 @@ $$
 $$
 
 For the variance it is important to realize that adding $s$ to all outcomes does not influence the spread in the outcomes, since we are looking at the deviations of the mean, and both the outcomes and mean are shifted by $s$. Since the variance is the weighted average of the **squared** deviations, multiplying the outcomes with $r$ implies that the variance must be multiplied with $r^2$.
+
+:::{card} Exercise
+
+<iframe src="https://tudelft.h5p.com/content/1292833855656410657/embed" aria-label="change-of-units" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://tudelft.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+:::

@@ -29,6 +29,7 @@ parts:
     #   sections:
     #   - file: 1_sensing_and_statistics/data_analysis/descriptive_statistics.ipynb
     #   - file: 1_sensing_and_statistics/data_analysis/data_visualization.ipynb
+    - file: 3_mapping/Measuring_and_Mapping_the_Earth.md
   # - caption: Part B - Applied Statistics with Python
   #   chapters:
   #   - file: 2_applied_statistics/data_preparation/overview.md

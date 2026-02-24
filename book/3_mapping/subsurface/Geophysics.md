@@ -1,4 +1,6 @@
 # Investigating subsurface properties with Geophysics
+Investigating subsurface properties with geophysics opens a window into the hidden structure of the Earth, allowing scientists and engineers to infer what lies beneath without direct excavation. By applying physical principles such as seismic wave behavior, electric or electromagnetic responses, or gravity variations—geophysical methods help characterise materials, detect anomalies, and map geological formations. This approach is essential in fields ranging from resource exploration to environmental assessment, offering a powerful, non-invasive means of understanding the complex and dynamic world beneath our feet.
+
 
 # DC-resistivity
 - Various names: direct-current resistivity (DCR) method, geoelectric method, electrical resistivity tomography (ERT). 

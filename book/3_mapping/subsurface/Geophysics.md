@@ -12,7 +12,7 @@
 
 Further reading:
 
-[Educational Website]([https://link-url-here.org](https://gpg.geosci.xyz/content/DC_resistivity/index.html )
+[Educational Website](https://gpg.geosci.xyz/content/DC_resistivity/index.html )
 
 [Book Chapter](https://link.springer.com/chapter/10.1007/978-3-540-88405-7_3 )
 

@@ -75,8 +75,6 @@ For large $n$ the sum $Y=\sum_{i=1}^n X_i$ approximately has a normal distributi
 
 $Y\overset{d}{\sim}N(n\mu,n\sigma^2)$
 
-$Y\overset{d}{\sim}N(50,25)$
-
 </div>
 
 If the $X_i$ are normally distributed, the result is exact, otherwise it is an approximation, indicated by the $\overset{d}{\sim}$.
@@ -88,7 +86,7 @@ $\textbf{Central limit theorem (mean):}$
 
 Let $X_1,X_2,\ldots,X_n$ be i.i.d. with expectation $\mu$ and variance $\sigma^2$ (both finite).
 
-For large $n$ the sample mean $\bar{X}_n=\sum_{i=1}^n X_i$ approximately has a normal distribution:
+For large $n$ the sample mean $\bar{X}_n=\frac{1}{n}\sum_{i=1}^n X_i$ approximately has a normal distribution:
 
 $\bar{X}_n\overset{d}{\sim}N(\mu,\frac{\sigma^2}{n})$
 

@@ -4,7 +4,7 @@ In science and engineering we are often dealing with events, processes or variab
 
 ## Learning objectives
 
-After studying Discrete random variables you will be able to ...
+After studying *Discrete random variables* you will be able to ...
 * define discrete random variables
 * construct, visualize and interpret probability mass functions and distribution functions of discrete random variables
 * identify when uniform, Bernouilli and binomial distributions apply in real-world contexts
@@ -128,7 +128,7 @@ Notation: $X\sim Ber(p)$
 ## Binomial distribution
 
 This distribution is applicable in case of $n$ trials of an experiment with the following characteristics:
-* each trial has two possible outcomes {1,0} (i.e., the outcome has Bernouilli distribution)
+* each trial has two possible outcomes {1,0} (i.e., the outcome has Bernouilli distribution, therefore also called Bernouilli trial)
 * each trial is independent
 * probability $p$ is the same for each trial
 
@@ -143,7 +143,7 @@ Random variable $X$ has probability mass function
 
 $p_X(k)=\mathsf{P}(X=k)=\binom{n}{k}p^k (1-p)^{n-k},\;\; \text{for } k=0,1,\ldots,n$
 
-with $0\leq p \leq 1$, and $n=1,2,\ldots$
+with $0\leq p \leq 1$, and $n\geq 1$
 
 Notation: $X\sim Bin(n,p)$
 
@@ -176,9 +176,69 @@ $P(X=2) = \mathsf{P}(\{sso\})+\mathsf{P}(\{sos\})+\mathsf{P}(\{oss\}) = 3\cdot p
 
 and this is indeed equal to what you get using the expression for the probability mass function as defined above.
 
+</div>
 
+## Geometric distribution
+
+The binomial distribution applies if we are interested in the number of successes in $n$ trials. If we are interested in the probability that the first success occurs in the $k^{\text{th}}$ trial, we need to use the geometric distribution.
+
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+
+$\textbf{Geometric distribution:}$
+
+Random variable $X$ has probability mass function
+
+$p_X(k)=\mathsf{P}(X=k)=p^k (1-p)^{n-k},\;\; \text{for } k=1,2,\ldots$
+
+with $0\leq p \leq 1$
+
+Notation: $X\sim Geo(p)$
 
 </div>
+
+## Poisson distribution
+
+When dealing with random events that occur in time (or space), the occurrences of the events can often be modeled by a *Poisson process* if they happen independently and at a constant average rate of time (or space). Examples are energy emitted by radioactive particles, times at which electronic components fail, earthquakes, tsunamis, meteor strikes.
+
+The random variable $X$ is now defined as the number of occurrences over a unit time interval.
+
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+
+$\textbf{Poisson distribution:}$
+
+Random variable $X$ has probability mass function
+
+$p_X(k)=\frac{\lambda^k}{k!}\exp\{-\lambda\},\;\; \text{for } k=0,1,\ldots,n$
+
+with $\lambda >0$.
+
+Notation: $X\sim Pois(\lambda)$
+
+</div>
+
+The Poisson distribution is an approximation of the binomial distribution in case $n$ is very large **and** $p$ is very small (i.e., the event is rare).
+
+Parameter $\lambda$ is the *mean* number of occurrences in the given time interval.
+
+## Summary of discrete distributions
+
+In this section several discrete distributions have been introduced:
+
+* Uniform distribution: $X$ has $n$ equally likely outcomes, each with probability mass $1/n$.
+* Bernouilli distribution: $X$ has two outcomes with probabilities $p$ and $1-p$, respectively.
+* Binomial distribution: $X$ is the number of successes in $n$ independent Bernouilli trials.
+* Geometric distribution: $X$ is the number Bernouilli trials to get the first success.
+* Poisson distribution: the number of occurrences of a rare event over a given time interval.
+
+Other discrete distributions outside the scope of this course are:
+
+* Negative binomial distribution: $X$ is the number of Bernouill trials to get $r$ successes. 
+* Multinomial distribution: $X$ is the number of successes in $n$ independent Bernouilli trials, but now with $k$ possible outcomes per trial.
+* Hypergeometric distribution: $X$ is the number of successes in $n$ independent Bernouilli trials, given that $K$ successes occur in a random subset of $N$ trials (useful in a factory if you only want to test a subset of all produced items).
+
+Note: a discrete random variable does not always follow one of these distributions!
 
 :::{card} Exercises
 

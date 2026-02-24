@@ -1,6 +1,4 @@
-Measuring and Mapping the Earth
-
-# Introduction
+# Measuring and Mapping the Earth
 
 The ability to acquire data, particularly through observation and measurement, is a core skill for engineers and scientists in Earth, Climate and Technology (EC&amp;T). Although, among other things, the quantities you wish to measure, the area of interest, and the instrumentation and methods employed may vary widely, designing and executing an observation campaign is a central component of many projects.
 

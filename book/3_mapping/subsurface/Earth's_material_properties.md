@@ -26,7 +26,11 @@ Further reading:
 
 If you prefer to read a book, this Chapter 1.2 gives a good overview on the property of electrical resistivity covered in the lecture.
 
+[Book Chapter](https://www-sciencedirect-com.tudelft.idm.oclc.org/science/chapter/monograph/pii/B9780123838483000037]
 
+This Chapter 3 gives a good overview on the properties of porosity and permeability covered in the lecture.
 
+[Book Chapter](https://tudelft.on.worldcat.org/search/detail/1347023072?queryString=petrophysics]
 
+In this book you can find more information on rock properties and logging.
 

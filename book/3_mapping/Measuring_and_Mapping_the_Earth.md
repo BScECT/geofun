@@ -41,6 +41,8 @@ The following notes apply to the definition of measurement. First, measurement a
 $\textbf{Scales of Measurement}$
 
 Scales of measurement refers to how data values are defined, categorised, and interpreted. The framework most used derives from psychologist Stanley Stevens, who distinguished four scales: nominal, ordinal, interval, and ratio. These scales determine not only how quantities are represented as data, but also which descriptive and inferential statistical methods are valid. Table 1 provides an overview. 
+</p>
+</div>
 
 
 Table 1: Definition of measurement scales.
@@ -50,9 +52,6 @@ Table 1: Definition of measurement scales.
 | Ordinal | Categories with meaningful ranking, but unequal differences between ranks. | Soil erosion risk levels: very low, low, moderate, high, very high |
 | Interval | Differences between values are meaningful and consistent, but zero is arbitrary. | Temperature in °C or °F|
 | Ratio | All mathematical operations are valid; zero means “none of the quantity”. | Temperature in K; precipitation amount in mm; ice sheet mass in gigatonnes|
-
-</p>
-</div>
 
 Let’s explore this further by starting with the concept of quantity. A quantity is a property of something—physical, chemical, or biological—that can be expressed as a number together with a reference. The reference may be a unit of measurement, a procedure, a reference material, or a combination of these. 
 

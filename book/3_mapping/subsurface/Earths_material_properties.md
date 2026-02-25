@@ -35,3 +35,6 @@ This Chapter 3 gives a good overview on the properties of porosity and permeabil
 
 In this book you can find more information on rock properties and logging.
 
+Here is a helpful video:
+[Video Porosity and Permeability](https://www.youtube.com/watch?v=JjEmxgr0TR8)
+

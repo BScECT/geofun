@@ -23,6 +23,7 @@ parts:
       - file: 1_sensing_and_statistics/probability_theory/MeanVar.md
       - file: 1_sensing_and_statistics/probability_theory/ContinDistributions.md
       - file: 1_sensing_and_statistics/probability_theory/NormDist.md
+      - file: 1_sensing_and_statistics/probability_theory/CLT.md
       - file: 1_sensing_and_statistics/probability_theory/normal.ipynb
     # - file: 1_sensing_and_statistics/statistical_inference/overview.md
     # - file: 1_sensing_and_statistics/data_analysis/overview.md

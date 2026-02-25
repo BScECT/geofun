@@ -16,6 +16,26 @@ Further reading:
 
 [Educational Website](https://gpg.geosci.xyz/content/DC_resistivity/index.html )
 
+This educational webpage page on DC-resistivity provides a structured, approachable introduction to the core concepts behind the method, making it a strong learning resource for you. It provides clear explanations of the geophysical concept, real-world examples that make the theory tangible and links to open-source tools, encouraging hands-on learning and experimentation.
+
+How can the webpage support your learning?
+
+1. The page explains electrical conductivity σ and resistivity ρ, the essential physical parameters measured in DC-resistivity surveys.
+
+    You learn how these properties relate to subsurface materials and why they matter for imaging the Earth.
+
+2. It describes how current is injected into the ground and how voltage differences are measured—exactly the principles behind ERT data acquisition.
+
+3.  The page covers common arrays such as dipole–dipole, pole–dipole, gradient, Schlumberger, and Wenner.
+
+    Each configuration emphasizes different subsurface features, which is crucial for understanding survey design and interpretation.
+
+4. You will find examples include mining exploration, geotechnical investigations, and environmental studies (e.g., detecting pollution leakage).
+
+5. Provides a structured learning resource
+
+
+
 [Book Chapter](https://link.springer.com/chapter/10.1007/978-3-540-88405-7_3 )
 
 

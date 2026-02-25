@@ -35,5 +35,7 @@ How can the webpage support your learning?
 
 [Book Chapter](https://link.springer.com/chapter/10.1007/978-3-540-88405-7_3 )
 
+If you prefer reading a book to understand the DC-resistivity method, this chapter “Geoelectrical Methods” in Groundwater Geophysics provides a comprehensive introduction to DC‑resistivity. It is especially valuable because it connects the physics, field practice, modelling and inversion strategies and interpretation challenges into one coherent learning pathway.
+
 
 # Cone-penetration testing (CPT)

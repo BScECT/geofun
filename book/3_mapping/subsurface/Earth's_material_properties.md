@@ -20,6 +20,7 @@ We also learn, in the lectures and practicals, how to measure a selection of pro
 Fluids play a profound role in shaping the physical behaviour of Earth’s materials, altering everything from their mechanical strength to their electrical and thermal responses. Whether occupying pore spaces in sediment, circulating through fractured rock, or saturating soils near the surface, fluids such as water, gas, and brines modify how these materials conduct electricity, transmit seismic waves, deform under stress, and exchange heat. Even small changes in fluid content or composition can produce measurable shifts in geophysical properties, making fluids both a key driver of subsurface processes and a powerful indicator of environmental and geological conditions. Understanding how fluids influence material properties is therefore essential for interpreting geophysical data and for investigating groundwater systems, natural hazards, and resource exploration.
 
 In the lecture, we cover the connection of fluids to density and electrical resistivity. We also learn why we care about fluids in the subsurface by examining the Delft geothermal project.
+
 Further reading:
 
 [Book Chapter](https://link.springer.com/chapter/10.1007/978-3-540-88405-7_1 )

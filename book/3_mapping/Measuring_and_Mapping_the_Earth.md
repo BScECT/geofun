@@ -47,7 +47,7 @@ Scales of measurement refers to how data values are defined, categorised, and in
 
 Table 1: Definition of measurement scales.
 | Scale | Definition | Example |
-| :--- | :--- | :---: |
+| :---: | :---: | :---: |
 | Nominal | Distinct classes or categories; no inherent order. | Land cover types: forest, grassland, urban, water|
 | Ordinal | Categories with meaningful ranking, but unequal differences between ranks. | Soil erosion risk levels: very low, low, moderate, high, very high |
 | Interval | Differences between values are meaningful and consistent, but zero is arbitrary. | Temperature in °C or °F|
@@ -97,26 +97,16 @@ Using a ruler or tape measure gives a direct measurement: the length is read dir
 
 By contrast, a total station measures distance indirectly. It records the travel time of a laser pulse or the phase shift of a modulated electromagnetic signal. Combined with other input quantities—such as the speed of light and corrections for environmental factors like temperature, humidity, and atmospheric pressure—the distance is inferred from the measurement model.
 
-{figure} ../figures/part-a_mapping_1.jpg
+````{figure} ../figures/part-a_mapping_1.jpg
 ---
 name: mapping1
 width: 60%
 align: center
 ---
-
 Image obtained from Christiaan Tiberius.
-
+````
 </p>
 </div>
-
-````{figure} ../figures/part-a_wind_histogram.png
----
-name: wind_histogram
-width: 50%
-align: center
----
-Histogram showing the relative frequency that wind speed in Delft is in a certain interval (based on data of one year).
-````
 
 ### Observations
 
@@ -147,11 +137,12 @@ In Earth Sciences, however, the term is often used in a narrower sense, especial
 
 Uncertainty, an inherent component of any dataset (including observations and measurements), is a multifaceted concept comprising many aspects. To illustrate this, consider MacEachren et al.’s (2005) still incomplete typology of geospatial information uncertainty:
 
-````{figure} ../../figures/part-a_mapping2.png
+````{figure} ../figures/part-a_mapping2.png
 ---
 name: mapping2
 width: 60%
 align: center
+---
 ````
 
 Although formulated to describe the uncertainty of geospatial information, many of these aspects—if not all—apply equally to the data that served as the source of the information. Awareness of each is required to draw meaningful and actionable insights from a dataset. To appreciate why such awareness matters, consider a few concrete examples:
@@ -218,7 +209,7 @@ Both Type A and Type B evaluations may involve statistical methods, but the key 
 
 Total Measurement Uncertainty – The total measurement uncertainty combines both Type A and Type B evaluations. Since the true value is unknown, it may lie anywhere within the reported uncertainty interval—or even outside it, depending on the chosen level of confidence (i.e., the probability that the constructed uncertainty interval will contain the true value).
 
-````{figure} ../../figures/part-a_mapping3.jpg
+````{figure} ../figures/part-a_mapping3.jpg
 ---
 name: mapping3
 width: 60%
@@ -238,7 +229,7 @@ The Length of a River – Suppose you are asked to measure the length of a river
 </p>
 </div>
 
-````{figure} ../../figures/part-a_mapping4.jpg
+````{figure} ../figures/part-a_mapping4.jpg
 ---
 name: mapping4
 width: 60%

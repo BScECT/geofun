@@ -38,11 +38,9 @@ The following notes apply to the definition of measurement. First, measurement a
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
-
 $\textbf{Scales of Measurement}$
+
 Scales of measurement refers to how data values are defined, categorised, and interpreted. The framework most used derives from psychologist Stanley Stevens, who distinguished four scales: nominal, ordinal, interval, and ratio. These scales determine not only how quantities are represented as data, but also which descriptive and inferential statistical methods are valid. Table 1 provides an overview. 
-</p>
-</div>
 
 
 Table 1: Definition of measurement scales.
@@ -53,30 +51,28 @@ Table 1: Definition of measurement scales.
 | Interval | Differences between values are meaningful and consistent, but zero is arbitrary. | Temperature in °C or °F|
 | Ratio | All mathematical operations are valid; zero means “none of the quantity”. | Temperature in K; precipitation amount in mm; ice sheet mass in gigatonnes|
 
-test table:
-| Description       | Notation | 
-| :---------------- | :------------: | 
-| Event            |   $A$   | 
-| Complement of event $A$           |   $A^c$   | 
-| Intersection of  $A$ and $B$    |  $A \cap B$   | 
-| Union of  $A$ and $B$ | $A \cup B$|
-| $A$ is subset of $B$ | $A \subset B$ |
-| Set difference of  $A$ and $B$ | $A\setminus B$ |
-| Probability of event $A$ | $\mathsf{P}(A)$ |
-| Conditional probability of $A$ given $B$ | $\mathsf{P}(A\|B)$ |
-| Sample space | $\Omega$|
+</p>
+</div>
 
 Let’s explore this further by starting with the concept of quantity. A quantity is a property of something—physical, chemical, or biological—that can be expressed as a number together with a reference. The reference may be a unit of measurement, a procedure, a reference material, or a combination of these. 
 
-```
-Reference – Imagine my American colleague and I each measure the height of our desks at home. I might report a magnitude of 0.9, while my colleague reports 3. To compare these results, we need two additional pieces of information: (1) the unit used (metres versus feet) and (2) how the height was measured. For a fair comparison, both of us should have measured the perpendicular distance from the tabletop to the floor.
-```
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Reference}$
+
+Imagine my American colleague and I each measure the height of our desks at home. I might report a magnitude of 0.9, while my colleague reports 3. To compare these results, we need two additional pieces of information: (1) the unit used (metres versus feet) and (2) how the height was measured. For a fair comparison, both of us should have measured the perpendicular distance from the tabletop to the floor.
+</p>
+</div>
 
 According to the VIM, quantity is a generic concept that can be made more specific. In the International System of Units (SI), seven base quantities are defined: length (m), mass (kg), time (s), electric current (ampere), thermodynamic temperature (kelvin), amount of substance (mole), and luminous intensity (candela). More specific examples of the length-type quantity include diameter, circumference, or wavelength. From these base quantities, countless derived quantities can be constructed. 
 
-```
-Examples of Derived Quantities – Density (mass/volume [itself the third power of length]), velocity (length / time), and pressure (force applied perpendicularly to a surface per unit area, derived from mass, length, and time).
-```
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Examples of Derived Quantities}$
+
+Density (mass/volume [itself the third power of length]), velocity (length / time), and pressure (force applied perpendicularly to a surface per unit area, derived from mass, length, and time).
+</p>
+</div>
 
 With these foundations, we return to the definition of measurement itself. A measurement is the process of experimentally obtaining one or more values of the measurand—the specific quantity intended to be measured. The outcome is the measurement result, consisting of the measured value(s) together with essential information such as the associated measurement uncertainty. These measured values are often referred to simply as measurements.
 
@@ -94,22 +90,34 @@ Y = f(X1, X2, . . . , XN),
 
 where Y is the measurand and Xi refers to the input quantities needed to obtain the result. These may include measured values, corrections, or influence quantities. Each has its own uncertainty, which propagates into the uncertainty of Y. The function f may rest on established physical laws or be determined experimentally, but in either case all significant sources of variation must be incorporated for the result to be meaningful. 
 
-```
-Measuring Distance – Using a ruler or tape measure gives a direct measurement: the length is read directly from the instrument’s scale. Yet even this simple case becomes indirect once corrections are applied (e.g., for thermal expansion of the ruler). In that case, the measurand is no longer obtained solely by reading the scale, but through a measurement model that combines the observed length with a correction factor.
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Measuring distance}$
+
+Using a ruler or tape measure gives a direct measurement: the length is read directly from the instrument’s scale. Yet even this simple case becomes indirect once corrections are applied (e.g., for thermal expansion of the ruler). In that case, the measurand is no longer obtained solely by reading the scale, but through a measurement model that combines the observed length with a correction factor.
 
 By contrast, a total station measures distance indirectly. It records the travel time of a laser pulse or the phase shift of a modulated electromagnetic signal. Combined with other input quantities—such as the speed of light and corrections for environmental factors like temperature, humidity, and atmospheric pressure—the distance is inferred from the measurement model.
 
-````{figure} ../figures/part-a_mapping_1.jpg
+{figure} ../figures/part-a_mapping_1.jpg
 ---
 name: mapping1
 width: 60%
 align: center
 ---
-test test test
-````
 
 Image obtained from Christiaan Tiberius.
-```
+
+</p>
+</div>
+
+````{figure} ../figures/part-a_wind_histogram.png
+---
+name: wind_histogram
+width: 50%
+align: center
+---
+Histogram showing the relative frequency that wind speed in Delft is in a certain interval (based on data of one year).
+````
 
 ### Observations
 
@@ -119,9 +127,14 @@ The feature of interest does not only refer to physical objects; it may also be 
 
 In this view, a measurement is a particular type of observation—one that yields a numerical result. Observations in general, however, may be either quantitative or qualitative.
 
-```
-Observation versus Measurement – Recording that the weather was cloudy on 29 August 2025 at 10:00 UTC is an observation but not a measurement. In contrast, reporting that the air temperature was −5.2 °C at the same time is both an observation and a measurement.
-```
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Observation versus Measurement}$
+
+Recording that the weather was cloudy on 29 August 2025 at 10:00 UTC is an observation but not a measurement. In contrast, reporting that the air temperature was −5.2 °C at the same time is both an observation and a measurement.
+</p>
+</div>
+
 
 ### Data
 
@@ -217,8 +230,14 @@ Illustration summarizing terms for the preferred Uncertainty Approach to measure
 
 Definitional Uncertainty – Component of measurement uncertainty resulting from the finite level of detail in the definition of a measurand. In other words, it is the minimum uncertainty you can have in any measurement of a given quantity, regardless of instrument precision. Any change in the descriptive detail of what you&apos;re measuring will lead to a different definitional uncertainty. Note, sometimes this is referred to as ‘idealization accuracy’. 
 
-```
-Example: The Length of a River – Suppose you are asked to measure the length of a river. The result will always contain some uncertainty because the definition ‘a river’ is not perfectly specific. Where exactly does the river begin and end? Do you follow every meander, or measure a straight line from source to mouth? This ambiguity in the definition itself creates uncertainty, even before you start measuring. 
+
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Example}$
+
+The Length of a River – Suppose you are asked to measure the length of a river. The result will always contain some uncertainty because the definition ‘a river’ is not perfectly specific. Where exactly does the river begin and end? Do you follow every meander, or measure a straight line from source to mouth? This ambiguity in the definition itself creates uncertainty, even before you start measuring. 
+</p>
+</div>
 
 ````{figure} ../../figures/part-a_mapping4.jpg
 ---
@@ -311,9 +330,13 @@ Key questions to ask at this stage include: What does the user want to know? Why
 
 A side note: users are not always known in advance. Observations acquired for one purpose may later prove valuable for entirely different ones.
 
-```
-Assessing flood risk in Seaside Town – In our scenario, the ‘user’ is the Seaside Town city council. The council wants to update its flood defence plan. Specifically, they need to know which residential areas are at risk during a 1-in-100-year storm surge event. The purpose is to prioritise infrastructure upgrades.
-```
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Assessing flood risk in Seaside Town }$
+
+In our scenario, the ‘user’ is the Seaside Town city council. The council wants to update its flood defence plan. Specifically, they need to know which residential areas are at risk during a 1-in-100-year storm surge event. The purpose is to prioritise infrastructure upgrades.
+</p>
+</div>
 
 ### Step 2 – Translating to Observation Requirements
 
@@ -321,8 +344,11 @@ The next step is to translate the abstract user need (‘risk’) into concrete,
 
 (The theory allowing us to determine the required resolution will be covered in the second year of the program, but the key point is that we must define how good our data needs to be to be useful.)
 
-```
-Assessing flood risk in Seaside Town – Determining flood risk requires knowing two primary things: the height of the land and the height of the water level during a 1-in-100-years storm surge event. This translates to:
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Assessing flood risk in Seaside Town }$
+
+Determining flood risk requires knowing two primary things: the height of the land and the height of the water level during a 1-in-100-years storm surge event. This translates to:
 
 Measurands:
 - Ground surface elevation (topography)
@@ -337,7 +363,9 @@ Specifications:
 - Temporal coverage: Elevation data should be recent, as construction can alter the landscape
 
 - Accuracy: The vertical accuracy of the elevation data is critical. If we need to know whether a 50 cm high barrier will protect a neighbourhood, the ground elevation must be known with an accuracy significantly better than that, for example, to within ±10 cm
-```
+</p>
+</div>
+
 
 ### Step 3 – Defining System Requirements
 
@@ -349,8 +377,11 @@ If remote sensing is chosen, the next question is which platform to use. Satelli
 
 This stage is ultimately about making informed choices and managing trade-offs. The ‘perfect’ measurement system may be too costly, too slow, or may not exist at all. In any case we must demonstrate—at least in theory—that the proposed system can meet the observation requirements.
 
-```
-Assessing flood risk in Seaside Town – How can we measure ground elevation with 1-meter resolution and ±10 cm vertical accuracy over the whole town?
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Assessing flood risk in Seaside Town }$
+
+How can we measure ground elevation with 1-meter resolution and ±10 cm vertical accuracy over the whole town?
 
 System Requirements (not complete):
 - Instrument &amp; Method: We chose to extract the elevation model using an airborne LiDAR (Light Detection and Ranging) system. An Airborne LiDAR system (ALS) integrates a laser scanner, a Global Navigation Satellite System (GNSS), and an Inertial Navigation System (INS). It is a commonly used method for this application. The distance between the scanner and the target is calculated based on the time interval between the laser pulse being transmitted and its reflection being received. By combining this with the position and attitude of the laser scanner as observed by the GNSS and the inertial measurement unit (IMU, module of the INS), the 3D spatial coordinates of the target are calculated.
@@ -358,20 +389,25 @@ System Requirements (not complete):
 - Procedure: Depending on the characteristics of the laser scanner, we need to fly at a certain altitude. Together with the swath width covered by the laser scanner, this is key input to design the flight plan.
 
 - Constraints &amp; Trade-offs: Airborne LiDAR surveys are expensive. Budget limitations may force compromises, such as lower resolution or reliance on older datasets. This illustrates the classic engineering trade-off between cost, quality, and time.
-```
+</p>
+</div>
 
 ### Step 4 – Calibration and Validation (Cal/Val) Plan
 
 Finally, having a system is not enough—we must prove that it works. The Cal/Val plan addresses this by asking: How will we demonstrate that our system and data meet the required accuracy? This may also be an ongoing task. For example, if we conduct a monitoring over a long time span, it is not sufficient to proof at the start that the system performs. Indeed, instrument performance can degrade over time. 
 
-```
-Assessing flood risk in Seaside Town – Our system requirement is to deliver an elevation map with ±10 cm vertical accuracy. How do we prove we achieved this?
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+$\textbf{Assessing flood risk in Seaside Town }$
+
+Our system requirement is to deliver an elevation map with ±10 cm vertical accuracy. How do we prove we achieved this?
 
 Cal/Val Plan (not complete):
 Calibration: A primary source of systematic error is angular misalignment between the mounting axes of the laser scanner and the IMU, known as boresight misalignment. This can be compared to a poorly adjusted sight (the IMU) on a rifle (the laser scanner): no matter how carefully you aim, the result will always be systematically off target. Another common source is the physical offset between the laser scanner and the GNSS antenna, referred to as lever-arm offsets. To address these, calibration is required. Several methods are available—for example, the approach described by Tian et al. (2022).
 
 Validation: After the survey, ground-truth measurements are collected using GNSS at 30–50 easily identifiable points in Seaside Town (e.g. road intersections). Validation is performed by comparing these elevations with the ALS-derived values.
-```
+</p>
+</div>
 
 ## The Observation Campaign
 

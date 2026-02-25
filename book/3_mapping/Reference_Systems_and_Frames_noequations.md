@@ -1,15 +1,12 @@
 # Coordinate Reference Systems
 
-
-## Introduction
-
 Coordinate Reference Systems (CRSs) allow us to describe, record, and compare the position, motion, and relationships of points or objects. The need to do so is widespread. Astronomers, for example, require a CRS to locate stars, galaxies, and other celestial objects in the sky. Engineers use CRSs in the design and construction of infrastructure, mechanical components, and structures. In robotics, CRSs are essential for controlling robot motion and enabling interaction with the environment. In computer graphics, CRSs play a key role in animating objects, generating 3D models, and displaying images. These are just a few examples.
 
 In the field of Earth, Climate and Technology (EC&T), CRSs are also used extensively. In most cases they provide the spatial reference that is a defining characteristic of geodata. This alone makes it essential for EC&T engineers and scientists to have a basic understanding of CRSs, how they are defined and realized in practice, and how to transform coordinates between different CRSs. The importance of this knowledge and these skills is further reinforced by:
 
-- The sheer number of CRSs in use. There are over 10,000 CRSs (https://epsg.io/), although most can be traced back to a few basic types. Any attempt to combine or compare geodatasets requires them to be represented in the same CRS.
-- The role of CRSs in analysis. Certain operations or analyses can be made much simpler—or more accurate—by transforming data into a different CRS. For example, calculating distances between points is considerably easier on a plane than on a reference ellipsoid.
-- The CRS in which the measurements are collected is typically not the target CRS. Measurements are often collected in a CRS tied to the sensor itself. As noted above, once these measurements need to be integrated with other datasets, they must be transformed into another CRS. This may involve a chain of transformations. For instance, when acquiring imagery from a satellite, a series of steps is required to transform pixel coordinates into a CRS that is referenced to the Earth.
+1. The sheer number of CRSs in use. There are over 10,000 CRSs (https://epsg.io/), although most can be traced back to a few basic types. Any attempt to combine or compare geodatasets requires them to be represented in the same CRS.
+2. The role of CRSs in analysis. Certain operations or analyses can be made much simpler—or more accurate—by transforming data into a different CRS. For example, calculating distances between points is considerably easier on a plane than on a reference ellipsoid.
+3. The CRS in which the measurements are collected is typically not the target CRS. Measurements are often collected in a CRS tied to the sensor itself. As noted above, once these measurements need to be integrated with other datasets, they must be transformed into another CRS. This may involve a chain of transformations. For instance, when acquiring imagery from a satellite, a series of steps is required to transform pixel coordinates into a CRS that is referenced to the Earth.
 
 In this chapter, we will focus on the CRSs used to describe positions of points / objects on or near the Earth’s surface. CRSs used to describe Earth’s rotation or satellite orbits will not be considered here. The chapter begins with an introduction to coordinate systems, vertical coordinate systems, datums and frames, and map projections. Thereafter, we will explore different types of CRSs in more detail and discuss some of the most important examples. Finally, we will then introduce datum transformations.
 
@@ -44,9 +41,9 @@ Many different coordinate systems exists (e.g., Neutsch, 2011). A comprehensive 
 
 3D Cartesian coordinate systems can be considered a straightforward extension of 2D Cartesian coordinate systems by adding a third axis. Each coordinate of a point P, is the signed distance from P to the plane defined by the other two axes (see Fig. 2). The sign is determined by the orientation of the corresponding axis. Together, the coordinates form a triplet that is typically denoted as X,Y,Z.
 
-````{figure} ../figures/refsys_12.png
+````{figure} ../figures/part-a_refsys2.png
 ---
-name: refsys1
+name: refsys2
 width: 60%
 align: center
 ---
@@ -68,63 +65,60 @@ To define a 3D Cartesian coordinate system, we need to:
 
 A point P in space can also be described using spherical coordinates (ψ, λ, r), where ψ is the angle of the position vector (vector from the origin to P) with the XY-plane, λ is the angle between the X-axis and the projection of the position vector onto the XY-plane, and r is the length of the position vector (see Fig. 1b). ψ, λ, and r are referred to as, respectively, the geocentric latitude, the longitude, and the geocentric radius. The relationship between Cartesian and spherical coordinates is given by:
 
-|  | (1.1) |
-| --- | --- |
+formula (1.1)
 
 The inverse relationship is given by:
 
-| 
-\begin{equation}
-\mathbf{R}{{({\Omega_{X},\Omega_{Y},\Omega_{Z}})} = \mathbf{R_{Z}}}{(\Omega_{Z})}\mathbf{R_{Y}}{(\Omega_{Y})}\mathbf{R_{X}}{(\Omega_{X})},
-\end{equation}
- formula | (1.2) |
-| --- | --- |
+formula (1.2)
 
 
 ### Ellipsoidal Coordinate Systems
 
 In an ellipsoidal coordinate system, we locate a point relative to an ellipsoid (of revolution) — the 3D surface formed by rotating an ellipse about its minor axis. In doing so, we use the geographic (or geodetic) latitude φ, longitude λ, and height h (See Fig. 3). φ is the angle measured in the meridian plane between the equatorial plane and the surface normal and λ is the angle measured in the equatorial plane between the zero meridian (X-axis) and the meridian plane of P. Here, φ is positive northwards and negative southwards and λ is positive as reckoned towards the east. The height h represents the distance between P and the ellipsoid measured along the ellipsoid’s normal (i.e., the line perpendicular to its surface).
 
-| Fig. 3: Ellipsoidal and Cartesian coordinates. The ellipsoidal latitude φ is also known as geodetic or geographic latitude. The ellipsoidal coordinates φ and λ are also called geographic coordinates (Tiberius et al., 2022, Fig. 29.2). |  |
-| --- | --- |
-
-The shape of an ellipsoid is defined by two parameters. The first is the semi-major axis or the equatorial radius a. The other parameter is either the semi-minor axis (or polar radius), b, or the flattening, f, or the eccentricity, e. They are related by:
-
-| formula | (1.3) |
-| --- | --- |
-
-The relationship between Cartesian and geographic coordinates is given by:
-
-| formula | (1.4) |
-| --- | --- |
-
-whereas the inverse relationship is given by the iterative formula:
-
-| formula(iterate four times, start withformula) formula formula | (1.5) |
-| --- | --- |
-
-````{figure} ../figures/Object 21
+````{figure} ../figures/part-a_refsys3.png
 ---
-name: refsys2
+name: refsys3
 width: 60%
 align: center
 ---
-, referred to in both equations, is the radius of curvature in the prime vertical normal section (see Fig. 4). That is, it is the distance between the surface of the ellipsoid and the polar axis measured along the line normal to the surface of the ellipsoid that goes through P. The prime vertical normal section is the curve formed by the intersection of the normal plane—a plane passing through the ellipsoid’s surface normal at a given point—and the surface of the ellipsoid, which has the minimum curvature. This section is oriented in the east–west direction and is one of the two principal normal sections. The other is the meridian normal section, which is perpendicular to the prime vertical section (i.e., it lies in the north–south direction) and has maximum curvature. Its radius of curvature is referred to as
-\begin{equation}
-M(\varphi) = \frac{a(1-e^{2})}{\left(1-e^{2}\sin^{2}\varphi\right)^{3/2}}
-\end{equation}
-. Both radii of curvature increase toward the poles (see Fig. 5). Their equations are:
+Fig. 3: Ellipsoidal and Cartesian coordinates. The ellipsoidal latitude φ is also known as geodetic or geographic latitude. The ellipsoidal coordinates φ and λ are also called geographic coordinates (Tiberius et al., 2022, Fig. 29.2).
 ````
 
-| formula formula | (1.6) |
-| --- | --- |
+The shape of an ellipsoid is defined by two parameters. The first is the semi-major axis or the equatorial radius a. The other parameter is either the semi-minor axis (or polar radius), b, or the flattening, f, or the eccentricity, e. They are related by:
 
-| Fig. 4: Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latitude ψ, radius of curvature $\overline{N}$, radius $r$, ellipsoidal height h, semi-major axis a and semi-minor axis b of the ellipsoid. The dashed line shows the local tangent plane to the ellipsoid. (Tiberius et al., 2022, Fig. 29.3). |  |
-| --- | --- |
+formula (1.3)
 
-| Fig. 5: Radius of curvature $\,\overline{N}\,$ and $M$ as function of latitude φ. The dashed lines represent the semi-major axis a and semi-minor axis b. (Tiberius et al., 2022, Fig. 29.4). |  |
-| --- | --- |
+The relationship between Cartesian and geographic coordinates is given by:
 
+formula (1.4)
+
+whereas the inverse relationship is given by the iterative formula:
+
+formula (1.5) 
+
+
+, referred to in both equations, is the radius of curvature in the prime vertical normal section (see Fig. 4). That is, it is the distance between the surface of the ellipsoid and the polar axis measured along the line normal to the surface of the ellipsoid that goes through P. The prime vertical normal section is the curve formed by the intersection of the normal plane—a plane passing through the ellipsoid’s surface normal at a given point—and the surface of the ellipsoid, which has the minimum curvature. This section is oriented in the east–west direction and is one of the two principal normal sections. The other is the meridian normal section, which is perpendicular to the prime vertical section (i.e., it lies in the north–south direction) and has maximum curvature. Its radius of curvature is referred to as formula. Both radii of curvature increase toward the poles (see Fig. 5). Their equations are:
+
+formula formula (1.6)
+
+````{figure} ../figures/part-a_refsys4.png
+---
+name: refsys4
+width: 60%
+align: center
+---
+Fig. 4: Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latitude ψ, radius of curvature formularadius r, ellipsoidal height h, semi-major axis a and semi-minor axis b of the ellipsoid. The dashed line shows the local tangent plane to the ellipsoid. (Tiberius et al., 2022, Fig. 29.3).
+````
+
+````{figure} ../figures/part-a_refsys5.png
+---
+name: refsys5
+width: 60%
+align: center
+---
+Fig. 5: Radius of curvature formulaand formulaas function of latitude φ. The dashed lines represent the semi-major axis a and semi-minor axis b. (Tiberius et al., 2022, Fig. 29.4).
+````
 
 ## Height Coordinate Systems
 
@@ -149,20 +143,11 @@ The gravity potential of the Earth, W, is the sum of the gravitational potential
 
 The gravitational potential V at a point P represents the work done by gravitation to move a unit mass from infinity (where V=0) to the point P. As such, V is negative. In geodesy, however, the negative sign is omitted. Following this convention, for a point mass V=Gm/l, where G is Newton’s gravitational constant (6.67428 ± 0.00067 × 10-11 m3 kg-1 s-2 ), m is the attracting mass, and l is the distance between P and m. For the Earth—being a three-dimensional body with volume v and variable density ρ—the expression for V becomes:
 
-| formula | (1.7) |
-| --- | --- |
+formula (1.7)
 
 where the coordinates of the attracted point P are given by XP, YP, ZP and that of the mass element m by ξ, η, ζ.
 
-````{figure} ../figures/Object 26
----
-name: refsys3
-width: 60%
-align: center
----
-The centrifugal potential arises from the fact that the Earth rotates about its own axis. In a Cartesian coordinate system co-rotating with the Earth and with its origin at the Earth’s centre, the potential is given by formulaHere, ω is the angular velocity of the Earth’s rotation and formularepresents the squared distance from the polar axis to the point P.
-````
-
+The centrifugal potential arises from the fact that the Earth rotates about its own axis. In a Cartesian coordinate system co-rotating with the Earth and with its origin at the Earth’s centre, the potential is given by formula Here, ω is the angular velocity of the Earth’s rotation and formularepresents the squared distance from the polar axis to the point P.
 
 ### Plumb Lines and Gravity
 
@@ -170,8 +155,7 @@ Gravity potential W and gravity are closely related. The gravity vector g is the
 
 The differential of W (dW) can be written as the scalar product of the two vectors g and dx=[dx,dy,dz], that is,
 
-| dW = g·dx. | (1.8) |
-| --- | --- |
+ formula dW = g·dx. (1.8)
 
 If dx is taken along an equipotential surface where W=constant, the potential remains constant and dW=0, from which it follows that g·dx=0. Since the scalar product of two vectors equals zero only when they are perpendicular, it follows that the gravity vector is orthogonal to the equipotential surface passing through the same point.
 
@@ -181,18 +165,15 @@ Heights defined along the plumb line are known as orthometric heights (denoted H
 
 If the vector dx is taken along the plumb line, in the direction of increasing height H, then its length is ∥dx∥ = dH, and its direction is opposite to that of the gravity vector g, which points downward. Hence, the angle between dx and g is 180°. Using the definition of the scalar product (for two vectors a and b, it is defined as a⋅b=∥a∥∥b∥ cos α, where α is the angle between them), we obtain
 
-| g · dx = g dH cos 180° = −g dH. | (1.9) |
-| --- | --- |
+g · dx = g dH cos 180° = −g dH. (1.9)
 
 From this, we find (see Eq. 1.8):
 
-| dW = −g dH, | (1.10) |
-| --- | --- |
+dW = −g dH, (1.10)
 
 which can also be written
 
-| g= - ∂W/∂H. | (1.11) |
-| --- | --- |
+g= - ∂W/∂H. (1.11)
 
 Eq. 1.10 relates the orthometric height H to the potential W and forms the basis of the theory of height determination. Eq. 1.11 shows that gravity is the negative vertical gradient of the potential W.
 
@@ -209,28 +190,13 @@ Equipotential surfaces of the Earth’s gravity field therefore have a complex s
 
 Given our expectation that two points of equal height should lie in the same level surface, it follows from the above that this does not hold for orthometric heights. In other words, two points with the same gravity potential in general do not have the same geometric distance (measured along the plumb line) to the equipotential surface used as the reference. Rather than expressing vertical position as a length, we should therefore express it as a difference in potential. The quantity used for this purpose is the geopotential number C, defined as
 
-| formula | (1.12) |
-| --- | --- |
+formula (1.12)
 
-````{figure} ../figures/Object 3
----
-name: refsys4
-width: 60%
-align: center
----
-whereis the mean value of the gravity along the plumb line between the geoid and the surface point P. The geopotential number C is measured in geopotential units (g.p.u.), where 1 g.p.u. = 1 kgal m = 1000 gal m, and note that 1 gal = 10−2 m s−2.
-````
+where is the mean value of the gravity along the plumb line between the geoid and the surface point P. The geopotential number C is measured in geopotential units (g.p.u.), where 1 g.p.u. = 1 kgal m = 1000 gal m, and note that 1 gal = 10−2 m s−2.
 
 Expressing vertical positions by potential differences, however, does not meet practical needs. For this reason, several alternative height coordinate systems have been defined, in which height can be expressed in the general form
 
-````{figure} ../figures/Object 5
----
-name: refsys5
-width: 60%
-align: center
----
-Height =formula
-````
+formula
 
 These height systems differ according to the choice of the gravity value G0 in the denominator. The principal systems are:
 
@@ -240,8 +206,23 @@ These height systems differ according to the choice of the gravity value G0 in t
 
 In the case of normal heights, the Earth’s gravity field is replaced by the gravity field of a reference ellipsoid (which can be computed analytically) and heights are measured along the ellipsoidal normal (see Fig. 6b). Without going into further details, normal heights can be interpreted as heights with respect to the quasi-geoid. In areas with moderate to little topography, the differences between the geoid and quasi-geoid as well as the differences between orthometric and normal heights are small (mm-cm). In mountainous regions, the differences can reach multiple meters (Foroughi and Tenzer, 2017). The key advantage of the normal height system versus the orthometric height system is that the first does not require any information about the Earth’s density distribution. The advantages and disadvantages of the different systems are summarised in Table 1.1.
 
-| Fig. 6a: The orthometric height HO: the curved-line distance measured along the plumb line from the point P0 on the geoid to the point of interest P on the Earth’s surface. The geoid height N: the straight-line distance measured along the ellipsoidal surface normal from the point Q0 on the ellipsoid to the point P0 on the geoid. (Note: the curvature of the equipotential surfaces and plumb lines is exaggerated for illustrative purposes). Adapted from Featherstone & Kuhn (2006), Fig. 2. | Fig. 6b: The normal height HN: the curved-line distance measured along the normal gravity plumb line from the point on the reference ellipsoid to the point Q on the telluroid. The quasi-geoid height: the straight-line distance measured along the ellipsoidal surface normal from formulaon the ellipsoid to the point formulaon the quasi-geoid. By definition, this distance equals the height anomaly: the straight-line distance measured along the ellipsoidal normal from the point P on the Earth’s surface to the point Q on the telluroid. Adapted from Featherstone & Kuhn (2006), Fig. 3. |
-| --- | --- |
+````{figure} ../figures/part-a_refsys6a.png
+---
+name: refsys6a
+width: 60%
+align: center
+---
+Fig. 6a: The orthometric height HO: the curved-line distance measured along the plumb line from the point P0 on the geoid to the point of interest P on the Earth’s surface. The geoid height N: the straight-line distance measured along the ellipsoidal surface normal from the point Q0 on the ellipsoid to the point P0 on the geoid. (Note: the curvature of the equipotential surfaces and plumb lines is exaggerated for illustrative purposes). Adapted from Featherstone & Kuhn (2006), Fig. 2. |
+````
+
+````{figure} ../figures/part-a_refsys6b.png
+---
+name: refsys6b
+width: 60%
+align: center
+---
+Fig. 6b: The normal height HN: the curved-line distance measured along the normal gravity plumb line from the point on the reference ellipsoid to the point Q on the telluroid. The quasi-geoid height: the straight-line distance measured along the ellipsoidal surface normal from formulaon the ellipsoid to the point formulaon the quasi-geoid. By definition, this distance equals the height anomaly: the straight-line distance measured along the ellipsoidal normal from the point P on the Earth’s surface to the point Q on the telluroid. Adapted from Featherstone & Kuhn (2006), Fig. 3.
+````
 
 Table 1.1: A comparison of height systems with respect to various properties that distinguish them. Taken and adapted from Meyer et al. (2006).
 
@@ -284,8 +265,14 @@ Table 1.2. Common ellipsoids with semi-major axis a, inverse flattening 1/f, and
 
 As noted in the introduction, a geodetic datum includes not only the parameters describing the size and shape of the sphere or ellipsoid, but also the position of the origin, the orientation of the axes, and the scale (unit). In the pre-satellite era, the datum was chosen so that the ellipsoid provided the best possible approximation to the local geoid. This was achieved by specifying a point—sometimes referred to as the fundamental point—for which the separation between the ellipsoid and the geoid was zero, and for which the ellipsoidal normal coincided with the direction of local gravity. Furthermore, the orientation of the minor axis of the ellipsoid was chosen to be parallel to the Earth’s rotation axis, and a prime meridian was defined for zero longitude. As illustrated in Fig. 7, alignment to the local geoid means that even when the same reference ellipsoid is used, different geodetic datums may be obtained.
 
-| Fig. 7: The shape of the Earth, i.e. the geoid (blue dashed line) with its best fitting reference ellipsoid (blue solid line). The red reference ellipsoids have a different size and shape compared to the one the best fits the global geoid. Both are positioned and oriented in such a way that they fit the local geoid best in different locations resulting in different geodetic datums. |  |
-| --- | --- |
+````{figure} ../figures/part-a_refsys7.png
+---
+name: refsys7
+width: 60%
+align: center
+---
+Fig. 7: The shape of the Earth, i.e. the geoid (blue dashed line) with its best fitting reference ellipsoid (blue solid line). The red reference ellipsoids have a different size and shape compared to the one the best fits the global geoid. Both are positioned and oriented in such a way that they fit the local geoid best in different locations resulting in different geodetic datums.
+````
 
 Modern, global geodetic datums—such as those used in GNSS positioning—are based on a geocentric 3D Cartesian coordinate system whose origin coincides with the Earth’s centre of mass. Its z-axis aligns with the actual rotation axis of the Earth. Both the direction and speed of this rotation axis are determined by the International Earth Rotation and Reference Systems Service (IERS; McCarthy and Petit, 2003). The prime meridian is the international reference meridian defined by the IERS, which is, in principle, coincident with the meridian passing through the old Greenwich Observatory. When ellipsoidal coordinates are computed, the GRS80 ellipsoid is used.
 
@@ -300,9 +287,14 @@ Historically, vertical datums were often defined using observation-derived (mean
 
 When countries or regions define their vertical datums based on local water-level observations, systematic differences between datums inevitably arise. Regardless of the chosen water level (e.g., mean water level), it represents a quantity that varies in both space and time. Consequently, the height of a point relative to datum A will generally differ from its height relative to datum B. Within Europe, such differences can amount to approximately 2.30 m (see Fig. 8).
 
-| Fig. 8: The differences between the national vertical datums and the one adopted for the European vertical vertical reference system. Taken from www.bkg.bund.de. |
-| --- |
-
+````{figure} ../figures/part-a_refsys8.png
+---
+name: refsys8
+width: 60%
+align: center
+---
+Fig. 8: The differences between the national vertical datums and the one adopted for the European vertical vertical reference system. Taken from www.bkg.bund.de.
+````
 
 ### Engineering datums
 
@@ -323,8 +315,14 @@ In the context of a levelling-based vertical (height) reference frame, the frame
 
 Each time new levellings are performed between the datum point(s) and the benchmarks, and the benchmark heights are re-estimated, a new reference frame is obtained. This new frame will differ from the previous one because: (i) repeated levellings will not yield identical height differences due to measurement uncertainty; (ii) new benchmarks may have been installed and/or existing ones removed; and/or (iii) some points may have experienced vertical motion. However, as long as the assigned height of the fundamental benchmark(s) remains unchanged, the datum itself has not changed.
 
-| Fig. 9: A height benchmark in the CiTG building. |  |
-| --- | --- |
+````{figure} ../figures/part-a_refsys9.png
+---
+name: refsys9
+width: 60%
+align: center
+---
+Fig. 9: A height benchmark in the CiTG building.
+````
 
 This example illustrates that a new vertical reference frame can be realized without redefining the vertical datum. The converse, however, is not true: redefining or rematerializing the datum—for example, by establishing a new fundamental benchmark that fixes the datum—necessarily requires the computation of a new reference frame. This principle applies equally to other types of datums (e.g., geodetic datums). As stated by Drewes (2009): “reference systems, the geodetic datum, and reference frames form an order of hierarchy: (i) The definition of a reference system must be completely unaffected by the realization of the reference frame and the geodetic datum, i.e., the realization of the system by the frame and the allocation of the datum must not change the definition. (ii) The realization of the datum has to be done by methods independent of the measurements of the reference frame, i.e., measurement errors or physical changes altering the observations of the frame must not affect the datum. (iii) The mathematical realization of the reference frame has to be done by algorithms that keep the datum parameters fixed and follow strictly the principles defined by the reference system”.
 
@@ -358,8 +356,14 @@ The value of k varies from point to point and often also with direction, so it a
 
 A classical way to visualize distortion is using Tissot’s indicatrix—the shape resulting from projecting an infinitesimally small circle from the sphere or ellipsoid onto the map. It depends on the scale factors along the meridian and parallel and on the angle between them. The result is an ellipse whose axes indicate the directions of maximum and minimum scale distortion. See Fig. 10 for an example.
 
-| Fig. 10: Tissot's indicatrices on the Mercator projection. Stefan Kühn, CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons. |  |
-| --- | --- |
+````{figure} ../figures/part-a_refsys10.png
+---
+name: refsys10
+width: 60%
+align: center
+---
+Fig. 10: Tissot's indicatrices on the Mercator projection. Stefan Kühn, CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons.
+````
 
 
 #### Projections Surfaces
@@ -376,14 +380,20 @@ Conic projections – The projection surface is a cone. Parallels appear as arcs
 
 Planar (Azimuthal) projections – The projection surface is a plane that may touch or intersect the globe at any point. If it touches a pole, meridians appear as straight lines and parallels as concentric circles. At the point of contact, directions are accurate.
 
-| Fig. 11: Cylindrical, conic and azimuthal map projections. Image of cylindrical, conic and azimuthal map projection, by Traroth, March 2005, taken from Wikimedia Commons, under CC BY-SA 3.0 license. |
-| --- |
+````{figure} ../figures/part-a_refsys11.png
+---
+name: refsys11
+width: 60%
+align: center
+---
+Fig. 11: Cylindrical, conic and azimuthal map projections. Image of cylindrical, conic and azimuthal map projection, by Traroth, March 2005, taken from Wikimedia Commons, under CC BY-SA 3.0 license.
+````
 
 The projection surface can be oriented in different ways, described by its aspect. It may be normal (aligned with Earth’s rotation axis), transverse (perpendicular to it), or oblique (any angle in between) (see Fig. 12).
 
-````{figure} ../figures/refsys_16.png
+````{figure} ../figures/refsys_12.png
 ---
-name: refsys6
+name: refsys12
 width: 60%
 align: center
 ---
@@ -397,9 +407,9 @@ Although these geometric models are conceptually useful, in practice a map proje
 
 Map projections also differ in the point of perspective from which the surface is conceptually projected. Fig. 13 illustrates three common cases: gnomonic, stereographic, and orthographic projections.
 
-````{figure} ../figures/refsys_02.png
+````{figure} ../figures/refsys_13.png
 ---
-name: refsys7
+name: refsys13
 width: 60%
 align: center
 ---
@@ -514,130 +524,39 @@ In this section, we first outline a general strategy that enables the applicatio
 
 Starting from the five different types of CRSs introduced in Sect. 6, a wide range of different transformations can be envisaged. For example, transformations from one geographic CRS to another, but also transformations from an engineering CRS to a geocentric CRS. It is possible to transform directly between two CRSs of the same type. Within the scope of these lecture notes, however, it is not feasible to treat all the methods required for this. We therefore resort to indirect transformation methods. Essentially, these consist of first converting the coordinates to a geocentric CRS, then transforming them to the target geodetic datum, and finally converting the coordinates to the desired coordinate system. From an educational point of view, this means that we only need to introduce a single transformation method. This is the commonly applied 7-parameter similarity transformation (or 14-parameter in the case that time dependency is included). The strategy is outlined in Fig. 14.
 
-| Fig. 14: Coordinate conversions and datum transformations. The horizontal operations represent coordinate conversions, while the vertical operations show datum transformations from system A to system B. Although direct transformations between different projected and geographic CRSs are possible, our strategy relies on indirect methods. These consist of converting the coordinates to a geocentric CRS, applying the datum transformation to the target geodetic datum, and then converting the transformed coordinates to the desired coordinate system. Figure is taken and adapted from Tiberius et al. (2022, Fig. 31.1). |
-| --- |
+````{figure} ../figures/refsys_14.png
+---
+name: refsys14
+width: 60%
+align: center
+---
+Fig. 14: Coordinate conversions and datum transformations. The horizontal operations represent coordinate conversions, while the vertical operations show datum transformations from system A to system B. Although direct transformations between different projected and geographic CRSs are possible, our strategy relies on indirect methods. These consist of converting the coordinates to a geocentric CRS, applying the datum transformation to the target geodetic datum, and then converting the transformed coordinates to the desired coordinate system. Figure is taken and adapted from Tiberius et al. (2022, Fig. 31.1).
+````
 
 
 ### 3D Similarity Transformations
 
 3D similarity transformations, also referred to as Helmert transformations, are transformations that preserve shape (lengths of lines and the position of points may change). The transformation accounts for a translation of the origin of the 3D Cartesian coordinate system (3 parameters), a rotation about each of the three axes (3 parameters), and a change in the scale (1 parameter). It is written as:
 
-````{figure} ../figures/Object 9
----
-name: refsys8
-width: 60%
-align: center
----
-````
+formula
 
 where λ = 1+μ is the scale factor between the two systems, μ the differential scale factor (sometimes expressed in parts-per-million (ppm), with 1 ppm = 10−6), and R is the rotation matrix defined as:
 
-````{figure} ../figures/Object 12
----
-name: refsys9
-width: 60%
-align: center
----
-
-\begin{equation}
-\mathrm{Height} = \frac{C}{G_{0}}
-\end{equation}
-
-````
+formula
 
 with
 
-````{figure} ../figures/Object 13
----
-name: refsys10
-width: 60%
-align: center
----
+formula
 
-\begin{equation}
-{\begin{pmatrix}
-X \\
-Y \\
-Z \\
-\end{pmatrix}_{\mathit{Target}} = \lambda}\mathbf{R}{({\Omega_{X},\Omega_{Y},\Omega_{Z}})}{\begin{pmatrix}
-X \\
-Y \\
-Z \\
-\end{pmatrix}_{\mathit{Source}} + \begin{pmatrix}
-{\Delta X} \\
-{\Delta Y} \\
-{\Delta Z} \\
-\end{pmatrix}},
-\end{equation}
-
-````
-
-````{figure} ../figures/Object 14
----
-name: refsys11
-width: 60%
-align: center
----
-The composed rotation is gained by the rotation of 
-\begin{equation}
-\mathbf{R}{{({\Omega_{X},\Omega_{Y},\Omega_{Z}})} = \mathbf{R_{Z}}}{(\Omega_{Z})}\mathbf{R_{Y}}{(\Omega_{Y})}\mathbf{R_{X}}{(\Omega_{X})},
-\end{equation}
-about the x-axis, followed by formulaaround the y-axis (already subject to the first rotation) and finally formulaabout the z-axis (again subject to the previous two rotations).
-````
+The composed rotation is gained by the rotation of formulaabout the x-axis, followed by formulaaround the y-axis (already subject to the first rotation) and finally formulaabout the z-axis (again subject to the previous two rotations).
 
 If the rotation angles are small (i.e., less than 10"), R is given by:
 
-````{figure} ../figures/Object 10
----
-name: refsys12
-width: 60%
-align: center
----
-
-\begin{equation}
-\mathbf{R}{{({\Omega_{X},\Omega_{Y},\Omega_{Z}})} = \begin{pmatrix}
-1 & \Omega_{Z} & {- \Omega_{Y}} \\
-{- \Omega_{Z}} & 1 & \Omega_{X} \\
-\Omega_{Y} & {- \Omega_{X}} & 1 \\
-\end{pmatrix}},
-\end{equation}
-
-````
+formula
 
 and the transformation is simplified (products μ Ω𝑖 can be safely neglected) to:
 
-````{figure} ../figures/Object 11
----
-name: refsys13
-width: 60%
-align: center
----
-
-\begin{equation}
-{\begin{pmatrix}
-X \\
-Y \\
-Z \\
-\end{pmatrix}_{\mathit{Target}} = {\begin{pmatrix}
-X \\
-Y \\
-Z \\
-\end{pmatrix}_{\mathit{Source}} + \begin{pmatrix}
-\mu & \Omega_{Z} & {- \Omega_{Y}} \\
-{- \Omega_{Z}} & \mu & \Omega_{X} \\
-\Omega_{Y} & {- \Omega_{X}} & \mu \\
-\end{pmatrix}}}{\begin{pmatrix}
-X \\
-Y \\
-Z \\
-\end{pmatrix}_{\mathit{Source}} + \begin{pmatrix}
-{\Delta X} \\
-{\Delta Y} \\
-{\Delta Z} \\
-\end{pmatrix}}.
-\end{equation}
-
-````
+formula
 
 Be aware that different conventions are used for the sign of the rotation parameters. In both conventions a positive rotation occurs in an anti-clockwise direction, when looking along the positive axis towards the origin. However, the IERS convention (also called the position vector convention) deems the rotations to be of the points relative to the axes while the ‘coordinate frame rotation convention’ that is used here deems the rotations to be of the axes relative to the points.
 
@@ -650,32 +569,20 @@ Two main operations are: i) the transformation between ellipsoidal heights and g
 
 The relation between orthometric height 𝐻 and ellipsoidal height ℎ is without any significant loss of accuracy given by ℎ=𝑁+𝐻, where N is the height of the geoid above the ellipsoid. For the relation between the normal height HN and ellipsoidal height ℎ, we need to replace N by the height of the quasi-geoid (ζ). The values of the (quasi-)geoid height are typically to be obtained from gridded (quasi-)geoid models. Such models are computed from various types of gravity data acquired both in-situ as well as from moving platforms (e.g., airplanes, ships, and satellites) and may cover a particular country, region or even the entire globe. In the Netherlands, the official model to be used in order to convert GNSS-derived ellipsoidal heights into NAP heights is the NLGEO2018 quasi-geoid model (see Fig. 15).
 
-| Fig. 15: The Dutch NLGEO2018 quasi-geoid model that needs to be used to convert GNSS-derived ellipsoidal heights into NAP heights. |  |
-| --- | --- |
-
-The transformation between vertical CRSs referring to different vertical datums is one that can be written as (Iliffe and Lott, 2008):
-
-````{figure} ../figures/Object 18
----
-name: refsys14
-width: 60%
-align: center
----
-
-\begin{equation}
-{H_{\mathit{Target}} = {\lbrack{{({{H_{\mathit{Source}} + \Delta}H})}U_{\mathit{Source}}}\rbrack}}\frac{m}{U_{\mathit{Target}}},
-\end{equation}
-
-````
-
-````{figure} ../figures/Object 19
+````{figure} ../figures/refsys_15.png
 ---
 name: refsys15
 width: 60%
 align: center
 ---
-with formulabeing an offset, m is a unit direction multiplier (m = 1 if both systems are height or both are depth and m = -1 if one system is height and the other system is depth), and USource and UTarget are unit conversion ratios to metres for the source and target systems and the offset value respectively. formulamay be: i) a constant that is valid for an entire region, ii) a spatially varying offset to be obtained by means of interpolation from a gridded dataset, or iii) is given by a mathematical model. One example of the latter that has been used in the past to describe the transformation between the national vertical CRSs and the European Vertical Reference Frame is the model of a tilted plane that includes a constant offset as well as a slope in longitude and latitude direction.
+Fig. 15: The Dutch NLGEO2018 quasi-geoid model that needs to be used to convert GNSS-derived ellipsoidal heights into NAP heights.
 ````
+
+The transformation between vertical CRSs referring to different vertical datums is one that can be written as (Iliffe and Lott, 2008):
+
+formula
+
+with formulabeing an offset, m is a unit direction multiplier (m = 1 if both systems are height or both are depth and m = -1 if one system is height and the other system is depth), and USource and UTarget are unit conversion ratios to metres for the source and target systems and the offset value respectively. formulamay be: i) a constant that is valid for an entire region, ii) a spatially varying offset to be obtained by means of interpolation from a gridded dataset, or iii) is given by a mathematical model. One example of the latter that has been used in the past to describe the transformation between the national vertical CRSs and the European Vertical Reference Frame is the model of a tilted plane that includes a constant offset as well as a slope in longitude and latitude direction.
 
 
 ### Practical Implementation
@@ -706,42 +613,3 @@ Meyer, Thomas H.; Roman, Daniel R.; and Zilkoski, David B. (2006). What Does Hei
 Neutsch, W. (2011). Coordinates. Walter de Gruyter.
 
 Tiberius, C., van der Marel, H., Reudink, R., & van Leijen, F. (2022). Surveying and Mapping. TU Delft OPEN Publishing. https://doi.org/10.5074/T.2021.007
-
-Backup material
-
-https://www.google.nl/books/edition/Coordinates/qaYbi3ugRDIC?hl=nl&gbpv=1&dq=Coordinates&pg=PA1329&printsec=frontcover
-
-https://tudelft.on.worldcat.org/oclc/609533634
-
-https://engineeringstatics.org/cartesian-coords-2d.html
-
-The directions of the axes
-
-https://mathworld.wolfram.com/OrthogonalCoordinateSystem.html
-
-https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Variational_Principles_in_Classical_Mechanics_(Cline)/19%3A_Mathematical_Methods_for_Classical_Mechanics/19.04%3A_Appendix_-_Orthogonal_Coordinate_Systems
-
-https://books.google.nl/books?hl=en&lr=&id=XVJwDrkZA1wC&oi=fnd&pg=PA8&dq=definition+coordinate+system+&ots=M7gaFRbUiI&sig=oJk43EcXJiMzO3e7W6qhkrUNx7Q#v=onepage&q=definition%20coordinate%20system&f=false
-
-https://www.usu.edu/geospatial/tutorials/core-concepts/coordinate-systems
-
-https://docs.ogc.org/per/22-036r1.html#toc16
-
--International Organization for Standardization. (2019). Geographic information – Spatial referencing by coordinates (ISO Standard No. 19111:2019). Geneva, Switzerland.
-
-https://www.ngs.noaa.gov/research/geopotential-datums/geopotential-surface.shtml
-
-https://docs.geotools.org/stable/userguide/library/api/cs.html
-
-https://docs.ogc.org/as/18-005r4/18-005r4.html#34
-
-The rotations in the 7-parameter similarity transformation described above are about the origin of the source system. If the area over which points used in the transformation derivation is small, the angle subtended by this area at the rotation point is small and the problem is ill-conditioned. If the problem is ill-conditioned, a rotation around the origin is very similar to a translation, and a large additional shift may be needed to compensate for this. There is a high degree of correlation between the transformation parameters. As such the solution is not solving for the seven parameters. Therefore, it is better to apply the rotation around an arbitrary point (𝑋0,𝑌0,𝑍0) somewhere in the centre of the network. For this type of transformation three additional parameters, the coordinates of the rotation point, are required to describe the transformation. These additional parameters can be chosen freely, or by convention, and do not have the same role in the derivation of parameter values for the other 7-parameter. The transformation essentially remains a 7-parameter transformation, with 7 degrees of freedom, although an extra 3 parameters are needed in the specification. The transformation formula is:
-
-````{figure} ../figures/Object 17
----
-name: refsys16
-width: 60%
-align: center
----
-formula
-````

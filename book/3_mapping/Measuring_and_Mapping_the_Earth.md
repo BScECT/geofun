@@ -38,13 +38,14 @@ The following notes apply to the definition of measurement. First, measurement a
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
-$\textbf{Scales of Measurement}$
+
+$\textbf{Terms and definitioScales of Measurement}$
 
 Scales of measurement refers to how data values are defined, categorised, and interpreted. The framework most used derives from psychologist Stanley Stevens, who distinguished four scales: nominal, ordinal, interval, and ratio. These scales determine not only how quantities are represented as data, but also which descriptive and inferential statistical methods are valid. Table 1 provides an overview. 
 </p>
 </div>
 
-<!-- 
+
 Table 1: Definition of measurement scales.
 | Scale | Definition | Example |
 | :---: | :---: | :---: |
@@ -57,6 +58,7 @@ Let’s explore this further by starting with the concept of quantity. A quantit
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Reference}$
 
 Imagine my American colleague and I each measure the height of our desks at home. I might report a magnitude of 0.9, while my colleague reports 3. To compare these results, we need two additional pieces of information: (1) the unit used (metres versus feet) and (2) how the height was measured. For a fair comparison, both of us should have measured the perpendicular distance from the tabletop to the floor.
@@ -67,6 +69,7 @@ According to the VIM, quantity is a generic concept that can be made more specif
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Examples of Derived Quantities}$
 
 Density (mass/volume [itself the third power of length]), velocity (length / time), and pressure (force applied perpendicularly to a surface per unit area, derived from mass, length, and time).
@@ -88,9 +91,10 @@ An indirect measurement is one in which the value of the measurand is obtained b
 Y = f(X1, X2, . . . , XN),
 
 where Y is the measurand and Xi refers to the input quantities needed to obtain the result. These may include measured values, corrections, or influence quantities. Each has its own uncertainty, which propagates into the uncertainty of Y. The function f may rest on established physical laws or be determined experimentally, but in either case all significant sources of variation must be incorporated for the result to be meaningful. 
-
+<!-- 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Measuring distance}$
 
 Using a ruler or tape measure gives a direct measurement: the length is read directly from the instrument’s scale. Yet even this simple case becomes indirect once corrections are applied (e.g., for thermal expansion of the ruler). In that case, the measurand is no longer obtained solely by reading the scale, but through a measurement model that combines the observed length with a correction factor.
@@ -118,6 +122,7 @@ In this view, a measurement is a particular type of observation—one that yield
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Observation versus Measurement}$
 
 Recording that the weather was cloudy on 29 August 2025 at 10:00 UTC is an observation but not a measurement. In contrast, reporting that the air temperature was −5.2 °C at the same time is both an observation and a measurement.
@@ -223,6 +228,7 @@ Definitional Uncertainty – Component of measurement uncertainty resulting from
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Example}$
 
 The Length of a River – Suppose you are asked to measure the length of a river. The result will always contain some uncertainty because the definition ‘a river’ is not perfectly specific. Where exactly does the river begin and end? Do you follow every meander, or measure a straight line from source to mouth? This ambiguity in the definition itself creates uncertainty, even before you start measuring. 
@@ -322,6 +328,7 @@ A side note: users are not always known in advance. Observations acquired for on
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Assessing flood risk in Seaside Town }$
 
 In our scenario, the ‘user’ is the Seaside Town city council. The council wants to update its flood defence plan. Specifically, they need to know which residential areas are at risk during a 1-in-100-year storm surge event. The purpose is to prioritise infrastructure upgrades.
@@ -336,6 +343,7 @@ The next step is to translate the abstract user need (‘risk’) into concrete,
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Assessing flood risk in Seaside Town }$
 
 Determining flood risk requires knowing two primary things: the height of the land and the height of the water level during a 1-in-100-years storm surge event. This translates to:
@@ -369,6 +377,7 @@ This stage is ultimately about making informed choices and managing trade-offs. 
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Assessing flood risk in Seaside Town }$
 
 How can we measure ground elevation with 1-meter resolution and ±10 cm vertical accuracy over the whole town?
@@ -388,6 +397,7 @@ Finally, having a system is not enough—we must prove that it works. The Cal/Va
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
+
 $\textbf{Assessing flood risk in Seaside Town }$
 
 Our system requirement is to deliver an elevation map with ±10 cm vertical accuracy. How do we prove we achieved this?

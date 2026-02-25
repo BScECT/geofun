@@ -26,14 +26,11 @@ How can the webpage support your learning?
 
 2. It describes how current is injected into the ground and how voltage differences are measured—exactly the principles behind ERT data acquisition.
 
-3.  The page covers common arrays such as dipole–dipole, pole–dipole, gradient, Schlumberger, and Wenner.
+3. The page covers common arrays such as dipole–dipole, pole–dipole, gradient, Schlumberger, and Wenner.
 
     Each configuration emphasizes different subsurface features, which is crucial for understanding survey design and interpretation.
 
-4. You will find examples include mining exploration, geotechnical investigations, and environmental studies (e.g., detecting pollution leakage).
-
-5. Provides a structured learning resource
-
+4. Instrumentation is explained and illustrated.
 
 
 [Book Chapter](https://link.springer.com/chapter/10.1007/978-3-540-88405-7_3 )

@@ -177,7 +177,7 @@ Every measurement carries uncertainty. Awareness of this associated uncertainty 
 
 In short, it is both fundamentally and practically impossible to achieve absolute certainty in measurement. At the same time, such certainty is rarely required. Measurements are performed to obtain quantitative information that is sufficiently accurate and affordable for a given purpose.
 
-<!-- #### Basic Terminology
+#### Basic Terminology
 
 To analyse measurements and their uncertainty, consistent terminology is required. The VIM provides precise definitions of many terms that we also use in our field. The VIM uses what it calls the ‘Uncertainty Approach’ to measurement terminology. The ‘Error Approach’ was the historical norm prior to publication of the VIM and was used to estimate a value as close as possible to a single true value. The Uncertainty Approach does not attempt to determine a single true value; instead, it assumes that information from the measurement permits an interval of reasonable values. The uncertainty approach is the preferred terminology for use by metrology organizations. Below are simplified definitions of some commonly used terms, based on the VIM (JCGM 200, 2012) and Crowder et al. (2020). 
 
@@ -233,17 +233,19 @@ Definitional Uncertainty – Component of measurement uncertainty resulting from
 $\textbf{Example}$
 
 The Length of a River – Suppose you are asked to measure the length of a river. The result will always contain some uncertainty because the definition ‘a river’ is not perfectly specific. Where exactly does the river begin and end? Do you follow every meander, or measure a straight line from source to mouth? This ambiguity in the definition itself creates uncertainty, even before you start measuring. 
-</p>
-</div>
+
 
 ````{figure} ../figures/part-a_mapping4.jpg
 ---
 name: mapping4
-width: 60%
-align: center
+width: 20%
+align: right
 ---
 Photo by Sindre Fs: https://www.pexels.com/photo/aerial-photography-of-water-beside-forest-during-golden-hour-1144176/
 ````
+
+</p>
+</div>
 
 ## To Measure Is to Know...!?
 
@@ -456,4 +458,4 @@ Teunissen, P.J.G. (2003). Adjustment theory. DUP Blueprint.
 
 Tian, Yu, Zhao, Yibo, Lei, Shaogang, Ji, Chuning, Duan, Lei, Sedlák, Vladimír, Automatic Calibration Method for Airborne LiDAR Systems Based on Approximate Corresponding Points Model, Journal of Sensors, 2022, 4853419, 13 pages, 2022. https://doi.org/10.1155/2022/4853419 
 
-Zheng, L., Shang, X., van den Broeke, M.R. et al. Rapid increases in satellite-observed ice sheet surface meltwater production. Nat. Clim. Chang. 15, 769–774 (2025). https://doi.org/10.1038/s41558-025-02364-4 JCGM 200: International Vocabulary of Metrology – basic and general concepts and terms (VIM), 3rd Edition, 2008 Version with Minor Corrections (2012) available at https://www.bipm.org/en/doi/10.59161/jcgm200-2012. -->
+Zheng, L., Shang, X., van den Broeke, M.R. et al. Rapid increases in satellite-observed ice sheet surface meltwater production. Nat. Clim. Chang. 15, 769–774 (2025). https://doi.org/10.1038/s41558-025-02364-4 JCGM 200: International Vocabulary of Metrology – basic and general concepts and terms (VIM), 3rd Edition, 2008 Version with Minor Corrections (2012) available at https://www.bipm.org/en/doi/10.59161/jcgm200-2012.

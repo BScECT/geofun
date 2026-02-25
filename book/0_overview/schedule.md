@@ -1,4 +1,4 @@
-<img width="1122" height="105" alt="image" src="https://github.com/user-attachments/assets/0aa5f3de-c65c-4b89-b391-077a5fcac307" /># Weekly schedule
+# Weekly schedule
 
 Click on the dropdown blocks below to find the schedule of each week's activities.
 

@@ -39,5 +39,6 @@ If you prefer reading a book to understand the DC-resistivity method, this chapt
 
 [Video](https://www.youtube.com/watch?v=IXZLYhj24L4)
 
+If you prefer someone explaininig you the DC-resistivity method, you can watch this video.
 
 # Cone-penetration testing (CPT)

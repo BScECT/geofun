@@ -46,6 +46,7 @@ Scales of measurement refers to how data values are defined, categorised, and in
 </div>
 
 Table 1: Definition of measurement scales.
+
 | Scale | Definition | Example |
 | :---: | :---: | :---: |
 | Nominal | Distinct classes or categories; no inherent order. | Land cover types: forest, grassland, urban, water|
@@ -91,7 +92,7 @@ Y = f(X1, X2, . . . , XN),
 
 where Y is the measurand and Xi refers to the input quantities needed to obtain the result. These may include measured values, corrections, or influence quantities. Each has its own uncertainty, which propagates into the uncertainty of Y. The function f may rest on established physical laws or be determined experimentally, but in either case all significant sources of variation must be incorporated for the result to be meaningful. 
 
-<!-- 
+
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
 
@@ -455,4 +456,4 @@ Teunissen, P.J.G. (2003). Adjustment theory. DUP Blueprint.
 
 Tian, Yu, Zhao, Yibo, Lei, Shaogang, Ji, Chuning, Duan, Lei, Sedlák, Vladimír, Automatic Calibration Method for Airborne LiDAR Systems Based on Approximate Corresponding Points Model, Journal of Sensors, 2022, 4853419, 13 pages, 2022. https://doi.org/10.1155/2022/4853419 
 
-Zheng, L., Shang, X., van den Broeke, M.R. et al. Rapid increases in satellite-observed ice sheet surface meltwater production. Nat. Clim. Chang. 15, 769–774 (2025). https://doi.org/10.1038/s41558-025-02364-4 JCGM 200: International Vocabulary of Metrology – basic and general concepts and terms (VIM), 3rd Edition, 2008 Version with Minor Corrections (2012) available at https://www.bipm.org/en/doi/10.59161/jcgm200-2012. -->
+Zheng, L., Shang, X., van den Broeke, M.R. et al. Rapid increases in satellite-observed ice sheet surface meltwater production. Nat. Clim. Chang. 15, 769–774 (2025). https://doi.org/10.1038/s41558-025-02364-4 JCGM 200: International Vocabulary of Metrology – basic and general concepts and terms (VIM), 3rd Edition, 2008 Version with Minor Corrections (2012) available at https://www.bipm.org/en/doi/10.59161/jcgm200-2012.

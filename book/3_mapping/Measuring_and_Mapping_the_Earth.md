@@ -39,12 +39,11 @@ The following notes apply to the definition of measurement. First, measurement a
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
 
-$\textbf{Terms and definitioScales of Measurement}$
+$\textbf{Scales of Measurement}$
 
 Scales of measurement refers to how data values are defined, categorised, and interpreted. The framework most used derives from psychologist Stanley Stevens, who distinguished four scales: nominal, ordinal, interval, and ratio. These scales determine not only how quantities are represented as data, but also which descriptive and inferential statistical methods are valid. Table 1 provides an overview. 
 </p>
 </div>
-
 
 Table 1: Definition of measurement scales.
 | Scale | Definition | Example |
@@ -91,6 +90,7 @@ An indirect measurement is one in which the value of the measurand is obtained b
 Y = f(X1, X2, . . . , XN),
 
 where Y is the measurand and Xi refers to the input quantities needed to obtain the result. These may include measured values, corrections, or influence quantities. Each has its own uncertainty, which propagates into the uncertainty of Y. The function f may rest on established physical laws or be determined experimentally, but in either case all significant sources of variation must be incorporated for the result to be meaningful. 
+
 <!-- 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>

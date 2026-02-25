@@ -1,4 +1,4 @@
-# Weekly schedule
+<img width="1122" height="105" alt="image" src="https://github.com/user-attachments/assets/0aa5f3de-c65c-4b89-b391-077a5fcac307" /># Weekly schedule
 
 Click on the dropdown blocks below to find the schedule of each week's activities.
 
@@ -94,9 +94,9 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: 
-* Lecture 2: 
-* Practical: 
+* Lecture 1: Properties of Earth’s materials and how to measure them
+* Lecture 2: The influence of fluids on Earth’s material properties
+* Practical: Log analysis (2 hours), density measurements (2 hours)
 
 ```
 
@@ -110,9 +110,9 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: 
-* Lecture 2: 
-* Practical: *(You only need to participate to one session, either A or B, not both. Check with that week's instructor)*
+* Lecture 1: DC-resistivity
+* Lecture 2: Cone-penetration testing
+* Practical: Excursion: field measurements *(You only need to participate to one session, either A or B, not both. Check with that week's instructor)*
 
 ```
 
@@ -128,7 +128,7 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 * Lecture 1: Descriptive statistics
 * Lecture 2: Data visualization
-* Practical: Data interpretation
+* Practical: Data interpretation: DC and CPT data from the field measurements (2 hours)
 
 ```
 

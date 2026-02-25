@@ -36,16 +36,35 @@ According to the VIM, measurement is the “process of experimentally obtaining 
 
 The following notes apply to the definition of measurement. First, measurement applies only to properties that can be expressed quantitatively—not to nominal properties such as colour names or categories. Second, measurement always involves either comparing quantities or counting entities. And third, measurement presupposes a clear description of the quantity, an agreed measurement procedure, and a calibrated system that operates under specified conditions.
 
-```Scales of Measurement – Scales of measurement refers to how data values are defined, categorised, and interpreted. The framework most used derives from psychologist Stanley Stevens, who distinguished four scales: nominal, ordinal, interval, and ratio. These scales determine not only how quantities are represented as data, but also which descriptive and inferential statistical methods are valid. Table 1 provides an overview. 
+<div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
+<p>
+
+$\textbf{Scales of Measurement}$
+Scales of measurement refers to how data values are defined, categorised, and interpreted. The framework most used derives from psychologist Stanley Stevens, who distinguished four scales: nominal, ordinal, interval, and ratio. These scales determine not only how quantities are represented as data, but also which descriptive and inferential statistical methods are valid. Table 1 provides an overview. 
+</p>
+</div>
+
 
 Table 1: Definition of measurement scales.
 | Scale | Definition | Example |
-| :---: | :---: | :---: |
+| :--- | :--- | :---: |
 | Nominal | Distinct classes or categories; no inherent order. | Land cover types: forest, grassland, urban, water|
 | Ordinal | Categories with meaningful ranking, but unequal differences between ranks. | Soil erosion risk levels: very low, low, moderate, high, very high |
 | Interval | Differences between values are meaningful and consistent, but zero is arbitrary. | Temperature in °C or °F|
 | Ratio | All mathematical operations are valid; zero means “none of the quantity”. | Temperature in K; precipitation amount in mm; ice sheet mass in gigatonnes|
-```
+
+test table:
+| Description       | Notation | 
+| :---------------- | :------------: | 
+| Event            |   $A$   | 
+| Complement of event $A$           |   $A^c$   | 
+| Intersection of  $A$ and $B$    |  $A \cap B$   | 
+| Union of  $A$ and $B$ | $A \cup B$|
+| $A$ is subset of $B$ | $A \subset B$ |
+| Set difference of  $A$ and $B$ | $A\setminus B$ |
+| Probability of event $A$ | $\mathsf{P}(A)$ |
+| Conditional probability of $A$ given $B$ | $\mathsf{P}(A\|B)$ |
+| Sample space | $\Omega$|
 
 Let’s explore this further by starting with the concept of quantity. A quantity is a property of something—physical, chemical, or biological—that can be expressed as a number together with a reference. The reference may be a unit of measurement, a procedure, a reference material, or a combination of these. 
 
@@ -80,7 +99,7 @@ Measuring Distance – Using a ruler or tape measure gives a direct measurement:
 
 By contrast, a total station measures distance indirectly. It records the travel time of a laser pulse or the phase shift of a modulated electromagnetic signal. Combined with other input quantities—such as the speed of light and corrections for environmental factors like temperature, humidity, and atmospheric pressure—the distance is inferred from the measurement model.
 
-````{figure} ../../figures/part-a_mapping_1.jpg
+````{figure} ../figures/part-a_mapping_1.jpg
 ---
 name: mapping1
 width: 60%

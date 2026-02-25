@@ -20,17 +20,17 @@ We then turn to the practical side. First, we outline the principal stages in de
 
 Second, we focus on the execution of the observation campaign. Here, we identify generic components and illustrate how these can influence the quality of the data obtained. 
 
-# Terminology
+## Terminology
 
 Clear and consistent terminology is essential to avoid misinterpretation and miscommunication. This section introduces key terms that will be used throughout the learning line. Sect. "Measurements, Observations, and Data" defines terminology used in connection with measurement and observation and explains how measurements, observations, and data are distinguished. Sect. "Uncertainty" introduces the concept of uncertainty, with an emphasis on measurement uncertainty. Here we explain why all measurements are inherently uncertain and define the main terms used to quantify and analyse uncertainty.
 
 It is important to note that terminology is not always used uniformly—neither across the various disciplines within EC&amp;T, nor even within one. While we adopt specific definitions for the purposes of this course, you should remain aware that others may use slightly different ones. To ensure a reliable foundation, we rely on established references such as the International Vocabulary of Metrology – Basic and General Concepts and Associated Terms (VIM) (JCGM 200, 2012), as well as standards provided by the Open Geospatial Consortium (OGC, https://www.ogc.org/).
 
-## Measurements, Observations, and Data
+### Measurements, Observations, and Data
 
 So far, we have used the terms data, observations, and measurements without defining them precisely. In this section, we clarify how they relate to one another by presenting them as a hierarchy: from measurements to observations to data, with each level encompassing a broader scope. Every measurement is an observation, and every measurement and observation is a form of data. The reverse does not necessarily hold: not all observations are measurements, and not all data originate from observations. We therefore begin with the most specific level—measurements—and proceed step by step to the broader categories of observations and data. 
 
-### Measurements
+#### Measurements
 
 According to the VIM, measurement is the “process of experimentally obtaining one or more quantity values that can reasonably be attributed to a quantity”. A quantity, in turn, is defined as a “property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference”.
 
@@ -78,7 +78,7 @@ Density (mass/volume [itself the third power of length]), velocity (length / tim
 
 With these foundations, we return to the definition of measurement itself. A measurement is the process of experimentally obtaining one or more values of the measurand—the specific quantity intended to be measured. The outcome is the measurement result, consisting of the measured value(s) together with essential information such as the associated measurement uncertainty. These measured values are often referred to simply as measurements.
 
-### Direct and Indirect Measurements
+#### Direct and Indirect Measurements
 
 Measurements can be classified as either direct or indirect (Crowder et al., 2020). A direct measurement is one in which the measurand’s value is read directly from the instrument. Conceptually, this can be represented as:
 
@@ -113,7 +113,7 @@ Image obtained from Christiaan Tiberius.
 </p>
 </div>
 
-### Observations
+#### Observations
 
 The term observation is broader than measurement. Rinne et al. (2023) define observation as “an act carried out by an observer to determine the value of an observable property of an object (feature of interest) by using a procedure, with the value provided as the result”. The result of an observation may be quantitative (a number) or qualitative (a category or description).
 
@@ -131,15 +131,15 @@ Recording that the weather was cloudy on 29 August 2025 at 10:00 UTC is an obser
 </div>
 
 
-### Data
+#### Data
 
 In general, data is a broader term than measurements and observations. It refers to any collection of symbols, numbers, or information—not necessarily originating from an instrument. For example, a spreadsheet with survey results, the output of a climate model, or even text documents can all be considered data.
 
 In Earth Sciences, however, the term is often used in a narrower sense, especially when linked to a specific measurement technique (e.g., GNSS data or LiDAR data). In such cases, data may refer to raw measurements, to the complete set of information acquired with the measurement system, or to processed and derived products (e.g., GNSS-derived positions or LiDAR-derived digital elevation models).
 
-## Uncertainty
+### Uncertainty
 
-### A Multifaceted Concept
+#### A Multifaceted Concept
 
 Uncertainty, an inherent component of any dataset (including observations and measurements), is a multifaceted concept comprising many aspects. To illustrate this, consider MacEachren et al.’s (2005) still incomplete typology of geospatial information uncertainty:
 
@@ -163,7 +163,7 @@ Although formulated to describe the uncertainty of geospatial information, many 
 
 In the remainder of this section, we focus on uncertainty in measurements. 
 
-### An Unavoidable Fact
+#### An Unavoidable Fact
 
 Every measurement carries uncertainty. Awareness of this associated uncertainty is essential for making informed decisions. Teunissen (2003) identifies four reasons why measurements will always remain uncertain to some degree, regardless of efforts to improve instruments, train observers, or better control measurement conditions:
 
@@ -177,7 +177,7 @@ Every measurement carries uncertainty. Awareness of this associated uncertainty 
 
 In short, it is both fundamentally and practically impossible to achieve absolute certainty in measurement. At the same time, such certainty is rarely required. Measurements are performed to obtain quantitative information that is sufficiently accurate and affordable for a given purpose.
 
-### Basic Terminology
+#### Basic Terminology
 
 To analyse measurements and their uncertainty, consistent terminology is required. The VIM provides precise definitions of many terms that we also use in our field. The VIM uses what it calls the ‘Uncertainty Approach’ to measurement terminology. The ‘Error Approach’ was the historical norm prior to publication of the VIM and was used to estimate a value as close as possible to a single true value. The Uncertainty Approach does not attempt to determine a single true value; instead, it assumes that information from the measurement permits an interval of reasonable values. The uncertainty approach is the preferred terminology for use by metrology organizations. Below are simplified definitions of some commonly used terms, based on the VIM (JCGM 200, 2012) and Crowder et al. (2020). 
 
@@ -191,7 +191,7 @@ Measurement Repeatability – Repeatability refers to the agreement between repe
 
 Measurement Reproducibility – Reproducibility refers to the agreement between measurements taken under different conditions: different operators, instruments, and/or procedures. It is often assessed over longer time intervals. In Earth Sciences this could mean, for example, comparing sea surface temperature from different satellites, or groundwater level measurements from independent surveys.
 
-#### The Error Approach (Discouraged)
+##### The Error Approach (Discouraged)
 
 Although widely used, the terminology associated with the Error Approach is discouraged in contemporary metrology.
 
@@ -201,7 +201,7 @@ Systematic (Measurement) Error – Predictable, repeatable effects that shift me
 
 Random (Measurement) Error – Unpredictable variation between individual measurements, reflecting the inherent variability of the measurement process or system (caused by, e.g., sensor noise or atmospheric turbulence). Random errors cannot be corrected but can be characterised statistically.
 
-#### The Uncertainty Approach (Preferred)
+##### The Uncertainty Approach (Preferred)
 
 The Uncertainty Approach assigns a range of likely values that could be attributed to the measurand based on the finite amount of knowledge of the measurement equipment and process.
 
@@ -245,13 +245,13 @@ align: center
 Photo by Sindre Fs: https://www.pexels.com/photo/aerial-photography-of-water-beside-forest-during-golden-hour-1144176/
 ````
 
-# To Measure Is to Know...!?
+## To Measure Is to Know...!?
 
 Sayings such as “to measure is to know”, “if you cannot measure it, you cannot improve it”, and “what gets measured gets done” underscore the crucial role of observations in everyday life. Observations underpin much of our knowledge and guide decision-making across nearly all areas of modern society. 
 
 The same applies in the EC&amp;T domain. Examples can be found in Mulhern (2020), Kimball (2024), Hijma et al. (2025), Pearson (2025), ter Voorde (2025), and Zheng et al. (2025). At a higher level, within EC&amp;T we rely on observations to describe and characterise natural systems, monitor changes, forecast future states, develop and validate models, inform design and interventions, and support resource management, risk assessment, and policy. Yet, while their importance is evident, the nature of observations is far from straightforward. This section reflects on how observations are shaped by theories, instruments, and social values—and what that implies for the knowledge we derive from them.
 
-## Beyond “Neutral Facts”: What Philosophy of Science Teaches Us
+### Beyond “Neutral Facts”: What Philosophy of Science Teaches Us
 
 These familiar sayings suggest that observations are pure, objective snapshots of reality—a neutral basis for judging theories. In practice, however, the relationships among observation, fact, and theory are more complex.
 
@@ -259,7 +259,7 @@ An observation is akin to a photograph: not reality itself, but a representation
 
 Similarly, (scientific) observations are shaped by the observer’s background, the instruments used, and the processing applied to the data. To make meaningful use of them, we must not only know how to collect observations but also how to interrogate their provenance, context, and limitations. Inspired by Boyd and Bogen (2025), this section introduces ten considerations—grouped into three themes—that clarify the nature and value of observations. 
 
-### The Observer Is Never Neutral
+#### The Observer Is Never Neutral
 
 Our minds are not empty buckets we fill with facts. They come equipped with theories, values, and expectations that act as filters. These filters are useful—they help us make sense of what we see, allowing us to recognize patterns instead of noise. A geologist, for example, looking at a rock outcrop does not just see ‘rock’, but evidence of tectonic forces (theory-ladenness). An environmental agency deciding to monitor nitrogen dioxide in cities but not in rural areas is makes a choice informed by public health priorities (value-ladenness).
 
@@ -275,7 +275,7 @@ Theory- ladenness and value- ladenness are two of the four considerations under 
 
 Note: the danger is not in having a framework, but in being unaware of it. Good science requires constant reflection: Why am I measuring this? Am I seeing what is really there, or what I expect to see?
 
-### The Journey of Data
+#### The Journey of Data
 
 A measurement is not a direct copy of reality; it is the result of a long chain of events. A satellite altimeter, for example, does not measure sea level directly. It records the reflected power of a radar pulse as a function of time, producing a waveform. This waveform is used to estimate the pulse’s travel time, which is converted into a range. Corrections are then applied for instrumental effects and atmospheric propagation delays—often themselves model-based. The corrected range is finally transformed into an estimate of sea level. From raw signal to a value in a dataset, the journey is long indeed.
 
@@ -289,7 +289,7 @@ This does not render the data unreliable, but it makes provenance—the record o
 
 8. Reuse and Provenance – Data are often repurposed. Without comprehensive metadata (documenting methods, location, calibration, uncertainty, etc.), reused data can mislead. For example, a student downloading a historical dataset of air temperatures in a particular city to study the urban heat island effect might be unaware that the weather station was moved in 1950 from a leafy park to the concrete surroundings of a nearby airport. The apparent ‘warming trend’ they detect is partly explained by this undocumented change of location.
 
-### How Observations Build Knowledge
+#### How Observations Build Knowledge
 
 A single observation is not sufficient to prove a theory. Observations act more like clues in a detective story: they constrain possibilities, strengthen some hypotheses, and challenge others. A discordant result may point to an instrument fault, an invalid auxiliary assumption, or perhaps a genuinely new phenomenon. The relationship between observation and theory is therefore one of negotiation, not a simple true/false test.
 
@@ -299,9 +299,9 @@ Objectivity in science is not a perfectly detached ‘view from nowhere’. Rath
 
 10. Inter-Subjectivity and Objectivity – Observations gain strength through independent reproduction and convergence across methods, teams, and contexts. Objectivity arises from communal checks and balances. The scientific consensus on global warming is considered objective not because it comes from one perfect thermometer, but because thousands of independent research teams, using different instruments (satellites, ocean buoys, weather stations), different analytical methods, and different models, all converge on the same basic conclusion. Objectivity is achieved through this communal verification and cross-checking.
 
-# Acquiring Measurements
+## Acquiring Measurements
 
-## From a Problem Statement to a Measurement Plan
+### From a Problem Statement to a Measurement Plan
 
 From here, we shift to a more practical perspective. How do we decide what to observe (i.e., the measurand[s]), which instrument to use, and how to design the measurement campaign? What does a typical workflow look like, from a user’s problem to the point where we can begin collecting data?
 
@@ -319,7 +319,7 @@ Although most EC&amp;T projects are less formal, following these steps helps ens
 
 In the following, we will elaborate on each step. To make it tangible, we will follow a hypothetical but realistic scenario through all four steps: assessing the flood risk for the coastal community of &apos;Seaside Town&apos;.
 
-### Step 1 – Defining User Requirements
+#### Step 1 – Defining User Requirements
 
 This first step is about understanding the core problem from the user&apos;s perspective. What do they want to know? What problem do they need to solve? A key insight here is that user requirements are almost never formulated in terms of ‘measurable quantities’. Instead, users are interested in concepts such as risk, safety, impact, or suitability—things we cannot measure directly with an instrument. 
 
@@ -336,7 +336,7 @@ In our scenario, the ‘user’ is the Seaside Town city council. The council wa
 </p>
 </div>
 
-### Step 2 – Translating to Observation Requirements
+#### Step 2 – Translating to Observation Requirements
 
 The next step is to translate the abstract user need (‘risk’) into concrete, observation requirements. This involves identifying the quantities that, when measured, will allow us to answer the user’s question, together with the required spatial coverage, spatial resolution, temporal coverage, and data quality.
 
@@ -366,7 +366,7 @@ Specifications:
 </div>
 
 
-### Step 3 – Defining System Requirements
+#### Step 3 – Defining System Requirements
 
 With the observation requirements in place, we can now define how to obtain the data. This involves selecting or designing the measurement system, defining the measurement process, and developing a measurement plan, all while considering practical constraints.
 
@@ -392,7 +392,7 @@ System Requirements (not complete):
 </p>
 </div>
 
-### Step 4 – Calibration and Validation (Cal/Val) Plan
+#### Step 4 – Calibration and Validation (Cal/Val) Plan
 
 Finally, having a system is not enough—we must prove that it works. The Cal/Val plan addresses this by asking: How will we demonstrate that our system and data meet the required accuracy? This may also be an ongoing task. For example, if we conduct a monitoring over a long time span, it is not sufficient to proof at the start that the system performs. Indeed, instrument performance can degrade over time. 
 
@@ -410,7 +410,7 @@ Validation: After the survey, ground-truth measurements are collected using GNSS
 </p>
 </div>
 
-## The Observation Campaign
+### The Observation Campaign
 
 As noted in the introduction, this chapter does not focus on the acquisition of specific types of observations. Nor do we review the full range of observational campaigns carried out across the broad field of Earth, Climate and Technology (EC&amp;T). That is somewhat regrettable, as each campaign tells its own story. Many of us have been taken to remarkable places through such work—from nearby sites to the polar regions. Each time, things unfolded differently. Plans had to be adapted. Carefully designed measurement setups sometimes proved impractical in the field. Sites turned out to be inaccessible. Instruments that had worked perfectly in the office failed while being in the field. The list could go on. Ultimately, the experience of conducting an observational campaign is easier to live through than to describe.
 
@@ -432,7 +432,7 @@ In this section, therefore, we identify the components that are common to most o
 
 8) Logistics &amp; Safety - The supporting activities that make data acquisition possible. Although not part of the measurement chain itself, shortcomings here can compromise or even halt an entire campaign. Inadequate logistics or unsafe conditions can result in data gaps, incomplete surveys, or rushed measurements prone to error.
 
-# References
+## References
 
 Boyd, Nora Mills and James Bogen, &quot;Theory and Observation in Science&quot;, The Stanford Encyclopedia of Philosophy (Spring 2025 Edition), Edward N. Zalta &amp; Uri Nodelman (eds.), URL = &lt;https://plato.stanford.edu/archives/spr2025/entries/science-theory-observation/&gt;. 
 

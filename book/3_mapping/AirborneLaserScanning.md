@@ -1,4 +1,4 @@
-# *Airborne* Laser Scanning
+# Airborne Laser Scanning
 
 In Chapter 3, we examined how the positions of points on the Earth can
 be determined within a geographic coordinate reference system (CRS). We

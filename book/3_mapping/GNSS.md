@@ -112,7 +112,6 @@ $\delta t_{r}(t)$, hence
 $$
 \begin{equation}
 t_{r}(t) = t + \delta t_{r}(t)
-
 \end{equation}
 $$
 
@@ -133,7 +132,6 @@ Substituting here the expression for $t_{r}(t)$, assuming that the satellite clo
 $$
 \begin{equation}
 p_{r}^{s}(t) = c \tau_{r}^{s}(t) = \underbrace{c \tau(t)}_{l_{r}^{s}(t)} + \underbrace{c \delta t_{r}(t)}_{b_{r}(t)}
-
 \end{equation}
 $$
 

@@ -319,7 +319,7 @@ the Earth—being a three-dimensional body with volume *v* and variable
 density *ρ*—the expression for *V* becomes:
 
 $$
-V\left( X_{P},Y_{P},Z_{P} \right) = G\iiint _{v}^{}\frac{\rho(\xi,\eta,\zeta)}{l}d\xi d\eta d\zeta,
+V\left( X_{P},Y_{P},Z_{P} \right) = G\iiint_{v}^{}\frac{\rho(\xi,\eta,\zeta)}{l}d\xi d\eta d\zeta,
 $$
 
 where the coordinates of the attracted point *P* are given by
@@ -345,8 +345,7 @@ on a unit mass.
 The differential of *W (dW)* can be written as the scalar product of the
 two vectors **g** and *d***x**=\[*dx,dy,dz*\], that is,
 
-| *dW* = **g**·*d***x**. | (1.8) |
-|------------------------|-------|
+*dW* = **g**·*d***x**
 
 If *d***x** is taken along an equipotential surface where *W*=constant,
 the potential remains constant and *dW=0*, from which it follows that
@@ -376,22 +375,19 @@ definition of the scalar product (for two vectors **a** and **b**, it is
 defined as **a**⋅**b**=∥**a**∥∥**b**∥ cos *α*, where *α* is the angle
 between them), we obtain
 
-| **g** · *d***x** = *g* *dH* cos 180° = *−g dH*. | (1.9) |
-|-------------------------------------------------|-------|
+**g** · *d***x** = *g* *dH* cos 180° = *−g dH*.
 
-From this, we find (see Eq. 1.8):
+From this, we find (see first equation of this section):
 
-| *dW = −g dH*, | (1.10) |
-|---------------|--------|
+*dW = −g dH*,
 
-which can also be written
+which relates the orthometric height *H* to the potential *W*.
 
-| *g= - ∂W/∂H.* | (1.11) |
-|---------------|--------|
+The previous equation can also be written as
 
-Eq. 1.10 relates the orthometric height *H* to the potential *W* and
-forms the basis of the theory of height determination. Eq. 1.11 shows
-that gravity is the negative vertical gradient of the potential *W*.
+*g= - ∂W/∂H*,
+
+which shows that gravity is the negative vertical gradient of the potential *W*.
 
 ### Heights
 
@@ -442,11 +438,12 @@ reference. *Rather than expressing vertical position as a length, we
 should therefore express it as a difference in potential*. The quantity
 used for this purpose is the *geopotential number* C, defined as
 
-| 
-$$C = W\_{0} - W\_{P} = \int\_{0}^{H}gdH = H\frac{1}{H}\int\_{0}^{H}gdH = H\overline{g},$$ | (1.12) |
-|------------------------------------------------------------|------------|
 
-where$\overline{g}$is the mean value of the gravity along the plumb line
+$$
+C = W_{0} - W_{P} = \int_{0}^{H}gdH = H\frac{1}{H}\int_{0}^{H}gdH = H\overline{g},
+$$
+
+where $\overline{g}$ is the mean value of the gravity along the plumb line
 between the geoid and the surface point *P*. The geopotential number *C*
 is measured in geopotential units (g.p.u.), where 1 g.p.u. = 1 kgal m =
 1000 gal m, and note that 1 gal = 10<sup>−2</sup> m s<sup>−2</sup>.
@@ -456,7 +453,7 @@ not meet practical needs. For this reason, several alternative height
 coordinate systems have been defined, in which height can be expressed
 in the general form
 
-Height =$\frac{C}{G\_{0}}.$
+Height =$\frac{C}{G_{0}}.$
 
 These height systems differ according to the choice of the gravity value
 *G<sub>0</sub>* in the denominator. The principal systems are:
@@ -1246,11 +1243,11 @@ $$\left( \begin{array}{r}
 X \\
 Y \\
 Z
-\end{array} \right)\_{Target} = \lambda R\left( \Omega\_{X},\Omega\_{Y},\Omega\_{Z} \right)\left( \begin{array}{r}
+\end{array} \right)_{Target} = \lambda R\left( \Omega_{X},\Omega_{Y},\Omega_{Z} \right)\left( \begin{array}{r}
 X \\
 Y \\
 Z
-\end{array} \right)\_{Source} + \left( \begin{array}{r}
+\end{array} \right)_{Source} + \left( \begin{array}{r}
 \Delta X \\
 \Delta Y \\
 \Delta Z
@@ -1265,17 +1262,17 @@ defined as:
 
 with
 
-$$R\_{X}\left( \Omega\_{X} \right) = \begin{bmatrix}
+$$R_{X}\left( \Omega_{X} \right) = \begin{bmatrix}
 1 & 0 & 0 \\
-0 & \cos\Omega\_{X} & \sin\Omega\_{X} \\
-0 & - \sin\Omega\_{X} & \cos\Omega\_{X}
-\end{bmatrix},R\_{Y}\left( \Omega\_{Y} \right) = \begin{bmatrix}
-\cos\Omega\_{Y} & 0 & - \sin\Omega\_{Y} \\
+0 & \cos\Omega\ {X} & \sin\Omega_{X} \\
+0 & - \sin\Omega_{X} & \cos\Omega_{X}
+\end{bmatrix},R_{Y}\left( \Omega_{Y} \right) = \begin{bmatrix}
+\cos\Omega_{Y} & 0 & - \sin\Omega_{Y} \\
 0 & 1 & 0 \\
-\sin\Omega\_{Y} & 0 & \cos\Omega\_{Y}
-\end{bmatrix},R\_{Z}\left( \Omega\_{Z} \right) = \begin{bmatrix}
-\cos\Omega\_{Z} & \sin\Omega\_{Z} & 0 \\
- - \sin\Omega\_{Z} & \cos\Omega\_{Z} & 0 \\
+\sin\Omega_{Y} & 0 & \cos\Omega_{Y}
+\end{bmatrix},R_{Z}\left( \Omega_{Z} \right) = \begin{bmatrix}
+\cos\Omega_{Z} & \sin\Omega_{Z} & 0 \\
+ - \sin\Omega_{Z} & \cos\Omega_{Z} & 0 \\
 0 & 0 & 1
 \end{bmatrix}.$$
 
@@ -1288,10 +1285,10 @@ rotations).
 If the rotation angles are small (i.e., less than 10"), **R** is given
 by:
 
-$$R\left( \Omega\_{X},\Omega\_{Y},\Omega\_{Z} \right) = \begin{pmatrix}
-1 & \Omega\_{Z} & - \Omega\_{Y} \\
- - \Omega\_{Z} & 1 & \Omega\_{X} \\
-\Omega\_{Y} & - \Omega\_{X} & 1
+$$R\left( \Omega_{X},\Omega_{Y},\Omega_{Z} \right) = \begin{pmatrix}
+1 & \Omega_{Z} & - \Omega_{Y} \\
+ - \Omega_{Z} & 1 & \Omega_{X} \\
+\Omega_{Y} & - \Omega_{X} & 1
 \end{pmatrix},$$
 
 and the transformation is simplified (products *μ* Ω<sub>𝑖</sub> can be
@@ -1301,19 +1298,19 @@ $$\left( \begin{array}{r}
 X \\
 Y \\
 Z
-\end{array} \right)\_{Target} = \left( \begin{array}{r}
+\end{array} \right)_{Target} = \left( \begin{array}{r}
 X \\
 Y \\
 Z
-\end{array} \right)\_{Source} + \begin{pmatrix}
-\mu & \Omega\_{Z} & - \Omega\_{Y} \\
- - \Omega\_{Z} & \mu & \Omega\_{X} \\
-\Omega\_{Y} & - \Omega\_{X} & \mu
+\end{array} \right)_{Source} + \begin{pmatrix}
+\mu & \Omega_{Z} & - \Omega_{Y} \\
+ - \Omega_{Z} & \mu & \Omega_{X} \\
+\Omega_{Y} & - \Omega_{X} & \mu
 \end{pmatrix}\left( \begin{array}{r}
 X \\
 Y \\
 Z
-\end{array} \right)\_{Source} + \left( \begin{array}{r}
+\end{array} \right)_{Source} + \left( \begin{array}{r}
 \Delta X \\
 \Delta Y \\
 \Delta Z
@@ -1381,7 +1378,7 @@ The Dutch NLGEO2018 quasi-geoid model that needs to be used to convert GNSS-deri
 The transformation between vertical CRSs referring to different vertical
 datums is one that can be written as (Iliffe and Lott, 2008):
 
-$$H\_{Target} = \left\lbrack \left( H\_{Source} + \Delta H \right)U\_{Source} \right\rbrack\frac{m}{U\_{Target}},$$
+$$H_{Target} = \left\lbrack \left( H_{Source} + \Delta H \right)U_{Source} \right\rbrack\frac{m}{U_{Target}},$$
 
 with *Δ**H*being an offset, *m* is a unit direction multiplier (*m* = 1
 if both systems are height or both are depth and *m* = -1 if one system
@@ -1507,16 +1504,16 @@ $$\left( \begin{array}{r}
 X \\
 Y \\
 Z
-\end{array} \right)\_{Target} = \lambda R\left( \Omega'\_{X},\Omega'\_{Y},\Omega'\_{Z} \right)\left( \begin{array}{r}
-X - X\_{0} \\
-Y - Y\_{0} \\
-Z - Z\_{0}
-\end{array} \right)\_{Source} + \left( \begin{array}{r}
+\end{array} \right)_{Target} = \lambda R\left( \Omega'_{X},\Omega'_{Y},\Omega'_{Z} \right)\left( \begin{array}{r}
+X - X_{0} \\
+Y - Y_{0} \\
+Z - Z_{0}
+\end{array} \right)_{Source} + \left( \begin{array}{r}
 \Delta X' \\
 \Delta Y' \\
 \Delta Z'
 \end{array} \right) + \left( \begin{array}{r}
-X\_{0} \\
-Y\_{0} \\
-Z\_{0}
+X_{0} \\
+Y_{0} \\
+Z_{0}
 \end{array} \right),$$

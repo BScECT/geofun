@@ -201,7 +201,9 @@ semi-major axis or the equatorial radius *a*. The other parameter is
 either the semi-minor axis (or polar radius), *b*, or the flattening,
 *f*, or the eccentricity, *e*. They are related by:
 
-$$ f = \frac{a - b}{a},e^{2} = 2f - f^{2} = \frac{a^{2} - b^{2}}{a^{2}},b = a(1 - f) = a\sqrt{1 - e^{2}}$$ .
+$$
+f = \frac{a - b}{a},e^{2} = 2f - f^{2} = \frac{a^{2} - b^{2}}{a^{2}},b = a(1 - f) = a\sqrt{1 - e^{2}}
+$$
 
 The relationship between Cartesian and geographic coordinates is given
 by:
@@ -469,13 +471,13 @@ Height =$\frac{C}{G_{0}}.$
 These height systems differ according to the choice of the gravity value
 *G<sub>0</sub>* in the denominator. The principal systems are:
 
-- **dynamic height** – where *G<sub>0\ </sub>*= *γ<sub>0\ </sub>*=
+- **dynamic height** – where *G<sub>0 </sub>*= *γ<sub>0 </sub>*=
   constant,
 
-- **orthometric height (*H*)** – where *G<sub>0\ </sub>*=$\overline{g}$,
+- **orthometric height (*H*)** – where *G<sub>0 </sub>*=$\overline{g}$,
 
 - **normal height (*H<sup>N</sup>***)– where
-  *G<sub>0\ </sub>*=$\overline{\gamma}$,
+  *G<sub>0 </sub>*=$\overline{\gamma}$,
 
 In the case of normal heights, the Earth’s gravity field is replaced by
 the gravity field of a reference ellipsoid (which can be computed
@@ -513,7 +515,7 @@ Table 1.1: A comparison of height systems with respect to various properties tha
 
 |  | Uncorrected diff. leveling | Dynamic | Orthometric | Normal | Ellipsoidal |
 | --- | --- | --- | --- | --- | --- |
-| G0 | N/A | γ0 = constant | formula | formula | N/A |
+| G0 | N/A | $γ_0$ = constant | $\overline{g}$ | $\overline{γ}$ | N/A |
 | Do points with equal height define level surface? | No | Yes | No | No | No |
 | Small correction to leveling data? | n/a | No | Yes | Yes | N/A |
 | Geometrically meaningful? | Yes | No | Yes | Yes | Yes |
@@ -891,7 +893,7 @@ its *aspect*. It may be normal (aligned with Earth’s rotation axis),
 transverse (perpendicular to it), or oblique (any angle in between) (see
 {numref}`refsys12`).
 
-````{figure} ../figures/part-a_refsys_12.png
+````{figure} ../figures/part-a_refsys12.png
 ---
 name: refsys12
 width: 40%
@@ -910,7 +912,7 @@ Map projections also differ in the point of perspective from which the
 surface is conceptually projected. {numref}`refsys13` illustrates three common
 cases: gnomonic, stereographic, and orthographic projections.
 
-````{figure} ../figures/part-a_refsys_13.png
+````{figure} ../figures/part-a_refsys13.png
 ---
 name: refsys13
 width: 40%
@@ -1232,7 +1234,7 @@ the commonly applied *7-parameter similarity transformation* (or
 *14-parameter* in the case that time dependency is included). The
 strategy is outlined in {numref}`refsys14`.
 
-````{figure} ../figures/part-a_refsys_14.png
+````{figure} ../figures/part-a_refsys14.png
 ---
 name: refsys14
 width: 40%
@@ -1377,7 +1379,7 @@ country, region or even the entire globe. In the Netherlands, the
 official model to be used in order to convert GNSS-derived ellipsoidal
 heights into NAP heights is the NLGEO2018 quasi-geoid model (see {numref}`refsys15`).
 
-````{figure} ../figures/part-a_refsys_15.png
+````{figure} ../figures/part-a_refsys15.png
 ---
 name: refsys15
 width: 40%

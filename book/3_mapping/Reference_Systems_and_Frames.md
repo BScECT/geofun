@@ -212,7 +212,7 @@ $$
 \begin{aligned}
 X &= \left( \overline{N} + h \right)\cos\varphi\cos\lambda \\
 Y &= \left( \overline{N} + h \right)\cos\varphi\sin\lambda \\
-Z &= \left( \overline{N}\left( 1 - e^{2} \right) + h \right \sin\varphi
+Z &= \left( \overline{N}\left( 1 - e^{2} \right) + h \right)\sin\varphi
 \end{aligned}
 $$
 

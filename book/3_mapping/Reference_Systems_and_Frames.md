@@ -1397,8 +1397,7 @@ with *Δ**H*being an offset, *m* is a unit direction multiplier (*m* = 1
 if both systems are height or both are depth and *m* = -1 if one system
 is height and the other system is depth), and *U*<sub>Source</sub> and
 *U*<sub>Target</sub> are unit conversion ratios to metres for the source
-and target systems and the offset value respectively. *Δ**H*may be: i) a
-constant that is valid for an entire region, ii) a spatially varying
+and target systems and the offset value respectively. $ΔH$ may be: i) a constant that is valid for an entire region, ii) a spatially varying
 offset to be obtained by means of interpolation from a gridded dataset,
 or iii) is given by a mathematical model. One example of the latter that
 has been used in the past to describe the transformation between the

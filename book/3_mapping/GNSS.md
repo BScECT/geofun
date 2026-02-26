@@ -57,13 +57,13 @@ spreading code, see Figure~{ref}`fig:gpssignal`, and, at a low rate, the satelli
 arrive at the receiver with an unknown *delay* due to travelling all the way from satellite to receiver, and due to the relative velocity
 of the GPS satellites with respect to a GPS user on or near the Earth's surface, with an unknown *Doppler frequency shift*.
 
-````{figure} ../figures/GNSS/GPSsignal.png
+````{figure} ../figures/GNSS/gpssignal.png
 ---
 name: gpssignal
 width: 60%
 align: center
 ---
-The GPS L1 CA-signal is composed of a carrier wave (a sinusoid with a frequency of 1575.42~MHz; not to scale in the above diagram), a spreading code (a sequence of `0' and `1' bits/chips, here represented by values `-1' and `+1', and unique for each satellite), and a low rate navigation data message. Both the spreading code and navigation message are phase-modulated on the carrier wave, through a technique called Binary Phase Shift Keying (BPSK); basically multiplying the carrier by the `-1' and `+1' values of the spreading code and navigation data, and the resulting modulated signal is shown at bottom. For the so-called CA-code on the GPS L1-frequency signal, the spreading codes are all publicly available, and GPS receivers have them built in. CA refers to Coarse Acquisition, but can also be understood as Civilian Access.
+The GPS L1 CA-signal is composed of a carrier wave (a sinusoid with a frequency of 1575.42~MHz; not to scale in the above diagram), a spreading code (a sequence of '0' and '1' bits/chips, here represented by values '-1' and '+1', and unique for each satellite), and a low rate navigation data message. Both the spreading code and navigation message are phase-modulated on the carrier wave, through a technique called Binary Phase Shift Keying (BPSK); basically multiplying the carrier by the '-1' and '+1' values of the spreading code and navigation data, and the resulting modulated signal is shown at bottom. For the so-called CA-code on the GPS L1-frequency signal, the spreading codes are all publicly available, and GPS receivers have them built in. CA refers to Coarse Acquisition, but can also be understood as Civilian Access.
 ````
 
 ### Measurement of range
@@ -81,7 +81,7 @@ This is done by overlaying the received signal with a local copy or replica of t
 Once the receiver has locked onto the *spreading code*, it can start regularly taking pseudorange code and Doppler frequency measurements,
 which are basically the shift in time (delay) and the shift in frequency that are required to maintain the tracking lock (onto the received satellite signal).
 
-Through the pseudorange, the receiver measures the *travel-time* of the radio signal from satellite `s' to receiver `r':
+Through the pseudorange, the receiver measures the *travel-time* of the radio signal from satellite 's' to receiver 'r':
 
 $$
 \begin{equation}
@@ -115,9 +115,9 @@ t_{r}(t) = t + \delta t_{r}(t)
 \end{equation}
 $$
 
-When the receiver measures the travel-time, to eventually produce the pseudorange measurement, it `reads' the moment of signal arrival at its own clock,
-and hence this measurement is off by an amount of $\delta t_{r}(t)$. The travel-time can be conceived as being obtained by `reading' the receiver clock at 
-signal reception, and `reading' the satellite clock at signal transmission, hence the *measured* travel-time reads
+When the receiver measures the travel-time, to eventually produce the pseudorange measurement, it 'reads' the moment of signal arrival at its own clock,
+and hence this measurement is off by an amount of $\delta t_{r}(t)$. The travel-time can be conceived as being obtained by 'reading' the receiver clock at 
+signal reception, and 'reading' the satellite clock at signal transmission, hence the *measured* travel-time reads
 
 $$
 \begin{equation}
@@ -143,7 +143,7 @@ the term *pseudo*-range.
 
 Additionally, a GPS receiver may measure the *fractional* phase difference between the received carrier wave from the satellite
 and a locally generated copy (replica). And, it can keep track of the number of cycles of the carrier wave since the start of tracking,
-together known as the *carrier phase* (CP) measurement. This measurement includes the accumulated number of `zero-crossings' since
+together known as the *carrier phase* (CP) measurement. This measurement includes the accumulated number of 'zero-crossings' since
 lock-on of the signal (for instance, when the fractional phase jumps from $1.99 \pi$ to $0.02 \pi$, the full period is accounted for
 and the resulting carrier phase measurement, output by the receiver, is $2.02 \pi$).
 
@@ -165,7 +165,7 @@ Carrier phase measurement: only the *fractional* phase difference can be measure
 #### Concluding remarks
 
 Linking to the exposition on measuring distances in Chapter~20 in Tiberius et al. (2022) , the pseudorange measurement corresponds to
-`pulse-based'-ranging, and the carrier phase measurement obviously to `phase-based'-ranging, see Section~20.1 in Tiberius et al. (2022) on the principles of ranging,
+'pulse-based'-ranging, and the carrier phase measurement obviously to 'phase-based'-ranging, see Section~20.1 in Tiberius et al. (2022) on the principles of ranging,
 though one should note that GPS is about *one-way* ranging (rather than two-way ranging, as in Chapter~20 in Tiberius et al. (2022) ).
 
 The receiver can also measure the received *signal-strength*, through the so-called carrier-to-noise-density ratio C/N0,
@@ -245,7 +245,7 @@ To see the effect of the receiver clock error on the positioning problem at work
 So, in two dimensions, we would need to solve for two receiver position coordinates and one receiver clock error, hence in total three unknown parameters,
 so we need at least three pseudorange measurements.
 
-````{figure} ../figures/GNSS/trilateration_green.png
+````{figure} ../figures/GNSS/trilateration_green.PNG
 ---
 name: trilaterationgreenblue
 width: 60%
@@ -264,7 +264,7 @@ The process of determining the receiver clock offset: the measured pseudoranges 
 ````
 
 In Figure~{ref}`fig:trilaterationgreenblue` at left, the measured pseudoranges are shown in green, and apparently these three green circles do not all
-meet in one point. The pseudoranges are `too short', the reason obviously being the receiver clock lagging behind. When the radii of the green circles
+meet in one point. The pseudoranges are 'too short', the reason obviously being the receiver clock lagging behind. When the radii of the green circles
 are enlarged, all by exactly the same amount, to yield the blue circles, as shown at right, we arrive at an intersection of all three circles in one point.
 We have solved for the two position coordinates, and the receiver clock offset as well\footnote{
 When, in this example, the receiver clock would behave perfectly and be exactly aligned with GPS-time, we could solve the two-dimensional
@@ -276,7 +276,7 @@ This clearly demonstrates that positioning and timing are intimately related!
 
 ### Pseudorange observation equation
 
-With expanding the one-way geometric range $l_{r}^{s}$ between satellite `s' and receiver `r' as
+With expanding the one-way geometric range $l_{r}^{s}$ between satellite 's' and receiver 'r' as
 
 $$
 \begin{equation}
@@ -299,7 +299,7 @@ $x^s$, $y^s$ and $z^s$, and the receiver position coordinates at time of signal 
 The satellite position, as well as the satellite clock offset, is available to the user
 through the navigation data message, cf.\ Figure~{ref}`fig:gpssignal`.
 Parameter $b_r$ equals the receiver clock offset $\delta t_r$ multiplied by the speed of light~$c$, cf.\ ({ref}`eq:pseudorange`).
-If the receiver clock is ahead of GPS system time, $b_r$ is positive, and the measured pseudoranges are `too long'.
+If the receiver clock is ahead of GPS system time, $b_r$ is positive, and the measured pseudoranges are 'too long'.
 And finally note that we included the (unavoidable) random measurement error $\underline{e}_{r}^{s}$ on the right hand side of Eq.~({ref}`eq:pseudorangeobseqn`).
 
 ````{figure} ../figures/GNSS/ECEF.png
@@ -343,7 +343,7 @@ $$\begin{equation}
 where we assume to have $m$ satellites in view. Tiberius et al. (2022) presents the linearization of a
 distance observation equation in two dimensions, and extension into three dimensions is straightforward.
 The coefficients in the above design-matrix for the coordinate parameters are actually the elements of the unit-direction vector $u_{r}^{s}$
-from the receiver `r', pointing to the satellite `s', cf.\ (Tiberius et al. 2022).
+from the receiver 'r', pointing to the satellite 's', cf.\ (Tiberius et al. 2022).
 The above model carries $m$ observations and 4 unknown parameters, and hence the redundancy equals $m-4$.
 
 Next, a least-squares algorithm is used to solve this linearized model, presented in matrix-vector form.
@@ -404,10 +404,10 @@ name: signalpath
 width: 60%
 align: center
 ---
-GPS error sources. The receiver clock offset (shown in faded green) is accounted for in the observation equation ({ref}`eq:pseudorangeobseqn
+GPS error sources. The receiver clock offset (shown in faded green) is accounted for in the observation equation ({ref}`eq:pseudorangeobseqn)
 ````
 
-\begin{table`
+\begin{table}
 \begin{center}
 \begin{tabular}{|l|c|}
 \hline
@@ -475,7 +475,7 @@ The graph at left shows the horizontal position scatter, North-coordinate versus
 and the graph at right shows the vertical position (Up) as a function of time.
 With the given coordinates of the marker, we actually present the position *error* in Figure~{ref}`fig:spppos`,
 i.e.\ the difference of the measured position coordinate and the known ground-truth position coordinate.
-Hence, the origin of this graph refers to the `true' position.
+Hence, the origin of this graph refers to the 'true' position.
 The position errors are expressed in a local topocentric coordinate system, in terms of local
 East, North and Up, see Section~29.4 in Tiberius et al. (2022).
 
@@ -522,7 +522,7 @@ is small enough, typically in the order of 5 to 10~km, considering that the sate
 
 From the differenced observations, the so-called baseline (vector) between the two receivers can be computed through least-squares
 estimation. The position of the rover is then obtained by adding the baseline vector to the accurately known coordinates
-of the reference station. Generally the term `DGPS' is used for relative positioning, though using only pseudorange measurements.
+of the reference station. Generally the term 'DGPS' is used for relative positioning, though using only pseudorange measurements.
 
 ````{figure} ../figures/GNSS/relativepositioning.png
 ---
@@ -717,7 +717,7 @@ versus East-coordinate, and the graph at right shows the vertical position (Up) 
 These measurements were taken at a survey-marker of which accurate position coordinates were already
 available cf.\ Figure~{ref}`fig:CTB3310surveymarker`, so, in the graph of Figure~{ref}`fig:rtkfix` we actually present the position *error*,
 i.e.\ the difference of the measured position coordinate and the known ground-truth position coordinate.
-Hence, the origin of this graph refers to the `true' position.
+Hence, the origin of this graph refers to the 'true' position.
 The position errors are expressed in a local topocentric coordinate system, in terms of local
 East, North and Up, see Section~29.4 in Tiberius et al. (2022).
 
@@ -798,7 +798,7 @@ based on the principles of RTK, but try to stretch the interstation distances to
 while PPP-AR starts from the global PPP network, and tries to solve the problem of ambiguity resolution (AR).
 The ultimate goal is to achieve high precision positioning across a (very) large area.
 
-````{figure} ../figures/GNSS/ubloxZED_F9P_NEW.jpg
+````{figure} ../figures/GNSS/ubloxZED_F9P_NEW.JPG
 ---
 name: ublox
 width: 60%
@@ -826,7 +826,7 @@ found as $l \sin \zeta$, see Figure~{ref}`fig:tiltcompensation`.
 ````{figure} ../figures/GNSS/tiltcompensation.png
 ---
 name: tiltcompensation
-width: 60%
+width: 20%
 align: center
 ---
 Principle of GPS range pole with tilt compensation. Tilt angle $\zeta$ is measured to provide, with known size $l$, the horizontal displacement $l \sin \zeta$.
@@ -835,7 +835,7 @@ Principle of GPS range pole with tilt compensation. Tilt angle $\zeta$ is measur
 Satellite Based Augmentation Systems (SBAS), e.g. the European EGNOS system, designed to enable GPS-based
 aircraft precision approaches, rely on the same principles as PPP. However, given the primary application,
 the focus is on integrity rather than accuracy (integrity refers to the trust that can be placed in the resulting position solution,
-the solution is largely fault-tolerant). Carrier phase measurements are only here used to `smooth' the pseudorange solution.
+the solution is largely fault-tolerant). Carrier phase measurements are only here used to 'smooth' the pseudorange solution.
 SBAS is a pseudorange code Differential GPS approach for large geographical areas (wide areas).
 An additional advantage of using SBAS is that the corrections are transmitted on the same radio frequency as GPS signals,
 so no additional data link is necessary.
@@ -843,7 +843,7 @@ so no additional data link is necessary.
 ### Processing strategies, dynamic model and observation period
 
 As already hinted at, the GPS position accuracy improves when the measurement time duration increases.
-One important factor here is the *dynamic model* of the receiver motion, or how the measurement epochs can be `linked' to each other.
+One important factor here is the *dynamic model* of the receiver motion, or how the measurement epochs can be 'linked' to each other.
 
 ````{figure} ../figures/GNSS/gpsaccuracy.png
 ---
@@ -922,7 +922,7 @@ The BeiDou (phase III) constellation deployment has been fully completed in 2020
 
 #### Concluding remarks
 
-````{figure} ../figures/GNSS/skyplotTrimbleNetR9_Oct2020.png
+````{figure} ../figures/GNSS/skyplotTrimbleNetR9_Oct2020.PNG
 ---
 name: skyplot
 width: 60%
@@ -978,7 +978,7 @@ name: waterscooter
 width: 60%
 align: center
 ---
-Both the on- and offshore part are regularly surveyed, to monitor the development of the Zandmotor (The Sand Engine), at the Dutch North-Sea coast, near Ter Heijde. This `building with nature' project started in 2011, and at right an aerial photo of the Zandmotor is shown, looking in Southern direction. High-precision RTK-GPS is used for positioning the quad on shore, and the jet-ski in the water (note the GPS-antenna at the back of the jet-ski, in the inset). The measurements by the quad result in a Digital Terrain Model (DTM), and echo sounder depth measurements by the jet-ski result in a seafloor-map. Photo at left by Matthieu de Schipper.
+Both the on- and offshore part are regularly surveyed, to monitor the development of the Zandmotor (The Sand Engine), at the Dutch North-Sea coast, near Ter Heijde. This 'building with nature' project started in 2011, and at right an aerial photo of the Zandmotor is shown, looking in Southern direction. High-precision RTK-GPS is used for positioning the quad on shore, and the jet-ski in the water (note the GPS-antenna at the back of the jet-ski, in the inset). The measurements by the quad result in a Digital Terrain Model (DTM), and echo sounder depth measurements by the jet-ski result in a seafloor-map. Photo at left by Matthieu de Schipper.
 ````
 
 ````{figure} ../figures/GNSS/KPNmastZvbh.jpg
@@ -1100,9 +1100,9 @@ from the two satellites to the receiver: $p_{AR} - b_R = 9-3=6$ and $p_{BR} - b_
 
 \vspace{3mm}
 
-**Question~5** The GPS relative positioning problem has been simplified to a single dimension. There is one satellite `sat' (or just `s')
-and it is visible at the local horizon. The receivers `1' and `2', and the satellite are all on a straight line (along the x-coordinate axis),
-see Figure~{ref}`fig:singledifference`. The radio-signals from the satellite to the two receivers pass through the Earth's atmosphere (layer `atm')
+**Question~5** The GPS relative positioning problem has been simplified to a single dimension. There is one satellite 'sat' (or just 's')
+and it is visible at the local horizon. The receivers '1' and '2', and the satellite are all on a straight line (along the x-coordinate axis),
+see Figure~{ref}`fig:singledifference`. The radio-signals from the satellite to the two receivers pass through the Earth's atmosphere (layer 'atm')
 and get thereby delayed; the delay, expressed in units of range, is denoted by $d^s$. This delay is unknown (but *equal* for the signals to both receivers).
 The satellite position is known, $x^{s} = -20$, and the position of receiver~1 as well $x_1 = 5$. Compute the position of receiver~2, $x_2$,
 based on the pseudorange measurements $p_{1}^{s} = 32$ and $p_{2}^{s} = 37$.

@@ -880,7 +880,7 @@ circles. At the point of contact, directions are accurate.
 ````{figure} ../figures/part-a_refsys11.png
 ---
 name: refsys11
-width: 40%
+width: 60%
 align: center
 ---
 Cylindrical, conic and azimuthal map projections. Image of cylindrical, conic and azimuthal map projection, by Traroth, March 2005, taken from Wikimedia Commons, under CC BY-SA 3.0 license.
@@ -891,7 +891,7 @@ its *aspect*. It may be normal (aligned with Earth’s rotation axis),
 transverse (perpendicular to it), or oblique (any angle in between) (see
 {numref}`refsys12`).
 
-````{figure} ../figures/refsys_12.png
+````{figure} ../figures/part-a_refsys_12.png
 ---
 name: refsys12
 width: 40%
@@ -910,7 +910,7 @@ Map projections also differ in the point of perspective from which the
 surface is conceptually projected. {numref}`refsys13` illustrates three common
 cases: gnomonic, stereographic, and orthographic projections.
 
-````{figure} ../figures/refsys_13.png
+````{figure} ../figures/part-a_refsys_13.png
 ---
 name: refsys13
 width: 40%
@@ -1232,7 +1232,7 @@ the commonly applied *7-parameter similarity transformation* (or
 *14-parameter* in the case that time dependency is included). The
 strategy is outlined in {numref}`refsys14`.
 
-````{figure} ../figures/refsys_14.png
+````{figure} ../figures/part-a_refsys_14.png
 ---
 name: refsys14
 width: 40%
@@ -1377,7 +1377,7 @@ country, region or even the entire globe. In the Netherlands, the
 official model to be used in order to convert GNSS-derived ellipsoidal
 heights into NAP heights is the NLGEO2018 quasi-geoid model (see {numref}`refsys15`).
 
-````{figure} ../figures/refsys_15.png
+````{figure} ../figures/part-a_refsys_15.png
 ---
 name: refsys15
 width: 40%

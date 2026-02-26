@@ -115,7 +115,7 @@ the 3D Cartesian, spherical, and ellipsoidal coordinate systems.
 3D Cartesian coordinate systems can be considered a straightforward
 extension of 2D Cartesian coordinate systems by adding a third axis.
 Each coordinate of a point *P*, is the signed distance from *P* to the
-plane defined by the other two axes (see Fig. 2 {numref}`refsys2`). The sign is determined
+plane defined by the other two axes (see {numref}`refsys2`). The sign is determined
 by the orientation of the corresponding axis. Together, the coordinates
 form a triplet that is typically denoted as *X,Y,Z*.
 
@@ -126,7 +126,7 @@ name: refsys2
 width: 30%
 align: center
 ---
-Fig. 2: The 3D Cartesian coordinate system.
+The 3D Cartesian coordinate system.
 ````
 
 Although the positive and negative directions of the axes are arbitrary,
@@ -187,7 +187,7 @@ Z^{2}}$$</span></p></th>
 In an ellipsoidal coordinate system, we locate a point relative to an
 ellipsoid (of revolution) — the 3D surface formed by rotating an ellipse
 about its minor axis. In doing so, we use the geographic (or geodetic)
-latitude *φ*, longitude *λ*, and height *h* (See Fig. 3). *φ* is the
+latitude *φ*, longitude *λ*, and height *h* (See {numref}`refsys3`). *φ* is the
 angle measured in the meridian plane between the equatorial plane and
 the surface normal and *λ* is the angle measured in the equatorial plane
 between the zero meridian (X-axis) and the meridian plane of *P*. Here,
@@ -202,7 +202,7 @@ name: refsys3
 width: 60%
 align: center
 ---
-Fig. 3: Ellipsoidal and Cartesian coordinates. The ellipsoidal latitude φ is also known as geodetic or geographic latitude. The ellipsoidal coordinates φ and λ are also called geographic coordinates (Tiberius et al., 2022, Fig. 29.2).
+Ellipsoidal and Cartesian coordinates. The ellipsoidal latitude φ is also known as geodetic or geographic latitude. The ellipsoidal coordinates φ and λ are also called geographic coordinates (Tiberius et al., 2022, Fig. 29.2).
 ````
 
 The shape of an ellipsoid is defined by two parameters. The first is the
@@ -250,7 +250,7 @@ Y^{2}}}{\cos\varphi} - \overline{N}$$</span></p></th>
 </table>
 
 $\overline{N}$, referred to in both equations, is the radius of
-curvature in the *prime vertical normal section* (see Fig. 4). That is,
+curvature in the *prime vertical normal section* (see {numref}`refsys4`). That is,
 it is the distance between the surface of the ellipsoid and the polar
 axis measured along the line normal to the surface of the ellipsoid that
 goes through *P*. The prime vertical normal section is the curve formed
@@ -261,8 +261,7 @@ the east–west direction and is one of the two principal normal sections.
 The other is the meridian normal section, which is perpendicular to the
 prime vertical section (i.e., it lies in the north–south direction) and
 has maximum curvature. Its radius of curvature is referred to as
-$\overline{M}$. Both radii of curvature increase toward the poles (see
-Fig. 5). Their equations are:
+$\overline{M}$. Both radii of curvature increase toward the poles (see {numref}`refsys5`). Their equations are:
 
 <table style="width:100%;">
 <colgroup>
@@ -290,7 +289,7 @@ name: refsys4
 width: 60%
 align: center
 ---
-Fig. 4: Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latitude ψ, radius of curvature formularadius r, ellipsoidal height h, semi-major axis a and semi-minor axis b of the ellipsoid. The dashed line shows the local tangent plane to the ellipsoid. (Tiberius et al., 2022, Fig. 29.3).
+Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latitude ψ, radius of curvature formularadius r, ellipsoidal height h, semi-major axis a and semi-minor axis b of the ellipsoid. The dashed line shows the local tangent plane to the ellipsoid. (Tiberius et al., 2022, Fig. 29.3).
 ````
 
 ````{figure} ../figures/part-a_refsys5.png
@@ -299,7 +298,7 @@ name: refsys5
 width: 60%
 align: center
 ---
-Fig. 5: Radius of curvature formulaand formulaas function of latitude φ. The dashed lines represent the semi-major axis a and semi-minor axis b. (Tiberius et al., 2022, Fig. 29.4).
+Radius of curvature formulaand formulaas function of latitude φ. The dashed lines represent the semi-major axis a and semi-minor axis b. (Tiberius et al., 2022, Fig. 29.4).
 ````
 
 ## Height Coordinate Systems
@@ -413,7 +412,7 @@ by the plumb line. Therefore, heights and height differences are
 naturally expressed as distances measured along the plumb line.
 
 Heights defined along the plumb line are known as *orthometric heights*
-(denoted *H*, see Fig. 6a). The distances are taken with respect to an
+(denoted *H*, see {numref}`refsys6a`). The distances are taken with respect to an
 equipotential surface that is defined as the reference surface, referred
 to as the *geoid*. The gravity potential of the geoid is denoted as
 *W<sub>0</sub>*.
@@ -522,7 +521,7 @@ These height systems differ according to the choice of the gravity value
 In the case of normal heights, the Earth’s gravity field is replaced by
 the gravity field of a reference ellipsoid (which can be computed
 analytically) and heights are measured along the ellipsoidal normal (see
-Fig. 6b). Without going into further details, normal heights can be
+Fig. {numref}`refsys6b`). Without going into further details, normal heights can be
 interpreted as heights with respect to the quasi-geoid. In areas with
 moderate to little topography, the differences between the geoid and
 quasi-geoid as well as the differences between orthometric and normal
@@ -539,7 +538,7 @@ name: refsys6a
 width: 60%
 align: center
 ---
-Fig. 6a: The orthometric height HO: the curved-line distance measured along the plumb line from the point P0 on the geoid to the point of interest P on the Earth’s surface. The geoid height N: the straight-line distance measured along the ellipsoidal surface normal from the point Q0 on the ellipsoid to the point P0 on the geoid. (Note: the curvature of the equipotential surfaces and plumb lines is exaggerated for illustrative purposes). Adapted from Featherstone & Kuhn (2006), Fig. 2. |
+The orthometric height HO: the curved-line distance measured along the plumb line from the point P0 on the geoid to the point of interest P on the Earth’s surface. The geoid height N: the straight-line distance measured along the ellipsoidal surface normal from the point Q0 on the ellipsoid to the point P0 on the geoid. (Note: the curvature of the equipotential surfaces and plumb lines is exaggerated for illustrative purposes). Adapted from Featherstone & Kuhn (2006), Fig. 2. |
 ````
 
 ````{figure} ../figures/part-a_refsys6b.png
@@ -548,7 +547,7 @@ name: refsys6b
 width: 60%
 align: center
 ---
-Fig. 6b: The normal height HN: the curved-line distance measured along the normal gravity plumb line from the point on the reference ellipsoid to the point Q on the telluroid. The quasi-geoid height: the straight-line distance measured along the ellipsoidal surface normal from formulaon the ellipsoid to the point formulaon the quasi-geoid. By definition, this distance equals the height anomaly: the straight-line distance measured along the ellipsoidal normal from the point P on the Earth’s surface to the point Q on the telluroid. Adapted from Featherstone & Kuhn (2006), Fig. 3.
+The normal height HN: the curved-line distance measured along the normal gravity plumb line from the point on the reference ellipsoid to the point Q on the telluroid. The quasi-geoid height: the straight-line distance measured along the ellipsoidal surface normal from formulaon the ellipsoid to the point formulaon the quasi-geoid. By definition, this distance equals the height anomaly: the straight-line distance measured along the ellipsoidal normal from the point P on the Earth’s surface to the point Q on the telluroid. Adapted from Featherstone & Kuhn (2006), Fig. 3.
 ````
 
 Table 1.1: A comparison of height systems with respect to various properties that distinguish them. Taken and adapted from Meyer et al. (2006).
@@ -633,7 +632,7 @@ geoid was zero, and for which the ellipsoidal normal coincided with the
 direction of local gravity. Furthermore, the orientation of the minor
 axis of the ellipsoid was chosen to be parallel to the Earth’s rotation
 axis, and a prime meridian was defined for zero longitude. As
-illustrated in Fig. 7, alignment to the local geoid means that even when
+illustrated in Fig. {numref}`refsys7`, alignment to the local geoid means that even when
 the same reference ellipsoid is used, different geodetic datums may be
 obtained.
 
@@ -643,7 +642,7 @@ name: refsys7
 width: 60%
 align: center
 ---
-Fig. 7: The shape of the Earth, i.e. the geoid (blue dashed line) with its best fitting reference ellipsoid (blue solid line). The red reference ellipsoids have a different size and shape compared to the one the best fits the global geoid. Both are positioned and oriented in such a way that they fit the local geoid best in different locations resulting in different geodetic datums.
+The shape of the Earth, i.e. the geoid (blue dashed line) with its best fitting reference ellipsoid (blue solid line). The red reference ellipsoids have a different size and shape compared to the one the best fits the global geoid. Both are positioned and oriented in such a way that they fit the local geoid best in different locations resulting in different geodetic datums.
 ````
 
 Modern, global geodetic datums—such as those used in GNSS
@@ -701,7 +700,7 @@ inevitably arise. Regardless of the chosen water level (e.g., mean water
 level), it represents a quantity that varies in both space and time.
 Consequently, the height of a point relative to datum A will generally
 differ from its height relative to datum B. Within Europe, such
-differences can amount to approximately 2.30 m (see Fig. 8).
+differences can amount to approximately 2.30 m (see Fig. {numref}`refsys8`).
 
 ````{figure} ../figures/part-a_refsys8.png
 ---
@@ -709,7 +708,7 @@ name: refsys8
 width: 60%
 align: center
 ---
-Fig. 8: The differences between the national vertical datums and the one adopted for the European vertical vertical reference system. Taken from www.bkg.bund.de.
+The differences between the national vertical datums and the one adopted for the European vertical vertical reference system. Taken from www.bkg.bund.de.
 ````
 
 ### **Engineering datums**
@@ -755,7 +754,7 @@ determine the coordinates of their own points of interest with respect
 to that CRS.
 
 In the context of a levelling-based vertical (height) reference frame,
-the frame consists of a network of benchmarks (see Fig. 9), typically
+the frame consists of a network of benchmarks (see {numref}`refsys9`), typically
 installed in buildings, bridges, or other stable structures, for which
 heights—and in some cases vertical motions—have been determined. A user
 requiring the height of a point *P* performs levelling to one or more
@@ -783,7 +782,7 @@ name: refsys9
 width: 60%
 align: center
 ---
-Fig. 9: A height benchmark in the CiTG building.
+A height benchmark in the CiTG building.
 ````
 
 This example illustrates that a new vertical reference frame can be
@@ -871,7 +870,7 @@ shape resulting from projecting an infinitesimally small circle from the
 sphere or ellipsoid onto the map. It depends on the scale factors along
 the meridian and parallel and on the angle between them. The result is
 an ellipse whose axes indicate the directions of maximum and minimum
-scale distortion. See Fig. 10 for an example.
+scale distortion. See {numref}`refsys10` for an example.
 
 ````{figure} ../figures/part-a_refsys10.png
 ---
@@ -879,15 +878,14 @@ name: refsys10
 width: 60%
 align: center
 ---
-Fig. 10: Tissot's indicatrices on the Mercator projection. Stefan Kühn, CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons.
+Tissot's indicatrices on the Mercator projection. Stefan Kühn, CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons.
 ````
 
 
 ### **Projections Surfaces**
 
 Historically, many projections were conceptualized using projection (or
-developable) surfaces—surfaces such as planes, cylinders, or cones (Fig.
-11) that can be unrolled onto a flat sheet without further distortion.
+developable) surfaces—surfaces such as planes, cylinders, or cones ({numref}`refsys11`) that can be unrolled onto a flat sheet without further distortion.
 In this approach, the projection surface is placed either tangentially
 (touching the globe) or secantly (cutting through it), geographic
 features are transferred to the surface, and the surface is then
@@ -905,7 +903,7 @@ classified as:
 **Cylindrical projections** – The projection surface is a cylinder. The
 resulting maps are rectangular. Meridians and parallels appear as
 straight lines intersecting at right angles (in the normal or transverse
-aspect, see Fig. 11). Meridians are equally spaced, while spacing
+aspect, see {numref}`refsys11`). Meridians are equally spaced, while spacing
 between parallels increases toward the poles. Cylindrical projections
 are conformal and preserve directions along straight lines. The line(s)
 of tangency or secancy have no distortion. Other geographical properties
@@ -926,13 +924,13 @@ name: refsys11
 width: 60%
 align: center
 ---
-Fig. 11: Cylindrical, conic and azimuthal map projections. Image of cylindrical, conic and azimuthal map projection, by Traroth, March 2005, taken from Wikimedia Commons, under CC BY-SA 3.0 license.
+Cylindrical, conic and azimuthal map projections. Image of cylindrical, conic and azimuthal map projection, by Traroth, March 2005, taken from Wikimedia Commons, under CC BY-SA 3.0 license.
 ````
 
 The projection surface can be oriented in different ways, described by
 its *aspect*. It may be normal (aligned with Earth’s rotation axis),
 transverse (perpendicular to it), or oblique (any angle in between) (see
-Fig. 12).
+{numref}`refsys12`).
 
 ````{figure} ../figures/refsys_12.png
 ---
@@ -940,7 +938,7 @@ name: refsys12
 width: 60%
 align: center
 ---
-Fig. 12: Normal, transverse and oblique projection for a cylinder. Image on cylindrical projection aspects by Peter Mercator, own work, November 2009, taken from Wikimedia Commons. Public Domain.
+Normal, transverse and oblique projection for a cylinder. Image on cylindrical projection aspects by Peter Mercator, own work, November 2009, taken from Wikimedia Commons. Public Domain.
 ````
 
 Although these geometric models are conceptually useful, in practice a
@@ -950,7 +948,7 @@ f(φ, λ)*.
 #### Projection origin
 
 Map projections also differ in the point of perspective from which the
-surface is conceptually projected. Fig. 13 illustrates three common
+surface is conceptually projected. {numref}`refsys13` illustrates three common
 cases: gnomonic, stereographic, and orthographic projections.
 
 ````{figure} ../figures/refsys_13.png
@@ -959,7 +957,7 @@ name: refsys13
 width: 60%
 align: center
 ---
-Fig. 13: Cross-section of azimuthal map projection, the mapping surface being a flat plane, with central point of projection, so-called gnomonic (left), stereographic projection (middle), and orthographic projection (right). Taken from Tiberius et al. (2022).
+Cross-section of azimuthal map projection, the mapping surface being a flat plane, with central point of projection, so-called gnomonic (left), stereographic projection (middle), and orthographic projection (right). Taken from Tiberius et al. (2022).
 ````
 
 #### **Preserved Properties**
@@ -1273,7 +1271,7 @@ desired coordinate system. From an educational point of view, this means
 that we only need to introduce a single transformation method. This is
 the commonly applied *7-parameter similarity transformation* (or
 *14-parameter* in the case that time dependency is included). The
-strategy is outlined in Fig. 14.
+strategy is outlined in {numref}`refsys14`.
 
 ````{figure} ../figures/refsys_14.png
 ---
@@ -1281,7 +1279,7 @@ name: refsys14
 width: 60%
 align: center
 ---
-Fig. 14: Coordinate conversions and datum transformations. The horizontal operations represent coordinate conversions, while the vertical operations show datum transformations from system A to system B. Although direct transformations between different projected and geographic CRSs are possible, our strategy relies on indirect methods. These consist of converting the coordinates to a geocentric CRS, applying the datum transformation to the target geodetic datum, and then converting the transformed coordinates to the desired coordinate system. Figure is taken and adapted from Tiberius et al. (2022, Fig. 31.1).
+Coordinate conversions and datum transformations. The horizontal operations represent coordinate conversions, while the vertical operations show datum transformations from system A to system B. Although direct transformations between different projected and geographic CRSs are possible, our strategy relies on indirect methods. These consist of converting the coordinates to a geocentric CRS, applying the datum transformation to the target geodetic datum, and then converting the transformed coordinates to the desired coordinate system. Figure is taken and adapted from Tiberius et al. (2022, Fig. 31.1).
 ````
 
 ### 3D Similarity Transformations
@@ -1418,8 +1416,7 @@ gravity data acquired both in-situ as well as from moving platforms
 (e.g., airplanes, ships, and satellites) and may cover a particular
 country, region or even the entire globe. In the Netherlands, the
 official model to be used in order to convert GNSS-derived ellipsoidal
-heights into NAP heights is the NLGEO2018 quasi-geoid model (see Fig.
-15).
+heights into NAP heights is the NLGEO2018 quasi-geoid model (see {numref}`refsys15`).
 
 ````{figure} ../figures/refsys_15.png
 ---
@@ -1427,7 +1424,7 @@ name: refsys15
 width: 60%
 align: center
 ---
-Fig. 15: The Dutch NLGEO2018 quasi-geoid model that needs to be used to convert GNSS-derived ellipsoidal heights into NAP heights.
+The Dutch NLGEO2018 quasi-geoid model that needs to be used to convert GNSS-derived ellipsoidal heights into NAP heights.
 ````
 
 The transformation between vertical CRSs referring to different vertical

@@ -34,6 +34,7 @@ parts:
       sections:
       - file: 3_mapping/Measuring_and_Mapping_the_Earth.md
       - file: 3_mapping/Reference_Systems_and_Frames.md
+      - file: 3_mapping/GNSS.md
       - file: 3_mapping/subsurface/Earths_material_properties.md
       - file: 3_mapping/subsurface/Geophysics.md
   # - caption: Part B - Applied Statistics with Python

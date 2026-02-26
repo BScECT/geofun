@@ -115,7 +115,7 @@ the 3D Cartesian, spherical, and ellipsoidal coordinate systems.
 3D Cartesian coordinate systems can be considered a straightforward
 extension of 2D Cartesian coordinate systems by adding a third axis.
 Each coordinate of a point *P*, is the signed distance from *P* to the
-plane defined by the other two axes (see Fig. 2). The sign is determined
+plane defined by the other two axes (see Fig. 2 {numref}`refsys2`). The sign is determined
 by the orientation of the corresponding axis. Together, the coordinates
 form a triplet that is typically denoted as *X,Y,Z*.
 
@@ -123,7 +123,7 @@ form a triplet that is typically denoted as *X,Y,Z*.
 ````{figure} ../figures/part-a_refsys2.png
 ---
 name: refsys2
-width: 60%
+width: 30%
 align: center
 ---
 Fig. 2: The 3D Cartesian coordinate system.
@@ -155,13 +155,10 @@ referred to as, respectively, the geocentric latitude, the longitude,
 and the geocentric radius. The relationship between Cartesian and
 spherical coordinates is given by:
 
-|                             
- $$\begin{array}{r}           
+$$
  X = r\cos\psi\cos\lambda \\  
  Y = r\cos\psi\sin\lambda \\  
- Z = r\sin\psi                
- \end{array}$$                | (1.1) |
-|-----------------------------|-------|
+ Z = r\sin\psi                $$
 
 The inverse relationship is given by:
 

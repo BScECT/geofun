@@ -158,29 +158,16 @@ spherical coordinates is given by:
 $$
  X = r\cos\psi\cos\lambda \\  
  Y = r\cos\psi\sin\lambda \\  
- Z = r\sin\psi                $$
+ Z = r\sin\psi
+$$
 
 The inverse relationship is given by:
 
-<table style="width:100%;">
-<colgroup>
-<col style="width: 85%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;"><p><span class="math display">$$\psi =
-\arctan\left( \frac{Z}{\sqrt{X^{2} + Y^{2}}} \right)$$</span></p>
-<p><span class="math display">$$\lambda = \arctan\left( \frac{Y}{X}
-\right)$$</span></p>
-<p><span class="math display">$$r = \sqrt{X^{2} + Y^{2} +
-Z^{2}}$$</span></p></th>
-<th style="text-align: right;">(1.2)</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+$$
+\psi = \arctan\left( \frac{Z}{\sqrt{X^{2} + Y^{2}}} \right) \\
+\lambda = \arctan\left( \frac{Y}{X} \right) \\
+r = \sqrt{X^{2} + Y^{2} + Z^{2}}
+$$
 
 ### **Ellipsoidal Coordinate Systems**
 
@@ -199,7 +186,7 @@ between *P* and the ellipsoid measured along the ellipsoid’s normal
 ````{figure} ../figures/part-a_refsys3.png
 ---
 name: refsys3
-width: 60%
+width: 40%
 align: center
 ---
 Ellipsoidal and Cartesian coordinates. The ellipsoidal latitude φ is also known as geodetic or geographic latitude. The ellipsoidal coordinates φ and λ are also called geographic coordinates (Tiberius et al., 2022, Fig. 29.2).
@@ -210,44 +197,24 @@ semi-major axis or the equatorial radius *a*. The other parameter is
 either the semi-minor axis (or polar radius), *b*, or the flattening,
 *f*, or the eccentricity, *e*. They are related by:
 
-| 
-$$f = \frac{a - b}{a},e^{2} = 2f - f^{2} = \frac{a^{2} - b^{2}}{a^{2}},b = a(1 - f) = a\sqrt{1 - e^{2}}.$$ | (1.3) |
-|------------------------------------------------------------|------------|
+$$ f = \frac{a - b}{a},e^{2} = 2f - f^{2} = \frac{a^{2} - b^{2}}{a^{2}},b = a(1 - f) = a\sqrt{1 - e^{2}}$$ .
 
 The relationship between Cartesian and geographic coordinates is given
 by:
 
-| 
-$$\begin{array}{r}
+$$
 X = \left( \overline{N} + h \right)\cos\varphi\cos\lambda \\
 Y = \left( \overline{N} + h \right)\cos\varphi\sin\lambda \\
-Z = \left( \overline{N}\left( 1 - e^{2} \right) + h \right)\sin\varphi
-\end{array}$$ | (1.4) |
-|------------------------------------------------------------|------------|
+Z = \left( \overline{N}\left( 1 - e^{2} \right) + h \right \sin\varphi
+$$
 
 whereas the inverse relationship is given by the iterative formula:
 
-<table style="width:100%;">
-<colgroup>
-<col style="width: 85%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;"><p><span class="math inline">$\varphi =
-\arctan\left( \frac{Z + e^{2}\overline{N}\sin\varphi}{\sqrt{X^{2} +
-Y^{2}}} \right)$</span>(iterate four times, start with<span
-class="math inline">$\overline{N}\sin\varphi = Z$</span>)</p>
-<p><span class="math display">$$\lambda = \arctan\left( \frac{Y}{X}
-\right)$$</span></p>
-<p><span class="math display">$$h = \frac{\sqrt{X^{2} +
-Y^{2}}}{\cos\varphi} - \overline{N}$$</span></p></th>
-<th style="text-align: right;">(1.5)</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+$$
+\varphi = \arctan\left( \frac{Z + e^{2}\overline{N}\sin\varphi}{\sqrt{X^{2} + Y^{2}}} \right) (iterate four times, start with \overline{N}\sin\varphi = Z) \\
+\lambda = \arctan\left( \frac{Y}{X} \right) \\
+h = \frac{\sqrt{X^{2} + Y^{2}}}{\cos\varphi} - \overline{N}
+$$
 
 $\overline{N}$, referred to in both equations, is the radius of
 curvature in the *prime vertical normal section* (see {numref}`refsys4`). That is,
@@ -263,30 +230,14 @@ prime vertical section (i.e., it lies in the north–south direction) and
 has maximum curvature. Its radius of curvature is referred to as
 $\overline{M}$. Both radii of curvature increase toward the poles (see {numref}`refsys5`). Their equations are:
 
-<table style="width:100%;">
-<colgroup>
-<col style="width: 85%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;"><p><span
-class="math display">$$\overline{N}(\varphi) = \frac{a}{\sqrt{1 -
-e^{2}\sin^{2}\varphi}}$$</span></p>
-<p><span class="math display">$$\overline{M}(\varphi) = \frac{a\left( 1
-- e^{2} \right)}{\left( 1 - e^{2}\sin^{2}\varphi
-\right)^{\frac{3}{2}}}$$</span></p></th>
-<th style="text-align: right;">(1.6)</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+$$\overline{N}(\varphi) = \frac{a}{\sqrt{1 - e^{2}\sin^{2}\varphi}} \\
+\overline{M}(\varphi) = \frac{a\left( 1 - e^{2} \right)}{\left( 1 - e^{2}\sin^{2}\varphi \right)^{\frac{3}{2}}}
+$$
 
 ````{figure} ../figures/part-a_refsys4.png
 ---
 name: refsys4
-width: 60%
+width: 40%
 align: center
 ---
 Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latitude ψ, radius of curvature formularadius r, ellipsoidal height h, semi-major axis a and semi-minor axis b of the ellipsoid. The dashed line shows the local tangent plane to the ellipsoid. (Tiberius et al., 2022, Fig. 29.3).
@@ -295,7 +246,7 @@ Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latit
 ````{figure} ../figures/part-a_refsys5.png
 ---
 name: refsys5
-width: 60%
+width: 40%
 align: center
 ---
 Radius of curvature formulaand formulaas function of latitude φ. The dashed lines represent the semi-major axis a and semi-minor axis b. (Tiberius et al., 2022, Fig. 29.4).
@@ -367,9 +318,9 @@ the attracting mass, and *l* is the distance between *P* and *m*. For
 the Earth—being a three-dimensional body with volume *v* and variable
 density *ρ*—the expression for *V* becomes:
 
-| 
-$$V\left( X\_{P},Y\_{P},Z\_{P} \right) = G\iiint\_{v}^{}\frac{\rho(\xi,\eta,\zeta)}{l}d\xi d\eta d\zeta,$$ | (1.7) |
-|------------------------------------------------------------|------------|
+$$
+V\left( X\_{P},Y\_{P},Z\_{P} \right) = G\iiint\_{v}^{}\frac{\rho(\xi,\eta,\zeta)}{l}d\xi d\eta d\zeta,
+$$
 
 where the coordinates of the attracted point *P* are given by
 *X*<sub>P</sub>*, Y*<sub>P</sub>*, Z*<sub>P</sub> and that of the mass
@@ -535,7 +486,7 @@ are summarised in Table 1.1.
 ````{figure} ../figures/part-a_refsys6a.png
 ---
 name: refsys6a
-width: 60%
+width: 40%
 align: center
 ---
 The orthometric height HO: the curved-line distance measured along the plumb line from the point P0 on the geoid to the point of interest P on the Earth’s surface. The geoid height N: the straight-line distance measured along the ellipsoidal surface normal from the point Q0 on the ellipsoid to the point P0 on the geoid. (Note: the curvature of the equipotential surfaces and plumb lines is exaggerated for illustrative purposes). Adapted from Featherstone & Kuhn (2006), Fig. 2. |
@@ -544,7 +495,7 @@ The orthometric height HO: the curved-line distance measured along the plumb lin
 ````{figure} ../figures/part-a_refsys6b.png
 ---
 name: refsys6b
-width: 60%
+width: 40%
 align: center
 ---
 The normal height HN: the curved-line distance measured along the normal gravity plumb line from the point on the reference ellipsoid to the point Q on the telluroid. The quasi-geoid height: the straight-line distance measured along the ellipsoidal surface normal from formulaon the ellipsoid to the point formulaon the quasi-geoid. By definition, this distance equals the height anomaly: the straight-line distance measured along the ellipsoidal normal from the point P on the Earth’s surface to the point Q on the telluroid. Adapted from Featherstone & Kuhn (2006), Fig. 3.
@@ -639,7 +590,7 @@ obtained.
 ````{figure} ../figures/part-a_refsys7.png
 ---
 name: refsys7
-width: 60%
+width: 40%
 align: center
 ---
 The shape of the Earth, i.e. the geoid (blue dashed line) with its best fitting reference ellipsoid (blue solid line). The red reference ellipsoids have a different size and shape compared to the one the best fits the global geoid. Both are positioned and oriented in such a way that they fit the local geoid best in different locations resulting in different geodetic datums.
@@ -705,7 +656,7 @@ differences can amount to approximately 2.30 m (see Fig. {numref}`refsys8`).
 ````{figure} ../figures/part-a_refsys8.png
 ---
 name: refsys8
-width: 60%
+width: 40%
 align: center
 ---
 The differences between the national vertical datums and the one adopted for the European vertical vertical reference system. Taken from www.bkg.bund.de.
@@ -779,7 +730,7 @@ datum itself has not changed.
 ````{figure} ../figures/part-a_refsys9.png
 ---
 name: refsys9
-width: 60%
+width: 40%
 align: center
 ---
 A height benchmark in the CiTG building.
@@ -875,7 +826,7 @@ scale distortion. See {numref}`refsys10` for an example.
 ````{figure} ../figures/part-a_refsys10.png
 ---
 name: refsys10
-width: 60%
+width: 40%
 align: center
 ---
 Tissot's indicatrices on the Mercator projection. Stefan Kühn, CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons.
@@ -921,7 +872,7 @@ circles. At the point of contact, directions are accurate.
 ````{figure} ../figures/part-a_refsys11.png
 ---
 name: refsys11
-width: 60%
+width: 40%
 align: center
 ---
 Cylindrical, conic and azimuthal map projections. Image of cylindrical, conic and azimuthal map projection, by Traroth, March 2005, taken from Wikimedia Commons, under CC BY-SA 3.0 license.
@@ -935,7 +886,7 @@ transverse (perpendicular to it), or oblique (any angle in between) (see
 ````{figure} ../figures/refsys_12.png
 ---
 name: refsys12
-width: 60%
+width: 40%
 align: center
 ---
 Normal, transverse and oblique projection for a cylinder. Image on cylindrical projection aspects by Peter Mercator, own work, November 2009, taken from Wikimedia Commons. Public Domain.
@@ -954,7 +905,7 @@ cases: gnomonic, stereographic, and orthographic projections.
 ````{figure} ../figures/refsys_13.png
 ---
 name: refsys13
-width: 60%
+width: 40%
 align: center
 ---
 Cross-section of azimuthal map projection, the mapping surface being a flat plane, with central point of projection, so-called gnomonic (left), stereographic projection (middle), and orthographic projection (right). Taken from Tiberius et al. (2022).
@@ -1276,7 +1227,7 @@ strategy is outlined in {numref}`refsys14`.
 ````{figure} ../figures/refsys_14.png
 ---
 name: refsys14
-width: 60%
+width: 40%
 align: center
 ---
 Coordinate conversions and datum transformations. The horizontal operations represent coordinate conversions, while the vertical operations show datum transformations from system A to system B. Although direct transformations between different projected and geographic CRSs are possible, our strategy relies on indirect methods. These consist of converting the coordinates to a geocentric CRS, applying the datum transformation to the target geodetic datum, and then converting the transformed coordinates to the desired coordinate system. Figure is taken and adapted from Tiberius et al. (2022, Fig. 31.1).
@@ -1421,7 +1372,7 @@ heights into NAP heights is the NLGEO2018 quasi-geoid model (see {numref}`refsys
 ````{figure} ../figures/refsys_15.png
 ---
 name: refsys15
-width: 60%
+width: 40%
 align: center
 ---
 The Dutch NLGEO2018 quasi-geoid model that needs to be used to convert GNSS-derived ellipsoidal heights into NAP heights.

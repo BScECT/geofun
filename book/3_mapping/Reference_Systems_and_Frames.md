@@ -259,7 +259,7 @@ Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latit
 ````{figure} ../figures/part-a_refsys5.png
 ---
 name: refsys5
-width: 40%
+width: 60%
 align: center
 ---
 Radius of curvature formulaand formulaas function of latitude φ. The dashed lines represent the semi-major axis a and semi-minor axis b. (Tiberius et al., 2022, Fig. 29.4).
@@ -600,7 +600,7 @@ obtained.
 ````{figure} ../figures/part-a_refsys7.png
 ---
 name: refsys7
-width: 40%
+width: 80%
 align: center
 ---
 The shape of the Earth, i.e. the geoid (blue dashed line) with its best fitting reference ellipsoid (blue solid line). The red reference ellipsoids have a different size and shape compared to the one the best fits the global geoid. Both are positioned and oriented in such a way that they fit the local geoid best in different locations resulting in different geodetic datums.
@@ -740,7 +740,7 @@ datum itself has not changed.
 ````{figure} ../figures/part-a_refsys9.png
 ---
 name: refsys9
-width: 40%
+width: 60%
 align: center
 ---
 A height benchmark in the CiTG building.
@@ -896,7 +896,7 @@ transverse (perpendicular to it), or oblique (any angle in between) (see
 ````{figure} ../figures/part-a_refsys12.png
 ---
 name: refsys12
-width: 40%
+width: 60%
 align: center
 ---
 Normal, transverse and oblique projection for a cylinder. Image on cylindrical projection aspects by Peter Mercator, own work, November 2009, taken from Wikimedia Commons. Public Domain.
@@ -915,7 +915,7 @@ cases: gnomonic, stereographic, and orthographic projections.
 ````{figure} ../figures/part-a_refsys13.png
 ---
 name: refsys13
-width: 40%
+width: 60%
 align: center
 ---
 Cross-section of azimuthal map projection, the mapping surface being a flat plane, with central point of projection, so-called gnomonic (left), stereographic projection (middle), and orthographic projection (right). Taken from Tiberius et al. (2022).
@@ -1237,7 +1237,7 @@ strategy is outlined in {numref}`refsys14`.
 ````{figure} ../figures/part-a_refsys14.png
 ---
 name: refsys14
-width: 40%
+width: 80%
 align: center
 ---
 Coordinate conversions and datum transformations. The horizontal operations represent coordinate conversions, while the vertical operations show datum transformations from system A to system B. Although direct transformations between different projected and geographic CRSs are possible, our strategy relies on indirect methods. These consist of converting the coordinates to a geocentric CRS, applying the datum transformation to the target geodetic datum, and then converting the transformed coordinates to the desired coordinate system. Figure is taken and adapted from Tiberius et al. (2022, Fig. 31.1).

@@ -319,7 +319,7 @@ the Earth—being a three-dimensional body with volume *v* and variable
 density *ρ*—the expression for *V* becomes:
 
 $$
-V\left( X\_{P},Y\_{P},Z\_{P} \right) = G\iiint\_{v}^{}\frac{\rho(\xi,\eta,\zeta)}{l}d\xi d\eta d\zeta,
+V\left( X_{P},Y_{P},Z_{P} \right) = G\iiint _{v}^{}\frac{\rho(\xi,\eta,\zeta)}{l}d\xi d\eta d\zeta,
 $$
 
 where the coordinates of the attracted point *P* are given by
@@ -330,7 +330,7 @@ The centrifugal potential arises from the fact that the Earth rotates
 about its own axis. In a Cartesian coordinate system co-rotating with
 the Earth and with its origin at the Earth’s centre, the potential is
 given by
-$\Phi = \frac{1}{2}\omega^{2}\left( X\_{P}^{2} + Y\_{P}^{2} \right).$Here,
+$\Phi = \frac{1}{2}\omega^{2}\left( X_{P}^{2} + Y_{P}^{2} \right).$Here,
 *ω* is the angular velocity of the Earth’s rotation and
 (*X*<sub>*P*</sub><sup>2</sup> + *Y*<sub>*P*</sub><sup>2</sup>)
 represents the squared distance from the polar axis to the point *P*.

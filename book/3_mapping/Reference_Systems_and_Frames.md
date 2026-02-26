@@ -267,7 +267,7 @@ Radius of curvature formulaand formulaas function of latitude φ. The dashed lin
 
 ## Height Coordinate Systems
 
-The coordinate systems introduced in Sect. 2 allow us to describe
+The coordinate systems introduced in the first section of this chapter allow us to describe
 positions in three-dimensional space. However, none of them are suitable
 for expressing vertical positions, whether heights on land or depths at
 sea. For heights on land, this limitation is related to how we define
@@ -561,7 +561,7 @@ A geodetic datum describes the relationship between a reference sphere
 coordinates) and the Earth. The sphere or ellipsoid of revolution is a
 mathematical approximation of the Earth’s shape. The actual shape of the
 Earth is represented by the equipotential surface that best fits mean
-sea level—the geoid (see Sect. 3.2). The sphere or ellipsoid therefore
+sea level—the geoid (see Section "Plumb Lines and Gravity"). The sphere or ellipsoid therefore
 serves as an approximation to the geoid.
 
 Before the satellite era, the parameters defining the size and shape of
@@ -1004,9 +1004,9 @@ Projection-specific parameters include:
 
 ## Coordinate Reference Systems
 
-In Sect. 4, we established that a Coordinate Reference System (CRS)
+In Section "Datums and Frames", we established that a Coordinate Reference System (CRS)
 consists of two main components: the datum and the coordinate system. In
-Sect. 4.4, we introduced the idea that for users to determine
+Section "Datums versus Reference Frames", we introduced the idea that for users to determine
 coordinates within a specific CRS, the system must be realized in
 practice. This requires a set of physical points whose coordinates (and
 possibly velocities) are known in that CRS. This set of points is known
@@ -1159,7 +1159,7 @@ kept within acceptable limits.
 
 A Vertical CRS is a one-dimensional reference system used for
 gravity-related heights. Its datum defines the origin, the orientation
-of the vertical axis, and the scale (Sect. 4.2) and is typically related
+of the vertical axis, and the scale (Section "4.2	Vertical Datums") and is typically related
 to a mean water level such as mean sea level.
 
 **Usage:** Vertical CRSs are essential in water management, hydrography,
@@ -1197,7 +1197,7 @@ and infrastructure design and maintenance.
 
 ## Coordinate Transformations
 
-In Sect. 2, we introduced the relationships between Cartesian
+In Section "Coordinate Systems", we introduced the relationships between Cartesian
 coordinates and their spherical and geographic counterparts. These
 relationships allow us to convert coordinates from one coordinate system
 to another. They are exact and do not involve any change of datum. The
@@ -1218,7 +1218,7 @@ coordinate operations for vertical CRSs.
 
 ### Overview of Transformations
 
-Starting from the five different types of CRSs introduced in Sect. 6, a
+Starting from the five different types of CRSs introduced in Section "6	Coordinate Reference Systems", a
 wide range of different transformations can be envisaged. For example,
 transformations from one geographic CRS to another, but also
 transformations from an engineering CRS to a geocentric CRS. It is

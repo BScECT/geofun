@@ -156,17 +156,21 @@ and the geocentric radius. The relationship between Cartesian and
 spherical coordinates is given by:
 
 $$
- X = r\cos\psi\cos\lambda \\  
- Y = r\cos\psi\sin\lambda \\  
- Z = r\sin\psi
+\begin{aligned}
+X &= r\cos\psi\cos\lambda \\
+Y &= r\cos\psi\sin\lambda \\
+Z &= r\sin\psi
+\end{aligned}
 $$
 
 The inverse relationship is given by:
 
 $$
-\psi = \arctan\left( \frac{Z}{\sqrt{X^{2} + Y^{2}}} \right) \\
-\lambda = \arctan\left( \frac{Y}{X} \right) \\
-r = \sqrt{X^{2} + Y^{2} + Z^{2}}
+\begin{aligned}
+\psi &= \arctan\left( \frac{Z}{\sqrt{X^{2} + Y^{2}}} \right) \\
+\lambda &= \arctan\left( \frac{Y}{X} \right) \\
+r &= \sqrt{X^{2} + Y^{2} + Z^{2}}
+\end{aligned}
 $$
 
 ### **Ellipsoidal Coordinate Systems**
@@ -203,17 +207,21 @@ The relationship between Cartesian and geographic coordinates is given
 by:
 
 $$
-X = \left( \overline{N} + h \right)\cos\varphi\cos\lambda \\
-Y = \left( \overline{N} + h \right)\cos\varphi\sin\lambda \\
-Z = \left( \overline{N}\left( 1 - e^{2} \right) + h \right \sin\varphi
+\begin{aligned}
+X &= \left( \overline{N} + h \right)\cos\varphi\cos\lambda \\
+Y &= \left( \overline{N} + h \right)\cos\varphi\sin\lambda \\
+Z &= \left( \overline{N}\left( 1 - e^{2} \right) + h \right \sin\varphi
+\end{aligned}
 $$
 
 whereas the inverse relationship is given by the iterative formula:
 
 $$
-\varphi = \arctan\left( \frac{Z + e^{2}\overline{N}\sin\varphi}{\sqrt{X^{2} + Y^{2}}} \right) (iterate four times, start with \overline{N}\sin\varphi = Z) \\
-\lambda = \arctan\left( \frac{Y}{X} \right) \\
-h = \frac{\sqrt{X^{2} + Y^{2}}}{\cos\varphi} - \overline{N}
+\begin{aligned}
+\varphi &= \arctan\left( \frac{Z + e^{2}\overline{N}\sin\varphi}{\sqrt{X^{2} + Y^{2}}} \right) (iterate four times, start with \overline{N}\sin\varphi = Z) \\
+\lambda &= \arctan\left( \frac{Y}{X} \right) \\
+h &= \frac{\sqrt{X^{2} + Y^{2}}}{\cos\varphi} - \overline{N}
+\end{aligned}
 $$
 
 $\overline{N}$, referred to in both equations, is the radius of
@@ -230,8 +238,11 @@ prime vertical section (i.e., it lies in the north–south direction) and
 has maximum curvature. Its radius of curvature is referred to as
 $\overline{M}$. Both radii of curvature increase toward the poles (see {numref}`refsys5`). Their equations are:
 
-$$\overline{N}(\varphi) = \frac{a}{\sqrt{1 - e^{2}\sin^{2}\varphi}} \\
-\overline{M}(\varphi) = \frac{a\left( 1 - e^{2} \right)}{\left( 1 - e^{2}\sin^{2}\varphi \right)^{\frac{3}{2}}}
+$$
+\begin{aligned}
+\overline{N}(\varphi) $= \frac{a}{\sqrt{1 - e^{2}\sin^{2}\varphi}} \\
+\overline{M}(\varphi) $= \frac{a\left( 1 - e^{2} \right)}{\left( 1 - e^{2}\sin^{2}\varphi \right)^{\frac{3}{2}}}
+\end{aligned}
 $$
 
 ````{figure} ../figures/part-a_refsys4.png

@@ -287,14 +287,12 @@ $$
 using a three-dimensional Cartesian coordinate system as shown in Figure~{ref}`fig:ECEF`,
 pseudorange observation Eq.~({ref}`eq:pseudorange`) turns into
 
-$$
-\begin{equation}
+$$\begin{equation}
 \underline{p}_{r}^{s} = \sqrt{(x^s-x_r)^2 + (y^s-y_r)^2 + (z^s-z_r)^2} + b_r + \underline{e}_{r}^{s}
+\label{eq:pseudorange}
+\end{equation}$$
 
-\end{equation}
-$$
-
-where we omitted the argument of time~$t$. The satellite position coordinates at time of signal transmission are
+where we omitted the argument of time $t$. The satellite position coordinates at time of signal transmission are
 $x^s$, $y^s$ and $z^s$, and the receiver position coordinates at time of signal reception are $x_r$, $y_r$ and $z_r$.
 The satellite position, as well as the satellite clock offset, is available to the user
 through the navigation data message, cf.\ Figure~{ref}`fig:gpssignal`.
@@ -322,21 +320,21 @@ see Tiberius et al., (2022). The linearized model of observation equations reads
 
 $$\begin{equation}
 \underbrace{
-\left( \begin{array}{c} \Delta \underline{p}\_{r}^{1} \\ \Delta \underline{p}\_{r}^{2} \\ \vdots \\ \Delta \underline{p}\_{r}^{m} \end{array} \right)
-}\_{\Delta \underline{y}} =
+\left( \begin{array}{c} \Delta \underline{p}_{r}^{1} \\ \Delta \underline{p}_{r}^{2} \\ \vdots \\ \Delta \underline{p}_{r}^{m} \end{array} \right)
+}_{\Delta \underline{y}} =
 \underbrace{
-\left( \begin{array}{cccc} -u\_{r,x}^{1} & -u\_{r,y}^{1} & -u\_{r,z}^{1} & 1  \\ 
-                           -u\_{r,x}^{2} & -u\_{r,y}^{2} & -u\_{r,z}^{2} & 1  \\
+\left( \begin{array}{cccc} -u_{r,x}^{1} & -u_{r,y}^{1} & -u_{r,z}^{1} & 1  \\ 
+                           -u_{r,x}^{2} & -u_{r,y}^{2} & -u_{r,z}^{2} & 1  \\
                               \vdots    &   \vdots     &   \vdots     & \vdots \\
-                           -u\_{r,x}^{m} & -u\_{r,y}^{m} & -u\_{r,z}^{m} & 1  \\
+                           -u_{r,x}^{m} & -u_{r,y}^{m} & -u_{r,z}^{m} & 1  \\
 \end{array} \right)
-}\_{A}
+}_{A}
 \underbrace{
-\left( \begin{array}{c} \Delta x\_{r} \\ \Delta y\_{r} \\ \Delta z\_{r} \\ b_r \end{array} \right)
-}\_{\Delta x} +
+\left( \begin{array}{c} \Delta x_{r} \\ \Delta y_{r} \\ \Delta z_{r} \\ b_r \end{array} \right)
+}_{\Delta x} +
 \underbrace{
-\left( \begin{array}{c} \underline{e}\_{r}^{1} \\ \underline{e}\_{r}^{2} \\  \vdots \\ \underline{e}\_{r}^{m} \end{array} \right)
-}\_{\underline{e}}
+\left( \begin{array}{c} \underline{e}_{r}^{1} \\ \underline{e}_{r}^{2} \\  \vdots \\ \underline{e}_{r}^{m} \end{array} \right)
+}_{\underline{e}}
 \label{eq:standalonemodel}
 \end{equation}$$
 
@@ -407,36 +405,27 @@ align: center
 GPS error sources. The receiver clock offset (shown in faded green) is accounted for in the observation equation ({ref}`eq:pseudorangeobseqn)
 ````
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|c|}
-\hline
-       error source & 95\%-value 
-\hline
-       satellite orbit   &   2 m 
-satellite clock   &  2-5 m 
-ionosphere        &  15-90 m 
-troposphere       &   20 m 
-multipath         &  1-10 m 
-receiver noise    &  1-3 m 
-\hline
-       total range  &  5-10 m 
-\hline
-\end{tabular}
-\end{center}
-\caption{GPS error budget for standalone positioning, see also Figure~{ref}`fig:signalpath`. The errors are given in the range domain, using the satellite (broadcast) navigation data message, and after Klobuchar ionospheric model
-correction (which in practice yields a 50\% reduction of the ionospheric delay error), as well as tropospheric delay correction based
-on an a-priori (blind) model (which yields about 90\% of reduction of the tropospheric delay error). The larger values for ionospheric and
-tropospheric delay may occur for slant ranges to satellites at low elevation.}
-
-\end{table}
-
 The accuracy of *standalone positioning* with GPS, also referred to as single-point positioning, or absolute positioning, according to model ({ref}`eq:standalonemodel`),
 in the order of 5-15 meters under reasonable satellite visibility, is limited by the accuracy of the range measurements
 (time can be determined correspondingly with a tens of nanoseconds accuracy).
 The GPS pseudorange measurements contain errors due to inaccurate satellite orbit and clock information,
 delays along the path of the radio signal, including atmospheric delays (ionosphere and troposphere), local effects including multipath,
 and measurement noise, see Figure~{ref}`fig:signalpath` and Table~{ref}`tab:errorbudget`.
+
+| error source    | 95%-value |
+|:----------------|:---------:|
+| satellite orbit |    2 m    |
+| satellite clock |   2-5 m   |
+| ionosphere      |  15-90 m  |
+| troposphere     |   20 m    |
+| multipath       |  1-10 m   |
+| receiver noise  |   1-3 m   |
+| total range     |  5-10 m   |
+
+Table 1: GPS error budget for standalone positioning, see also Figure~{ref}`fig:signalpath`. The errors are given in the range domain, using the satellite (broadcast) navigation data message, and after Klobuchar ionospheric model
+correction (which in practice yields a 50\% reduction of the ionospheric delay error), as well as tropospheric delay correction based
+on an a-priori (blind) model (which yields about 90\% of reduction of the tropospheric delay error). The larger values for ionospheric and
+tropospheric delay may occur for slant ranges to satellites at low elevation.
 
 Finally it is mentioned that a GPS receiver, using electromagnetic signals received from the satellites,
 determines the position of the antenna phase center (typically a point inside or slightly above the antenna)
@@ -484,22 +473,17 @@ Table~{ref}`tab:spppos` presents the resulting empirical mean, standard deviatio
 of the position error in East, North and Up, showing a better than 1 meter accuracy of GNSS standalone positioning
 using over 25 GNSS satellites.
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|ccc|}
-\hline
-               & East & North & Up 
-\hline
-      mean [m] & 0.51 &  0.23 & -0.47 
-std [m]  & 0.15 &  0.35 &   0.41 
-rms [m]  & 0.53 & 0.42 & 0.62 
-\hline
-\end{tabular}
-\end{center}
-\caption{Empirical mean, standard deviation (std) and root mean square (rms) of position error,
-based on $N$=1000 GNSS standalone position solutions.}
+Table 2 presents the resulting empirical mean,
+standard deviation (std) and the root mean square (rms), which is the
+square root of the MSE, see , of the position error in East, North and
+Up, showing a better than 1 meter accuracy of GNSS standalone
+positioning using over 25 GNSS satellites.
 
-\end{table}
+|            | East | North |  Up   |
+|:-----------|:----:|:-----:|:-----:|
+| mean \[m\] | 0.51 | 0.23  | -0.47 |
+| std \[m\]  | 0.15 | 0.35  | 0.41  |
+| rms \[m\]  | 0.53 | 0.42  | 0.62  |
 
 ## GPS positioning modes
 
@@ -527,7 +511,7 @@ of the reference station. Generally the term 'DGPS' is used for relative positio
 ````{figure} ../figures/GNSS/relativepositioning.png
 ---
 name: dgps
-width: 60%
+width: 30%
 align: center
 ---
 Relative GPS positioning combines measurements from a roving receiver with measurements from a reference (or base) station. The position of the rover is actually computed *relative* to the position of the base station. A number of errors, including atmospheric errors, is almost identical for two receivers in close proximity to each other. Hence, these errors cancel in relative positioning.
@@ -620,32 +604,17 @@ and in the sequel we assume them to be really equal: $d_{1}^{s} = d_{2}^{s}$ (an
 With the position coordinates of the reference or base station $(x_1,y_1,z_1)$ being known,
 and taking the difference of measurements across the two receivers, $\varphi_{1,2}^{s} = \varphi_{2}^{s} - \varphi_{1}^{s}$, we obtain
 
-$$
-\begin{equation}
-\left( \begin{array}{c} \Delta \underline{\varphi}_{1,2}^{1} 
-\Delta \underline{\varphi}_{1,2}^{2} 
-\vdots 
-\Delta \underline{\varphi}_{1,2}^{m} \end{array} \right)
+$$\begin{equation}
+\left( \begin{array}{c} \Delta \underline{\varphi}\_{1,2}^{1} \\ \Delta \underline{\varphi}\_{1,2}^{2} \\ \vdots \\ \Delta \underline{\varphi}\_{1,2}^{m} \end{array} \right)
  =
-\left( \begin{array}{cccccccc} -u_{2,x}^{1} & -u_{2,y}^{1} & -u_{2,z}^{1} & 1 & \lambda & & &  
--u_{2,x}^{2} & -u_{2,y}^{2} & -u_{2,z}^{2} & 1 & & \lambda & &  
-\vdots    &   \vdots     &   \vdots     & \vdots & & & \ddots & 
--u_{2,x}^{m} & -u_{2,y}^{m} & -u_{2,z}^{m} & 1 & & & & \lambda  
+\left( \begin{array}{cccccccc} -u\_{2,x}^{1} & -u\_{2,y}^{1} & -u\_{2,z}^{1} & 1 & \lambda & & &  \\ 
+                               -u\_{2,x}^{2} & -u\_{2,y}^{2} & -u\_{2,z}^{2} & 1 & & \lambda & &  \\
+                                  \vdots    &   \vdots     &   \vdots     & \vdots & & & \ddots & \\
+                               -u\_{2,x}^{m} & -u\_{2,y}^{m} & -u\_{2,z}^{m} & 1 & & & & \lambda  \\
 \end{array} \right)
-\left( \begin{array}{c} \Delta x_{2} 
-\Delta y_{2} 
-\Delta z_{2} 
-b_{1,2} 
-N_{1,2}^{1} 
-N_{1,2}^{2} 
-\vdots 
-N_{1,2}^{m} \end{array} \right) +
-\left( \begin{array}{c} \underline{e}_{1,2}^{1} 
-\underline{e}_{1,2}^{2} 
-\vdots 
-\underline{e}_{1,2}^{m} \end{array} \right)
-\end{equation}
-$$
+\left( \begin{array}{c} \Delta x\_{2} \\ \Delta y\_{2} \\ \Delta z\_{2} \\ b\_{1,2} \\ N\_{1,2}^{1} \\ N\_{1,2}^{2} \\ \vdots \\ N\_{1,2}^{m} \end{array} \right) +
+\left( \begin{array}{c} \underline{e}\_{1,2}^{1} \\ \underline{e}\_{1,2}^{2} \\  \vdots \\ \underline{e}\_{1,2}^{m} \end{array} \right)
+\end{equation}$$
 
 with $b_{1,2} = b_2 - b_1$, $N_{1,2}^{s} = N_{2}^{s} - N_{1}^{s}$ and $\underline{e}_{1,2}^{s} = \underline{e}_{2}^{s} - \underline{e}_{1}^{s}$.
 Note that when we would leave the ambiguities $N$ out, the above model in structure very much resembles model ({ref}`eq:standalonemodel`) for standalone positioning.
@@ -656,27 +625,16 @@ In the above model the receiver clock offset parameter $b_{1,2}$, as it is appea
 can be removed by taking differences between measurements, e.g.\ $\varphi_{1,2}^{1,2} = \varphi_{1,2}^{2} - \varphi_{1,2}^{1}$.
 The resulting model of taking differences all with respect to the first measurement $\varphi_{1,2}^{1}$, reads
 
-$$
-\begin{equation}
-\left( \begin{array}{c} \Delta \underline{\varphi}_{1,2}^{1,2} 
-\vdots 
-\Delta \underline{\varphi}_{1,2}^{1,m} \end{array} \right)
+$$\begin{equation}
+\left( \begin{array}{c} \Delta \underline{\varphi}\_{1,2}^{1,2} \\ \vdots \\ \Delta \underline{\varphi}\_{1,2}^{1,m} \end{array} \right)
  =
-\left( \begin{array}{cccccc} -(u_{2,x}^{2}-u_{2,x}^{1}) & -(u_{2,y}^{2}-u_{2,y}^{1}) & -(u_{2,z}^{2}-u_{2,z}^{1}) & \lambda & & 
-\vdots    &   \vdots     &   \vdots     &  & \ddots & 
--(u_{2,x}^{m}-u_{2,x}^{1}) & -(u_{2,y}^{m}-u_{2,y}^{1}) & -(u_{2,z}^{m}-u_{2,z}^{1}) & & & \lambda  
+\left( \begin{array}{cccccc} -(u\_{2,x}^{2}-u\_{2,x}^{1}) & -(u\_{2,y}^{2}-u\_{2,y}^{1}) & -(u\_{2,z}^{2}-u\_{2,z}^{1}) & \lambda & & \\ 
+                                  \vdots    &   \vdots     &   \vdots     &  & \ddots & \\
+                             -(u\_{2,x}^{m}-u\_{2,x}^{1}) & -(u\_{2,y}^{m}-u\_{2,y}^{1}) & -(u\_{2,z}^{m}-u\_{2,z}^{1}) & & & \lambda  \\
 \end{array} \right)
-\left( \begin{array}{c} \Delta x_{2} 
-\Delta y_{2} 
-\Delta z_{2} 
-N_{1,2}^{1,2} 
-\vdots 
-N_{1,2}^{1,m} \end{array} \right) +
-\left( \begin{array}{c} \underline{e}_{1,2}^{1,2} 
-\vdots 
-\underline{e}_{1,2}^{1,m} \end{array} \right)
-\end{equation}
-$$
+\left( \begin{array}{c} \Delta x\_{2} \\ \Delta y\_{2} \\ \Delta z\_{2} \\ N\_{1,2}^{1,2} \\ \vdots \\ N\_{1,2}^{1,m} \end{array} \right) +
+\left( \begin{array}{c} \underline{e}\_{1,2}^{1,2} \\ \vdots \\ \underline{e}\_{1,2}^{1,m} \end{array} \right)
+\end{equation}$$
 
 With carrier phase measurements to $m$ satellites, we have $(m-1)$ of these so-called double difference measurements.
 The receiver clock offset parameter has been cancelled.
@@ -700,7 +658,7 @@ and the receiver clocks are assumed to behave perfectly ($b_1=b_2=0$).
 ````{figure} ../figures/GNSS/CPbasedpositioning.png
 ---
 name: ambiguouspositioning
-width: 60%
+width: 40%
 align: center
 ---
 Geometric interpretation of relative positioning with carrier phase measurements, which are inherently *ambiguous*. The blue circle arcs, as possible solution for the rover receiver position result from the carrier phase measurement to the blue satellite, and the green circle arcs to those to the green satellite. The arcs are spaced by one wavelength $\lambda$ of the carrier wave.
@@ -730,27 +688,17 @@ align: center
 Example of Carrier Phase (CP) Real-Time Kinematic (RTK) positioning for a duration of 1000 seconds, on August 27th, 2021, with measurements of about 25 GNSS satellites, and successfully fixing the carrier phase ambiguities (RTK-fixed solution). At left: scatter of horizontal position error, at right: time series of vertical position error.
 ````
 
-Table~{ref}`tab:rtkfix` presents the resulting empirical mean, standard deviation (std) and the root mean square
+Table 3 presents the resulting empirical mean, standard deviation (std) and the root mean square
 (rms), which is the square root of the MSE, see Chapter~6 in Tiberius et al. (2022) ,
 of the position error in East, North and Up, confirming centimeter-accuracy of RTK-GPS positioning.
 This is an improvement by a factor of 100 compared to the standalone positioning results in Figure~{ref}`fig:spppos`.
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|ccc|}
-\hline
-               & East & North & Up 
-\hline
-      mean [m] & 0.0016 & 0.0021 & 0.0068 
-std [m]  & 0.0033 & 0.0039 & 0.0072 
-rms [m]  & 0.0037 & 0.0044 & 0.0099 
-\hline
-\end{tabular}
-\end{center}
-\caption{Empirical mean, standard deviation (std) and root mean square (rms) of position error,
-based on $N$=1000 Carrier Phase (CP) Real-Time Kinematic (RTK) position solutions (with ambiguities fixed).}
+|            |  East  | North  |   Up   |
+|:-----------|:------:|:------:|:------:|
+| mean \[m\] | 0.0016 | 0.0021 | 0.0068 |
+| std \[m\]  | 0.0033 | 0.0039 | 0.0072 |
+| rms \[m\]  | 0.0037 | 0.0044 | 0.0099 |
 
-\end{table}
 
 #### RTK --- carrier phase positioning: Digital Terrain Model (DTM)
 
@@ -972,22 +920,30 @@ Car navigation, route guidance and fleet management in traffic and transport are
       require high accuracy and integrity; this can be achieved by using RTK-GNSS
       though this is still subject of research, and likely fusion with additional sensors is in order.
 
-````{figure} ../figures/GNSS/GPSsurveyZandmotor.jpg
----
-name: waterscooter
-width: 60%
-align: center
----
-Both the on- and offshore part are regularly surveyed, to monitor the development of the Zandmotor (The Sand Engine), at the Dutch North-Sea coast, near Ter Heijde. This 'building with nature' project started in 2011, and at right an aerial photo of the Zandmotor is shown, looking in Southern direction. High-precision RTK-GPS is used for positioning the quad on shore, and the jet-ski in the water (note the GPS-antenna at the back of the jet-ski, in the inset). The measurements by the quad result in a Digital Terrain Model (DTM), and echo sounder depth measurements by the jet-ski result in a seafloor-map. Photo at left by Matthieu de Schipper.
-````
 
-````{figure} ../figures/GNSS/KPNmastZvbh.jpg
+````{figure} ../figures/GNSS/GPSsurveyZandmotor.jpg
 ---
 name: KPNtelecommast
 width: 60%
 align: center
 ---
-A GPS receiver is commonly used to synchronize base stations for telecommunication. Requirements on time-synchronization for this application lie in the order of a $\mu$s. The photo shows a base station with a height of 37~m, providing the full range of mobile services from 2G (GSM) to 5G (NR).
+
+````
+
+````{figure} ../figures/GNSS/Zandmotor_luchtfoto.jpg
+---
+name: waterscooter
+width: 60%
+align: center
+---
+Both the on- and offshore part are regularly surveyed, to monitor the development of the Zandmotor
+(The Sand Engine), at the Dutch North-Sea coast, near Ter Heijde. This ‘building with nature’ project
+started in 2011, and at bottom an aerial photo of the Zandmotor is shown, looking in Southern direction.
+High-precision RTK-GPS is used for positioning the quad on shore, and the jet-ski in the water (note the
+GPS-antenna at the back of the jet-ski, in the inset). The measurements by the quad result in a Digital
+Terrain Model (DTM), and echo sounder depth measurements by the jet-ski result in a seafloor-map. Photo
+at top by Matthieu de Schipper de Schipper [n.d.]. Photo at bottom by Pmblom - own work, May 2016, taken
+from Wikimedia Commons Wikimedia Commons [n.d.] under CC BY-SA 4.0 license.
 ````
 
 There is also a number of GNSS applications, in which the position solution is not the (primary) goal.
@@ -995,6 +951,15 @@ Accurate time which is obtained through determining also the receiver clock offs
 is used in timing applications. The standard positioning service allows for timing at the 10-100~ns level,
 and this is used for instance in telecommunication, cf.\ Figure~{ref}`fig:KPNtelecommast`, electrical power grids,
 and financial networks.
+
+
+````{figure} ../figures/GNSS/KPNmastZvbh.jpg
+---
+name: KPNtelecommast
+width: 60%
+align: center
+---
+````
 
 Nuisance parameters such as the atmospheric delays can also be used as observational input e.g.\ to determine, together with using models,
 the state of the Earth's ionosphere, or derive troposphere delays, for instance for Numerical Weather Prediction (NWP).
@@ -1020,15 +985,11 @@ and providing GNSS data and products for high(est)-precision applications (IGS).
 
 This section presents a couple of questions and problems with (worked) answers on GPS-positioning.
 
-\vspace{3mm}
-
 **Question~1** What are the largest remaining error sources in short-baseline DGPS, explain your answer.
 
 **Answer~1** The atmosphere delays as well as the satellite orbit and clock errors are eliminated in
 DGPS, cf.\ Figure~{ref}`fig:dgps`, which leaves multipath and (pseudorange) measurement noise as the largest error sources,
 cf.\ Figure~{ref}`fig:signalpath` and Table~{ref}`tab:errorbudget`.
-
-\vspace{3mm}
 
 **Question~2** If a certain application requires decimeter positioning accuracy, which GPS positioning modes can be considered?
 And for how long a time would we need to collect measurements?
@@ -1039,8 +1000,6 @@ PPP can also provide decimeter accuracy after several minutes. DGPS can reach de
 well, but may considerable time to allow for averaging (with static positioning only), for instance one hour.
 SBAS and standalone GPS often do not reach decimeter accuracy even after one or several days (averaging with static positioning),
 especially in the vertical component. An overview of the attainable accuracies can be found in Figure~{ref}`fig:gpsaccuracy`.
-
-\vspace{3mm}
 
 **Question~3** The principle of GPS satellite positioning and navigation consists of determining the range
 from satellite to receiver through measurement of the signal travel-time. The atomic clock in the satellite is perfectly on time.
@@ -1098,7 +1057,6 @@ The user position coordinate equals $x_R = 6$, and we are typically not interest
 It is easily verified that correcting the measured pseudoranges for the receiver clock offset yield the actual distances
 from the two satellites to the receiver: $p_{AR} - b_R = 9-3=6$ and $p_{BR} - b_R = 7-3=4$.
 
-\vspace{3mm}
 
 **Question~5** The GPS relative positioning problem has been simplified to a single dimension. There is one satellite 'sat' (or just 's')
 and it is visible at the local horizon. The receivers '1' and '2', and the satellite are all on a straight line (along the x-coordinate axis),

@@ -1,3 +1,3 @@
-# Data analysis and interpretation
+# Data analysis
 
 

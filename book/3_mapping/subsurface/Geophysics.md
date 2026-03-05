@@ -42,3 +42,25 @@ If you prefer reading a book to understand the DC-resistivity method, this chapt
 If you prefer someone explaininig you the DC-resistivity method, you can watch this video.
 
 # Cone-penetration testing (CPT)
+
+Cone-Penetration Testing (CPT)
+•	Cone with force injected into subsurface, often with speed of 2 cm/s
+•	Reaction force (fc) of subsurface material measured
+•	Cone resistance (qc) is reactional force divided by cross-sectional area of cone
+•	Cone resistance is used for identifying soil type and layering
+•	Frictional force along the sleeve of the cone measured
+•	Sleeve-friction resistance (fs) is frictional force divided by the area of the sleeve
+•	Sleeve friction is used for identifying soil type and layering
+•	Combined cone resistance and sleeve-friction resistance deliver more accurate soil identification and layering than each alone
+•	Cone resistance and sleeve friction are high-strain properties where material is deformed to failure point
+•	Often, pore-water pressure (u) is measured
+•	Pore-water pressure is used for identifying over-pressured zones and layering
+•	The angle of the cone  is measured
+•	The cone angle is used for identifying possible failure or breaking of the cone itself.
+
+If you like someone explaining the CPT method, you can watch this [video](https://www.youtube.com/watch?v=alrzeelWpZc) (webinar):
+
+
+If you like some more background reading, you can read the freely [downloadable book](https://www.cpt-robertson.com/publications)
+The suggestion is not to read beyond page 36.
+

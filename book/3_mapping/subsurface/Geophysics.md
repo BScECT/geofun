@@ -44,8 +44,8 @@ If you prefer someone explaininig you the DC-resistivity method, you can watch t
 # Cone-penetration testing (CPT)
 
 Cone-Penetration Testing (CPT)
-•	Cone with force injected into subsurface, often with speed of 2 cm/s
-•	Reaction force (fc) of subsurface material measured
+- Cone with force injected into subsurface, often with speed of 2 cm/s
+- Reaction force (fc) of subsurface material measured
 •	Cone resistance (qc) is reactional force divided by cross-sectional area of cone
 •	Cone resistance is used for identifying soil type and layering
 •	Frictional force along the sleeve of the cone measured

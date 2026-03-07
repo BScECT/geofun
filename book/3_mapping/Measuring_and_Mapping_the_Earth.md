@@ -191,21 +191,21 @@ Measurement Repeatability – Repeatability refers to the agreement between repe
 
 Measurement Reproducibility – Reproducibility refers to the agreement between measurements taken under different conditions: different operators, instruments, and/or procedures. It is often assessed over longer time intervals. In Earth Sciences this could mean, for example, comparing sea surface temperature from different satellites, or groundwater level measurements from independent surveys.
 
-##### The Error Approach (Discouraged)
+##### The Error Approach
 
-Although widely used, the terminology associated with the Error Approach is discouraged in contemporary metrology.
+Metrology is the science of measurement, encompassing the definition, implementation, and maintenance of units, standards, and instruments. Hence, it is not about the actual ‘use’ of the instruments and measurements, but for instance about calibrating the instruments and defining the units we use. In metrology the Error Approach is not encouraged. However, later in this course we will see that this is the approach we will use when processing our measurements for Earth, Climate & Technology applications.
 
-Measurement Error – The difference between a measured value and the true value. Since the true value is never known exactly, the actual error is also unknown. For this reason, metrology prefers to speak in terms of uncertainty rather than error.
+**Measurement Error** – The difference between a measured value and the true value. Since the true value is never known exactly, the actual error is also unknown. For this reason, metrology prefers to speak in terms of uncertainty rather than error.
 
-Systematic (Measurement) Error – Predictable, repeatable effects that shift measurements in one direction (e.g. a temperature sensor that consistently reads 0.2 °C too high). If known, these systematic errors can be corrected. Again, since the true value can never be known, use of the term ‘systematic error’ is discouraged unless referring to a quantitative, known offset that can be corrected.
+**Systematic (Measurement) Error** – Consistent, repeatable effects that shift measurements in one direction (e.g. a temperature sensor that consistently reads 0.2 °C too high). These errors can be caused in case we use uncalibrated or defective instruments, due to poor experimental procedures, or environmental conditions (e.g., errors due to temperatures). These systematic errors can be corrected if known to be present.
 
-Random (Measurement) Error – Unpredictable variation between individual measurements, reflecting the inherent variability of the measurement process or system (caused by, e.g., sensor noise or atmospheric turbulence). Random errors cannot be corrected but can be characterised statistically.
+**Random (Measurement) Error** – Unpredictable variation between individual measurements, reflecting the inherent variability of the measurement process or system (caused by, e.g., sensor noise or atmospheric turbulence). Random errors cannot be corrected but can be characterised statistically.
 
-##### The Uncertainty Approach (Preferred)
+##### The Uncertainty Approach
 
-The Uncertainty Approach assigns a range of likely values that could be attributed to the measurand based on the finite amount of knowledge of the measurement equipment and process.
+The Uncertainty Approach is adapted in metrology, and assigns a range of likely values that could be attributed to the measurand based on the finite amount of knowledge of the measurement equipment and process.
 
-Measurement Uncertainty – A non-negative parameter that characterizes the dispersion of the quantity values being attributed to a measurand, based on the information used (JCGM 200, 2012). Put simply, uncertainty describes the range within which the true value of the measurand is believed to lie, given all the available information. It includes contributions from the instruments and standards used to make the measurement, the measurement process, the measurement model, and definitional uncertainty. Measurement uncertainty always includes Type A and Type B evaluations of measurement uncertainty:
+**Measurement Uncertainty** – A non-negative parameter that characterizes the dispersion of the quantity values being attributed to a measurand, based on the information used (JCGM 200, 2012). Put simply, uncertainty describes the range within which the true value of the measurand is believed to lie, given all the available information. It includes contributions from the instruments and standards used to make the measurement, the measurement process, the measurement model, and definitional uncertainty. Measurement uncertainty always includes Type A and Type B evaluations of measurement uncertainty:
 
 - Type A uncertainty evaluation: Based on statistical analysis of repeated observations taken under the same conditions (e.g. the spread of repeated temperature readings).
 
@@ -213,7 +213,7 @@ Measurement Uncertainty – A non-negative parameter that characterizes the disp
 
 Both Type A and Type B evaluations may involve statistical methods, but the key distinction is the source of information: Type A uses current, repeated measurements; Type B relies on external or prior information. Care must be taken to avoid ‘double counting’ uncertainties when combining the two.
 
-Total Measurement Uncertainty – The total measurement uncertainty combines both Type A and Type B evaluations. Since the true value is unknown, it may lie anywhere within the reported uncertainty interval—or even outside it, depending on the chosen level of confidence (i.e., the probability that the constructed uncertainty interval will contain the true value).
+**Total Measurement Uncertainty** – The total measurement uncertainty combines both Type A and Type B evaluations. Since the true value is unknown, it may lie anywhere within the reported uncertainty interval—or even outside it, depending on the chosen level of confidence (i.e., the probability that the constructed uncertainty interval will contain the true value).
 
 ````{figure} ../figures/part-a_mapping3.png
 ---
@@ -221,10 +221,11 @@ name: mapping3
 width: 60%
 align: center
 ---
-Illustration summarizing terms for the preferred Uncertainty Approach to measurement terminology. The measured value will fall within the total uncertainty above or (not shown) below the true value. Taken from: Crowder et al. (2020).
+Illustration summarizing terms for the Uncertainty Approach to measurement terminology. The measured value will fall within the total uncertainty above or (not shown) below the true value. Taken from: Crowder et al. (2020).
 ````
 
-Definitional Uncertainty – Component of measurement uncertainty resulting from the finite level of detail in the definition of a measurand. In other words, it is the minimum uncertainty you can have in any measurement of a given quantity, regardless of instrument precision. Any change in the descriptive detail of what you&apos;re measuring will lead to a different definitional uncertainty. Note, sometimes this is referred to as ‘idealization accuracy’. 
+##### Idealization accuracy or Definitional uncertainty
+Component of measurement uncertainty resulting from the finite level of detail in the definition of a measurand. In other words, it is the minimum uncertainty you can have in any measurement of a given quantity, regardless of instrument precision. Any change in the descriptive detail of what you are measuring will lead to a different definitional uncertainty, also referred to as ‘idealization accuracy’. 
 
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">

@@ -66,7 +66,7 @@ the reader is therefore referred to, for instance, the textbooks Teunissen and M
 ````{figure} ../figures/GNSS/GPSsatelliteblockIIF.jpg
 ---
 name: GNSSblockIIF
-width: 60%
+width: 50%
 align: center
 ---
 GNSS block IIF satellite, built by Boeing. These GNSS satellites, 12 in total, have been launched between 2010 and 2016. They have a design lifetime of 12 years. The full GNSS constellation nominally consists of 24 satellites. Image courtesy of Boeing.
@@ -229,7 +229,7 @@ Two-dimensional positioning example with three satellites (at known positions, r
 ````{figure} ../figures/GNSS/trilateration.png
 ---
 name: trilateration
-width: 80%
+width: 60%
 align: center
 ---
 The process of determining the receiver clock offset: the measured pseudoranges have to be reduced or enlarged, but all with exactly the same amount, in order to meet at one physical position. The amount to make that happen is the receiver clock offset. The different colors represent different values for the receiver clock offset.
@@ -262,7 +262,7 @@ Parameter $b_r$ equals the receiver clock offset $\delta t_r$ multiplied by the 
 ````{figure} ../figures/GNSS/ECEF.png
 ---
 name: ECEF
-width: 60%
+width: 40%
 align: center
 ---
 Three-dimensional Cartesian Earth-Centered Earth-Fixed (ECEF) coordinate system for GNSS positioning.
@@ -295,7 +295,7 @@ Carefully selecting the location for a survey can help to keep the impact of mul
 ````{figure} ../figures/GNSS/multipath.png
 ---
 name: multipath
-width: 60%
+width: 50%
 align: center
 ---
 Multipath: the direct line of sight signal from the satellite is received, though as well as a signal which has been reflected by the building. The reception of also a reflected signal, which has made a detour, will generally cause a bias in the measurement.
@@ -304,7 +304,7 @@ Multipath: the direct line of sight signal from the satellite is received, thoug
 ````{figure} ../figures/GNSS/errorsources.png
 ---
 name: signalpath
-width: 60%
+width: 50%
 align: center
 ---
 GNSS error sources.
@@ -337,7 +337,7 @@ is important in high-precision positioning discussed in the next section.
 ````{figure} ../figures/GNSS/CTB3310surveymarker.jpg
 ---
 name: CTB3310surveymarker
-width: 60%
+width: 40%
 align: center
 ---
 Survey-marker at TU Delft campus with accurate ground-truth coordinates: $X$ = 3923768.0147 m, $Y$ = 300255.7048 m, $Z$ = 5002640.2228 m (ITRF2014 at epoch 2021.50).
@@ -414,7 +414,7 @@ Relative positioning, including resolving the ambiguities, is referred to as *Re
 ````{figure} ../figures/GNSS/06GPSnetwork.png
 ---
 name: 06GNSSnetwork
-width: 60%
+width: 50%
 align: center
 ---
 Example of network of permanent GNSS tracking stations, of a commercial network RTK service provider in the Netherlands, Belgium and Luxemburg. Image obtained with permission from [06-GPS](https://www.06-GPS.nl) (06-GPS)
@@ -427,7 +427,7 @@ In many regions and countries, networks of reference stations, or Continuously O
 ````{figure} ../figures/GNSS/excavator.png
 ---
 name: excavator
-width: 60%
+width: 50%
 align: center
 ---
 Excavator in the process of constructing a motorway embankment. RTK-GNSS provides accurate real-time position information to guide this machine (note the two GNSS-antennas on the back of the engine). Image courtesy of [Heijmans](https://www.heijmans.nl/).
@@ -505,7 +505,7 @@ More GNSS processing strategies exist then treated here, see Tiberius et al. (20
 ````{figure} ../figures/GNSS/ubloxZED_F9P_NEW.JPG
 ---
 name: ublox
-width: 60%
+width: 50%
 align: center
 ---
 At left: dual-frequency, multi-constellation GNSS receiver with receiver board at bottom, small patch-antenna (black) on top, and smartphone with Android positioning app at right; a total equipment cost of below 500 Euro (u-blox ZED-F9P), yet capable of providing cm-accurate RTK-GNSS positioning. At right: screenshot of SW Maps app by Softwel (P) Ltd.
@@ -548,7 +548,7 @@ There are many different applications of GNSS positioning each with its own requ
 ````{figure} ../figures/GNSS/Zandmotor.png
 ---
 name: waterscooter
-width: 60%
+width: 90%
 align: center
 ---
 Both the on- and offshore part are regularly surveyed, to monitor the development of the Zandmotor (The Sand Engine), at the Dutch North-Sea coast, near Ter Heijde. This ‘building with nature’ project started in 2011, and at bottom an aerial photo of the Zandmotor is shown, looking in Southern direction. High-precision RTK-GNSS is used for positioning the quad on shore, and the jet-ski in the water (note the GNSS-antenna at the back of the jet-ski, in the inset). The measurements by the quad result in a Digital Terrain Model (DTM), and echo sounder depth measurements by the jet-ski result in a seafloor-map. Photo at top by Matthieu de Schipper de Schipper [n.d.]. Photo at bottom by Pmblom - own work, May 2016, taken from Wikimedia Commons Wikimedia Commons [n.d.] under CC BY-SA 4.0 license.
@@ -560,7 +560,7 @@ There is also a number of GNSS applications, in which the position solution is n
 ````{figure} ../figures/GNSS/KPNmastZvbh.jpg
 ---
 name: KPNtelecommast
-width: 60%
+width: 40%
 align: center
 ---
 GNSS receivers are commonly used to synchronize base stations for telecommunication. Requirements on time ­synchronization for this application lie in the order of $\mu s$. The photo shows a base station with an height of 37 m.

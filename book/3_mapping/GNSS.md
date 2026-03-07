@@ -63,7 +63,7 @@ Section *GNSS applications* presents an overview of the wide range of applicatio
 There is much more more of information available on this subject, and
 the reader is therefore referred to, for instance, the textbooks Teunissen and Montenbruck [2017] and Morton et al. [2021].
 
-````{figure} ../figures/GNSS/GNSSsatelliteblockIIF.jpg
+````{figure} ../figures/GNSS/GPSsatelliteblockIIF.jpg
 ---
 name: GNSSblockIIF
 width: 60%
@@ -78,7 +78,7 @@ GNSS block IIF satellite, built by Boeing. These GNSS satellites, 12 in total, h
 
 The GNSS satellites transmit signals in the so-called L-band of the electromagnetic radio frequency spectrum, which corresponds to the 1 to 2 GHz range. The signal consists of a carrier wave, and each satellite adds its own unique *Pseudo Random Noise (PRN)* code on it, see {numref}`figure {number} <GNSSsignal>`, as well as information about the satellites' orbits and clocks. The PRN code allows a receiver to identify from which satellite a signal originates, and also *when* it was transmitted. And with that, it is thus possible to determine the travel time of the signal.
 
-````{figure} ../figures/GNSS/GNSSsignal.png
+````{figure} ../figures/GNSS/gpssignal.png
 ---
 name: GNSSsignal
 width: 80%
@@ -164,9 +164,9 @@ align: center
 Carrier phase measurement: only the *fractional* phase difference can be measured, shown in red in units of length [m] (fractional phase $\Phi \in \left[0,2\pi \right \rangle $ expressed in radians, converted to distance: $\varphi = \lambda \frac{\Phi}{2\pi}$). The total distance from the satellite to the receiver equals the observed fractional phase difference plus multiple wavelengths $N\cdot \lambda$. The unknown integer number ofwavelengths $N$ at the start of signal tracking, is referred to as ambiguity. In this illustrative example $N = 4$.
 ````
 
-#### Concluding remarks
+#### Concluding remarks on range measurements
 
-GNSS receivers can also provide additional measurements, such as the signal strength and Dopplier frequency (a measure for the relative velocity of receiver with respect to satellite). This is beyond the scope of this course. More details can be found in Tiberius et al. (2022) 
+GNSS receivers can also provide additional measurements, such as the signal strength and Dopplier frequency (a measure for the relative velocity of receiver with respect to satellite). This is beyond the scope of this course. More details can be found in Tiberius et al. (2022).
 
 The pseudorange measurement precision is typically at the  decimeter level. The carrier phase measurement precision ranges from the few centimeter to the millimeter level. The carrier phase is an ambiguous measurement of distance, but it is more precise than the pseudorange, typically by two orders of magnitude.
 
@@ -179,12 +179,12 @@ align: center
 Example of time series of (at left) C1 pseudorange measurements, in meters, of a stationary, permanent receiver in Delft.
 ````
 
-{numref}`Figure {number} <graphsC1>` shows measurements of one satellite, collected by a stationary receiver in Delft as a function of time. A pass-over of a GNSS satellite typically takes several, up to 7 hours. With a nearly circular orbit of the GNSS satellite around the Earth, the distance from satellite to receiver is shortest when the satellite is directly overhead. You can see that the satellite appear above the horizon later during the day at another location in the sky due to the Earth's rotation and the satellite orbiting the Earth.
+{numref}`Figure {number} <graphsC1>` shows measurements of one satellite, collected by a stationary receiver in Delft as a function of time. A pass-over of a GNSS satellite typically takes several, up to 7 hours. With a nearly circular orbit of the GNSS satellite around the Earth, the distance from satellite to receiver is shortest when the satellite is directly overhead. You can see that the satellite appears above the horizon later during the day at another location in the sky due to the Earth's rotation and the satellite orbiting the Earth.
 
 
 ### Ionospheric delays and multi-frequency ranging
 
-One of the major error sources in GNSS is due to the ionosphere, see also Figure {ref}`fig:signalpath` and Table 1. The ionosphere is an ionized part of the Earth's upper atmosphere. There solar radiation separates electrons from neutral gas atoms and molecules. The free electrons in the ionosphere delay the radio signals, and thus affect the range measurements, with delays in terms of distance ranging from a few meter to hundreds of meters.
+One of the major error sources in GNSS is due to the ionosphere, see {numref}`Figure {number} <signalpath>` and Table 1. The ionosphere is an ionized part of the Earth's upper atmosphere. There solar radiation separates electrons from neutral gas atoms and molecules. The free electrons in the ionosphere delay the radio signals, and thus affect the range measurements, with delays in terms of distance ranging from a few meter to hundreds of meters.
 
 The largest delays occur round the geomagnetic equator around local noon, and during solar maxima. The ionospheric delay may be highly variable, as a function of both time and space.
 
@@ -199,7 +199,7 @@ GNSS positioning is based on the concept of multi-lateration. By measuring dista
 
 To estimate the three position coordinates of the receiver $x_r$, $y_r$, $z_r$, and the receiver clock offset $b_r$, a GNSS receiver needs to track at least 4 satellites.
 
-````{figure} ../figures/GNSS/GNSSpositioning.png
+````{figure} ../figures/GNSS/GPSpositioning.png
 ---
 name: GNSSpositioning
 width: 60%
@@ -381,7 +381,7 @@ Fortunately, even more accurate positioning modes are available, all relying on 
 ### Relative positioning, or DGNSS
 
 Differential GNSS (DGNSS) uses a data link to a nearby base or reference station, i.e., another GNSS receiver at an accurately known position, and the *relative position* between the two is obtained. Measurement data from this base station are used, to reduce the effects of the atmospheric delays, satellite clock offsets and orbit errors. This can be achieved by differencing the observations from both receivers to the same satellites, which eliminates these (common) errors, which affect both receivers almost identically if the distance between them
-is small enough, typically in the order of 5 to 10 km, considering that the satellites are at 20.000 km distance, see {numref}`figure {number} <dGNSS>`
+is small enough, typically in the order of 5 to 10 km, considering that the satellites are at 20,000 km distance, see {numref}`figure {number} <dGNSS>`.
 
 From the differenced observations, the so-called baseline (vector) between the two receivers can be computed through least squares estimation. The position of the rover is then obtained by adding the baseline vector to the accurately known coordinates of the reference station. Generally the term 'DGNSS' is used for relative positioning, though using only pseudorange measurements.
 
@@ -411,13 +411,13 @@ Geometric interpretation of relative positioning with carrier phase measurements
 Relative positioning, including resolving the ambiguities, is referred to as *Real-Time Kinematic (RTK)* positioning, or Carrier Phase based relative positioning (if performed in post processing). For more details see for instance Tiberius et al. (2022).
 
 
-````{figure} ../figures/GNSS/06GNSSnetwork.png
+````{figure} ../figures/GNSS/06GPSnetwork.png
 ---
 name: 06GNSSnetwork
 width: 60%
 align: center
 ---
-Example of network of permanent GNSS tracking stations, of a commercial network RTK service provider in the Netherlands, Belgium and Luxemburg. Image obtained with permission from [06-GNSS](https://www.06-GNSS.nl) (06-GNSS)
+Example of network of permanent GNSS tracking stations, of a commercial network RTK service provider in the Netherlands, Belgium and Luxemburg. Image obtained with permission from [06-GPS](https://www.06-GPS.nl) (06-GPS)
 ````
 
 The requirement for a nearby reference receiver is a disadvantage of RTK, considering effort and/or cost.
@@ -476,7 +476,7 @@ of an embankment on the TU Delft campus, see {numref}`figure {number} <talud>`. 
 ````{figure} ../figures/GNSS/talud.png
 ---
 name: talud
-width: 60%
+width: 90%
 align: center
 ---
 Example of a centimeter-accurate 3D Digital Terrain Model (DTM) resulting from Carrier Phase Real-Time Kinematic (RTK) positioning. The DTM is presented in the national RD-NAP reference system (see Chapter 35 in Tiberius et al. (2022).
@@ -593,13 +593,11 @@ This section presents a couple of questions and problems on GNSS positioning. An
 **Question 2** If a certain application requires decimeter positioning accuracy, which GNSS positioning modes can be considered?
 And for how long a time would we need to collect measurements?
 
-
-
 **Question 3** The principle of GNSS satellite positioning and navigation consists of determining the range
 from satellite to receiver through measurement of the signal travel time. When the receiver clock is ahead of time by 0.1 $\mu$s, by how much is the measured range to the satellite too long or too short due to this clock error?
 
 
-````{figure} ../figures/GNSS/1D_GNSSpositioning.png
+````{figure} ../figures/GNSS/1D_GPSpositioning.png
 ---
 name: 1D_GNSSpositioning
 width: 60%
@@ -634,9 +632,8 @@ Relative positioning in one dimension (Question 5).
 
 ```{admonition} Answer 1
 :class: tip, dropdown
- The atmosphere delays as well as the satellite orbit and clock errors are eliminated in
-DGNSS, cf.\ Figure {ref}`fig:dGNSS`, which leaves multipath and (pseudorange) measurement noise as the largest error sources,
-cf.\ Figure {ref}`fig:signalpath` and Table {ref}`tab:errorbudget`.
+ The atmosphere delays as well as the satellite orbit and clock errors are eliminated in DGNSS, see {numref}`figure {number} <dGNSS>`, which leaves multipath and (pseudorange) measurement noise as the largest error sources,
+see {numref}`figure {number} <signalpath>` and Table 1.
 ```
 
 ```{admonition} Answer 2
@@ -645,7 +642,7 @@ Real-Time Kinematic (RTK) provides decimeter or even centimeter accuracy as soon
 fixed, which generally is (well) within 100 seconds of measurements, and even faster in post-processing.
 PPP can also provide decimeter accuracy after several minutes. DGNSS can reach decimeter accuracy as
 well, but may considerable time to allow for averaging (with static positioning only), for instance one hour.
-SBAS and standalone GNSS often do not reach decimeter accuracy even after one or several days (averaging with static positioning), especially in the vertical component. An overview of the attainable accuracies can be found in {numref}`figure {number} <GNSSaccuracy>`.
+Standalone GNSS often does not reach decimeter accuracy even after one or several days (averaging with static positioning).
 ```
 
 
@@ -661,28 +658,22 @@ the pseudorange $p_{r}^{s}$ is too long by 30 m compared to the actual distance 
 and $l_{BR} = x_B - x_R$ (mind to define these distances to be positive). Then we can formulate two observation equations:
 
 $$
-\begin{equation}
 \begin{align*} p_{AR} & = & l_{AR} + b_R \\
 p_{BR} & = & l_{BR} + b_R    \end{align*}
-\end{equation}
 $$
 
 which gives
 
 $$
-\begin{equation}
 \begin{align*} p_{AR} & = & x_R - x_A + b_R \\
 p_{BR} & = & x_B - x_R + b_R    \end{align*}
-\end{equation}
 $$
 
 and with the given satellite positions, we obtain
 
 $$
-\begin{equation}
 \begin{align*} p_{AR} + x_A & = & x_R + b_R \\
 p_{BR} - x_B & = & - x_R + b_R    \end{align*}
-\end{equation}
 $$
 
 We have two equations with two unknown parameters, namely $x_R$ and $b_R$, which we can solve, giving $x_R = 6$ and $b_R = 3$.
@@ -697,19 +688,15 @@ The pseudorange observation equation needs to be adapted. There is no clock offs
 so parameter $b_r$ cancels, but now, we face an unknown atmospheric delay $d^s$. Hence
 
 $$
-\begin{equation}
 \begin{align*} p_{1}^{s} & = & l_{1}^{s} + d^s \\
 p_{2}^{s} & = & l_{2}^{s} + d^s    \end{align*}
-\end{equation}
 $$
 
 Looking at {numref}`figure {number} <singledifference>` we identify two geometric ranges, namely $l_{1}^{s} = x_1 - x^s$ and $l_{2}^{s} = x_2 - x^s$ (mind to define these distances to be positive). Then the two observation equations become:
 
 $$
-\begin{equation}
 \begin{align*} p_{1}^{s} & = & x_1 - x^s + d^s \\
 p_{2}^{s} & = & x_2 - x^s + d^s    \end{align*}
-\end{equation}
 $$
 
 where there are two unknown parameters, namely $x_2$ and $d^s$. With the given measurements and coordinates, this is easily solved, to
@@ -720,7 +707,7 @@ $p_{2}^{s} - p_{1}^{s} = x_2 - x_1$, which gives an identical result for $x_2$, 
 
 ## References
 
-06-GNSS. Image of network of permanent GNSS tracking stations in the Netherlands, Belgium and Luxemburg. Sliedrecht, The Netherlands, 2021. URL https://www.06-GNSS.nl/.
+06-GPS. Image of network of permanent GNSS tracking stations in the Netherlands, Belgium and Luxemburg. Sliedrecht, The Netherlands, 2021. URL https://www.06-GPS.nl/.
 24
 
 Boeing. Image of GNSS block IIF satellite. Chicago, Illinois, n.d. URL https://www.boeing.com/space/global-positioning-system/.

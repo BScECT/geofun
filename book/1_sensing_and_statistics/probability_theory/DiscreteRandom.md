@@ -7,7 +7,7 @@ In science and engineering we are often dealing with events, processes or variab
 After studying *Discrete random variables* you will be able to ...
 * define discrete random variables
 * construct, visualize and interpret probability mass functions and distribution functions of discrete random variables
-* identify when uniform, Bernouilli and binomial distributions apply in real-world contexts
+* identify when uniform, Bernoulli and binomial distributions apply in real-world contexts
 
 ## Random variables
 
@@ -106,14 +106,14 @@ with $0\leq p \leq 1$
 
 </div>
 
-## Bernouilli distribution
+## Bernoulli distribution
 
 This distribution is applicable for experiments with two possible outcomes: $X=1$ for "success" and $X=0$ for "failure".
 
 <div style="background-color:#5f9c96; color: black; width:95%; vertical-align: middle; padding:15px; margin: 10px; border-radius: 10px">
 <p>
 
-$\textbf{Bernouilli distribution:}$
+$\textbf{Bernoulli distribution:}$
 
 Random variable $X$ has probability mass function
 
@@ -128,7 +128,7 @@ Notation: $X\sim Ber(p)$
 ## Binomial distribution
 
 This distribution is applicable in case of $n$ trials of an experiment with the following characteristics:
-* each trial has two possible outcomes {1,0} (i.e., the outcome has Bernouilli distribution, therefore also called Bernouilli trial)
+* each trial has two possible outcomes {1,0} (i.e., the outcome has Bernoulli distribution, therefore also called Bernoulli trial)
 * each trial is independent
 * probability $p$ is the same for each trial
 
@@ -156,7 +156,7 @@ The binomial coefficient $\binom{n}{k}=\frac{n!}{k!(n-k)!}$ and is equal to the 
 
 $\textbf{Example rock testing}$
 
-We will look again at the experiment where we test three rocks on the presence of neodymium. If we consider 'detection' as a "success", and 'not detected' as a "failure", we realize that the outcome of single trial follows the Bernouilli distribution. Let's now assume that the probability of success and failure are not equal, but $p$ and $1-p$, respectively.
+We will look again at the experiment where we test three rocks on the presence of neodymium. If we consider 'detection' as a "success", and 'not detected' as a "failure", we realize that the outcome of single trial follows the Bernoulli distribution. Let's now assume that the probability of success and failure are not equal, but $p$ and $1-p$, respectively.
 
 If the 3 trials are independent this means that if $X$ is the number of successes that $X\sim Bin(3,p)$.
 
@@ -227,16 +227,16 @@ Parameter $\lambda$ is the *mean* number of occurrences in the given time interv
 In this section several discrete distributions have been introduced:
 
 * Uniform distribution: $X$ has $n$ equally likely outcomes, each with probability mass $1/n$.
-* Bernouilli distribution: $X$ has two outcomes with probabilities $p$ and $1-p$, respectively.
-* Binomial distribution: $X$ is the number of successes in $n$ independent Bernouilli trials.
-* Geometric distribution: $X$ is the number Bernouilli trials to get the first success.
+* Bernoulli distribution: $X$ has two outcomes with probabilities $p$ and $1-p$, respectively.
+* Binomial distribution: $X$ is the number of successes in $n$ independent Bernoulli trials.
+* Geometric distribution: $X$ is the number Bernoulli trials to get the first success.
 * Poisson distribution: the number of occurrences of a rare event over a given time interval.
 
 Other discrete distributions outside the scope of this course are:
 
 * Negative binomial distribution: $X$ is the number of Bernouill trials to get $r$ successes. 
-* Multinomial distribution: $X$ is the number of successes in $n$ independent Bernouilli trials, but now with $k$ possible outcomes per trial.
-* Hypergeometric distribution: $X$ is the number of successes in $n$ independent Bernouilli trials, given that $K$ successes occur in a random subset of $N$ trials (useful in a factory if you only want to test a subset of all produced items).
+* Multinomial distribution: $X$ is the number of successes in $n$ independent Bernoulli trials, but now with $k$ possible outcomes per trial.
+* Hypergeometric distribution: $X$ is the number of successes in $n$ independent Bernoulli trials, given that $K$ successes occur in a random subset of $N$ trials (useful in a factory if you only want to test a subset of all produced items).
 
 Note: a discrete random variable does not always follow one of these distributions!
 

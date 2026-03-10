@@ -1,5 +1,7 @@
 # Airborne Laser Scanning
 
+## Introduction
+
 In Chapter 3, we examined how the positions of points on the Earth can be determined within a geographic coordinate reference system (CRS). We focused primarily on the capabilities of Global Navigation Satellite Systems (GNSS) and saw that these technologies can provide positions with (sub-)centimetre-level precision. Such accuracy allows us to measure topography and detect surface changes over time with great confidence.
 
 However, despite its precision, GNSS is not a particularly efficient technology for collecting terrain elevations over large areas. Acquiring dense elevation data point by point quickly becomes time-consuming, labour-intensive, and costly. This naturally raises the question: can terrain elevations be measured more efficiently?
@@ -45,27 +47,35 @@ conclude with an overview of the processing steps required to obtain
 what we ultimately aim for in many applications: a digital surface
 model (DSM) and a digital terrain model (DTM).
 
-# <span id="anchor"></span>Principles of Lidar
+## Principles of Lidar
 
 Lidar (Light Detection and Ranging) is an active remote sensing
 technology that uses laser radiation to measure ranges.
 
-|  |
-|----|
-| Active vs. passive remote sensing – Active remote sensing instruments measure reflected or backscattered energy that is emitted by the instrument itself. Passive remote sensing instruments measure naturally occurring radiation, either reflected solar radiation or thermally emitted radiation from the Earth–atmosphere system. |
+```{admonition} Active vs Passive remote Sensing
+Active remote sensing instruments measure reflected or backscattered energy that is emitted by the instrument itself. Passive remote sensing instruments measure naturally occurring radiation, either reflected solar radiation or thermally emitted radiation from the Earth–atmosphere system.
+```
 
 The range can be measured in different ways. Time-of-Flight
 (ToF), also known as pulse-based, systems emit short laser
 pulses and measure the time it takes for the pulse to travel to a
 target, be reflected, and return to the sensor. Because electromagnetic
-radiation propagates at the speed of light c, the distance l to the
-target is obtained from l = ½c𝜏, where 𝜏 is the measured
+radiation propagates at the speed of light c, the distance $l$ to the
+target is obtained from 
+
+$l = \frac{1}{2}c\tau$
+
+where 𝜏 is the measured
 round-trip travel time (i.e., the time-of-flight) of the pulse. The
-factor ½ accounts for the outgoing and returning path (see
+factor $\frac{1}{2}$ accounts for the outgoing and returning path (see
 Tiberius et al., 2022, Section 20.1.1). 
 
 Phase-based lidar systems determine distance by interferometry, that
-is, by measuring the phase difference Φ (in radians, with Φ ∈ \[0,2π))
+is, by measuring the phase difference $\Phi$ in radians with 
+
+$\Phi \in [0,2\pi)$
+
+
 between the transmitted laser signal, whose intensity is modulated, and
 the received signal. Phase-based systems can achieve very high
 precision, on the order of a few millimetres. However, because they
@@ -79,7 +89,7 @@ There are additional ranging principles (i.e., triangulation
 lidar), but these will not be discussed here. For the acquisition of
 terrain elevations, ToF systems are by far the most commonly used.
 
-# The Journey of a Laser Pulse
+## The Journey of a Laser Pulse
 
 To understand how the technology works and which factors influence its
 performance, let us follow a laser pulse in a time-of-flight (ToF)
@@ -89,9 +99,9 @@ the atmosphere or water, interaction with the target surface, return to
 the detector, and finally the signal processing steps that determine the
 range to the target.
 
-## Laser Transmitter
+### Laser Transmitter
 
-### The Laser
+#### The Laser
 
 A laser is a device that generates a highly coherent, monochromatic,
 and directional beam of electromagnetic radiation through the process of
@@ -113,7 +123,7 @@ back and forth between the mirrors, stimulating further emissions and
 building up a coherent light field. A fraction of this amplified light
 escapes through the partially transmissive mirror as the laser beam.
 
-### Laser Wavelength
+#### Laser Wavelength
 
 For the mapping of terrain elevations, typically diode-pumped
 Nd:YAG lasers are used operating at a wavelength of 1,064 nm
@@ -129,15 +139,15 @@ reaching the bottom—whereas radiation at near-infrared wavelengths is
 absorbed rapidly. So, the 1,064 nm laser cannot be used to measure
 bathymetry, a green laser does!
 
-|  |  |
-|----|----|
-| Fig. 1: Absorption spectrum of liquid water across a wide wavelength range. Taken from [https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png](https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png)  | <img src="Pictures/10000001000006300000040C9AB98EBC8E851F4C.png"
-style="width:4.5752in;height:2.9929in" /> |
+```{figure} figures/absorption_water.png
+Absorption spectrum of liquid water across a wide wavelength range. Taken from [https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png](https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png)
+```
 
+```{admonition} Laser wavelength
 <table>
 <tbody>
 <tr>
-<td><p><strong>Laser wavelength</strong> - The choice of wavelength
+<td><p>The choice of wavelength
 depends on application-specific requirements such as range, accuracy,
 surface type, and atmospheric conditions. The options include
 (PhoenixLiDAR.com, 2024):</p>
@@ -165,8 +175,9 @@ those achieved at 1,064 nm.</li>
 </tr>
 </tbody>
 </table>
+```
 
-### Other Important Laser Parameters
+#### Other Important Laser Parameters
 
 In a ToF laser scanner, the laser does not emit its energy continuously
 but in very short bursts—laser pulses—with durations ranging from
@@ -203,7 +214,7 @@ therefore represent carefully engineered trade-offs. We will analyse
 some of these trade-offs in more detail later. For now, let us
 complete the journey of the laser pulse.
 
-## Start Signal Generation and Beam Steering
+### Start Signal Generation and Beam Steering
 
 When the laser fires, a beam splitter directs a small fraction of the
 outgoing pulse to an internal start detector. This signal triggers the
@@ -245,13 +256,13 @@ scanner are:
   the scanner. Smaller angular step widths result in higher point
   densities in the across-track direction.
 
-## Propagation and Backscattering
+### Propagation and Backscattering
 
 After emission, the laser pulse propagates through the
 atmosphere toward the ground, where it interacts with objects such
 as vegetation, buildings, or the soil surface.
 
-### Atmospheric Propagation
+#### Atmospheric Propagation
 
 The Earth’s atmosphere consists of various gases and suspended aerosol
 particles. As the laser pulse travels through the atmosphere, it
@@ -282,7 +293,7 @@ style="width:4.9528in;height:3.0661in" /> |
 
 
 
-### Interaction with the Surface
+#### Interaction with the Surface
 
 At the ground, incident laser energy can be absorbed or reflected. The
 reflected portion is redistributed in different directions through
@@ -312,7 +323,7 @@ The scattering behaviour depends on several factors, most
 importantly the type of material, the surface roughness at the scale of
 the wavelength, and the wavelength of the incident laser radiation.
 
-### Target Cross Section
+#### Target Cross Section
 
 The quantity describing how effectively a target intercepts and
 redirects the incoming laser energy back toward the sensor is the
@@ -401,7 +412,7 @@ cosine-weighted angular distribution of Lambertian reflection
 concentrates the effective reflected energy into π sr). Besides,
 $${A\_{t} = \frac{\pi R^{2}\beta^{2}}{4}}\cos\alpha.$$
 
-## Optical-to-Electrical Conversion
+### Optical-to-Electrical Conversion
 
 The backscattered laser energy is collected by the receiver aperture and
 detected by a photodiode—typically an avalanche photodiode (APD)
@@ -451,7 +462,7 @@ Mandlburger (2019).</p></td>
 </tbody>
 </table>
 
-## Detection of Pulse Arrival
+### Detection of Pulse Arrival
 
 The system must now determine when the pulse arrived. Two main system
 concepts exist.
@@ -515,7 +526,7 @@ of linear-mode lidar, Geiger-mode lidar, and single-photon lidar.
 </tbody>
 </table>
 
-# The Laser Range Equation
+## The Laser Range Equation
 
 After introducing the fundamental principles of lidar, we have followed
 a laser pulse along its complete signal path: from emission at the
@@ -634,12 +645,12 @@ Hence,
 | 
 $${P\_{r} = \frac{P\_{t}{({\pi\rho R^{2}\beta^{2}\cos\alpha})}D\_{r}^{2}}{4\pi R^{4}\beta^{2}}}\eta\_{\mathit{sys}}{{\eta\_{\mathit{atm}} + P\_{b}} = \frac{P\_{t}{({\rho\cos\alpha})}D\_{r}^{2}}{4R^{2}}}\eta\_{\mathit{sys}}{\eta\_{\mathit{atm}} + P\_{b}}.$$ | (1.9) |
 
-# Georeferencing
+## Georeferencing
 
 The material in this chapter draws extensively on Mandlburger (2024),
 while being reorganized and rephrased for the purposes of this lecture.
 
-## Remaining Components of an Airborne Laser Scanner
+### Remaining Components of an Airborne Laser Scanner
 
 So far, we have focused primarily on the laser scanner itself.
 To efficiently collect topographic data—or bathymetric data, the latter
@@ -666,7 +677,7 @@ measurements is known as direct georeferencing.
 | Fig. 9: Schematic diagram of airborne laser scanning. Reproduced with permission from  Mandlburger (2024) | <img src="Pictures/1000000100000400000002E87F60E763E31C0B50.png"
 style="width:4.9161in;height:3.572in" /> |
 
-## The Workflow
+### The Workflow
 
 The standard airborne lidar processing workflow begins with the
 estimation of the aircraft’s trajectory. This is done by combining GNSS
@@ -812,7 +823,7 @@ main steps (Mandly, 2025):
     (for example, 0.5 m × 0.5 m cells), with each grid cell representing
     a single elevation value.
 
-# References
+## References
 
 PhoenixLiDAR.com (2024), LIDAR Selection Guide - Considerations,
 Comparisons, Current Scanners.

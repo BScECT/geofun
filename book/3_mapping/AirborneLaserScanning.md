@@ -1,52 +1,27 @@
 # Airborne Laser Scanning
 
-In Chapter 3, we examined how the positions of points on the Earth can
-be determined within a geographic coordinate reference system (CRS). We
-focused primarily on the capabilities of Global Navigation Satellite
-Systems (GNSS) and saw that these technologies can provide positions
-with (sub-)centimetre-level precision. Such accuracy allows us to
-measure topography and detect surface changes over time with great
-confidence.
+In Chapter 3, we examined how the positions of points on the Earth can be determined within a geographic coordinate reference system (CRS). We focused primarily on the capabilities of Global Navigation Satellite Systems (GNSS) and saw that these technologies can provide positions with (sub-)centimetre-level precision. Such accuracy allows us to measure topography and detect surface changes over time with great confidence.
 
-However, despite its precision, GNSS is not a particularly efficient
-technology for collecting terrain elevations over large areas. Acquiring
-dense elevation data point by point quickly becomes time-consuming,
-labour-intensive, and costly. This naturally raises the question: can
-terrain elevations be measured more efficiently?
+However, despite its precision, GNSS is not a particularly efficient technology for collecting terrain elevations over large areas. Acquiring dense elevation data point by point quickly becomes time-consuming, labour-intensive, and costly. This naturally raises the question: can terrain elevations be measured more efficiently?
 
-The answer will not come as a surprise: yes, they can. A range of remote
-sensing techniques exists that are capable of collecting terrain
-elevation data at sub-metre spatial resolution and with centimetre-level
-vertical accuracy, often over very large areas and in a relatively short
-amount of time. Some of these techniques can even be used to measure
-seafloor topography, known as bathymetry.
+The answer will not come as a surprise: yes, they can. A range of remote sensing techniques exists that are capable of collecting terrain elevation data at sub-metre spatial resolution and with centimetre-level vertical accuracy, often over very large areas and in a relatively short amount of time. Some of these techniques can even be used to measure seafloor topography, known as bathymetry.
 
-In this lecture, we will focus on one such technique: laser scanning,
-also referred to as lidar (Light Detection and Ranging). Because our
-primary interest lies in the efficient acquisition of terrain elevations
-over large areas, the emphasis of this lecture will be on *airborne*
-laser scanning, that is, lidar systems mounted on aircraft. This is a
-highly versatile technology that is widely used for mapping land
-topography and, under suitable conditions, for measuring bathymetry in
-shallow and clear waters.
+In this lecture, we will focus on one such technique: laser scanning, also referred to as lidar (Light Detection and Ranging). Because our primary interest lies in the efficient acquisition of terrain elevations over large areas, the emphasis of this lecture will be on airborne laser scanning, that is, lidar systems mounted on aircraft. This is a highly versatile technology that is widely used for mapping land topography and, under suitable conditions, for measuring bathymetry in shallow and clear waters.
 
-*****The principles and techniques discussed in this lecture are not
-limited to airborne platforms.*** **They also apply to laser scanning
-systems deployed from a wide range of other platforms, including
-tripods, backpacks, vehicles, trains, drones, helicopters, and
-satellites.****
+The principles and techniques discussed in this lecture are not limited to airborne platforms. They also apply to laser scanning systems deployed from a wide range of other platforms, including tripods, backpacks, vehicles, trains, drones, helicopters, and satellites.
 
-****T****he main objective of this** **chapter** **is:**** *to develop a
+
+The main objective of this chapter is: to develop a
 physical and technical understanding of airborne laser scanning that
 enables you to reason about system design choices, data quality, and
 application suitability, rather than treating LiDAR data as a black
-box.*
+box.
 
 The chapter is structured as follows. We begin with an explanation of
 the two main principles of laser ranging. The first is based on
-measuring travel time, so-called ****time-of-flight (ToF)**** systems;
+measuring travel time, so-called time-of-flight (ToF) systems;
 the second is based on measuring phase differences, referred to as
-****phase-based systems****. For the application we are concerned with,
+phase-based systems. For the application we are concerned with,
 time-of-flight systems are the most relevant and will therefore receive
 most attention.
 
@@ -59,104 +34,104 @@ introduce the key system-related, propagation-related, and
 target-related parameters that govern system performance.
 
 This naturally leads to the derivation of a central analytical tool in
-LiDAR remote sensing: the ****laser range equation****, which relates
+LiDAR remote sensing: the laser range equation, which relates
 the transmitted laser power to the power received by the sensor while
 explicitly accounting for system characteristics, propagation losses,
 and target properties.
 
-****Finally, we address how the resulting measurements are georeferenced
-within a geographic** **CRS when acquired from an aircraft** **and
+Finally, we address how the resulting measurements are georeferenced
+within a geographic CRS when acquired from an aircraft and
 conclude with an overview of the processing steps required to obtain
-what we ultimately aim for in many applications: a** **digital surface
-model (DSM) and a** **digital terrain model** **(DTM)****.****
+what we ultimately aim for in many applications: a digital surface
+model (DSM) and a digital terrain model (DTM).
 
 # <span id="anchor"></span>Principles of Lidar
 
-**Lidar* *(Light Detection and Ranging) is an* active *remote sensing
-technology that uses laser radiation to measure ranges.**
+Lidar (Light Detection and Ranging) is an active remote sensing
+technology that uses laser radiation to measure ranges.
 
 |  |
 |----|
-| ****Active vs. passive remote sensing*** *– Active remote sensing instruments measure reflected or backscattered energy that is emitted by the instrument itself. Passive remote sensing instruments measure naturally occurring radiation, either reflected solar radiation or thermally emitted radiation from the Earth–atmosphere system.** |
+| Active vs. passive remote sensing – Active remote sensing instruments measure reflected or backscattered energy that is emitted by the instrument itself. Passive remote sensing instruments measure naturally occurring radiation, either reflected solar radiation or thermally emitted radiation from the Earth–atmosphere system. |
 
-**Th**e range can be measured in* *different ways.* Time-of-Flight
-(ToF)*,* *also* *known* *as* pulse-based*, systems emit short laser
-pulses and measure the time it takes for the* *pulse* *to travel to a
+The range can be measured in different ways. Time-of-Flight
+(ToF), also known as pulse-based, systems emit short laser
+pulses and measure the time it takes for the pulse to travel to a
 target, be reflected, and return to the sensor. Because electromagnetic
-radiation propagates at the speed of light* c*, the distance* l *to the
-target is obtained from* l *=* *½*c𝜏*,* *where* 𝜏 *is the measured
-round-trip travel time* *(i.e., the time-of-flight)* *of the pulse. The
-factor* *½* *accounts for the outgoing and returning path* *(see*
-*Tiberius et al., 2022,* *Section 20.1.1)**.* ***
+radiation propagates at the speed of light c, the distance l to the
+target is obtained from l = ½c𝜏, where 𝜏 is the measured
+round-trip travel time (i.e., the time-of-flight) of the pulse. The
+factor ½ accounts for the outgoing and returning path (see
+Tiberius et al., 2022, Section 20.1.1). 
 
-**Phase-based* *lidar systems determine distance by interferometry, that
+Phase-based lidar systems determine distance by interferometry, that
 is, by measuring the phase difference Φ (in radians, with Φ ∈ \[0,2π))
 between the transmitted laser signal, whose intensity is modulated, and
 the received signal. Phase-based systems can achieve very high
 precision, on the order of a few millimetres. However, because they
-require comparatively more signal power than* *ToF* *systems, they are
+require comparatively more signal power than ToF systems, they are
 typically used for short-range applications such as indoor scanning.
 Their operational range is usually up to 80–120 m, with optimal
-performance below approximately 50 m (**see* *Tiberius et al., 2022,*
-*Section 20.1.2 for further explanation).**
+performance below approximately 50 m (see Tiberius et al., 2022,
+Section 20.1.2 for further explanation).
 
-**There are additional ranging principles* *(i.e., triangulation
-lidar)**, but these will not be discussed here.* For the acquisition of
-terrain elevations, ToF systems are by far the most commonly used.*
+There are additional ranging principles (i.e., triangulation
+lidar), but these will not be discussed here. For the acquisition of
+terrain elevations, ToF systems are by far the most commonly used.
 
-# **The* *J**ourney of a* *L**aser* *P**ulse**
+# The Journey of a Laser Pulse
 
-**To understand how the technology works and which factors influence its
-performance, let us follow a laser pulse in a time-of-flight (ToF)*
-*lidar* *system along its entire journey: from the moment it is
+To understand how the technology works and which factors influence its
+performance, let us follow a laser pulse in a time-of-flight (ToF)
+lidar system along its entire journey: from the moment it is
 generated, through its emission from the instrument, propagation through
 the atmosphere or water, interaction with the target surface, return to
 the detector, and finally the signal processing steps that determine the
-range to the target.**
+range to the target.
 
 ## Laser Transmitter
 
 ### The Laser
 
-****A laser is a device that generates a highly coherent, monochromatic,
+A laser is a device that generates a highly coherent, monochromatic,
 and directional beam of electromagnetic radiation through the process of
-stimulated emission. The term**** laser ****is an acronym for**** Light
-Amplification by Stimulated Emission of Radiation****.****
+stimulated emission. The term laser is an acronym for Light
+Amplification by Stimulated Emission of Radiation.
 
-At the core of a laser is a ****gain medium**** (such as a crystal, gas,
+At the core of a laser is a gain medium (such as a crystal, gas,
 or semiconductor) whose atoms or ions can be excited to higher energy
-states by an external energy source, known as the ****pump****. When an
+states by an external energy source, known as the pump. When an
 excited particle is stimulated by an incoming photon with the
 appropriate energy, it emits a second photon that is identical in
 wavelength, phase, and direction to the first. This process leads to
 optical amplification.
 
-The gain medium is placed inside an ****optical resonator****, typically
+The gain medium is placed inside an optical resonator, typically
 formed by two mirrors facing each other. One mirror is highly
 reflective, while the other is partially transmissive. Photons bounce
 back and forth between the mirrors, stimulating further emissions and
 building up a coherent light field. A fraction of this amplified light
 escapes through the partially transmissive mirror as the laser beam.
 
-### **Laser Wavelength**
+### Laser Wavelength
 
-****For the mapping of terrain elevations,**** **typically diode-pumped
-Nd:YAG lasers* *are used* *operating at a wavelength of 1,064 nm
-(near-infrared).* *Other wavelength options are available, however.**
+For the mapping of terrain elevations, typically diode-pumped
+Nd:YAG lasers are used operating at a wavelength of 1,064 nm
+(near-infrared). Other wavelength options are available, however.
 
-To illustrate why the choice of the wavelength matters, consider **the
+To illustrate why the choice of the wavelength matters, consider the
 absorption spectrum of electromagnetic radiation in water. As shown in
-the* *Fig. 1,* *absorption is strongly wavelength dependent: absorption
+the Fig. 1, absorption is strongly wavelength dependent: absorption
 is relatively low in the blue–green part of the visible electromagnetic
 spectrum and much higher at longer wavelengths. As a consequence, blue
 and green light can penetrate further into the water column—potentially
 reaching the bottom—whereas radiation at near-infrared wavelengths is
-absorbed rapidly.* So, the 1,064 nm laser cannot be used to measure
-bathymetry, a green laser does!*
+absorbed rapidly. So, the 1,064 nm laser cannot be used to measure
+bathymetry, a green laser does!
 
 |  |  |
 |----|----|
-| *Fig. 1: Absorption spectrum of liquid water across a wide wavelength range. Taken from* [*https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png*](https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png) ** | <img src="Pictures/10000001000006300000040C9AB98EBC8E851F4C.png"
+| Fig. 1: Absorption spectrum of liquid water across a wide wavelength range. Taken from [https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png](https://commons.wikimedia.org/wiki/File:Absorption_spectrum_of_liquid_water.png)  | <img src="Pictures/10000001000006300000040C9AB98EBC8E851F4C.png"
 style="width:4.5752in;height:2.9929in" /> |
 
 <table>
@@ -195,40 +170,40 @@ those achieved at 1,064 nm.</li>
 
 In a ToF laser scanner, the laser does not emit its energy continuously
 but in very short bursts—laser pulses—with durations ranging from
-approximately one to several nanoseconds. *Each pulse must contain
+approximately one to several nanoseconds. Each pulse must contain
 sufficient energy for its backscattered signal to be detected by the
-receiver.* Several laser parameters
+receiver. Several laser parameters
 (<https://www.laserax.com/blog/laser-powers#peak-power>) control this:
 
-- *(Average) Laser power*: Power is defined as the rate at which energy
+- (Average) Laser power: Power is defined as the rate at which energy
   is emitted and is expressed in watts (W), where 1 W corresponds to 1
   joule per second.
-- *Pulse repetition frequency (PRF)*: Because the energy is emitted in
+- Pulse repetition frequency (PRF): Because the energy is emitted in
   discrete pulses, the energy per pulse is given by the average laser
   power divided by the number of pulses emitted per second, i.e. the
   PRF.
-- *Pulse duration and peak power*: The pulse energy is distributed over
+- Pulse duration and peak power: The pulse energy is distributed over
   the pulse duration. For a given pulse energy, a shorter pulse duration
   results in a higher peak power, defined as the maximum instantaneous
-  power during the pulse. *Peak power is the quantity that appears in
+  power during the pulse. Peak power is the quantity that appears in
   the laser range equation and directly influences the strength of the
-  received signal.*
-- *****Laser beam divergence*****:** **Laser beam divergence describes
+  received signal.
+- Laser beam divergence: Laser beam divergence describes
   the angular spread of the laser beam as it propagates through space.
   It is usually expressed in milliradians (mrad) and is determined by
-  both the properties of the laser and the optical design of the**
-  **lidar** **sensor. Typical values range from about 0.1 to 1.0 mrad. A
+  both the properties of the laser and the optical design of the
+  lidar sensor. Typical values range from about 0.1 to 1.0 mrad. A
   larger divergence leads to a larger footprint on the ground; we will
-  return to this point later.****
+  return to this point later.
 
-****These design requirements are mutually conflicting: no** **lidar**
-**system can optimise pulse energy, PRF, pulse duration, divergence, eye
-safety, and ranging performance simultaneously. Practical** **systems
-therefore represent carefully engineered trade-offs. We will analyse**
-**some of** **these trade-offs in more detail later. For now, let us
-complete the** **journey of the laser pulse****.****
+These design requirements are mutually conflicting: no lidar
+system can optimise pulse energy, PRF, pulse duration, divergence, eye
+safety, and ranging performance simultaneously. Practical systems
+therefore represent carefully engineered trade-offs. We will analyse
+some of these trade-offs in more detail later. For now, let us
+complete the journey of the laser pulse.
 
-## **Start Signal Generation and Beam Steering**
+## Start Signal Generation and Beam Steering
 
 When the laser fires, a beam splitter directs a small fraction of the
 outgoing pulse to an internal start detector. This signal triggers the
@@ -243,40 +218,40 @@ ground.
 
 |  |  |
 |----|----|
-| *Fig. 2: Laser beam deflection with rotating and oscillating mirrors. *Reproduced with permission from*  Mandlburger (2024)* | <img src="Pictures/1000000100000400000002089D5640CF5B4FF4E3.png"
+| Fig. 2: Laser beam deflection with rotating and oscillating mirrors. Reproduced with permission from  Mandlburger (2024) | <img src="Pictures/1000000100000400000002089D5640CF5B4FF4E3.png"
 style="width:4.9307in;height:2.5035in" /> |
 
 The most important specifications that describe the performance of a
 scanner are:
 
-- *****Horizontal Field of View (HFOV)*****:**** The angular range,
+- Horizontal Field of View (HFOV): The angular range,
   typically expressed in degrees, covered by the sensor in the
   horizontal plane. A larger HFOV results in a wider ground swath,
   allowing the sensor to cover a larger area per flight line.
-- *****Vertical Field of View (VFOV)*****:**** The angular range,
+- Vertical Field of View (VFOV): The angular range,
   typically expressed in degrees, covered by the sensor in the vertical
   plane. A larger VFOV enables the detection of objects over a wider
   range of vertical angles, which is particularly beneficial for mapping
   complex vertical structures such as buildings, cliffs, or vegetation.
-- *****Scan rate*****:**** The speed at which the scanning mirror moves,
+- Scan rate: The speed at which the scanning mirror moves,
   often expressed as the number of scan lines per second. A higher scan
   rate increases the point density in the flight direction
   (along-track), assuming other parameters remain constant.
-- *****Angular step width*****: The angular increment between successive
-  laser** **pulses** **in the across-track direction, typically
+- Angular step width: The angular increment between successive
+  laser pulses in the across-track direction, typically
   expressed in degrees. The minimum achievable angular step width is
   constrained by the selected laser pulse repetition frequency (PRF),
   while the maximum step width is limited by the maximum scan rate of
   the scanner. Smaller angular step widths result in higher point
-  densities in the across-track direction.****
+  densities in the across-track direction.
 
-## **Propagation and Backscattering**
+## Propagation and Backscattering
 
-****After emission, the laser pulse propagates** **through the
-atmosphere** **toward the ground, where it interacts with objects such
-as vegetation, buildings, or the soil surface.****
+After emission, the laser pulse propagates through the
+atmosphere toward the ground, where it interacts with objects such
+as vegetation, buildings, or the soil surface.
 
-### **Atmospheric Propagation**
+### Atmospheric Propagation
 
 The Earth’s atmosphere consists of various gases and suspended aerosol
 particles. As the laser pulse travels through the atmosphere, it
@@ -287,39 +262,39 @@ consequently, the strength of the returned signal.
 
 Aerosols and water vapour selectively absorb electromagnetic radiation
 at different wavelengths. The combined effect of these processes is
-described by the atmospheric transmittance *T*, which ranges from 0 to
-1, where *T*=1 represents a perfectly transparent atmosphere. The value
-of *T* depends on meteorological conditions such as visibility, air
+described by the atmospheric transmittance T, which ranges from 0 to
+1, where T=1 represents a perfectly transparent atmosphere. The value
+of T depends on meteorological conditions such as visibility, air
 temperature, humidity, and aerosol concentration, as well as on the
 flight altitude.
 
-****Atmospheric transmittance typically increases with altitude,
+Atmospheric transmittance typically increases with altitude,
 resulting in lower average attenuation coefficients for vertical paths
-compared to horizontal paths** **(see Fig. 3)****. For flying heights of
+compared to horizontal paths (see Fig. 3). For flying heights of
 1,000 m, 2,000 m, and 3,000 m above ground (and above sea level),
 average vertical attenuations are approximately 0.22, 0.17, and 0.14
-dB/km, respectively.****
+dB/km, respectively.
 
 |  |  |
 |----|----|
-| *Fig. 3: Atmospheric transmission at different altitudes. Taken from Zhang et al. (2024),* | <img src="Pictures/1000000100000C2F0000078B4C6BE77E9B7725AB.png"
+| Fig. 3: Atmospheric transmission at different altitudes. Taken from Zhang et al. (2024), | <img src="Pictures/1000000100000C2F0000078B4C6BE77E9B7725AB.png"
 style="width:4.9528in;height:3.0661in" /> |
 
-****
 
-### **Interaction **w**ith the **S**urface**
+
+### Interaction with the Surface
 
 At the ground, incident laser energy can be absorbed or reflected. The
 reflected portion is redistributed in different directions through
 scattering, which can occur in several different ways, as illustrated in
 Fig. 4.
 
-*Specular* scattering occurs when the incident energy is reflected
+Specular scattering occurs when the incident energy is reflected
 predominantly in a single direction, such that the angle of reflection
 equals the angle of incidence. This situation is rare for natural
-surfaces but may occur approximately (*quasi-specular reflection*) on
+surfaces but may occur approximately (quasi-specular reflection) on
 relatively smooth surfaces such as calm water, wet soil, or smooth
-roofs. In contrast, *Lambertian* scattering describes a situation in
+roofs. In contrast, Lambertian scattering describes a situation in
 which the incident energy is redistributed uniformly in all directions,
 including back toward the sensor. Most natural surfaces exhibit
 scattering behaviour that lies somewhere between these two idealised
@@ -331,34 +306,34 @@ cases.
 style="width:6.485in;height:2.6488in" /> |
 | Fig. 4: Various forms of scattering at the surface. Taken from: Philpot & Philipson: Remote Sensing Fundamentals. |
 
-****
 
-****The scattering behaviour depends on several factors, most
+
+The scattering behaviour depends on several factors, most
 importantly the type of material, the surface roughness at the scale of
-the wavelength, and the wavelength of the incident laser radiation.****
+the wavelength, and the wavelength of the incident laser radiation.
 
-### **Target **C**ross **S**ection**
+### Target Cross Section
 
 The quantity describing how effectively a target intercepts and
 redirects the incoming laser energy back toward the sensor is the
-**target cross section* *(**σ**)**. It can be interpreted as the
-effective area* ***(units is m*<sup>*2*</sup>*)* *of a target “as seen”
-by a* *lidar* *sensor.* *It is defined as:**
+target cross section (σ). It can be interpreted as the
+effective area (units is m<sup>2</sup>) of a target “as seen”
+by a lidar sensor. It is defined as:
 
 |                                                |       |
 |------------------------------------------------|-------|
 |                                                
  $${\sigma = \frac{4\pi}{\Omega}}\rho A\_{t},$$  | (1.1) |
 
-**where* ρ *is the* *reflectance* *(**or reflectivity**), defined as the
+where ρ is the reflectance (or reflectivity), defined as the
 fraction of incident laser energy reflected by the surface (averaged
-over the illuminated target area);* **A<sub>*t*</sub> *is the effective
-area illuminated by the laser beam,* *i.e.* *the area of the target
-projected orthogonally to the laser beam;* Ω *is the** ****scattering
-solid angle**** **into which the target reflects* *energy* *toward the
-receiver. A smaller* Ω *indicates that the reflected energy is more
+over the illuminated target area); A<sub>t</sub> is the effective
+area illuminated by the laser beam, i.e. the area of the target
+projected orthogonally to the laser beam; Ω is the scattering
+solid angle into which the target reflects energy toward the
+receiver. A smaller Ω indicates that the reflected energy is more
 concentrated (as for a specular reflector), making the target appear
-“brighter” to the sensor.**
+“brighter” to the sensor.
 
 <table>
 <tbody>
@@ -376,10 +351,10 @@ sr.</li>
 </tbody>
 </table>
 
-**R**eflectance* ***is a* *material property* *that is*
-*wavelength-dependent. The curve* *describing* *reflectance as a
-function of wavelength is called a reflectance spectrum.* *Fig. 5*
-*shows reflectance spectra for various surface materials.**
+Reflectance is a material property that is
+wavelength-dependent. The curve describing reflectance as a
+function of wavelength is called a reflectance spectrum. Fig. 5
+shows reflectance spectra for various surface materials.
 
 |  |
 |----|
@@ -387,29 +362,29 @@ function of wavelength is called a reflectance spectrum.* *Fig. 5*
 style="width:6.5146in;height:3.55in" /> |
 | Fig. 5: Reflectance spectra for various surface materials. Taken from Rieger et al. (2025) |
 
-**Regarding the effective illuminated target area,* *t**hree cases can
-be distinguished:**
+Regarding the effective illuminated target area, three cases can
+be distinguished:
 
-- **Extended targets (target area \> than the* *laser* *footprint)**:*
-  ***I**n this case,* A<sub>*t*</sub> *(for* *a* *nadir footprint)
-  equals*<sup>
+- Extended targets (target area \> than the laser footprint):
+  In this case, A<sub>t</sub> (for a nadir footprint)
+  equals<sup>
   $${A\_{t} = \pi}{{({\frac{1}{2}R\beta})}^{2} = \frac{\pi R^{2}\beta^{2}}{4}}.$$
-  </sup>*
+  </sup>
 - Linear targets (e.g. power lines or wires): The target cross section
   depends linearly on range.
 - Point targets (e.g. individual leaves) with an area smaller than the
   footprint: In this case, the target cross section is independent of
   range.
 
-**At first glance,* *the definition of* *σ* *shows no explicit
-dependence on the** ****incidence angle****. However, the incidence
+At first glance, the definition of σ shows no explicit
+dependence on the incidence angle. However, the incidence
 angle is implicitly accounted for:
 
-- **through* A<sub>*t*</sub>*, since the projected area depends on
-  surface orientation;**
-- **through Ω, because changes in illumination geometry can alter the
+- through A<sub>t</sub>, since the projected area depends on
+  surface orientation;
+- through Ω, because changes in illumination geometry can alter the
   angular distribution of the reflected energy and thus the apparent
-  scattering behavio**u**r of the target.**
+  scattering behaviour of the target.
 
 For an extended target with Lambertian scattering characteristics, i.e.
 a surface that reflects light in all directions according to Lambert’s
@@ -418,26 +393,26 @@ Cosine Law, the general expression for σ can be simplified to:
 |                                                    |       |
 |----------------------------------------------------|-------|
 |                                                    
- *σ* = *π**ρ**R*<sup>2</sup>*β*<sup>2</sup>cos *α*.  | (1.2) |
+ σ = πρR<sup>2</sup>β<sup>2</sup>cos α.  | (1.2) |
 
-**In this case, the effective scattering solid angle is* **Ω=π
-*******sr**. (Note,* *w**hile a hemisphere* *subtends* **2π *sr**, the
+In this case, the effective scattering solid angle is Ω=π
+sr. (Note, while a hemisphere subtends 2π sr, the
 cosine-weighted angular distribution of Lambertian reflection
-concentrates the effective reflected energy into* π *sr**).* *Besides,*
-*$${A\_{t} = \frac{\pi R^{2}\beta^{2}}{4}}\cos\alpha.$$**
+concentrates the effective reflected energy into π sr). Besides,
+$${A\_{t} = \frac{\pi R^{2}\beta^{2}}{4}}\cos\alpha.$$
 
-## **Optical-to-**E**lectrical* *C**onversion**
+## Optical-to-Electrical Conversion
 
 The backscattered laser energy is collected by the receiver aperture and
-detected by a photodiode—typically an ****avalanche photodiode (APD)****
+detected by a photodiode—typically an avalanche photodiode (APD)
 in traditional linear-mode lidar systems, which usually employ a single
 detector. The APD converts the incoming optical signal into an
 electrical current and amplifies it. The output is an analogue voltage
 signal that represents an electrical “echo” of the returned laser pulse.
 
-Three parameters are particularly important at this stage: the ****area
-of the receiver aperture****, the ****throughput efficiency of the
-receiver****, and the ****sensitivity of the detector****. The detector
+Three parameters are particularly important at this stage: the area
+of the receiver aperture, the throughput efficiency of the
+receiver, and the sensitivity of the detector. The detector
 sensitivity is largely governed by the noise generated by the detector
 and its associated electronics.
 
@@ -476,12 +451,12 @@ Mandlburger (2019).</p></td>
 </tbody>
 </table>
 
-## **Detection of* *P**ulse* *A**rrival**
+## Detection of Pulse Arrival
 
 The system must now determine when the pulse arrived. Two main system
 concepts exist.
 
-****a) Discrete-return systems -**** In discrete-return systems, the
+a) Discrete-return systems - In discrete-return systems, the
 analog voltage signal is fed to a discriminator that compares the signal
 against a predefined threshold. When the signal exceeds this threshold,
 a stop signal is sent to the TDC. The TDC then converts the measured
@@ -489,18 +464,18 @@ time interval into a digital value, which is finally converted into a
 range. Again, multiple reflections may be detected per pulse (see figure
 below).
 
-****b) Full-waveform systems**** -**** **Full-waveform systems record
-the complete backscattered signal as a function of time* *(see figure
-below)**.* *In doing so, a**n Analog-to-Digital Converter (ADC) samples
-the* *analog voltage signal at a high rate, producing a waveform.
-Various algorithms can be applied* *(both online and in post-processing
-mode)* *to this waveform to estimate the travel time and thus the range.
+b) Full-waveform systems - Full-waveform systems record
+the complete backscattered signal as a function of time (see figure
+below). In doing so, an Analog-to-Digital Converter (ADC) samples
+the analog voltage signal at a high rate, producing a waveform.
+Various algorithms can be applied (both online and in post-processing
+mode) to this waveform to estimate the travel time and thus the range.
 Conceptually, this often corresponds to locating one or more peaks in
-the recorded waveform.**
+the recorded waveform.
 
 |  |  |
 |----|----|
-| *Fig. 6: Example of a real-world incoming lidar return. Potential discrete-return peaks are marked in red. Image taken from* [*https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3*](https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3) | <img src="Pictures/10000001000008340000083479A95B89617203D1.png"
+| Fig. 6: Example of a real-world incoming lidar return. Potential discrete-return peaks are marked in red. Image taken from [https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3](https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3) | <img src="Pictures/10000001000008340000083479A95B89617203D1.png"
 style="width:3.1in;height:3.1in" /> |
 
 <table>
@@ -540,7 +515,7 @@ of linear-mode lidar, Geiger-mode lidar, and single-photon lidar.
 </tbody>
 </table>
 
-# **The Laser Range Equation**
+# The Laser Range Equation
 
 After introducing the fundamental principles of lidar, we have followed
 a laser pulse along its complete signal path: from emission at the
@@ -562,15 +537,15 @@ and target properties.
 Because of its central role in instrument selection and performance
 assessment, we now derive the laser range equation step by step.
 
-Consider a laser that transmits a pulse with power *P*<sub>*t*</sub> and
-beam divergence *β*. The distance from the sensor to the target is *R*.
-**The target is characterised by a target cross section* *σ**.* *The
-receiver has a circular aperture with diameter* D<sub>r\ </sub>*and*
-*collects a power** *P*<sub>*r*</sub>. Let’s assume, our target is at
+Consider a laser that transmits a pulse with power P<sub>t</sub> and
+beam divergence β. The distance from the sensor to the target is R.
+The target is characterised by a target cross section σ. The
+receiver has a circular aperture with diameter D<sub>r\ </sub>and
+collects a power P<sub>r</sub>. Let’s assume, our target is at
 nadir.
 
-At range *R*, the laser beam illuminates a circular footprint with
-diameter *Rβ* and area
+At range R, the laser beam illuminates a circular footprint with
+diameter Rβ and area
 
 |  |  |
 |----|----|
@@ -584,10 +559,10 @@ The irradiance at the target (power per unit area) is therefore
 | 
 $${E\_{t} = \frac{P\_{t}}{A\_{f}} = P\_{t}}\frac{4}{\pi R^{2}\beta^{2}}.$$ | (1.4) |
 
-The target cross section *σ* represents the effective area that
+The target cross section σ represents the effective area that
 intercepts the incident irradiance and redirects energy back toward the
 sensor. Assuming Lambertian scattering and using the standard lidar
-definition of *σ*, which accounts for isotropic re-radiation into *4π*
+definition of σ, which accounts for isotropic re-radiation into 4π
 steradians, the irradiance incident to the receiver is
 
 |  |  |
@@ -616,20 +591,20 @@ receiver. Signal losses occur within the instrument and during
 propagation through the atmosphere. These effects are accounted for by
 introducing two transmission factors:
 
-- *η*<sub>sys</sub>: the system transmission factor, representing the
+- η<sub>sys</sub>: the system transmission factor, representing the
   combined optical transmission of all components within the lidar
   system. This factor is assumed to be constant for a certain scanner
   but may vary with different systems (and over time);
-- *η*<sub>atm</sub>: the atmospheric transmission factor, which accounts
+- η<sub>atm</sub>: the atmospheric transmission factor, which accounts
   for attenuation due to scattering and absorption along the propagation
   path. Following Höfle and Pfeifer (2007), it is expressed as
-  *η*<sub>*a**t**m*</sub> = 10<sup>−2*R**a*/10000</sup>,
-  where *a* is the atmospheric attenuation coefficient in dB/km (see
+  η<sub>atm</sub> = 10<sup>−2Ra/10000</sup>,
+  where a is the atmospheric attenuation coefficient in dB/km (see
   values provided earlier) and R is the range in meters. The factor
-  10,000 originates from *a* given in dB/km, whereas R is in meters as
+  10,000 originates from a given in dB/km, whereas R is in meters as
   before.
 
-Finally, the receiver also collects background power *P*<sub>b</sub>,
+Finally, the receiver also collects background power P<sub>b</sub>,
 for example due to solar radiation reflected from the surface and
 scattered by the atmosphere. The magnitude of this contribution depends
 strongly on wavelength and can be estimated from the solar irradiance
@@ -650,9 +625,9 @@ $${P\_{r} = \frac{P\_{t}\sigma D\_{r}^{2}}{4\pi R^{4}\beta^{2}}}\eta\_{\mathit{s
 
 This is the laser range equation in its most generic form. For an
 extended surface,
-*σ* = *π**ρ**R*<sup>2</sup>*β*<sup>2</sup>cos *α*.
+σ = πρR<sup>2</sup>β<sup>2</sup>cos α.
 
-****Hence,****
+Hence,
 
 |  |  |
 |----|----|
@@ -661,53 +636,53 @@ $${P\_{r} = \frac{P\_{t}{({\pi\rho R^{2}\beta^{2}\cos\alpha})}D\_{r}^{2}}{4\pi R
 
 # Georeferencing
 
-*The material in this chapter draws extensively on Mandlburger (2024),
-while being reorganized and rephrased for the purposes of this lecture.*
+The material in this chapter draws extensively on Mandlburger (2024),
+while being reorganized and rephrased for the purposes of this lecture.
 
 ## Remaining Components of an Airborne Laser Scanner
 
-So far, we have focused primarily on the ****laser scanner itself****.
+So far, we have focused primarily on the laser scanner itself.
 To efficiently collect topographic data—or bathymetric data, the latter
 only in shallow and clear waters—the laser scanner must be mounted on an
 aircraft (see Fig. 9).
 
-This immediately raises an important question: *****What else do we need
+This immediately raises an important question: What else do we need
 on board to ultimately obtain a point cloud in a geographic coordinate
-reference system (CRS)?*****
+reference system (CRS)?
 
 In addition to the laser scanner, two other sensor systems are
-essential: i) ****A** ***GNSS*****, which measures the position of the
-aircraft in a geocentric coordinate reference system; and ii) a****n**
-***Inertial Navigation System (INS)*****, which continuously measures
-the orientation, or *attitude*, of the aircraft. These components must
-be ****tightly synchronized in time****, because each laser pulse must
+essential: i) A GNSS, which measures the position of the
+aircraft in a geocentric coordinate reference system; and ii) an
+Inertial Navigation System (INS), which continuously measures
+the orientation, or attitude, of the aircraft. These components must
+be tightly synchronized in time, because each laser pulse must
 be linked to the exact position and orientation of the platform at the
 moment the pulse is emitted and received. The process of computing
 georeferenced 3D points directly from the laser, GNSS, and INS
-measurements is known as ****direct georeferencing****.
+measurements is known as direct georeferencing.
 
 |  |  |
 |----|----|
-| *Fig. 9: Schematic diagram of airborne laser scanning. *Reproduced with permission from*  Mandlburger (2024)* | <img src="Pictures/1000000100000400000002E87F60E763E31C0B50.png"
+| Fig. 9: Schematic diagram of airborne laser scanning. Reproduced with permission from  Mandlburger (2024) | <img src="Pictures/1000000100000400000002E87F60E763E31C0B50.png"
 style="width:4.9161in;height:3.572in" /> |
 
 ## The Workflow
 
 The standard airborne lidar processing workflow begins with the
 estimation of the aircraft’s trajectory. This is done by combining GNSS
-and INS observations using ****Kalman filtering****, resulting in a
+and INS observations using Kalman filtering, resulting in a
 so-called smoothed best estimate of the trajectory.
 
 This trajectory provides:
 
-- the *****3D position***** of the platform (X, Y, Z) in a geocentric,
+- the 3D position of the platform (X, Y, Z) in a geocentric,
   Earth-centered Earth-fixed (ECEF) CRS, and
-- the *****attitude*** **of the platform**** with respect to the local
-  horizon, expressed by the navigation angles ****roll, pitch, and
-  yaw****.
+- the attitude of the platform with respect to the local
+  horizon, expressed by the navigation angles roll, pitch, and
+  yaw.
 
 In the next step, the trajectory information is combined with the
-****time-stamped laser scanner measurements****. Here, manufacturers
+time-stamped laser scanner measurements. Here, manufacturers
 typically apply corrections for small systematic instrument effects of
 the ranging and scanning unit (obtained based on laboratory
 calibration). The step provides the corrected 3D coordinates of the
@@ -717,7 +692,7 @@ in a geocentric CRS, as illustrated in Fig. 10.
 
 |  |  |
 |----|----|
-| *Fig. 10: Schematic diagram of the geometric airborne lidar sensor model. *Reproduced with permission from*  Mandlburger (2024)* | <img src="Pictures/10000001000002EC000001676338A2E79CEFDD36.png"
+| Fig. 10: Schematic diagram of the geometric airborne lidar sensor model. Reproduced with permission from  Mandlburger (2024) | <img src="Pictures/10000001000002EC000001676338A2E79CEFDD36.png"
 style="width:5.0598in;height:2.4283in" /> |
 
 The transformation from scanner coordinates to geocentric coordinates
@@ -735,72 +710,72 @@ The transformation is given by Eq. 1.10.
 |  |  |
 |----|----|
 | 
-X<sup>**e**</sup>(*t*) = X<sup>GNSS</sup>(*t*) + R<sub>**n**</sub><sup>**e**</sup>(*t*)R<sub>**i**</sub><sup>**p**</sup>(*t*)(a<sup>**i**</sup> + R<sub>**s**</sub><sup>**i**</sup>(*t*)X<sup>**s**</sup>(*t*)). | (1.10) |
+X<sup>e</sup>(t) = X<sup>GNSS</sup>(t) + R<sub>n</sub><sup>e</sup>(t)R<sub>i</sub><sup>p</sup>(t)(a<sup>i</sup> + R<sub>s</sub><sup>i</sup>(t)X<sup>s</sup>(t)). | (1.10) |
 
 Reading the transformation equation from right to left, the process is
 as follows:
 
 The 3D point
-X<sup>**s**</sup> = (*X*<sup>*s*</sup>, *Y*<sup>*s*</sup>, *Z*<sup>*s*</sup>),
+X<sup>s</sup> = (X<sup>s</sup>, Y<sup>s</sup>, Z<sup>s</sup>),
 defined in the local scanner CRS, is first rotated into the INS CRS
-using the ****boresight angles****. These angles represent small
+using the boresight angles. These angles represent small
 rotational offsets (Δroll, Δpitch, Δyaw) between the scanner and the INS
 reference planes (cf. green elements in the Figure). The point is then
-translated using the ****lever arm** **(**
-**a<sup>**i**</sup>**
-**)****, which is the offset vector between the GNSS antenna phase
+translated using the lever arm (
+a<sup>i</sup>
+), which is the offset vector between the GNSS antenna phase
 centre and the origin of the scanner CRS.
 
 Next, the point is rotated from the INS CRS into the platform CRS using
 the roll, pitch, and yaw angles measured by the INS (
-R<sub>**i**</sub><sup>**n**</sup>(*t*)
+R<sub>i</sub><sup>n</sup>(t)
 ). A further rotation (
-R<sub>**p**</sub><sup>**e**</sup>(*t*)
+R<sub>p</sub><sup>e</sup>(t)
 ) transforms the point from the platform CRS into the geocentric CRS.
 This final rotation depends on the geographic position (latitude and
 longitude) of the INS origin.
 
-****Finally, the geocentric coordinates of the GNSS antenna are added
-(**
-**X<sup>GNSS</sup>(*t*)**
-**)****, yielding the fully georeferenced 3D coordinates of the laser
-point**
-**X<sup>**e**</sup>(*t*).****
+Finally, the geocentric coordinates of the GNSS antenna are added
+(
+X<sup>GNSS</sup>(t)
+), yielding the fully georeferenced 3D coordinates of the laser
+point
+X<sup>e</sup>(t).
 
-## **Accuracy Considerations**
+## Accuracy Considerations
 
-****The overall horizontal and vertical uncertainty of the resulting 3D
+The overall horizontal and vertical uncertainty of the resulting 3D
 laser points is determined by the accuracy of the laser scanner and the
 platform trajectory, as well as by the quality of synchronization among
 all sensor components (GNSS, INS, and scanner). Modern laser scanners
 typically achieve ranging accuracies of 1–3 cm. Post-processed
 integration of GNSS observations from both the base station and the
-lidar sensor system yields positional accuracies of approximately**
-**3–5 cm. Inertial navigation systems used in airborne lidar commonly
+lidar sensor system yields positional accuracies of approximately
+3–5 cm. Inertial navigation systems used in airborne lidar commonly
 provide angular accuracies of about 0.0025° for roll and pitch and
 0.005° for heading (yaw). Taken together, state-of-the-art airborne
-lidar systems achieve sub-decimetre 3D coordinate accuracy.****
+lidar systems achieve sub-decimetre 3D coordinate accuracy.
 
-# ****From Point Cloud to** DSM / DTM**
+# From Point Cloud to DSM / DTM
 
-****Once we have a georeferenced LiDAR point cloud—that is, a set of 3D
+Once we have a georeferenced LiDAR point cloud—that is, a set of 3D
 points expressed in a geographic CRS—the next step is to derive surface
 models such as a Digital Surface Model (DSM) and/or a Digital Terrain
-Model (DTM).****
+Model (DTM).
 
-- ****Digital Surface Model (DSM) –**** A DSM represents the elevation
-  of the ****highest surface**** within each unit of area. In practice,
+- Digital Surface Model (DSM) – A DSM represents the elevation
+  of the highest surface within each unit of area. In practice,
   this means it includes both natural and artificial features such as
   building roofs, trees, bridges, and other objects above the ground.
   The DSM can be interpreted as a representation of what the laser sees
   first.
-- ****Digital Terrain Model (DTM) –**** A DTM, by contrast, represents
-  the ****bare-earth surface****, that is, the elevation of the ground
+- Digital Terrain Model (DTM) – A DTM, by contrast, represents
+  the bare-earth surface, that is, the elevation of the ground
   itself without vegetation, buildings, or other above-ground
   structures. A DTM therefore describes the shape of the terrain in the
   absence of these overlying features.
 
-Strictly speaking, a ****Digital Elevation Model (DEM)**** is a more
+Strictly speaking, a Digital Elevation Model (DEM) is a more
 generic term that refers to a raster or grid of elevation values.
 Depending on how it is derived, a DEM may represent either a DSM or a
 DTM.
@@ -808,7 +783,7 @@ DTM.
 The generation of DSMs and DTMs from LiDAR data typically involves three
 main steps (Mandly, 2025):
 
-1.  **Point cloud cleaning – ******Raw LiDAR point clouds inevitably
+1.  Point cloud cleaning – Raw LiDAR point clouds inevitably
     contain anomalies and inconsistencies due to sensor limitations,
     atmospheric effects, or interactions with transient objects. Point
     cloud cleaning is therefore an essential first step. This process
@@ -822,54 +797,53 @@ main steps (Mandly, 2025):
       often preferred, whereas for DSM generation first returns or
       highest returns are typically used.
 
-2.  **Point cloud classification **–**** In the second step, the LiDAR
+2.  Point cloud classification – In the second step, the LiDAR
     points are classified into categories such as ground, vegetation,
     buildings, and other objects. This is usually achieved using
     filtering and classification algorithms that exploit differences in
     elevation, local surface roughness, and spatial relationships
     between neighbouring points.
 
-3.  **Interpolation to a regular grid – **After classification, the
+3.  Interpolation to a regular grid – After classification, the
     elevation values of the selected points are used to create a
     continuous surface. For a DSM, all points (or the highest points per
     cell) are considered; for a DTM, only points classified as ground
     are used. The selected points are interpolated onto a regular grid
     (for example, 0.5 m × 0.5 m cells), with each grid cell representing
-    a single elevation value.****
+    a single elevation value.
 
-# **References**
+# References
 
-****PhoenixLiDAR.com (2024), LIDAR Selection Guide - Considerations,
-Comparisons, Current Scanners.****
-[****https://phoenixlidar.com/wp-content/uploads/2023/06/2023-03-15_lidar_selection_guide.pdf****](https://phoenixlidar.com/wp-content/uploads/2023/06/2023-03-15_lidar_selection_guide.pdf)
-********
+PhoenixLiDAR.com (2024), LIDAR Selection Guide - Considerations,
+Comparisons, Current Scanners.
+[https://phoenixlidar.com/wp-content/uploads/2023/06/2023-03-15_lidar_selection_guide.pdf](https://phoenixlidar.com/wp-content/uploads/2023/06/2023-03-15_lidar_selection_guide.pdf)
 
-****Rieger,** **P.,** **Pfennigbauer,** **M., &** **Ullric,** **A.
+Rieger, P., Pfennigbauer, M., & Ullric, A.
 (2025). Multispectral airborne laserscanning: Three wavelengths in
 theory and practice. EuroSDR – Workshop on Multispectral LiDAR, June
-23.****
-[****https://www.eurosdr.net/sites/default/files/images/inline/04_riegl_eurosdr_multispectral_laserscanning_workshop2025.pdf****](https://www.eurosdr.net/sites/default/files/images/inline/04_riegl_eurosdr_multispectral_laserscanning_workshop2025.pdf)
-********
+23.
+[https://www.eurosdr.net/sites/default/files/images/inline/04_riegl_eurosdr_multispectral_laserscanning_workshop2025.pdf](https://www.eurosdr.net/sites/default/files/images/inline/04_riegl_eurosdr_multispectral_laserscanning_workshop2025.pdf)
 
-****Höfle, B., & Pfeifer, N. (2007). Correction of laser scanning
-intensity data: Data and model-driven approaches.** ***ISPRS journal of
-photogrammetry and remote sensing*****,** ***62*****(6), 415-433.****
 
-Mandlburger, G. (2019). Recent Developments in Airborne Lidar. *GIM
-International Magazine*.
+Höfle, B., & Pfeifer, N. (2007). Correction of laser scanning
+intensity data: Data and model-driven approaches. ISPRS journal of
+photogrammetry and remote sensing, 62(6), 415-433.
+
+Mandlburger, G. (2019). Recent Developments in Airborne Lidar. GIM
+International Magazine.
 <https://www.gim-international.com/content/article/recent-developments-in-airborne-lidar-2>
 
 Mandlburger, G. (2024). Airborne Lidar: A Tutorial for 2025 – Part I:
-Lidar basics. *Lidar Magazine*. **Volume 14, Issue 4. Nov/Dec 2024.
+Lidar basics. Lidar Magazine. Volume 14, Issue 4. Nov/Dec 2024.
 <https://lidarmag.com/2024/12/30/airborne-lidar-a-tutorial-for-2025/>
 
 Mandly, F. N. (2025). How to Generate a Digital Terrain Model from a
 LiDAR Point Cloud: Complete Workflow. lidarnews.com.
 <https://lidarnews.com/articles/how-to-generate-a-digital-terrain-model-from-a-lidar-point-cloud-complete-workflow/>
 
-****Zhang, M., Wen, G., Fan, C., Guan, B., Song, Q., Liu, C., & Wang, S.
+Zhang, M., Wen, G., Fan, C., Guan, B., Song, Q., Liu, C., & Wang, S.
 (2024). Analysis of the Ranging Capability of a Space Debris Laser
-Ranging System Based on the Maximum Detection Distance Model.**** Remote
-Sensing****,**** 16****(4), 727.****
-[****https://doi.org/10.3390/rs16040727****](https://doi.org/10.3390/rs16040727)
-********
+Ranging System Based on the Maximum Detection Distance Model. Remote
+Sensing, 16(4), 727.
+[https://doi.org/10.3390/rs16040727](https://doi.org/10.3390/rs16040727)
+

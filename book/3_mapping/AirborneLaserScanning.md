@@ -322,8 +322,10 @@ redirects the incoming laser energy back toward the sensor is the
 target cross section (σ). It can be interpreted as the
 effective area (units is $m^2$) of a target “as seen”
 by a lidar sensor. It is defined as:
-                                              
- ${\sigma = \frac{4\pi}{\Omega}}\rho A_{t}$
+                                
+$$
+{\sigma = \frac{4\pi}{\Omega}}\rho A_{t}
+$$ (1.1)
 
 where ρ is the reflectance (or reflectivity), defined as the
 fraction of incident laser energy reflected by the surface (averaged

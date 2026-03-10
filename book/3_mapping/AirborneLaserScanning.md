@@ -386,7 +386,8 @@ For an extended target with Lambertian scattering characteristics, i.e.
 a surface that reflects light in all directions according to Lambert’s
 Cosine Law, the general expression for σ can be simplified to:
 
-$\sigma = \pi\rho R^2\beta^2cos(a)$                                              
+$$
+\sigma = \pi\rho R^2\beta^2cos(a)$$                                              
 
 In this case, the effective scattering solid angle is $\Omega = \pi$ sr.
 (Note, while a hemisphere subtends $2\pi$ sr, the
@@ -542,11 +543,15 @@ nadir.
 At range R, the laser beam illuminates a circular footprint with
 diameter Rβ and area
 
-${A_{f} = \pi}{{({\frac{1}{2}R\beta})}^{2} = \frac{\pi R^{2}\beta^{2}}{4}}$
+$$
+{A_{f} = \pi}{{({\frac{1}{2}R\beta})}^{2} = \frac{\pi R^{2}\beta^{2}}{4}}
+$$
 
 The irradiance at the target (power per unit area) is therefore
 
-${E_{t} = \frac{P_{t}}{A_{f}} = P_{t}}\frac{4}{\pi R^{2}\beta^{2}}$
+$$
+{E_{t} = \frac{P_{t}}{A_{f}} = P_{t}}\frac{4}{\pi R^{2}\beta^{2}}
+$$
 
 The target cross section σ represents the effective area that
 intercepts the incident irradiance and redirects energy back toward the
@@ -554,17 +559,23 @@ sensor. Assuming Lambertian scattering and using the standard lidar
 definition of σ, which accounts for isotropic re-radiation into 4π
 steradians, the irradiance incident to the receiver is
 
-${E_{r} = E_{t}}{\sigma = \frac{4P_{t}}{\pi R^{2}\beta^{2}}}\frac{\sigma}{4\pi R^{2}}$
+$$
+{E_{r} = E_{t}}{\sigma = \frac{4P_{t}}{\pi R^{2}\beta^{2}}}\frac{\sigma}{4\pi R^{2}}
+$$
 
 The receiver aperture has an area
 
-${A_{r} = \pi(\frac{1}{2}D_{r}}^{2}) = \frac{\pi D_{r}^{2}}{4}$
+$$
+{A_{r} = \pi(\frac{1}{2}D_{r}}^{2}) = \frac{\pi D_{r}^{2}}{4}
+$$
 
 The power collected by the receiver is obtained by multiplying the
 irradiance incident to the receiver by the receiver aperture area,
 yielding
 
-${P_{r} = \frac{4P_{t}}{\pi R^{2}\beta^{2}}}\frac{\sigma}{4\pi R^{2}}{\frac{\pi D_{r}^{2}}{4} = \frac{P_{t}\sigma D_{r}^{2}}{4\pi R^{4}\beta^{2}}}$
+$$
+{P_{r} = \frac{4P_{t}}{\pi R^{2}\beta^{2}}}\frac{\sigma}{4\pi R^{2}}{\frac{\pi D_{r}^{2}}{4} = \frac{P_{t}\sigma D_{r}^{2}}{4\pi R^{4}\beta^{2}}}
+$$
 
 In practice, not all transmitted power reaches the target or the
 receiver. Signal losses occur within the instrument and during
@@ -596,7 +607,9 @@ The solar irradiance spectrum. Taken from Rieger et al. (2025)
 
 Including these terms, the laser range equation becomes
 
-${P_{r} = \frac{P_{t}\sigma D_{r}^{2}}{4\pi R^{4}\beta^{2}}}\eta_{\mathit{sys}}{\eta_{\mathit{atm}} + P_{b}}$
+$$
+{P_{r} = \frac{P_{t}\sigma D_{r}^{2}}{4\pi R^{4}\beta^{2}}}\eta_{\mathit{sys}}{\eta_{\mathit{atm}} + P_{b}}
+$$
 
 This is the laser range equation in its most generic form. For an
 extended surface,
@@ -605,7 +618,9 @@ $\sigma = \pi\rho R^2\beta^2cos(a)$
 
 Hence,
 
-${P\_{r} = \frac{P_{t}{({\pi\rho R^{2}\beta^{2}\cos\alpha})}D_{r}^{2}}{4\pi R^{4}\beta^{2}}}\eta_{\mathit{sys}}{{\eta_{\mathit{atm}} + P_{b}} = \frac{P_{t}{({\rho\cos\alpha})}D_{r}^{2}}{4R^{2}}}\eta_{\mathit{sys}}{\eta_{\mathit{atm}} + P_{b}}$
+$$
+{P\_{r} = \frac{P_{t}{({\pi\rho R^{2}\beta^{2}\cos\alpha})}D_{r}^{2}}{4\pi R^{4}\beta^{2}}}\eta_{\mathit{sys}}{{\eta_{\mathit{atm}} + P_{b}} = \frac{P_{t}{({\rho\cos\alpha})}D_{r}^{2}}{4R^{2}}}\eta_{\mathit{sys}}{\eta_{\mathit{atm}} + P_{b}}
+$$
 
 ## Georeferencing
 
@@ -676,7 +691,7 @@ in the figure:
   north/east/down)
 - e/magenta: geocentric CRS
 
-The transformation is given by Eq. 1.10.
+The transformation is given by Eq. 10.
 
 $X^e(t) = X^{GNSS}(t) + R_n^e(t)R_i^p(t)(a^i+R_s^i(t)X^s(t))$
 

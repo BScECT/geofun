@@ -31,7 +31,7 @@ parts:
       - file: 3_mapping/Measuring_and_Mapping_the_Earth.md
       - file: 3_mapping/Reference_Systems_and_Frames.md
       - file: 3_mapping/GNSS.md
-     # - file: 3_mapping/AirborneLaserScanning.md
+      - file: 3_mapping/AirborneLaserScanning.md
       - file: 3_mapping/subsurface/Earths_material_properties.md
       - file: 3_mapping/subsurface/Geophysics.md
     # - file: 1_sensing_and_statistics/data_analysis/overview.md

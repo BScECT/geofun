@@ -320,7 +320,7 @@ the wavelength, and the wavelength of the incident laser radiation.
 The quantity describing how effectively a target intercepts and
 redirects the incoming laser energy back toward the sensor is the
 target cross section (σ). It can be interpreted as the
-effective area (units is m<sup>2</sup>) of a target “as seen”
+effective area (units is $m^2$) of a target “as seen”
 by a lidar sensor. It is defined as:
                                               
  ${\sigma = \frac{4\pi}{\Omega}}\rho A_{t}$
@@ -630,12 +630,11 @@ be tightly synchronized in time, because each laser pulse must
 be linked to the exact position and orientation of the platform at the
 moment the pulse is emitted and received. The process of computing
 georeferenced 3D points directly from the laser, GNSS, and INS
-measurements is known as direct georeferencing.
+measurements is known as direct georeferencing. 
 
-|  |  |
-|----|----|
-| Fig. 9: Schematic diagram of airborne laser scanning. Reproduced with permission from  Mandlburger (2024) | <img src="Pictures/1000000100000400000002E87F60E763E31C0B50.png"
-style="width:4.9161in;height:3.572in" /> |
+```{figure} figures/airborne_lidar.png
+Schematic diagram of airborne laser scanning. Reproduced with permission from  Mandlburger (2024)
+```
 
 ### The Workflow
 
@@ -661,10 +660,9 @@ detected objects (i.e. laser echoes) in the scanner CRS. These points
 form the basis for computing fully georeferenced 3D object coordinates
 in a geocentric CRS, as illustrated in Fig. 10.
 
-|  |  |
-|----|----|
-| Fig. 10: Schematic diagram of the geometric airborne lidar sensor model. Reproduced with permission from  Mandlburger (2024) | <img src="Pictures/10000001000002EC000001676338A2E79CEFDD36.png"
-style="width:5.0598in;height:2.4283in" /> |
+```{figure} figures/lidar_sensor.png
+Schematic diagram of the geometric airborne lidar sensor model. Reproduced with permission from  Mandlburger (2024)
+```
 
 The transformation from scanner coordinates to geocentric coordinates
 involves a chain of CRSs, each indicated by a specific index and colour
@@ -678,40 +676,30 @@ in the figure:
 
 The transformation is given by Eq. 1.10.
 
-|  |  |
-|----|----|
-| 
-X<sup>e</sup>(t) = X<sup>GNSS</sup>(t) + R<sub>n</sub><sup>e</sup>(t)R<sub>i</sub><sup>p</sup>(t)(a<sup>i</sup> + R<sub>s</sub><sup>i</sup>(t)X<sup>s</sup>(t)). | (1.10) |
+$X^e(t) = X^{GNSS}(t) + R_n^e(t)R_i^p(t)(a^i+R_s^i(t)X^s(t))$
 
 Reading the transformation equation from right to left, the process is
 as follows:
 
-The 3D point
-X<sup>s</sup> = (X<sup>s</sup>, Y<sup>s</sup>, Z<sup>s</sup>),
-defined in the local scanner CRS, is first rotated into the INS CRS
+The 3D point $X_s = (X^s, Y^s, Z^s)$ defined in the local scanner CRS, is first rotated into the INS CRS
 using the boresight angles. These angles represent small
-rotational offsets (Δroll, Δpitch, Δyaw) between the scanner and the INS
+rotational offsets $(\Delta_{roll}, \Delta_{pitch}, \Delta_{yaw})$ between the scanner and the INS
 reference planes (cf. green elements in the Figure). The point is then
-translated using the lever arm (
-a<sup>i</sup>
-), which is the offset vector between the GNSS antenna phase
+translated using the lever arm $(a^i)$, which is the offset vector between the GNSS antenna phase
 centre and the origin of the scanner CRS.
 
 Next, the point is rotated from the INS CRS into the platform CRS using
-the roll, pitch, and yaw angles measured by the INS (
-R<sub>i</sub><sup>n</sup>(t)
-). A further rotation (
-R<sub>p</sub><sup>e</sup>(t)
-) transforms the point from the platform CRS into the geocentric CRS.
+the roll, pitch, and yaw angles measured by the INS ($R_i^n(t)$). A further rotation 
+$(R_p^e(t))$ transforms the point from the platform CRS into the geocentric CRS.
 This final rotation depends on the geographic position (latitude and
 longitude) of the INS origin.
 
 Finally, the geocentric coordinates of the GNSS antenna are added
 (
-X<sup>GNSS</sup>(t)
+$X^{GNSS}(t)$
 ), yielding the fully georeferenced 3D coordinates of the laser
 point
-X<sup>e</sup>(t).
+$X^e(t)$.
 
 ## Accuracy Considerations
 

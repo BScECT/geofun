@@ -222,15 +222,14 @@ Time-to-Digital Converter (TDC) to start counting the time. You can
 think of this as pressing the start button on an extremely precise
 stopwatch.
 
--A beam deflection unit then steers the laser pulse in a certain
+A beam deflection unit then steers the laser pulse in a certain
 direction. Common implementations (see Fig. 2) include rotating and
 oscillating mirrors, which produce different point distributions on the
 ground.
 
-|  |  |
-|----|----|
-| Fig. 2: Laser beam deflection with rotating and oscillating mirrors. Reproduced with permission from  Mandlburger (2024) | <img src="Pictures/1000000100000400000002089D5640CF5B4FF4E3.png"
-style="width:4.9307in;height:2.5035in" /> |
+```{figure} figures/laser_beam.png
+Laser beam deflection with rotating and oscillating mirrors. Reproduced with permission from  Mandlburger (2024)
+```
 
 The most important specifications that describe the performance of a
 scanner are:
@@ -286,12 +285,9 @@ compared to horizontal paths (see Fig. 3). For flying heights of
 average vertical attenuations are approximately 0.22, 0.17, and 0.14
 dB/km, respectively.
 
-|  |  |
-|----|----|
-| Fig. 3: Atmospheric transmission at different altitudes. Taken from Zhang et al. (2024), | <img src="Pictures/1000000100000C2F0000078B4C6BE77E9B7725AB.png"
-style="width:4.9528in;height:3.0661in" /> |
-
-
+```{figure} figures/atmospheric_transmission.png
+Atmospheric transmission at different altitudes. Taken from Zhang et al. (2024)
+```
 
 #### Interaction with the Surface
 
@@ -311,13 +307,9 @@ including back toward the sensor. Most natural surfaces exhibit
 scattering behaviour that lies somewhere between these two idealised
 cases.
 
-|  |
-|----|
-| <img src="Pictures/1000000100000898000003BBB30C2271C15F791C.png"
-style="width:6.485in;height:2.6488in" /> |
-| Fig. 4: Various forms of scattering at the surface. Taken from: Philpot & Philipson: Remote Sensing Fundamentals. |
-
-
+```{figure} figures/scattering.png
+Various forms of scattering at the surface. Taken from: Philpot & Philipson: Remote Sensing Fundamentals.
+```
 
 The scattering behaviour depends on several factors, most
 importantly the type of material, the surface roughness at the scale of
@@ -330,11 +322,8 @@ redirects the incoming laser energy back toward the sensor is the
 target cross section (σ). It can be interpreted as the
 effective area (units is m<sup>2</sup>) of a target “as seen”
 by a lidar sensor. It is defined as:
-
-|                                                |       |
-|------------------------------------------------|-------|
-|                                                
- $${\sigma = \frac{4\pi}{\Omega}}\rho A\_{t},$$  | (1.1) |
+                                              
+ ${\sigma = \frac{4\pi}{\Omega}}\rho A_{t}$
 
 where ρ is the reflectance (or reflectivity), defined as the
 fraction of incident laser energy reflected by the surface (averaged
@@ -346,41 +335,35 @@ receiver. A smaller Ω indicates that the reflected energy is more
 concentrated (as for a specular reflector), making the target appear
 “brighter” to the sensor.
 
-<table>
-<tbody>
-<tr>
-<td><p>A <strong><strong>solid angle</strong></strong> Ω is the
+```{note}
+
+A solid angle $\Omega$ is the
 three-dimensional analogue of a planar angle. It quantifies how much of
-the sphere <strong><strong>surrounding a point is subtended by an object
-and is measured in steradians (sr):</strong></strong> </p>
-<ul>
-<li>A full sphere subtends 4π sr.</li>
-<li>Half a sphere (e.g. all directions above a flat surface) subtends 2π
-sr.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+the sphere surrounding a point is subtended by an object
+and is measured in steradians (sr):
+
+1. A full sphere subtends 4$\pi$ sr.
+2. Half a sphere (e.g. all directions above a flat surface) subtends 2$\pi$ sr.
+```
 
 Reflectance is a material property that is
 wavelength-dependent. The curve describing reflectance as a
 function of wavelength is called a reflectance spectrum. Fig. 5
 shows reflectance spectra for various surface materials.
 
-|  |
-|----|
-| <img src="Pictures/10000001000004370000024CA53993947F6C9CBA.png"
-style="width:6.5146in;height:3.55in" /> |
-| Fig. 5: Reflectance spectra for various surface materials. Taken from Rieger et al. (2025) |
+```{figure} figures/reflectance_spectra.png
+Reflectance spectra for various surface materials. Taken from Rieger et al. (2025)
+```
 
 Regarding the effective illuminated target area, three cases can
 be distinguished:
 
 - Extended targets (target area \> than the laser footprint):
-  In this case, A<sub>t</sub> (for a nadir footprint)
-  equals<sup>
-  $${A\_{t} = \pi}{{({\frac{1}{2}R\beta})}^{2} = \frac{\pi R^{2}\beta^{2}}{4}}.$$
-  </sup>
+  In this case, $A_t$ (for a nadir footprint)
+  equals:
+
+  ${A_{t} = \pi}{{({\frac{1}{2}R\beta})}^{2} = \frac{\pi R^{2}\beta^{2}}{4}}.$
+
 - Linear targets (e.g. power lines or wires): The target cross section
   depends linearly on range.
 - Point targets (e.g. individual leaves) with an area smaller than the
@@ -391,7 +374,7 @@ At first glance, the definition of σ shows no explicit
 dependence on the incidence angle. However, the incidence
 angle is implicitly accounted for:
 
-- through A<sub>t</sub>, since the projected area depends on
+- through $A_t$, since the projected area depends on
   surface orientation;
 - through Ω, because changes in illumination geometry can alter the
   angular distribution of the reflected energy and thus the apparent
@@ -401,16 +384,14 @@ For an extended target with Lambertian scattering characteristics, i.e.
 a surface that reflects light in all directions according to Lambert’s
 Cosine Law, the general expression for σ can be simplified to:
 
-|                                                    |       |
-|----------------------------------------------------|-------|
-|                                                    
- σ = πρR<sup>2</sup>β<sup>2</sup>cos α.  | (1.2) |
+$\sigma = \pi\rho R^2\beta^2cos(a)$                                              
 
-In this case, the effective scattering solid angle is Ω=π
-sr. (Note, while a hemisphere subtends 2π sr, the
+In this case, the effective scattering solid angle is $\Omega = \pi$ sr.
+(Note, while a hemisphere subtends $2\pi$ sr, the
 cosine-weighted angular distribution of Lambertian reflection
-concentrates the effective reflected energy into π sr). Besides,
-$${A\_{t} = \frac{\pi R^{2}\beta^{2}}{4}}\cos\alpha.$$
+concentrates the effective reflected energy into $\pi
+$ sr). Besides,
+${A_{t} = \frac{\pi R^{2}\beta^{2}}{4}}\cos\alpha.$
 
 ### Optical-to-Electrical Conversion
 
@@ -427,40 +408,42 @@ receiver, and the sensitivity of the detector. The detector
 sensitivity is largely governed by the noise generated by the detector
 and its associated electronics.
 
+```{admonition} The maximum unambiguous range
 <table>
 <tbody>
 <tr>
-<td><p><strong>The maximum unambiguous range</strong> – Modern lidars
+<td><p>Modern lidars
 may operate at PRFs larger than 2,000 kHz. This raises an important
-question: <strong><strong>what is the maximum distance to a target if we
+question: what is the maximum distance to a target if we
 require that a laser pulse must return to the sensor before the next
-pulse is emitted?</strong></strong></p>
-<p>This distance is known as the <strong><strong>maximum unambiguous
-range</strong></strong>, denoted <em>l</em><sub>max</sub>. It is given
+pulse is emitted?</p>
+<p>This distance is known as the <strong>maximum unambiguous
+range</strong>, denoted <em>l</em><sub>max</sub>. It is given
 by l<sub>max</sub> = <em><em> </em><em>½</em><em>c</em><em>(1/PRF).
 </em></em></p>
 <p><em><em>For a PRF of 2,</em><em>0</em><em>00 kHz, this results in a
-maximum unambiguous range of </em><em>75</em></em><strong><strong>
-m</strong></strong><em><em>. In other words, if a laser scanner were
+maximum unambiguous range of </em><em>75</em></em><strong>
+m</strong><em><em>. In other words, if a laser scanner were
 required to wait for the return of each pulse before emitting the next
 one, the PRF would have to be drastically reduced to allow for larger
 flying heights .</em></em></p>
 <p>To overcome this limitation, modern lidar systems use solutions
-collectively referred to as <strong><strong>multiple-time-around
-(MTA)</strong></strong> techniques. These approaches allow multiple
+collectively referred to as <strong>multiple-time-around
+(MTA)</strong> techniques. These approaches allow multiple
 pulses to be in the atmosphere simultaneously and resolve range
 ambiguities using, for example, a preliminary digital terrain model or
 by varying the PRF.</p>
 <p>With the extremely high PRFs achieved by today’s lidar systems, even
 these strategies are sometimes insufficient. This has motivated the
 development of systems employing large numbers of parallel detectors,
-such as <strong><strong>single-photon</strong></strong> and
-<strong><strong>Geiger-mode lidar</strong></strong>, which can handle
+such as <strong>single-photon</strong> and
+<strong>Geiger-mode lidar</strong>, which can handle
 very high pulse rates and return densities. For further discussion, see
 Mandlburger (2019).</p></td>
 </tr>
 </tbody>
 </table>
+```
 
 ### Detection of Pulse Arrival
 
@@ -484,10 +467,11 @@ mode) to this waveform to estimate the travel time and thus the range.
 Conceptually, this often corresponds to locating one or more peaks in
 the recorded waveform.
 
-|  |  |
-|----|----|
-| Fig. 6: Example of a real-world incoming lidar return. Potential discrete-return peaks are marked in red. Image taken from [https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3](https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3) | <img src="Pictures/10000001000008340000083479A95B89617203D1.png"
-style="width:3.1in;height:3.1in" /> |
+```{figure} figures/lidar_return.png
+Example of a real-world incoming lidar return. Potential discrete-return peaks are marked in red. Image taken from [https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3](https://pdal.io/en/2.8.4/workshop/lidar-introduction.html#id3)
+```
+
+```{admonition} Lidar Systems
 
 <table>
 <tbody>
@@ -517,14 +501,16 @@ As a result, these technologies are particularly well suited for
 large-scale and nationwide topographic mapping. A schematic comparison
 of linear-mode lidar, Geiger-mode lidar, and single-photon lidar is
 shown in the following figure.</p>
-<p><img src="Pictures/100000010000040000000272039E4DBD11AB858C.png"
-style="width:6.2173in;height:3.8in" /><em>Fig. 7: A schematic comparison
-of linear-mode lidar, Geiger-mode lidar, and single-photon lidar.
-<em>Reproduced with permission from </em> Mandlburger
-(2024)</em></p></td>
+
+
+</p></td>
 </tr>
 </tbody>
 </table>
+
+```{figure} figures/lidar_comparison.png
+A schematic comparison of linear-mode lidar, Geiger-mode lidar, and single-photon lidar. Reproduced with permission from  Mandlburger (2024)
+```
 
 ## The Laser Range Equation
 

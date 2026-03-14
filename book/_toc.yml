@@ -34,10 +34,10 @@ parts:
       - file: 3_mapping/AirborneLaserScanning.md
       - file: 3_mapping/subsurface/Earths_material_properties.md
       - file: 3_mapping/subsurface/Geophysics.md
-    # - file: 1_sensing_and_statistics/data_analysis/overview.md
-      # sections:
-      # - file: 1_sensing_and_statistics/data_analysis/descriptive_statistics.ipynb
-      # - file: 1_sensing_and_statistics/data_analysis/data_visualization.ipynb
+    - file: 1_sensing_and_statistics/data_analysis/overview.md
+      sections:
+      - file: 1_sensing_and_statistics/data_analysis/descriptive_statistics.ipynb
+      - file: 1_sensing_and_statistics/data_analysis/data_visualization.ipynb
   # - caption: Part B - Applied Statistics with Python
   #   chapters:
   #   - file: 2_applied_statistics/data_preparation/overview.md

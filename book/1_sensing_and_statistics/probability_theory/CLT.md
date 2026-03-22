@@ -1,6 +1,7 @@
 # Law of large numbers and central limit theorem
 
 
+(1:clt:population)=
 ## Random sample and population
 
 In statistics, the *population* refers to the complete set of all objects / people of interest, e.g.,

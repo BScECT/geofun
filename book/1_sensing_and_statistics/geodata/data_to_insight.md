@@ -25,6 +25,7 @@ Probability theory provides a formal framework to reason under uncertainty. Unce
 
 Probability theory results from a long history, starting in the 17th century with a [correspondence between Blaise Pascal and Pierre de Fermat](https://www.aps.org/apsnews/2009/07/pascal-letters-fermat-points) on gambling problems and continuing today with [Daphne Koller’s research](https://www.technologyreview.com/technology/bayesian-machine-learning/) on making predictions based on incomplete knowledge of the world.
 
+(1:data_to_insight:statistics)=
 ### Statistics
 
 Statistics supports the quantitative analysis and interpretation of data. It is often divided into two main branches:

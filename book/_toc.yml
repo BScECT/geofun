@@ -47,8 +47,8 @@ parts:
   #     - file: 2_applied_statistics/data_preparation/statistical_tables.md
   #   - file: 2_applied_statistics/linear_regression/overview.md
   #     sections:
-  #     - file: 2_applied_statistics/linear_regression/ordinary_least_squares.md
-  #     - file: 2_applied_statistics/linear_regression/weighted_least_squares.ipynb
+  #     - file: 2_applied_statistics/linear_regression/regression.ipynb
+  #     - file: 2_applied_statistics/linear_regression/uncertainty.md
   #   - file: 2_applied_statistics/probabilistic_outlook/overview.md
   #     sections:
   #     - file: 2_applied_statistics/probabilistic_outlook/parameter_uncertainty.ipynb

@@ -128,7 +128,7 @@ The test statistic follows a [normal distribution](https://distribution-explorer
   * The population variance $\sigma_X^2$ is known.
   * The observations are independent and the sample is representative of the population.
 
-````{iframe-figure} ../../_static/part-a_hypothesis-testing.html
+````{iframe-figure} ../../_static/part-b_hypothesis-testing.html
 ---
 name: hypothesis_testing
 width: 825px

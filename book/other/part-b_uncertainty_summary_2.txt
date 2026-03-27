@@ -1,0 +1,26 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                Density   R-squared:                       0.401
+Model:                            OLS   Adj. R-squared:                  0.399
+Method:                 Least Squares   F-statistic:                     164.7
+Date:                Thu, 26 Mar 2026   Prob (F-statistic):           1.88e-55
+Time:                        21:53:07   Log-Likelihood:                 1398.7
+No. Observations:                 494   AIC:                            -2791.
+Df Residuals:                     491   BIC:                            -2779.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            2.6590      0.002   1623.696      0.000       2.656       2.662
+Porosity            -0.0021      0.000    -16.371      0.000      -0.002      -0.002
+Water_saturation     0.0001   3.69e-05      3.864      0.000    7.02e-05       0.000
+==============================================================================
+Omnibus:                      231.112   Durbin-Watson:                   0.903
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2058.441
+Skew:                           1.818   Prob(JB):                         0.00
+Kurtosis:                      12.316   Cond. No.                         133.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

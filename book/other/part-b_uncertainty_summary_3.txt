@@ -1,0 +1,30 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Temperature_anomaly   R-squared:                       0.813
+Model:                             OLS   Adj. R-squared:                  0.812
+Method:                  Least Squares   F-statistic:                     583.0
+Date:                 Thu, 26 Mar 2026   Prob (F-statistic):          2.05e-193
+Time:                         22:05:19   Log-Likelihood:                 327.83
+No. Observations:                  540   AIC:                            -645.7
+Df Residuals:                      535   BIC:                            -624.2
+Df Model:                            4                                         
+Covariance Type:             nonrobust                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept            -40.2809      0.994    -40.537      0.000     -42.233     -38.329
+Time                   0.0204      0.000     41.238      0.000       0.019       0.021
+Volcanic_eruptions    -1.8522      0.322     -5.744      0.000      -2.486      -1.219
+El_Nino_index          0.0778      0.007     11.708      0.000       0.065       0.091
+Solar_irradiance       0.0005   8.73e-05      5.540      0.000       0.000       0.001
+==============================================================================
+Omnibus:                        8.163   Durbin-Watson:                   0.884
+Prob(Omnibus):                  0.017   Jarque-Bera (JB):                8.205
+Skew:                           0.301   Prob(JB):                       0.0165
+Kurtosis:                       3.038   Cond. No.                     3.52e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.52e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.

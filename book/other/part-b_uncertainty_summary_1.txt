@@ -1,0 +1,30 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:     Bankfull_discharge   R-squared:                       0.900
+Model:                            OLS   Adj. R-squared:                  0.887
+Method:                 Least Squares   F-statistic:                     71.61
+Date:                Thu, 26 Mar 2026   Prob (F-statistic):           1.66e-15
+Time:                        22:35:43   Log-Likelihood:                -126.02
+No. Observations:                  37   AIC:                             262.0
+Df Residuals:                      32   BIC:                             270.1
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+Intercept              -20.0554      3.444     -5.823      0.000     -27.071     -13.040
+Bankfull_width           1.1057      0.220      5.029      0.000       0.658       1.554
+Bankfull_depth          18.3557      4.149      4.424      0.000       9.905      26.807
+Local_slope           -236.8938    195.938     -1.209      0.236    -636.006     162.218
+Median_sediment_size     0.3385      0.099      3.403      0.002       0.136       0.541
+==============================================================================
+Omnibus:                        9.199   Durbin-Watson:                   1.828
+Prob(Omnibus):                  0.010   Jarque-Bera (JB):                8.387
+Skew:                           0.894   Prob(JB):                       0.0151
+Kurtosis:                       4.499   Cond. No.                     5.24e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.24e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

@@ -25,7 +25,8 @@ parts:
       - file: 1_sensing_and_statistics/probability_theory/NormDist.md
       - file: 1_sensing_and_statistics/probability_theory/CLT.md
       - file: 1_sensing_and_statistics/probability_theory/normal.ipynb
-    # - file: 1_sensing_and_statistics/statistical_inference/overview.md
+      - file: 1_sensing_and_statistics/probability_theory/FormulaSheet.md
+          # - file: 1_sensing_and_statistics/statistical_inference/overview.md
     - file: 3_mapping/overview.md
       sections:
       - file: 3_mapping/Measuring_and_Mapping_the_Earth.md

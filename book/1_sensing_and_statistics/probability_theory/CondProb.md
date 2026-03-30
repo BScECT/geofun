@@ -224,7 +224,7 @@ Two events $A$ and $B$ are mutually independent if $\mathsf{P}(B|A) = \mathsf{P}
 This implies that for independent $A$ and $B$:
 
 $$
-\mathsf{P}(A| B)= \frac{\mathsf{P}(A\cap B)}{\mathsf{P}(B)}= \mathsf{P}(B) \Leftrightarrow \mathsf{P}(A\cap B)=\mathsf{P}(A)\mathsf{P}(B)
+\mathsf{P}(A| B)= \frac{\mathsf{P}(A\cap B)}{\mathsf{P}(B)}= \mathsf{P}(A) \Leftrightarrow \mathsf{P}(A\cap B)=\mathsf{P}(A)\mathsf{P}(B)
 $$
 
 This can be generalized to $n$ independent events: the intersection of any number of subset of these events is equal to the product of the individual events in the subset. For instance with three independent events we have:

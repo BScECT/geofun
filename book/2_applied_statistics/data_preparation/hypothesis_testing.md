@@ -138,6 +138,7 @@ align: center
 Change the distribution to switch between $Z$- and $t$-test, and the test and significance level to see how the rejection region(s) change(s).
 ````
 
+(2:hypothesistesting:ttest)=
 #### $t$-test
 
 In a $t$-test, we also want to assess whether the population mean $\mu_X$ is different, lower, or higher than a reference value $\mu_0$, but this time with an unknown population variance.
@@ -251,6 +252,7 @@ $\nu = n - 1$
   * The population is normally distributed.
   * The observations are independent and the sample is representative of the population.
 
+(2:hypothesistesting:ftest)=
 #### $F$-test
 
 In a $F$-test for the variance, we want to assess whether the population variances $\sigma_{X_1}^2$ and $\sigma_{X_2}^2$ are different based on two independent samples.

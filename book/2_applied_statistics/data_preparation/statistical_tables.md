@@ -3,6 +3,7 @@
 
 You have already seen the [table for the standard normal distribution](table_standardnormal), which you can use to get $p$-values for the $Z$-test.
 
+(2:statistical_tables:normal)=
 ## Critical values for the standard normal distribution
 
 For the $Z$-test, you can also use the following table to get the critical value for a right-tailed test.
@@ -16,6 +17,7 @@ For the $Z$-test, you can also use the following table to get the critical value
 | $\boldsymbol{Z}$ | 0.674 | 0.842 | 1.036 | 1.282 | 1.645 | 1.960 | 2.326 | 2.576 | 2.807 | 3.090 | 3.291 |
 ```
 
+(2:statistical_tables:student)=
 ## Critical values for Student's $t$-distribution
 
 For the $t$-test, you can use the following table to get the critical value for a one-sided (i.e., right-tailed or left-tailed test) or two-sided test.

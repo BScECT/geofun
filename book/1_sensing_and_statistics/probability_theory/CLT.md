@@ -61,6 +61,7 @@ $\underset{n\rightarrow\infty}{\lim}{P(|{\overline{X}}_n-\mu|>\epsilon)\mathrm{=
 </div>
 
 
+(1:clt:clt)=
 ## Central limit theorem
 
 The Central Limit Theorem (CLT) states that the distribution of the sample mean approaches a normal distribution with increasing sample size, even if underlying distribution of the individual $X_i$ is non-normal. This allows to make inferences about statistical properties by using the normal distribution to approximate probabilities of events.

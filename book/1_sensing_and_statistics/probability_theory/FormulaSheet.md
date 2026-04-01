@@ -10,7 +10,9 @@ This formula sheet will be provided on the exam.
 | Conditional probability       |   $\mathsf{P}(A\mid B) = \frac{\mathsf{P}(A\cap B)}{\mathsf{P}(B)}$   | 
 | Total probability rule*          |   $\mathsf{P}(A) = \sum_{i=1}^n \mathsf{P}(A\mid B_i)\mathsf{P}(B_i)$  | 
 | Bayes' rule          |   $\mathsf{P}(B_j\mid A) = \frac{\mathsf{P}(A\mid B_j)\mathsf{P}(B_j)}{\mathsf{P}(A)}$  | 
-| Independence | $\mathsf{P}(A\mid B) = \mathsf{P}(A)$ and $\mathsf{P}(B\mid A) = \mathsf{P}(B)$
+| Independence | $\mathsf{P}(A\mid B) = \mathsf{P}(A)$ and $\mathsf{P}(B\mid A) = \mathsf{P}(B)$ |
+| Central limit theorem (sum) | $\sum_{i=1}^n X_i \overset{d}{\sim}N(n\mu,n\sigma^2)$, ($X_i$ i.i.d.)  |
+| Central limit theorem (mean) | $\bar{X}_n \overset{d}{\sim}N(\mu,\frac{\sigma^2}{n})$  |
 
 *where the $B_i$ form a partition of the sample space.
 

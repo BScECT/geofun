@@ -32,7 +32,7 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 * Lecture 1: Introduction to probability
 * Lecture 2: Conditional probability and independence
-* Practical: Thinking in probabilities
+* Practical: Thinking in probabilities [[slides](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4683684/View) & [notebook](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4683683/View)]
 
 ```
 
@@ -126,9 +126,9 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Descriptive statistics
-* Lecture 2: Data visualization
-* Practical: Data interpretation: DC and CPT data from the field measurements (2 hours)
+* Lecture 1: Descriptive statistics [[slides](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4707429/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220a/presentation/1826de48e68247659fbde3d4d4965e1d1d?academicYear=2025-2026-ectb1220a)]
+* Lecture 2: Data visualization [[slides](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4707430/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220a/presentation/1826de48e68247659fbde3d4d4965e1d1d?academicYear=2025-2026-ectb1220a)]
+* Practical: Data interpretation: DC and CPT data from the field measurements (2 hours) [[slides](https://brightspace.tudelft.nl/d2l/le/content/774785/viewContent/4794701/View)]
 
 ```
 
@@ -164,9 +164,9 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Data cleaning and wrangling
+* Lecture 1: Data wrangling and cleaning
 * Lecture 2: Hypothesis testing
-* Practical: Answering a question with statistics
+* Practical: Testing climate change
 
 ```
 
@@ -180,13 +180,13 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Ordinary least squares
-* Lecture 2: 
-* Practical: Multilinear regression
+* Lecture 1: Regression & least squares
+* Lecture 2: Uncertainty in regression
+* Practical: Estimating streamflow extremes
 
 ```
 
-```{dropdown} Week 4.4 - Taking a probabilistic outlook
+```{dropdown} Week 4.4 - Advanced least squares
 |                   | Monday    | Tuesday     | Wednesday | Thursday    | Friday      |
 | :---------------: | :-------: | :---------: | :-------: | :---------: | :---------: |
 | 08:45&ndash;10:30 |           | Lecture 2.  | Practical |             |             |
@@ -197,8 +197,8 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 **Content**
 
 * Lecture 1: 
-* Lecture 2: Parameter uncertainty
-* Practical: Model robustness
+* Lecture 2: 
+* Practical: 
 * Q&A session: Q&A on the capstone case study
 
 ```
@@ -213,7 +213,7 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Maximum likelihood
+* Lecture 1: Beyond least squares
 * Lecture 2: Logistic regression
 * Practical: 
 

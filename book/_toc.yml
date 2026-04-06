@@ -50,13 +50,13 @@ parts:
   #     sections:
   #     - file: 2_applied_statistics/linear_regression/regression.ipynb
   #     - file: 2_applied_statistics/linear_regression/uncertainty.md
-  #   - file: 2_applied_statistics/probabilistic_outlook/overview.md
+  #   - file: 2_applied_statistics/advanced_least_squares/overview.md
   #     sections:
-  #     - file: 2_applied_statistics/probabilistic_outlook/parameter_uncertainty.ipynb
+  #     - file: 2_applied_statistics/advanced_least_squares/
   #   - file: 2_applied_statistics/classification/overview.md
   #     sections:
-  #     - file: 2_applied_statistics/classification/maximum_likelihood.ipynb
-  #     - file: 2_applied_statistics/classification/logistic_regression.md
+  #     - file: 2_applied_statistics/classification/beyond_least_squares.ipynb
+  #     - file: 2_applied_statistics/classification/logistic_regression.ipynb
   #   - file: 2_applied_statistics/validation/overview.md
   #     sections:
   #     - file: 2_applied_statistics/validation/model_validation.ipynb

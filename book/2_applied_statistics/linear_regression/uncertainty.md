@@ -119,6 +119,7 @@ Where:
   * $\beta_0$ and $\beta_1$ are the parameters, respectively the intercept and the slope.
   * $\epsilon$ is the error.
 
+(2:uncertainty:parameters)=
 ### For the parameters
 
 Getting confidence intervals for the slope and intercept is very similar to getting confidence intervals for a mean: the only difference is how we compute the standard error. For that, we first need to define the estimate for the variance of the error:

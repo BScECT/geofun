@@ -10,6 +10,7 @@ After studying *Continuous random variables* you will be able to ...
 * evaluate probability density functions and distribution functions of continuous random variables
 * define and interpret the expectation and variance of random variables
 
+(1:continrandom:pdf)=
 ## From histogram to probability density function
 
 An histogram with relative frequencies based on observed data can be used to show the *empirical* distribution of the random variable.

@@ -189,7 +189,7 @@ $\textbf{Geometric distribution:}$
 
 Random variable $X$ has probability mass function
 
-$p_X(k)=\mathsf{P}(X=k)=p^k (1-p)^{n-k},\;\; \text{for } k=1,2,\ldots$
+$p_X(k)=\mathsf{P}(X=k)=p (1-p)^{k-1},\;\; \text{for } k=1,2,\ldots$
 
 with $0\leq p \leq 1$
 

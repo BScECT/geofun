@@ -42,7 +42,7 @@ $\mathbb{E}(X)=np,\;Var(X)=np(1-p)$
 
 ### Geometric distribution, $X\sim Geo(p)$
 
-$p_X(k)=p^k (1-p)^{n-k},\;\; \text{for } k=1,2,\ldots$, with $0\leq p \leq 1$
+$p_X(k)=p (1-p)^{k-1},\;\; \text{for } k=1,2,\ldots$, with $0\leq p \leq 1$
 
 $\mathbb{E}(X)=\frac{1}{p},\;Var(X)=\frac{1-p}{p^2}$
 

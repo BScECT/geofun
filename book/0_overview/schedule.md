@@ -152,7 +152,7 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 ```
 
-<!-- ## Part B - Applied Statistics with Python
+## Part B - Applied Statistics with Python
 
 ```{dropdown} Week 4.2 - Data preparation and analysis
 |                   | Monday    | Tuesday   | Wednesday | Thursday    | Friday      |
@@ -215,7 +215,7 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 * Lecture 1: Beyond least squares
 * Lecture 2: Logistic regression
-* Practical: 
+* Practical: Data-driven interpretation of CPT data
 
 ```
 
@@ -264,4 +264,4 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 | 13:45&ndash;15:30 |           |           |           |             |             |
 | 15:45&ndash;17:30 |           |           |           |             |             |
 
-``` -->
+```

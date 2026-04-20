@@ -106,6 +106,7 @@ with $0\leq p \leq 1$
 
 </div>
 
+(1:DiscreteRandom:Bernoulli)=
 ## Bernoulli distribution
 
 This distribution is applicable for experiments with two possible outcomes: $X=1$ for "success" and $X=0$ for "failure".

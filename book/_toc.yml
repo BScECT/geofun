@@ -39,17 +39,17 @@ parts:
       sections:
       - file: 1_sensing_and_statistics/data_analysis/descriptive_statistics.ipynb
       - file: 1_sensing_and_statistics/data_analysis/data_visualization.ipynb
-  # - caption: Part B - Applied Statistics with Python
-  #   chapters:
-  #   - file: 2_applied_statistics/data_preparation/overview.md
-  #     sections:
-  #     - file: 2_applied_statistics/data_preparation/data_wrangling.md
-  #     - file: 2_applied_statistics/data_preparation/hypothesis_testing.md
-  #     - file: 2_applied_statistics/data_preparation/statistical_tables.md
-  #   - file: 2_applied_statistics/linear_regression/overview.md
-  #     sections:
-  #     - file: 2_applied_statistics/linear_regression/regression.ipynb
-  #     - file: 2_applied_statistics/linear_regression/uncertainty.md
+  - caption: Part B - Applied Statistics with Python
+    chapters:
+    - file: 2_applied_statistics/data_preparation/overview.md
+      sections:
+      - file: 2_applied_statistics/data_preparation/data_wrangling.md
+      - file: 2_applied_statistics/data_preparation/hypothesis_testing.md
+      - file: 2_applied_statistics/data_preparation/statistical_tables.md
+    - file: 2_applied_statistics/linear_regression/overview.md
+      sections:
+      - file: 2_applied_statistics/linear_regression/regression.ipynb
+      - file: 2_applied_statistics/linear_regression/uncertainty.md
     # - file: 2_applied_statistics/advanced_least_squares/overview.md
     #   sections:
     #   - file: 2_applied_statistics/advanced_least_squares/

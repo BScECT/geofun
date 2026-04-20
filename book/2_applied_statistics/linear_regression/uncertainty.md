@@ -142,12 +142,12 @@ $$
     s_{\hat{\beta}_0} = s_{\hat{\beta}_1}\sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2}
 $$
 
-Finally, using a Student's $t$-distribution again, we get the following estimates for the 100$\gamma$% confidence intervals of the slope and the intercept:
+Finally, using Student's $t$-distribution again, we get the following estimates for the 100$\gamma$% confidence intervals of the slope and the intercept:
 
 $$
     \begin{align}
-        \hat{\beta}_1 \pm& t_{n-2,\alpha/2} \times s_{\hat{\beta}_1} \\
-        \hat{\beta}_0 \pm& t_{n-2,\alpha/2} \times s_{\hat{\beta}_0} \\
+        \hat{\beta}_1 &\pm t_{n-2,\alpha/2} \times s_{\hat{\beta}_1} \\
+        \hat{\beta}_0 &\pm t_{n-2,\alpha/2} \times s_{\hat{\beta}_0} \\
     \end{align}
 $$
 
@@ -262,6 +262,7 @@ The bootstrap is a non-parametric approach: it does not assume a specific model 
 
 In addition to confidence intervals, we can use statistical tests to assess the significance of a model and of its parameters. Those tests are often performed automatically when fitting a model, so be mindful of $p$-hacking: you should decide on a significance level to reject or not the null hypothesis before looking at the test results, not after.
 
+(2:uncertainty:test_params)=
 ### Statistical tests of the parameters
 
 We can determine the significance of each parameter using a two-sided [$t$-test](2:hypothesistesting:ttest). The idea is to test if a parameter is significantly different from 0. This is mainly useful with the slope $\beta_1$, as it suggest that the predictor has a significant relationship with the outcome.

@@ -8,6 +8,7 @@ This perspective is valid in geoscience and statistics, but variables also show 
 
 ## How to differentiate variables?
 
+(1:data_types:variable_types)=
 ### The standard approach
 
 In this approach, variables are classified based on three criteria:

@@ -14,7 +14,7 @@ In contrast, in messy data:
   * Multiple types of observational units are stored in the same table.
   * A single observational unit is stored in multiple tables.
 
-But tidy datasets are just a part of what constitute a robust digital culture: you also need a while infrastructure to store and be able to use them. This is represented by the [FAIR principle](https://www.go-fair.org/fair-principles), which are guidelines to make data (from [libereurope.eu](https://libereurope.eu/wp-content/uploads/2020/09/LIBER-FAIR-Data.pdf)):
+But tidy datasets are just a part of what constitute a robust digital culture: you also need all the infrastructure to store and be able to use them. This is codified by the [FAIR principle](https://www.go-fair.org/fair-principles), which are guidelines to make data (from [libereurope.eu](https://libereurope.eu/wp-content/uploads/2020/09/LIBER-FAIR-Data.pdf)):
   * Findable
     > Data and supplementary materials have sufficiently rich metadata and a unique and persistent identifier.
   * Accessible
@@ -117,7 +117,7 @@ An outlier is a datum that deviates clearly from the rest of the data. They can 
   * A change in system behavior.
   * etc.
 
-So from measurement errors, lack of measurements, or because the variables of interest has a heavy-tailed distribution.
+So from measurement errors, lack of measurements, or because the variables of interest have heavy-tailed distributions.
 
 Some statistical estimators are sensitive to outliers (e.g., the mean), so they can perturb analyses and many approaches have been developed to identify them. The most famous is Tukey's fences, which define outliers as values outside of the range:
 

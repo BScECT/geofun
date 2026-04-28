@@ -2,7 +2,7 @@
 
 ## What is hypothesis testing?
 
-The [very first section of this book](1:data_to_insight:statistics) mentions that statistics is often divided into two main branches: *descriptive* and *inferential* statistics. [In part A](1:descriptive_statistics), you saw that descriptive statistics aim at analyzing and summarizing the data while losing as little information as possible. Its goal is to better understand the observations and their variability, and to highlight any pattern in the data that might be of interest.
+The [very first section of this book](1:data_to_insight:statistics) mentions that statistics is often divided into two main branches: *descriptive* and *inferential* statistics. [In part A](1:descriptive_statistics), you saw that descriptive statistics aims at analyzing and summarizing the data while losing as little information as possible. Its goal is to better understand the observations and their variability, and to highlight any pattern in the data that might be of interest.
 
 But data are just a sample from a [larger population](1:clt:population) and, in most cases, we are actually interested in the characteristics of that population. Take for instance a potential geothermal reservoir (the population): to know whether this reservoir is actually suitable, we need to know its properties (e.g., porosity, permeability, heat conductivity); extracting cores from boreholes (the sample) is the most direct and thorough way to get insights about those, but this operation is so expensive and difficult that drilling everywhere is impossible. So how can we be sure that the summary statistics computed from a limited number of cores give us any insight about the corresponding values for the whole population? This is where inferential statistics comes into play. Inferential statistics aims at generalizing beyond the data themselves to draw conclusions about the population.
 
@@ -157,7 +157,7 @@ Where $\overline{x}$ is the sample mean and $s_X$ is the sample standard deviati
 
 $$s_X = \sqrt{\frac{1}{n - 1}\sum_{i=1}^n (x_i - \overline{x})^2}$$
 
-The test statistic follows a [Student's t-distribution](https://distribution-explorer.github.io/continuous/student_t.html) under the null hypothesis ({numref}`figure {number} <hypothesis_testing>`). Compared to the normal distribution, Student's t-distribution has an extra parameter, the degrees of freedom $\nu$. The degrees of freedom reflect how many independent values are used to estimate variability, so it depends on the number of data:
+The test statistic follows [Student's t-distribution](https://distribution-explorer.github.io/continuous/student_t.html) under the null hypothesis ({numref}`figure {number} <hypothesis_testing>`). Compared to the normal distribution, Student's t-distribution has an extra parameter, the degrees of freedom $\nu$. The degrees of freedom reflect how many independent values are used to estimate the test statistic, so it depends on the number of data:
 
 $\nu = n - 1$
 
@@ -180,9 +180,9 @@ $H_A: \mu_{X_1} \neq \mu_{X_2}$ or $\mu_{X_1} < \mu_{X_2}$ or $\mu_{X_1} > \mu_{
 
 **Test statistic**
 
-$$t = \frac{\overline{x_1} - \overline{x_2}}{s_p{\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}}$$
+$$t = \frac{\overline{x}_1 - \overline{x}_2}{s_p{\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}}$$
 
-Where $n_1$ and $n_2$ are the number of data in the two samples, $\overline{x_1}$ and $\overline{x_2}$ their means, and $s_{X_1}$ and $s_{X_2}$ their standard deviations so that the pooled variance $s_p^2$ is:
+Where $n_1$ and $n_2$ are the number of data in the two samples, $\overline{x}_1$ and $\overline{x}_2$ their means, and $s_{X_1}$ and $s_{X_2}$ their standard deviations so that the pooled variance $s_p^2$ is:
 
 $$s_p^2 = \frac{(n_1 - 1)s_{X_1}^2 + (n_2 - 1)s_{X_2}^2}{n_1 + n_2 - 2}$$
 
@@ -209,9 +209,9 @@ $H_A: \mu_{X_1} \neq \mu_{X_2}$ or $\mu_{X_1} < \mu_{X_2}$ or $\mu_{X_1} > \mu_{
 
 **Test statistic**
 
-$$t = \frac{\overline{x_1} - \overline{x_2}}{s_{\overline{\Delta}}}$$
+$$t = \frac{\overline{x}_1 - \overline{x}_2}{s_{\overline{\Delta}}}$$
 
-Where $\overline{x_1}$ and $\overline{x_2}$ are the means of the two samples and $s_{X_1}$ and $s_{X_2}$ their standard deviations so that:
+Where $\overline{x}_1$ and $\overline{x}_2$ are the means of the two samples and $s_{X_1}$ and $s_{X_2}$ their standard deviations so that:
 
 $$s_{\overline{\Delta}} = \sqrt{\frac{s_{X_1}^2}{n_1} + \frac{s_{X_2}^2}{n_2}}$$
 
@@ -283,7 +283,7 @@ $\nu_2 = n_2 - 1$
 
 ### Other tests
 
-Many more hypothesis tests have been developed beside these few examples. You can test whether a distribution is more skewed than a normal distribution, whether a sample follows a normal distribution, whether a correlation is significant, etc. To have an idea of what is possible, you can take a look at SciPy documentation: SciPy has [many functions to perform all sorts of hypothesis tests](https://docs.scipy.org/doc/scipy/reference/stats.html#hypothesis-tests-and-related-functions).
+Many more hypothesis tests have been developed beside these few examples. You can test whether a distribution is more skewed than a normal distribution, whether a sample follows a normal distribution, whether a correlation is significant, etc. To have an idea of what is possible, you can take a look at SciPy's documentation: SciPy has [many functions to perform all sorts of hypothesis tests](https://docs.scipy.org/doc/scipy/reference/stats.html#hypothesis-tests-and-related-functions).
 
 ## What is $p$-hacking?
 

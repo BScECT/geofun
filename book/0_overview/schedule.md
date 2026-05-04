@@ -164,9 +164,9 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Data wrangling and cleaning
-* Lecture 2: Hypothesis testing
-* Practical: Testing climate change
+* Lecture 1: Data wrangling and cleaning [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4819704/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/87e451284b3c46e5afdfe2fd59235fa81d?academicYear=2025-2026-ectb1220b)]
+* Lecture 2: Hypothesis testing [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4820986/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/26a3a97cc27640f59c8d9d515f4738c81d?academicYear=2025-2026-ectb1220b)]
+* Practical: Testing climate change [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4827953/View) & [notebook](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4827952/View)]
 
 ```
 

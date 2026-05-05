@@ -182,7 +182,7 @@ $$
 Then the confidence interval for the j$^\text{th}$ parameter in $\boldsymbol{\beta}$ is:
 
 $$
-    \hat{\beta}_j \pm t_{n-2,\alpha/2} \times s_\epsilon \sqrt{c_{jj}}
+    \hat{\beta}_j \pm t_{n-m-1,\alpha/2} \times s_\epsilon \sqrt{c_{jj}}
 $$
 ```
 

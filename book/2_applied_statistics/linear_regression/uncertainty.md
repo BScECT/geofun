@@ -215,10 +215,10 @@ $$
 ```{admonition} Link to linear algebra
 :class: tip
 
-With a multiple linear regression, the confidence interval becomes:
+With a multiple linear regression and $m$ predictors, the confidence interval becomes:
 
 $$
-    \hat{y} \pm t_{n-2,\alpha/2} \times s_\epsilon \sqrt{\boldsymbol{X}_0^T\left(\boldsymbol{X}^T\boldsymbol{X}\right)^{-1}\boldsymbol{X}_0}
+    \hat{y} \pm t_{n-m-1,\alpha/2} \times s_\epsilon \sqrt{\boldsymbol{X}_0^T\left(\boldsymbol{X}^T\boldsymbol{X}\right)^{-1}\boldsymbol{X}_0}
 $$
 
 Where $\boldsymbol{X}_0$ is a vector of predictor values:
@@ -233,7 +233,7 @@ $$
 Similarly, the prediction interval becomes:
 
 $$
-    \hat{y} \pm t_{n-2,\alpha/2} \times s_\epsilon \sqrt{1 + \boldsymbol{X}_0^T\left(\boldsymbol{X}^T\boldsymbol{X}\right)^{-1}\boldsymbol{X}_0}
+    \hat{y} \pm t_{n-m-1,\alpha/2} \times s_\epsilon \sqrt{1 + \boldsymbol{X}_0^T\left(\boldsymbol{X}^T\boldsymbol{X}\right)^{-1}\boldsymbol{X}_0}
 $$
 ```
 
@@ -247,7 +247,7 @@ $$
 
 This is called a parametric approach, because it relies on a model (here a normal distribution) with parameters (here a mean and a variance). Parametric approaches are efficient and precise, but only if their assumptions are met. The normality assumption is convenient because we can derive closed-form solutions for many operations, like estimating confidence intervals. But in reality we have no real reason to assume normality of the error. The central limit theorem relaxes that assumption, but what if we only have few data? What is a big enough sample anyway?
 
-Remember that repeated sampling is at the heart of computing confidence intervals. Under the normality assumption, this was translated as treating the samples as random variables. Another approach consist in creating artificial samples from our data and estimating a parameter of interest from those. The process of extracting new samples from a dataset is called resampling, and the process of using resampling to estimate a parameter is called bootstrapping or the bootstrap.
+Remember that repeated sampling is at the heart of computing confidence intervals. Under the normality assumption, this was translated as treating the samples as random variables. Another approach consist in creating artificial samples from our data and estimating a parameter of interest from those. The process of extracting new samples from a dataset is called resampling, and bootstrapping or the bootstrap is a process that uses resampling to estimate a parameter.
 
 The bootstrap is similar to the simulation procedure you have seen in part A:
   1. Extract a random sample from the data with replacement.
@@ -265,7 +265,7 @@ In addition to confidence intervals, we can use statistical tests to assess the 
 (2:uncertainty:test_params)=
 ### Statistical tests of the parameters
 
-We can determine the significance of each parameter using a two-sided [$t$-test](2:hypothesistesting:ttest). The idea is to test if a parameter is significantly different from 0. This is mainly useful with the slope $\beta_1$, as it suggest that the predictor has a significant relationship with the outcome.
+We can determine the significance of each parameter using a two-sided [$t$-test](2:hypothesistesting:ttest). The idea is to test if a parameter is significantly different from 0. This is mainly useful with the slope $\beta_1$, as it suggests that the predictor has a significant relationship with the outcome.
 
 **Null and alternative hypotheses**
 

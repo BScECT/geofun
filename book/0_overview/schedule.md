@@ -180,7 +180,7 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Regression & least squares
+* Lecture 1: Regression & least squares [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4829937/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/e42e33e3071744cea670b537cb1c2fd71d?academicYear=2025-2026-ectb1220b)]
 * Lecture 2: Uncertainty in regression
 * Practical: Estimating streamflow extremes
 

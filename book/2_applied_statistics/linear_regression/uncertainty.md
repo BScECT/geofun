@@ -1,3 +1,4 @@
+(uncertaintyreg)=
 # Uncertainty in regression
 
 ## What are confidence intervals?

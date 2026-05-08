@@ -56,6 +56,7 @@ parts:
       - file: 2_applied_statistics/advanced_least_squares/LeastSquares_NB.ipynb    
       - file: 2_applied_statistics/advanced_least_squares/weighted_lsq.md
       - file: 2_applied_statistics/advanced_least_squares/Notebook_WLS.ipynb
+      - file: 2_applied_statistics/advanced_least_squares/Notebook_sampling.ipynb
     # - file: 2_applied_statistics/classification/overview.md
     #   sections:
     #   - file: 2_applied_statistics/classification/beyond_least_squares.ipynb

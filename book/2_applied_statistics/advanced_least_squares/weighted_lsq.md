@@ -4,9 +4,9 @@ Observations are never perfect, and we have to account for their uncertainty whe
 
 ### Precision of observations
 
-Assuming that the errors are a realization of a random variable, assumed to be normally distributed, we can describe the uncertainty or **precision** by their variance, $\sigma^2$.
+Assuming that our model is correct $\boldsymbol{y}=\boldsymbol {X\beta}+\boldsymbol{\epsilon}$, the errors $\boldsymbol{\epsilon}$ are a realization of a random variable, assumed to be normally distributed, we can describe the uncertainty or **precision** by their variance, $\sigma^2$.
 
-Let's assume that we use the same instrument to collect $n$ *repeated* observations of the same variable (e.g., a fixed distance) under the same circumstances. The outcomes of these repeated measurements could look like those in {numref}`figure {number} <randome>`. Let's assume we know the true value $\mu$ (e.g., calibration distance); we can see that the repeated measurements fluctuate around $\mu$. The empirical mean will approximate $\mu$, especially if $n$ is large (law of large numbers). 
+Let's assume that we use the same instrument to collect $n$ *repeated* observations of the same variable (e.g., a fixed distance) under the same circumstances. This means that the expectation or mean of each individual observation is equal to the same value $\mu$. The outcomes of these repeated measurements could look like those in {numref}`figure {number} <randome>`. Let's assume we know the true value $\mu$ (e.g., calibration distance); we can see that the repeated measurements fluctuate around $\mu$. The empirical mean will approximate $\mu$, especially if $n$ is large (law of large numbers). 
 
 ````{figure} ../../figures/part-b_randomerrors.png
 ---
@@ -57,13 +57,13 @@ It makes sense, since a larger weight $w_j$ should result in a smaller $r_j$ (an
 
 The weight matrix $\boldsymbol{W}$ must be a symmetric and invertible matrix. 
 
-The *weighted* least squares solutions follows thus by miminiming:
+The *weighted* least squares solution follows thus by miminiming:
 
 $$
-    \begin{align}
+    \begin{align*}
         S_{\text{res}}(\boldsymbol{\hat{\beta}}) &= \left(\boldsymbol{y} - \boldsymbol{X}\boldsymbol{\hat{\beta}}\right)^T \boldsymbol{W}\left(\boldsymbol{y} - \boldsymbol{X}\boldsymbol{\hat{\beta}}\right) \\
          &= \boldsymbol{y}^T \boldsymbol{W}\boldsymbol{y} - \boldsymbol{y}^T \boldsymbol{W}\boldsymbol{X}\boldsymbol{\hat{\beta}} - \boldsymbol{\hat{\beta}}^T \boldsymbol{X}^T \boldsymbol{W}\boldsymbol{y} + \boldsymbol{\hat{\beta}}^T \boldsymbol{X}^T \boldsymbol{W}\boldsymbol{X}\boldsymbol{\hat{\beta}} \\
-    \end{align}
+    \end{align*}
 $$
 
 which gives:
@@ -76,7 +76,7 @@ $$\boldsymbol{W} =\begin{bmatrix} \frac{1}{\sigma_1^2}& & & 0 \\ &\frac{1}{\sigm
 \\ && \ddots & 
 \\ 0&&  & \frac{1}{\sigma_n^2} \end{bmatrix}$$
 
- A more precise observation will namely have a smaller variance, but should get a larger weight. In fact, this turns out to be a very good idea. If the errors of the different observations are indeed independent, in this way the weighted least squares solution provides the *best* estimates, i.e., you cannot find estimates with a better precision (smaller variance).
+A more precise observation will namely have a smaller variance, but should get a larger weight. In fact, this turns out to be a very good idea. If the errors of the different observations are indeed independent, in this way the weighted least squares solution provides the *best* estimates, i.e., you cannot find estimates with a better precision (smaller variance).
 
 Note that in [Uncertainty in regression](uncertaintyreg) the confidence interval for linear regression was derived assuming that the variance of the observation errors is not known. For estimation problems where the variances can be assumed known (based on calibration), and the observation errors are normally distributed and independent, we have that the variance of the estimated parameters is equal to:
 

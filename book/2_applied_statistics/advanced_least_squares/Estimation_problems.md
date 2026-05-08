@@ -15,7 +15,7 @@ In Earth, Climate & Technology we are also looking at problems like estimating:
 
 * positions using GNSS observations
 * land subsidence as a function of time series of height measurements
-* sea level change based on satellite altimetry or tide gauge measurement
+* sea level change based on satellite altimetry and/or tide gauge measurements
 
 For all these problems, least squares can be applied to *estimate* the unknown model parameters, that describe a linear relationship:
 

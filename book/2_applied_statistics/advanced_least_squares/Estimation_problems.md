@@ -1,6 +1,6 @@
 ## Estimation problems
 
-Prediction based on linear regression is convenient when the dependent variables are *hard-to-measure*, whereas the independent variables can be easily measured. In the latter case, the idea is that based on a limited sample of observations of both the dependent and independent variables, we estimate the model parameters that describe their relationship. Once the model parameters are 'known', the dependent parameters can be predicted using **only** observations of the independent variables.
+Linear regression can be used to quantify relationships between physical parameters, and to predict outcomes of a certain process / property (dependent variables) based on observations of another variable (independent variable). Prediction based on linear regression is convenient when the dependent variables are *hard-to-measure*, whereas the independent variables can be easily measured. In the latter case, the idea is that based on a limited sample of observations of both the dependent and independent variables, we estimate the model parameters that describe their relationship. Once the model parameters are 'known', the dependent parameters can be predicted using **only** observations of the independent variables.
 
 
 Examples are:
@@ -17,7 +17,7 @@ In Earth, Climate & Technology we are also looking at problems like estimating:
 * land subsidence as a function of time series of height measurements
 * sea level change based on satellite altimetry or tide gauge measurement
 
-For all these problems, least squares can be applied to *predict* the unknown model parameters, that describe a linear relationship:
+For all these problems, least squares can be applied to *estimate* the unknown model parameters, that describe a linear relationship:
 
 $$\boldsymbol{y} = \boldsymbol{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}$$
 
@@ -58,9 +58,9 @@ This is model is linear in $\boldsymbol{\beta}$, therefore we refer to it as a l
 :::
 
 ### Step function
-Consider a process with unknown parameter $\beta_0$ assumed to be constant up till time $t_{i-1}$, and a sudden change (step) at time $t_i$, after which the parameter remains constant at $\beta_0$. See {numref}`stepfun`.
+Consider a process with unknown parameter $\beta_0$ assumed to be constant up till time $t_{i-1}$, and a sudden change (step) at time $t_i$, after which the parameter remains constant at $\beta_1$. See {numref}`stepfun`.
 
-```{figure} https://github.com/TUDelft-MUDE/source-files/raw/main/file/00_step.png
+```{figure} ../figures/part-b_stepfunction.png
 ---
 height: 300px
 name: stepfun
@@ -78,7 +78,7 @@ Such model may apply when considering deformation events in the subsurface, but 
 
 :::{card} Exercise
 
-The linear model of the step function can also be parameterized in terms of the initial value $\beta_0$ plus the step size $s=\beta_0-\beta_1$. Give the corresponding model.
+The linear model of the step function can also be parameterized in terms of the initial value $\beta_0$ plus the step size $s=\beta_1-\beta_0$. Give the corresponding model.
 
 ```{admonition} Solution
 :class: tip, dropdown
@@ -96,7 +96,7 @@ $$
 
 (positioning)=
 #### GNSS Positioning 
-As a final example we will consider a non-linear functional model for estimating the unknown position $\mathrm{x}=\begin{bmatrix} x, y, z\end{bmatrix}^T$ of a Global Navigation Satellite System (GNSS) receiver on Earth. The observables are distance measured for $n \geq 4$ GNSS satellites with known positions $\begin{bmatrix} x_i, y_i, z_i\end{bmatrix}^T$.
+As a final example we will consider a non-linear functional model for estimating the unknown position and clock error $\boldsymbol{\beta}=\begin{bmatrix} x, y, z,b\end{bmatrix}^T$ of a Global Navigation Satellite System (GNSS) receiver on Earth. The observables are pseudoranges measured for $n \geq 4$ GNSS satellites with known positions $\begin{bmatrix} x_i, y_i, z_i\end{bmatrix}^T$.
 
 ```{figure} https://upload.wikimedia.org/wikipedia/commons/9/91/GDOP_good.svg
 ---
@@ -109,7 +109,7 @@ GNSS positioning: the position of the user is estimated from four GNSS satellite
 The functional model comprises $n$ non-linear functions of the unknown parameter vector $\boldsymbol{\beta}$:
 
 $$
-\begin{bmatrix} y_1 \\ \vdots \\ y_{i-1} \\ y_i \\ \vdots \\ y_n \end{bmatrix} = \begin{bmatrix} \sqrt{(x_1-x)^2+(y_1-y)^2+(z_1-z)^2}\\ \sqrt{(x_2-x)^2+(y_2-y)^2+(z_2-z)^2} \\ \vdots \\ \sqrt{(x_n-x)^2+(y_n-y)^2+(z_n-z)^2}\end{bmatrix}+\boldsymbol{\epsilon}
+\begin{bmatrix} y_1 \\ y_2 \\\vdots \\ y_n \end{bmatrix} = \begin{bmatrix} \sqrt{(x_1-x)^2+(y_1-y)^2+(z_1-z)^2}+b\\ \sqrt{(x_2-x)^2+(y_2-y)^2+(z_2-z)^2} +b\\ \vdots \\ \sqrt{(x_n-x)^2+(y_n-y)^2+(z_n-z)^2}+b\end{bmatrix}+\boldsymbol{\epsilon}
 $$
 
-Where $y_i$ is the pseudorange measurement to satellite $i$. Note that the model is non-linear in $\boldsymbol{\beta}$, since the unknown parameters appear inside a square root. For such problems we would have to apply non-linear least squares, but this is outside the scope of this course.
+Where $y_i$ is the pseudorange measurement to satellite $i$. Note that the model is non-linear in $\boldsymbol{\beta}$, since three of the unknown parameters appear inside a square root. For such problems we would have to apply non-linear least squares, but this is outside the scope of this course.

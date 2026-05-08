@@ -6,9 +6,9 @@ Observations are never perfect, and we have to account for their uncertainty whe
 
 Assuming that the errors are a realization of a random variable, assumed to be normally distributed, we can describe the uncertainty or **precision** by their variance, $\sigma^2$.
 
-Let's assume that we use the same instrument to collect $n$ *repeated* observations of the same variable (e.g., a fixed distance). The outcomes of these repeated measurements could look like those in {numref}`figure {number} <randome>`. Let's assume we know the true value $\mu$ (e.g., calibration distance); we can see that the repeated measurements fluctuate around $\mu$. The empirical mean will approximate $\mu$, especially if $n$ is large (law of large numbers). 
+Let's assume that we use the same instrument to collect $n$ *repeated* observations of the same variable (e.g., a fixed distance) under the same circumstances. The outcomes of these repeated measurements could look like those in {numref}`figure {number} <randome>`. Let's assume we know the true value $\mu$ (e.g., calibration distance); we can see that the repeated measurements fluctuate around $\mu$. The empirical mean will approximate $\mu$, especially if $n$ is large (law of large numbers). 
 
-````{figure} ../figures/part-b_randomerrors.png
+````{figure} ../../figures/part-b_randomerrors.png
 ---
 name: randome
 width: 80%
@@ -24,6 +24,8 @@ $$\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (y_i-\mu)^2$$
 Note that if $\mu$ would not be known, we would replace it by the empirical mean $\bar{y}$, and we should divide by $n-1$, see [Descriptive Statistics](1:descriptive_statistics).
 
 With this approach, we can thus calibrate an instrument, and consider the estimated variance as the true variance, such that we can assess the precision of our estimation results.
+
+Above it was mentioned that we assumed the repeated measurements to be collected *under the same circumstances*. This may be important, since with some measurement techniques the fluctuations (hence variance) may depend on for instance environmental or weather conditions. In such cases, you would have to do the calibration measurements under different circumstances to derive a variance which may depend on specific parameters (e.g., distance, temperature). 
 
 ### Heteroscedasticity (different variances)
 

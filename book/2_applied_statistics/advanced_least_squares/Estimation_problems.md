@@ -61,7 +61,7 @@ This is model is linear in $\boldsymbol{\beta}$, therefore we refer to it as a l
 ### Step function
 Consider a process with unknown parameter $\beta_0$ assumed to be constant up till time $t_{i-1}$, and a sudden change (step) at time $t_i$, after which the parameter remains constant at $\beta_1$. See {numref}`stepfun`.
 
-```{figure} ../figures/part-b_stepfunction.png
+```{figure} ../../figures/part-b_stepfunction.png
 ---
 height: 300px
 name: stepfun
@@ -96,7 +96,7 @@ $$
 :::
 
 (positioning)=
-#### GNSS Positioning 
+### GNSS Positioning 
 As a final example we will consider a non-linear functional model for estimating the unknown position and clock error $\boldsymbol{\beta}=\begin{bmatrix} x, y, z,b\end{bmatrix}^T$ of a Global Navigation Satellite System (GNSS) receiver on Earth. The observables are pseudoranges measured for $n \geq 4$ GNSS satellites with known positions $\begin{bmatrix} x_i, y_i, z_i\end{bmatrix}^T$.
 
 ```{figure} https://upload.wikimedia.org/wikipedia/commons/9/91/GDOP_good.svg

@@ -181,8 +181,8 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 **Content**
 
 * Lecture 1: Regression & least squares [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4829937/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/e42e33e3071744cea670b537cb1c2fd71d?academicYear=2025-2026-ectb1220b)]
-* Lecture 2: Uncertainty in regression
-* Practical: Estimating streamflow extremes
+* Lecture 2: Uncertainty in regression [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4830596/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/b65608c9c1dc44fab8468c2a2542c73a1d?academicYear=2025-2026-ectb1220b)]
+* Practical: Estimating streamflow extremes [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4831935/View) & [notebook](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4831934/View)]
 
 ```
 

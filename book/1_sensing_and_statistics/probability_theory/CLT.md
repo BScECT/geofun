@@ -13,6 +13,7 @@ In statistics, the *population* refers to the complete set of all objects / peop
 
 In practice, we won't be able to get data about the full population, so best we can do is to make inferences about the properties of the population based on a *random sample*, which is a subset from the population. Thereby it is important to use a representative and large enough sample to avoid sampling biases. In the following we will look more closely at the effect of the sample size.
 
+(1:clt:iid)=
 ## Independent identically distributed (i.i.d.) random variables
 
 Random variable $𝑋_1$ and $X_2$ are independent if $\mathsf{P}\left(X_1\in S,X_2\in T\right)= \mathsf{P}\left(X_1\in S)\mathsf{P}(X_2\in T\right)$ (in line with $\mathsf{P}(A\cap B)= \mathsf{P}(A)\mathsf{P}(B)$). In words: the outcome of one does not affect the other.

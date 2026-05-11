@@ -102,10 +102,12 @@ Data wrangling often happens during exploratory data analysis, because this is w
 
 ## How to clean and transform data?
 
+(2:data_wrangling:missing_data)=
 ### Missing data
 
 Missing data occur when no value is stored for a variable in an observation. The easiest way to encode missing data in a file is to leave a blank space. But this is not a standard practice, and people have developed many different ways of encoding them: none, null, -99, -999, -9999 (etc.), 0, -1, \*, \*\*\*, and many more. That missing data are sometimes encoded as numbers can lead to huge issues in analysis, so always make sure to check the metadata to see the proper encoding. If there are no metadata or nothing is mentioned, plot the data and check for any nonphysical values (e.g., a negative concentration).
 
+(2:data_wrangling:outliers)=
 ### Outliers
 
 An outlier is a datum that deviates clearly from the rest of the data. They can come from:
@@ -135,6 +137,7 @@ Transformations turn the original data into more useful inputs for statistical m
 
 For this subsection, let's assume that we have a sample of $n$ observed values $\{x_1, x_2, ..., x_n\}$ of a variable $X$.
 
+(2:data_wrangling:standardization)=
 #### Standardization
 
 Standardization transforms a numerical variable $X$ into a variable $Z$ with a mean of 0 (i.e., it is centered) and a standard deviation of 1 (i.e., it is reduced):

@@ -54,6 +54,7 @@ We have then two hypotheses:
 
 Hypothesis tests are set up so that we end up deciding whether we can reject (or not) the null hypothesis.
 
+(2:hypothesistesting:significance)=
 ### Selecting a significance level
 
 As mentioned above, hypothesis testing factors in uncertainty: we do not know the true population parameter(s), so there is always a risk that we reject the null hypothesis when it is true, or not reject it when it is false:

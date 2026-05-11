@@ -238,6 +238,7 @@ $$
 $$
 ```
 
+(2:uncertainty:bootstrap)=
 ### Resampling and the bootstrap
 
 One of the assumptions of linear regression is that the mean of the error $\epsilon$ is 0 (this is necessary to get unbiased estimates of the parameters). To get confidence intervals, we have also assumed that the error is normally distributed. So in the end we have:
@@ -282,6 +283,7 @@ The same procedure can be used in multiple linear regression when interpreting t
 
 In that case, we need to apply a correction factor. Several methods exist, but the most common one is the Bonferroni correction: instead of performing each test at a significance level $\alpha$, we perform each individual test with a significance level of $\frac{\alpha}{c}$, where $c$ is the number of tests. If the tests are independent, then the global significance level of all the tests together will be $\alpha$.
 
+(2:uncertainty:test_model)=
 ### Statistical test of the model
 
 On top of testing each coefficient individually, we can also test them all together, i.e., determine the significance of the whole model. For that we can use a two-sided [$F$-test](2:hypothesistesting:ftest), which compares the [deviation from the mean](2:regression:determination) (i.e., the variance) explained by the model and the deviation not explained by the model.
@@ -300,6 +302,7 @@ $$
 
 Where $\nu_\text{mod} = m$ and $\nu_\text{res} = n - m - 1$, $n$ is the number of data, and $m$ is the number of predictors.
 
+(2:uncertainty:test_residuals)=
 ### Statistical tests of the residuals
 
 Here we mainly want to assess that the residuals $r$ meet the conditions to estimate confidence intervals and apply $t$-tests, i.e., that they are normally distributed. For that, we can use the Jarque-Bera test of normality, which tests whether the skewness and kurtosis match those of a normal distribution.

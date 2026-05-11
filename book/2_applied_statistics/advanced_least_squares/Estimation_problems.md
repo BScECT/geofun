@@ -1,3 +1,4 @@
+(2:estimationprob)=
 ## Estimation problems
 
 Linear regression can be used to quantify relationships between physical parameters, and to predict outcomes of a certain process / property (dependent variables) based on observations of another variable (independent variable). Prediction based on linear regression is convenient when the dependent variables are *hard-to-measure*, whereas the independent variables can be easily measured. In the latter case, the idea is that based on a limited sample of observations of both the dependent and independent variables, we estimate the model parameters that describe their relationship. Once the model parameters are 'known', the dependent parameters can be predicted using **only** observations of the independent variables.

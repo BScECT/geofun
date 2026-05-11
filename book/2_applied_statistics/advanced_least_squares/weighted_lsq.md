@@ -1,3 +1,4 @@
+(2:wls)=
 ## Heteroscedasticity and weighted least squares
 
 Observations are never perfect, and we have to account for their uncertainty when evaluating our estimation results (and hence predictions). But not all observations have the same uncertainty. How to deal with this?

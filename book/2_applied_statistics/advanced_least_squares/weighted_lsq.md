@@ -81,7 +81,7 @@ A more precise observation will namely have a smaller variance, but should get a
 
 Note that in [Uncertainty in regression](uncertaintyreg) the confidence interval for linear regression was derived assuming that the variance of the observation errors is not known. For estimation problems where the variances can be assumed known (based on calibration), and the observation errors are normally distributed and independent, we have that the variance of the estimated parameters is equal to:
 
-$$ \sigma_{\hat{\beta}_j}= \left(\boldsymbol{X}^T \boldsymbol{W}\boldsymbol{X}\right)^{-1}_{jj} $$
+$$ \sigma^2_{\hat{\beta}_j}= \left(\boldsymbol{X}^T \boldsymbol{W}\boldsymbol{X}\right)^{-1}_{jj} $$
 
 where $\boldsymbol{W}$ is the diagonal matrix with the inverse variances of the observation errors as diagonal elements.
 

@@ -136,3 +136,8 @@ In a spatial context, this simple format is not enough. We need to also store so
 Those components are *metadata*, i.e., information that helps us understand the data, or "data about the data". They give us a georeferenced image, i.e., an image that can be located in the real world. Such image is often stored using an extension of the TIFF format called GeoTIFF (with the same extension `.tiff` or `.tif`). They are best suited to map continuous fields such as temperature and elevation, and when needing full spatial coverage over large areas.
 
 Raster data can also be seen from a vector perspective as a set of connected polygons forming a grid. The advantage is that we can then build more flexible irregular grids; the inconvenient is that this is more difficult than building a standard, regular raster. This is something you will learn more about later in your studies.
+
+## Exercise: Check your understanding
+
+```{h5p} https://tudelft.h5p.com/content/1292901217369268937/embed
+```

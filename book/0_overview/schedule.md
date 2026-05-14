@@ -239,8 +239,8 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 ```{dropdown} Week 4.7 - Capstone case study
 |                   | Monday    | Tuesday   | Wednesday   | Thursday    | Friday      |
 | :---------------: | :-------: | :-------: | :---------: | :---------: | :---------: |
-| 08:45&ndash;10:30 |           |           | Q&A session |             |             |
-| 10:45&ndash;12:30 |           |           |             |             |             |
+| 08:45&ndash;10:30 |           |           |             |             |             |
+| 10:45&ndash;12:30 |           |           |             | Q&A session |             |
 | 13:45&ndash;15:30 |           |           |             |             |             |
 | 15:45&ndash;17:30 |           |           |             |             |             |
 

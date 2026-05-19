@@ -148,6 +148,7 @@ $$
 
 Where $\overline{x}$ is the mean of the sample and $s_X$ its standard deviation. It is mainly used on continuous variables to make variables with different units comparable. Otherwise, variables with larger values could have a disproportionate effect in some statistical analyses.
 
+(2:data_wrangling:log_transformation)=
 #### Log transformation
 
 Logarithm transformation transforms a numerical variable $X$ into a variable $Y$ using a logarithm, sometimes of base 10 but often of base $e$:

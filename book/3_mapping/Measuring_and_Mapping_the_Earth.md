@@ -177,6 +177,7 @@ Every measurement carries uncertainty. Awareness of this associated uncertainty 
 
 In short, it is both fundamentally and practically impossible to achieve absolute certainty in measurement. At the same time, such certainty is rarely required. Measurements are performed to obtain quantitative information that is sufficiently accurate and affordable for a given purpose.
 
+(1:mapping:basic_terminology)=
 #### Basic Terminology
 
 To analyse measurements and their uncertainty, consistent terminology is required. The VIM provides precise definitions of many terms that we also use in our field. The VIM uses what it calls the ‘Uncertainty Approach’ to measurement terminology. The ‘Error Approach’ was the historical norm prior to publication of the VIM and was used to estimate a value as close as possible to a single true value. The Uncertainty Approach does not attempt to determine a single true value; instead, it assumes that information from the measurement permits an interval of reasonable values. The uncertainty approach is the preferred terminology for use by metrology organizations. Below are simplified definitions of some commonly used terms, based on the VIM (JCGM 200, 2012) and Crowder et al. (2020). 

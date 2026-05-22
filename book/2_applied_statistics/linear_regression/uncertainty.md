@@ -1,6 +1,7 @@
 (uncertaintyreg)=
 # Uncertainty in regression
 
+(2:uncertainty:confidence)=
 ## What are confidence intervals?
 
 When we estimate a parameter, we often get a single, most-likely value. But since we work from samples with a limited number of observations, there is uncertainty around that estimate. And we can also quantify that uncertainty. This is often done through confidence intervals. A confidence interval is a range of values likely to contain the true value of the parameter. More specifically, the 100$\gamma$% confidence interval for the parameter $\theta$ related to a variable $X$ is the interval $\left[\theta_l\left(X\right),\theta_u\left(X\right)\right]$ such that:

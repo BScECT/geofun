@@ -213,9 +213,9 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Beyond least squares
-* Lecture 2: Logistic regression
-* Practical: Data-driven interpretation of CPT data
+* Lecture 1: Beyond least squares [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4868308/View)]
+* Lecture 2: Logistic regression [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4876210/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/3bd21f823b8c413f9679750857e573381d?academicYear=2025-2026-ectb1220b)]
+* Practical: Data-driven interpretation of CPT data [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4913778/View) & [notebook](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4913777/View)]
 
 ```
 

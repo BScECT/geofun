@@ -16,6 +16,7 @@ And the same applies to statistics.
 
 ## What lies behind statistics?
 
+(1:data_to_insight:probability)=
 ### Probability theory
 
 Probability theory provides a formal framework to reason under uncertainty. Uncertainty is often divided into two types:

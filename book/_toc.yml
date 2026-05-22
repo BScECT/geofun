@@ -62,10 +62,10 @@ parts:
       sections:
       - file: 2_applied_statistics/classification/beyond_least_squares.ipynb
       - file: 2_applied_statistics/classification/logistic_regression.ipynb
-    # - file: 2_applied_statistics/validation/overview.md
-    #   sections:
-    #   - file: 2_applied_statistics/validation/model_validation.ipynb
-    #   - file: 2_applied_statistics/validation/model_selection.ipynb
+    - file: 2_applied_statistics/validation/overview.md
+      sections:
+      - file: 2_applied_statistics/validation/model_validation.ipynb
+      - file: 2_applied_statistics/validation/model_selection.ipynb
   - caption: Miscellaneous
     chapters:
     - file: references.md

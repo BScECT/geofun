@@ -26,15 +26,14 @@ parts:
       - file: 1_sensing_and_statistics/probability_theory/CLT.md
       - file: 1_sensing_and_statistics/probability_theory/normal.ipynb
       - file: 1_sensing_and_statistics/probability_theory/FormulaSheet.md
-          # - file: 1_sensing_and_statistics/statistical_inference/overview.md
-    - file: 3_mapping/overview.md
+    - file: 1_sensing_and_statistics/surface_mapping/overview.md
       sections:
-      - file: 3_mapping/Measuring_and_Mapping_the_Earth.md
-      - file: 3_mapping/Reference_Systems_and_Frames.md
-      - file: 3_mapping/GNSS.md
-      - file: 3_mapping/AirborneLaserScanning.md
-      - file: 3_mapping/subsurface/Earths_material_properties.md
-      - file: 3_mapping/subsurface/Geophysics.md
+      - file: 1_sensing_and_statistics/surface_mapping/Measuring_and_Mapping_the_Earth.md
+      - file: 1_sensing_and_statistics/surface_mapping/Reference_Systems_and_Frames.md
+      - file: 1_sensing_and_statistics/surface_mapping/GNSS.md
+      - file: 1_sensing_and_statistics/surface_mapping/AirborneLaserScanning.md
+      - file: 1_sensing_and_statistics/subsurface_mapping/Earths_material_properties.md
+      - file: 1_sensing_and_statistics/subsurface_mapping/Geophysics.md
     - file: 1_sensing_and_statistics/data_analysis/overview.md
       sections:
       - file: 1_sensing_and_statistics/data_analysis/descriptive_statistics.ipynb

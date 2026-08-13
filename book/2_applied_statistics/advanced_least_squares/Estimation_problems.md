@@ -1,5 +1,5 @@
 (2:estimationprob)=
-## Estimation problems
+# Estimation problems
 
 Linear regression can be used to quantify relationships between physical parameters, and to predict outcomes of a certain process / property (dependent variables) based on observations of another variable (independent variable). Prediction based on linear regression is convenient when the dependent variables are *hard-to-measure*, whereas the independent variables can be easily measured. In the latter case, the idea is that based on a limited sample of observations of both the dependent and independent variables, we estimate the model parameters that describe their relationship. Once the model parameters are 'known', the dependent parameters can be predicted using **only** observations of the independent variables.
 
@@ -26,7 +26,7 @@ where $\boldsymbol{X}$ is the design matrix and $\boldsymbol{\beta}$ the unknown
 
 The uncertainty in the estimation results depends on the errors $\boldsymbol{\epsilon}$ as well as on how well the assumed linear relationship represents the true relationship. Until now, it was assumed that the errors have a constant variance (homoscedasticity) and are independent. In this chapter we will also look at problems where this is not the case (heteroscedasticity) and how to deal with that by introducing *weighted* least squares. Furthermore, we will look into precision versus accuracy, show a practical example how the precision of observables can be estimated, and also which factors influence the precision and accuracy of our estimation results.
 
-### Linear trend model for time series 
+## Linear trend model for time series 
 The unknown parameters are the intercept $\beta_0$ and rate of change (velocity) $\beta_1$. The observation equation of a single observation $y_i$ is:
 
 $$
@@ -58,7 +58,7 @@ This is model is linear in $\boldsymbol{\beta}$, therefore we refer to it as a l
 ```
 :::
 
-### Step function
+## Step function
 Consider a process with unknown parameter $\beta_0$ assumed to be constant up till time $t_{i-1}$, and a sudden change (step) at time $t_i$, after which the parameter remains constant at $\beta_1$. See {numref}`stepfun`.
 
 ```{figure} ../../figures/part-b_stepfunction.png
@@ -96,7 +96,7 @@ $$
 :::
 
 (positioning)=
-### GNSS Positioning 
+## GNSS Positioning 
 As a final example we will consider a non-linear functional model for estimating the unknown position and clock error $\boldsymbol{\beta}=\begin{bmatrix} x, y, z,b\end{bmatrix}^T$ of a Global Navigation Satellite System (GNSS) receiver on Earth. The observables are pseudoranges measured for $n \geq 4$ GNSS satellites with known positions $\begin{bmatrix} x_i, y_i, z_i\end{bmatrix}^T$.
 
 ```{figure} https://upload.wikimedia.org/wikipedia/commons/9/91/GDOP_good.svg

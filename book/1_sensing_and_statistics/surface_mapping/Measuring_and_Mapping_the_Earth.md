@@ -102,7 +102,7 @@ Using a ruler or tape measure gives a direct measurement: the length is read dir
 
 By contrast, a total station measures distance indirectly. It records the travel time of a laser pulse or the phase shift of a modulated electromagnetic signal. Combined with other input quantities—such as the speed of light and corrections for environmental factors like temperature, humidity, and atmospheric pressure—the distance is inferred from the measurement model.
 
-````{figure} ../figures/part-a_mapping_1.jpg
+````{figure} ../../figures/part-a_mapping_1.jpg
 ---
 name: mapping1
 width: 60%
@@ -143,7 +143,7 @@ In Earth Sciences, however, the term is often used in a narrower sense, especial
 
 Uncertainty, an inherent component of any dataset (including observations and measurements), is a multifaceted concept comprising many aspects. To illustrate this, consider MacEachren et al.’s (2005) still incomplete typology of geospatial information uncertainty:
 
-````{figure} ../figures/part-a_mapping2.png
+````{figure} ../../figures/part-a_mapping2.png
 ---
 name: mapping2
 width: 60%
@@ -216,7 +216,7 @@ Both Type A and Type B evaluations may involve statistical methods, but the key 
 
 **Total Measurement Uncertainty** – The total measurement uncertainty combines both Type A and Type B evaluations. Since the true value is unknown, it may lie anywhere within the reported uncertainty interval—or even outside it, depending on the chosen level of confidence (i.e., the probability that the constructed uncertainty interval will contain the true value).
 
-````{figure} ../figures/part-a_mapping3.png
+````{figure} ../../figures/part-a_mapping3.png
 ---
 name: mapping3
 width: 60%
@@ -237,7 +237,7 @@ $\textbf{Example}$
 The Length of a River – Suppose you are asked to measure the length of a river. The result will always contain some uncertainty because the definition ‘a river’ is not perfectly specific. Where exactly does the river begin and end? Do you follow every meander, or measure a straight line from source to mouth? This ambiguity in the definition itself creates uncertainty, even before you start measuring. 
 
 
-````{figure} ../figures/part-a_mapping4.jpg
+````{figure} ../../figures/part-a_mapping4.jpg
 ---
 name: mapping4
 width: 20%

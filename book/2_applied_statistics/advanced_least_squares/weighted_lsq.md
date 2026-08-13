@@ -1,9 +1,9 @@
 (2:wls)=
-## Heteroscedasticity and weighted least squares
+# Heteroscedasticity and weighted least squares
 
 Observations are never perfect, and we have to account for their uncertainty when evaluating our estimation results (and hence predictions). But not all observations have the same uncertainty. How to deal with this?
 
-### Precision of observations
+## Precision of observations
 
 Assuming that our model is correct $\boldsymbol{y}=\boldsymbol {X\beta}+\boldsymbol{\epsilon}$, the errors $\boldsymbol{\epsilon}$ are a realization of a random variable, assumed to be normally distributed, we can describe the uncertainty or **precision** by their variance, $\sigma^2$.
 
@@ -28,7 +28,7 @@ With this approach, we can thus calibrate an instrument, and consider the estima
 
 Above it was mentioned that we assumed the repeated measurements to be collected *under the same circumstances*. This may be important, since with some measurement techniques the fluctuations (hence variance) may depend on for instance environmental or weather conditions. In such cases, you would have to do the calibration measurements under different circumstances to derive a variance which may depend on specific parameters (e.g., distance, temperature). 
 
-### Heteroscedasticity (different variances)
+## Heteroscedasticity (different variances)
 
 The *ordinary* least squares method as introduced in [the previous chapter](2:regression) provides the *best* estimates in case all observation errors can be assumed to have the same variance and are independent. However, it may occur that this is not the case. Examples:
 
@@ -90,7 +90,3 @@ The confidence interval then becomes
 $$
     \hat{\beta}_j \pm z_{\alpha/2} \sigma_{\hat{\beta}_j}
 $$
-
-
-
-

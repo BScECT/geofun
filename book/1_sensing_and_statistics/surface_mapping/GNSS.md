@@ -12,10 +12,10 @@ Global Navigation Satellite Systems (GNSS) are used for a wide variety of applic
 
 Navigation and positioning are also (indirectly) used for Earth, Climate & Technology applications: for instance if we take ground-based or remote sensing measurements we need to know where the sensor was at the time of measurement. A more extensive list of applications can be found in Section *GNSS Applications*.
 
-The Global Positioning System (GNSS), developed by the US military and operated by the US Air Force (USAF), is the first Global Navigation Satellite System, and most well-known system, of its kind. In order not to be dependent on a US military system and/or to get their share of the GNSS market, other countries have developed their own GNSS.
+The Global Positioning System (GPS), developed by the US military and operated by the US Air Force (USAF), is the first Global Navigation Satellite System, and most well-known system, of its kind. In order not to be dependent on a US military system and/or to get their share of the GNSS market, other countries have developed their own GNSS.
 The result is that today a lot of GNSS satellites can be seen at the same time, anywhere on Earth, anytime. {numref}`Figure {number} <skyplot>` shows as an example of a so-called skyplot for Delft, with up to 40 visible GNSS-satellites in view.
 
-````{figure} ../figures/GNSS/skyplotTrimbleNetR9_Oct2020.PNG
+````{figure} ../../figures/GNSS/skyplotTrimbleNetR9_Oct2020.PNG
 ---
 name: skyplot
 width: 60%
@@ -24,7 +24,7 @@ align: center
 Skyplot with GNSS satellites for October 8th, 2020, at 12:10 UTC, in Delft. The skyplot shows the positions of the satellites of the various constellations, GPS, GLONASS, Galileo and BeiDou, in the sky. The outer circle represents the local horizon in Delft, 360 degrees around (0 is North, 90 East, etc). The smaller circles refer to 30 degrees of elevation, above the horizon, and 60 degrees of elevation. The middle of the skyplot corresponds to the so-called local zenith, which is directly overhead. The skyplot was obtained from the Trimble NetR9 GNSS receiver at the TU Delft observatory, of which the antenna set-up is shown at right.
 ````
 
-#### GNSS
+### GPS
 
 The Global Positioning System (GPS), also known as the NAVigation Satellite Time And Ranging (NAVSTAR) system, is one the most successful satellite systems to date. Its success is strongly linked to the ever-decreasing costs of GPS receivers, which primarily consist of electronic hardware. While high-end receivers still cost in the order of 1-10kEuro, mass-market receivers, such as those used in smartphones, cost no more than a few euros each.
 
@@ -41,19 +41,19 @@ The GPS system consists of three segments.
 
 The other three GNSSs have a very similar design and functionality.
 
-#### Glonass
+### Glonass
 
 The Russian GLObal NAvigation Satellite System (GLONASS) was developed from the 1970's onward. It is similar to GPS, but with its own signal and constellation design. Currently, GLONASS has about 24 operational satellites in orbit.
 
-#### Galileo
+### Galileo
 
 Galileo, the European GNSS, has been under design and development since the late 1990's. Again, it has its own design in terms of signals and constellation, but based on *interoperability* with GPS. That is why your smartphone, and the vast majority of GNSS receivers, use GPS and Galileo (and even other GNSSs) at the same time.
 
-#### BeiDou
+### BeiDou
 
 The Chinese BeiDou Navigation Satellite System (BDS), sometimes still known as Compass, was designed to provide independent regional navigation in the first stage and global coverage later. The BeiDou (phase III) constellation deployment has been fully completed in 2020, with 40+ satellites in orbit, providing global coverage.
 
-#### Outline
+### Outline
 
 This chapter provides an introduction to GNSS positioning. 
 Section *Ranging* presents the basic concepts of the measurement of travel time of a radio signal from a GNSS satellite to a receiver.
@@ -63,7 +63,7 @@ Section *GNSS applications* presents an overview of the wide range of applicatio
 There is much more more of information available on this subject, and
 the reader is therefore referred to, for instance, the textbooks Teunissen and Montenbruck [2017] and Morton et al. [2021].
 
-````{figure} ../figures/GNSS/GPSsatelliteblockIIF.jpg
+````{figure} ../../figures/GNSS/GPSsatelliteblockIIF.jpg
 ---
 name: GNSSblockIIF
 width: 50%
@@ -78,7 +78,7 @@ GNSS block IIF satellite, built by Boeing. These GNSS satellites, 12 in total, h
 
 The GNSS satellites transmit signals in the so-called L-band of the electromagnetic radio frequency spectrum, which corresponds to the 1 to 2 GHz range. The signal consists of a carrier wave, and each satellite adds its own unique *Pseudo Random Noise (PRN)* code on it, see {numref}`figure {number} <GNSSsignal>`, as well as information about the satellites' orbits and clocks. The PRN code allows a receiver to identify from which satellite a signal originates, and also *when* it was transmitted. And with that, it is thus possible to determine the travel time of the signal.
 
-````{figure} ../figures/GNSS/gpssignal.png
+````{figure} ../../figures/GNSS/gpssignal.png
 ---
 name: GNSSsignal
 width: 80%
@@ -155,7 +155,7 @@ and the resulting carrier phase measurement, output by the receiver, is $2.02 \p
 
 The carrier wave measurement is a very precise measure of the distance between the satellite and the receiver, but the initial number of carrier wave cycles is unknown, and needs to be estimated before the carrier phase measurements can be effectively used, see {numref}`figure {number} <ambiguity>`.
 
-````{figure} ../figures/GNSS/ambiguity.png
+````{figure} ../../figures/GNSS/ambiguity.png
 ---
 name: ambiguity
 width: 60%
@@ -170,7 +170,7 @@ GNSS receivers can also provide additional measurements, such as the signal stre
 
 The pseudorange measurement precision is typically at the  decimeter level. The carrier phase measurement precision ranges from the few centimeter to the millimeter level. The carrier phase is an ambiguous measurement of distance, but it is more precise than the pseudorange, typically by two orders of magnitude.
 
-````{figure} ../figures/GNSS/graphC1.png
+````{figure} ../../figures/GNSS/graphC1.png
 ---
 name: graphsC1
 width: 60%
@@ -199,7 +199,7 @@ GNSS positioning is based on the concept of multi-lateration. By measuring dista
 
 To estimate the three position coordinates of the receiver $x_r$, $y_r$, $z_r$, and the receiver clock offset $b_r$, a GNSS receiver needs to track at least 4 satellites.
 
-````{figure} ../figures/GNSS/GPSpositioning.png
+````{figure} ../../figures/GNSS/GPSpositioning.png
 ---
 name: GNSSpositioning
 width: 60%
@@ -217,7 +217,7 @@ To see the effect of the receiver clock error on the positioning problem at work
 So, in two dimensions, we would need to solve for two receiver position coordinates and one receiver clock error, hence in total three unknown parameters,
 so we need at least three pseudorange measurements.
 
-````{figure} ../figures/GNSS/trilateration_greenblue.PNG
+````{figure} ../../figures/GNSS/trilateration_greenblue.PNG
 ---
 name: trilaterationgreenblue
 width: 80%
@@ -226,7 +226,7 @@ align: center
 Two-dimensional positioning example with three satellites (at known positions, represented by the black dots). The measured pseudoranges are visualized by circles, in green at left (with clock error of -1), and in blue at right (with clock error of 0).
 ````
 
-````{figure} ../figures/GNSS/trilateration.png
+````{figure} ../../figures/GNSS/trilateration.png
 ---
 name: trilateration
 width: 60%
@@ -259,7 +259,7 @@ Recall that the approximate satellite position and clock offset are available to
 
 Parameter $b_r$ equals the receiver clock offset $\delta t_r$ multiplied by the speed of light $c$. Note that we included the (unavoidable) random measurement error $\epsilon_{r}^{s}$ on the right hand side the equation.
 
-````{figure} ../figures/GNSS/ECEF.png
+````{figure} ../../figures/GNSS/ECEF.png
 ---
 name: ECEF
 width: 40%
@@ -292,7 +292,7 @@ which is referred to as *multipath*. In this case, the receiver must deal with t
 
 Carefully selecting the location for a survey can help to keep the impact of multipath at a minimum, as well as the use of a good antenna.
 
-````{figure} ../figures/GNSS/multipath.png
+````{figure} ../../figures/GNSS/multipath.png
 ---
 name: multipath
 width: 50%
@@ -301,7 +301,7 @@ align: center
 Multipath: the direct line of sight signal from the satellite is received, though as well as a signal which has been reflected by the building. The reception of also a reflected signal, which has made a detour, will generally cause a bias in the measurement.
 ````
 
-````{figure} ../figures/GNSS/errorsources.png
+````{figure} ../../figures/GNSS/errorsources.png
 ---
 name: signalpath
 width: 50%
@@ -334,7 +334,7 @@ as this is where the radio signals actually arrive.
 Handling the so-called antenna Phase Center Offset (PCO) with respect to the bottom of the antenna, usually a cm to dm-effect,
 is important in high-precision positioning discussed in the next section.
 
-````{figure} ../figures/GNSS/CTB3310surveymarker.jpg
+````{figure} ../../figures/GNSS/CTB3310surveymarker.jpg
 ---
 name: CTB3310surveymarker
 width: 40%
@@ -343,7 +343,7 @@ align: center
 Survey-marker at TU Delft campus with accurate ground-truth coordinates: $X$ = 3923768.0147 m, $Y$ = 300255.7048 m, $Z$ = 5002640.2228 m (ITRF2014 at epoch 2021.50).
 ````
 
-````{figure} ../figures/GNSS/spp_scatter.png
+````{figure} ../../figures/GNSS/spp_scatter.png
 ---
 name: spppos
 width: 60%
@@ -385,7 +385,7 @@ is small enough, typically in the order of 5 to 10 km, considering that the sate
 
 From the differenced observations, the so-called baseline (vector) between the two receivers can be computed through least squares estimation. The position of the rover is then obtained by adding the baseline vector to the accurately known coordinates of the reference station. Generally the term 'DGNSS' is used for relative positioning, though using only pseudorange measurements.
 
-````{figure} ../figures/GNSS/relativepositioning.png
+````{figure} ../../figures/GNSS/relativepositioning.png
 ---
 name: dGNSS
 width: 30%
@@ -399,7 +399,7 @@ Relative GNSS positioning combines measurements from a roving receiver with meas
 To obtain the highest possible accuracy from GNSS, it is no longer sufficient to use only the pseudorange code measurements, but rather the *carrier phase* measurements, introduced in Section *Ranging*, are required.
 As mentioned before and illustrated in {numref}`figure {number} <ambiguity>` the measurement of fractional phase differences does pose the problem of the unknown initial number of carrier wave cycles, also called the carrier wave *ambiguities*, which need to be estimated together with the other unknown parameters. For relative positioning this is visualized in {numref}`figure {number} <ambiguouspositioning>`. Basically the range observed with carrier phase measurements is equal to the radius of one of the circles. Recall: the difference in radius of two circles is approximately 20 cm (one wavelength), the total distance more than 20,000 km! For both satellites (in reality more) we therefore have many options and hence there are many intersections to choose from. Resolving the ambiguities is a complex problem beyond the scope of this course. Important to remember is that if we can resolve the correct ambiguities, we benefit from the very high precision of the carrier phase measurements measurements. 
 
-````{figure} ../figures/GNSS/CPbasedpositioning.png
+````{figure} ../../figures/GNSS/CPbasedpositioning.png
 ---
 name: ambiguouspositioning
 width: 40%
@@ -411,7 +411,7 @@ Geometric interpretation of relative positioning with carrier phase measurements
 Relative positioning, including resolving the ambiguities, is referred to as *Real-Time Kinematic (RTK)* positioning, or Carrier Phase based relative positioning (if performed in post processing). For more details see for instance Tiberius et al. (2022).
 
 
-````{figure} ../figures/GNSS/06GPSnetwork.png
+````{figure} ../../figures/GNSS/06GPSnetwork.png
 ---
 name: 06GNSSnetwork
 width: 50%
@@ -424,7 +424,7 @@ The requirement for a nearby reference receiver is a disadvantage of RTK, consid
 With RTK the coverage area of a reference receiver or station typically has a radius of ten, or tens of kilometers.
 In many regions and countries, networks of reference stations, or Continuously Operating Reference Stations (CORS) have been deployed in order to cover the entire area, and in this scenario sometimes the term *network-RTK* is used, see {numref}`figure {number} <06GNSSnetwork>`, where reference stations generally have a 30-40 km inter-distance. An example of an application of RTK positioning in road construction is shown in {numref}`figure {number} <excavator>`.
 
-````{figure} ../figures/GNSS/excavator.png
+````{figure} ../../figures/GNSS/excavator.png
 ---
 name: excavator
 width: 50%
@@ -448,7 +448,7 @@ versus East-coordinate, and the graph at right shows the vertical position (Up) 
 These measurements were taken at a survey-marker of which accurate position coordinates were already available, see {numref}`figure {number} <CTB3310surveymarker>`. That is how we can actually present the position *error* in the graph of {numref}`figure {number} <rtkfix>`, i.e., the difference of the measured position coordinate and the known ground-truth position coordinate. The position errors are expressed in a local topocentric coordinate system, in terms of local
 East, North and Up, see Section 29.4 in Tiberius et al. (2022).
 
-````{figure} ../figures/GNSS/RTKfix_scatter.png
+````{figure} ../../figures/GNSS/RTKfix_scatter.png
 ---
 name: rtkfix
 width: 60%
@@ -473,7 +473,7 @@ This is an improvement by a factor of 100 compared to the standalone positioning
 Another short experiment was carried out to result in a centimeter-accurate 3D Digital Terrain Model (DTM)
 of an embankment on the TU Delft campus, see {numref}`figure {number} <talud>`. The RTK survey of this bank of earth took only 15 minutes: walking with the GNSS-receiver in a grid-like pattern over this bank, and recording measurements every 1 second. 
 
-````{figure} ../figures/GNSS/talud.png
+````{figure} ../../figures/GNSS/talud.png
 ---
 name: talud
 width: 90%
@@ -502,7 +502,7 @@ More GNSS processing strategies exist then treated here, see Tiberius et al. (20
 * Real-time Kinematic and Carrier Phase based relative positioning: relative positioning with carrier phase (and pseudorange) measurement, centimeter-accuracy in real-time.
 * Precise Point Positioning: single-receiver positioning using corrections from a sparse network of reference receivers using carrier phase and pseudorange observations, centimeter- to decimater-accuracy with convergence times from several up to tens of minutes.
 
-````{figure} ../figures/GNSS/ubloxZED_F9P_NEW.JPG
+````{figure} ../../figures/GNSS/ubloxZED_F9P_NEW.JPG
 ---
 name: ublox
 width: 50%
@@ -545,7 +545,7 @@ There are many different applications of GNSS positioning each with its own requ
 * Smartphones, car navigation, and personal navigation usually have the lowest requirements, and the GPS (GNSS) standard positioning service suffices.
 
 
-````{figure} ../figures/GNSS/Zandmotor.png
+````{figure} ../../figures/GNSS/Zandmotor.png
 ---
 name: waterscooter
 width: 90%
@@ -557,7 +557,7 @@ Both the on- and offshore part are regularly surveyed, to monitor the developmen
 There is also a number of GNSS applications, in which the position solution is not the (primary) goal. Accurate time which is obtained through determining also the receiver clock offset $b_r$, is used in timing applications. The standard positioning service allows for timing at the 10-100 ns level, and this is used for instance in telecommunication, see {numref}`figure {number} <KPNtelecommast>`, electrical power grids, and financial networks.
 
 
-````{figure} ../figures/GNSS/KPNmastZvbh.jpg
+````{figure} ../../figures/GNSS/KPNmastZvbh.jpg
 ---
 name: KPNtelecommast
 width: 40%
@@ -597,7 +597,7 @@ And for how long a time would we need to collect measurements?
 from satellite to receiver through measurement of the signal travel time. When the receiver clock is ahead of time by 0.1 $\mu$s, by how much is the measured range to the satellite too long or too short due to this clock error?
 
 
-````{figure} ../figures/GNSS/1D_GPSpositioning.png
+````{figure} ../../figures/GNSS/1D_GPSpositioning.png
 ---
 name: 1D_GNSSpositioning
 width: 60%
@@ -619,7 +619,7 @@ The satellite position is known, $x^{s} = -20$, and the position of receiver 1 a
 based on the pseudorange measurements $p_{1}^{s} = 32$ and $p_{2}^{s} = 37$.
 In this case, you can again assume that all clocks run perfectly on time – there are no clock offsets involved.
 
-````{figure} ../figures/GNSS/singledifference.png
+````{figure} ../../figures/GNSS/singledifference.png
 ---
 name: singledifference
 width: 60%

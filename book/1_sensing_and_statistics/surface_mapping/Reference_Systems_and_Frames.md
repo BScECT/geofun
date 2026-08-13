@@ -121,7 +121,7 @@ by the orientation of the corresponding axis. Together, the coordinates
 form a triplet that is typically denoted as *X,Y,Z*.
 
 
-````{figure} ../figures/part-a_refsys2.png
+````{figure} ../../figures/part-a_refsys2.png
 ---
 name: refsys2
 width: 30%
@@ -188,7 +188,7 @@ as reckoned towards the east. The height *h* represents the distance
 between *P* and the ellipsoid measured along the ellipsoid’s normal
 (i.e., the line perpendicular to its surface).
 
-````{figure} ../figures/part-a_refsys3.png
+````{figure} ../../figures/part-a_refsys3.png
 ---
 name: refsys3
 width: 40%
@@ -248,7 +248,7 @@ $$
 \end{aligned}
 $$
 
-````{figure} ../figures/part-a_refsys4.png
+````{figure} ../../figures/part-a_refsys4.png
 ---
 name: refsys4
 width: 40%
@@ -257,7 +257,7 @@ align: center
 Ellipsoidal, geodetic or geographic latitude φ, geocentric (or spherical) latitude ψ, radius of curvature formularadius r, ellipsoidal height h, semi-major axis a and semi-minor axis b of the ellipsoid. The dashed line shows the local tangent plane to the ellipsoid. (Tiberius et al., 2022, Fig. 29.3).
 ````
 
-````{figure} ../figures/part-a_refsys5.png
+````{figure} ../../figures/part-a_refsys5.png
 ---
 name: refsys5
 width: 60%
@@ -494,7 +494,7 @@ the first does not require any information about the Earth’s density
 distribution*. The advantages and disadvantages of the different systems
 are summarised in Table 1.1.
 
-````{figure} ../figures/part-a_refsys6a.png
+````{figure} ../../figures/part-a_refsys6a.png
 ---
 name: refsys6a
 width: 40%
@@ -503,7 +503,7 @@ align: center
 The orthometric height HO: the curved-line distance measured along the plumb line from the point P0 on the geoid to the point of interest P on the Earth’s surface. The geoid height N: the straight-line distance measured along the ellipsoidal surface normal from the point Q0 on the ellipsoid to the point P0 on the geoid. (Note: the curvature of the equipotential surfaces and plumb lines is exaggerated for illustrative purposes). Adapted from Featherstone & Kuhn (2006), Fig. 2. |
 ````
 
-````{figure} ../figures/part-a_refsys6b.png
+````{figure} ../../figures/part-a_refsys6b.png
 ---
 name: refsys6b
 width: 40%
@@ -598,7 +598,7 @@ illustrated in Fig. {numref}`refsys7`, alignment to the local geoid means that e
 the same reference ellipsoid is used, different geodetic datums may be
 obtained.
 
-````{figure} ../figures/part-a_refsys7.png
+````{figure} ../../figures/part-a_refsys7.png
 ---
 name: refsys7
 width: 80%
@@ -664,7 +664,7 @@ Consequently, the height of a point relative to datum A will generally
 differ from its height relative to datum B. Within Europe, such
 differences can amount to approximately 2.30 m (see Fig. {numref}`refsys8`).
 
-````{figure} ../figures/part-a_refsys8.png
+````{figure} ../../figures/part-a_refsys8.png
 ---
 name: refsys8
 width: 40%
@@ -738,7 +738,7 @@ points may have experienced vertical motion. However, as long as the
 assigned height of the fundamental benchmark(s) remains unchanged, the
 datum itself has not changed.
 
-````{figure} ../figures/part-a_refsys9.png
+````{figure} ../../figures/part-a_refsys9.png
 ---
 name: refsys9
 width: 60%
@@ -834,7 +834,7 @@ the meridian and parallel and on the angle between them. The result is
 an ellipse whose axes indicate the directions of maximum and minimum
 scale distortion. See {numref}`refsys10` for an example.
 
-````{figure} ../figures/part-a_refsys10.png
+````{figure} ../../figures/part-a_refsys10.png
 ---
 name: refsys10
 width: 40%
@@ -880,7 +880,7 @@ that may touch or intersect the globe at any point. If it touches a
 pole, meridians appear as straight lines and parallels as concentric
 circles. At the point of contact, directions are accurate.
 
-````{figure} ../figures/part-a_refsys11.png
+````{figure} ../../figures/part-a_refsys11.png
 ---
 name: refsys11
 width: 60%
@@ -894,7 +894,7 @@ its *aspect*. It may be normal (aligned with Earth’s rotation axis),
 transverse (perpendicular to it), or oblique (any angle in between) (see
 {numref}`refsys12`).
 
-````{figure} ../figures/part-a_refsys12.png
+````{figure} ../../figures/part-a_refsys12.png
 ---
 name: refsys12
 width: 60%
@@ -913,7 +913,7 @@ Map projections also differ in the point of perspective from which the
 surface is conceptually projected. {numref}`refsys13` illustrates three common
 cases: gnomonic, stereographic, and orthographic projections.
 
-````{figure} ../figures/part-a_refsys13.png
+````{figure} ../../figures/part-a_refsys13.png
 ---
 name: refsys13
 width: 60%
@@ -1235,7 +1235,7 @@ the commonly applied *7-parameter similarity transformation* (or
 *14-parameter* in the case that time dependency is included). The
 strategy is outlined in {numref}`refsys14`.
 
-````{figure} ../figures/part-a_refsys14.png
+````{figure} ../../figures/part-a_refsys14.png
 ---
 name: refsys14
 width: 80%
@@ -1380,7 +1380,7 @@ country, region or even the entire globe. In the Netherlands, the
 official model to be used in order to convert GNSS-derived ellipsoidal
 heights into NAP heights is the NLGEO2018 quasi-geoid model (see {numref}`refsys15`).
 
-````{figure} ../figures/part-a_refsys15.png
+````{figure} ../../figures/part-a_refsys15.png
 ---
 name: refsys15
 width: 40%

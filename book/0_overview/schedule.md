@@ -229,8 +229,8 @@ Click on the dropdown blocks below to find the schedule of each week's activitie
 
 **Content**
 
-* Lecture 1: Model validation
-* Lecture 2: Model selection
+* Lecture 1: Model validation [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4914554/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/f567f2a051d247919fa38bf43afbf92e1d?academicYear=2025-2026-ectb1220b)]
+* Lecture 2: Model selection [[slides](https://brightspace.tudelft.nl/d2l/le/content/774786/viewContent/4915344/View) & [recording](https://collegeramavideoportal.tudelft.nl/catalogue/ectb1220b/presentation/891911e8ceed4978843178525be638081d?academicYear=2025-2026-ectb1220b)]
 * Practical: 
 * Q&A session: Q&A on the capstone case study
 
